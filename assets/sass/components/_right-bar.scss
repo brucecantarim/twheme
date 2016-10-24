@@ -1,0 +1,125 @@
+/*---------------------------------------------------/
+/                                                    /
+/    RIGHT BAR - Here you can mess with the post     /
+/     previews, simulator menu, and other stuff.     /
+/                                                    /
+/---------------------------------------------------*/
+
+// --------------------------------------------------
+//                 Right Bar Wrappers
+// --------------------------------------------------
+.rightbar, .panel-bonardi-bg {
+    width: 20%;
+    min-height: 85.30%;
+    height: 87.30%;
+    position: absolute;
+    top: 12.70%;
+    right: -16px;
+    color: $color-white;
+    padding: 20px;
+    overflow-y: scroll;
+    overflow-x: show;
+        h1, h2, h3, h4, h5, h6, p, span { color: $color-white }
+}
+
+// --------------------------------------------------
+//               Selected Item Wrapper
+// --------------------------------------------------
+.panel-bonardi {
+    width: 100%;
+    background-color: $color-main;
+    margin-bottom: 120px;
+}
+
+.panel-bonardi-bg {
+    height: 35%;
+    color: $color-white;
+    background-color: $color-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.panel-bonardi-header {
+    background-color: $color-box;
+    color: $color-white;
+    padding: 10px;
+}
+
+.panel-bonardi-content {
+    background-color: $color-grey;
+    color: $color-copy;
+    padding: 10px;
+}
+
+// --------------------------------------------------
+//               Item boxes and elements
+// --------------------------------------------------
+.item-selected {
+    width: 40%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 10px;
+    box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.panel-icon-box, .panel-icon-box:visited {
+    background-color: $color-grey;
+    height: 80px;
+    width: 80px;
+    overflow-x: hidden;
+    margin: 20px auto;
+    box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease-in-out;
+}
+
+.panel-icon-box:hover, .painel-icon-box:active {
+    background-color: $color-hover;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.panel-icon {
+    width: 70%;
+    margin: 15%;
+}
+
+.panel-icon:hover {
+    position: absolute;
+    transform: translateY(-4em);
+}
+
+// --------------------------------------------------
+//              Item Positioning Classes
+// --------------------------------------------------
+.panel-col-left {
+    margin: 10px 5px 10px 0;
+}
+
+.panel-col-middle {
+    margin: 10px 0 10px 0;
+}
+
+.panel-col-right {
+    margin: 10px 0 10px 0px;
+}
+
+// --------------------------------------------------
+//                  Panel Control
+// --------------------------------------------------
+.panel-control {
+    width: 20%;
+    height: 10%;
+    position: fixed;
+    bottom: 0;
+    right: -16px;
+    overflow-y: visible;
+}
+
+.panel-control i {
+    color: $color-main;
+    font-size: 70px;
+    position: relative;
+    top: -35px;
+}

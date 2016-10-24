@@ -1,0 +1,31 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div class ="row">
+            <div class="container-flex col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="greydotline wow fadeInUp"> </div><br/>
+               <div class="greydotline wow fadeInUp"> </div><br/>
+               <div class="greydotline wow fadeInUp"> </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <br/><br/>
+                <h1 class="search-title wow fadeInUp">{{ title }}</h1>
+                <br/><br/><br/><hr/>
+            </div>
+        {% for post in posts %}
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
+                    <h1>{{ post.title }}</h1>
+				    <a href="{{ post.link }}">
+				    {% if post.thumbnail %}
+				    <img class="img-thumbnail" src="{{ post.thumbnail.src }}" srcset="{{ post.thumbnail.src | retina(1) }} 1x, {{ post.thumbnail.src | retina(2) }}  2x, {{ post.thumbnail.src | retina(3) }}  3x, {{ post.thumbnail.src | retina(4) }}  4x">
+                    {% else %}
+                    <img class="img-thumbnail" src="http://placehold.it/300?text={{__('IMAGEM', 'twheme')|e }}">
+                    {% endif %}
+                </a>
+            </div><!--/. col -->
+        {% endfor %}
+        </div>
+        <br/><br/><br/>
+    </div>
+{% endblock %}

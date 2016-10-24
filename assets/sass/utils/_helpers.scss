@@ -1,0 +1,40 @@
+/*---------------------------------------------------/
+/                                                    /
+/     HELPERS - Here are the SASS functions and      / 
+/    css classes to convert data and apply fixes.    /
+/                                                    /
+/---------------------------------------------------*/
+
+// --------------------------------------------------
+//              Responsive Resize Function
+// --------------------------------------------------
+
+// eg: em(12) || em(12px) || em(12, 22)
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+.col-left, .col-middle, .col-right, .col-none {
+    padding: 2em !important;
+}
+
+.col-left {
+    border-right: 1px dashed $color-footer !important;
+}
+
+.col-middle {
+    border-left: 1px dashed $color-footer !important;
+    border-right: 1px dashed $color-footer !important;
+}
+
+.col-right {
+    border-left: 1px dashed $color-footer !important;
+}

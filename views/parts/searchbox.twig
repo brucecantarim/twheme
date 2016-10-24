@@ -1,0 +1,15 @@
+{# searchbox.twig #}
+
+
+{% block searchform %}
+<li>
+    <form method="get" id="searchform" action="{{site.url}}" class="navbar-form" role="search">
+        <div id="searchbar" class="form-group">
+            <input type="text" class="form-control" placeholder="{{__('Procurar...', 'twheme')|e }}" value="" name="s"/>
+            <button type="submit" id="searchsubmit" class="btn btn-success" value="Search">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </form>
+</li>
+{% endblock searchform %}

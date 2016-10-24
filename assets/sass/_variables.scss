@@ -1,0 +1,70 @@
+/*---------------------------------------------------/
+/                                                    /
+/    VARIABLES - Here you'll find the most useful    /
+/  variables to apply this styling to a new client.  /
+/                                                    /
+/---------------------------------------------------*/
+
+
+// --------------------------------------------------
+//                    Typography
+// --------------------------------------------------
+
+// Here I'm defining the main fonts in use
+
+$font-title: 'Open Sans Condensed', sans-serif !default;
+$font-subtitle: 'Arial', sans-serif !default;
+$font-copy: 'Arial', sans-serif !default;
+
+
+// --------------------------------------------------
+//                      Colors
+// --------------------------------------------------
+
+// And here, the main colors used at the website
+
+$color-main: #ffc425;
+$color-black: black;
+$color-grey: #f2f2f2;
+$color-white: white;
+$color-title: white;
+$color-subtitle: white;
+$color-copy: black;
+$color-link: white;
+$color-hover: #ffc425;
+$color-active: #ffc425;
+$color-visited: #ffc425;
+$color-background: white;
+$color-box: #ffc425;
+$color-footer: #5F6062;
+
+
+
+// --------------------------------------------------
+//                   Media Queries
+// --------------------------------------------------
+
+//Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+$screen-xs-min:                		   480px !default;
+
+// Small screen / tablet
+$screen-sm-min:                		   768px !default;
+
+// Medium screen / desktop
+$screen-md-min:                		   992px !default;
+
+// Large screen / wide desktop
+$screen-lg-min:                		   1200px !default;
+
+// Large screen / wider desktop
+$screen-lg-med:                        1260px !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:          ($screen-sm-min - 1) !default;
+$screen-sm-max:          ($screen-md-min - 1) !default;
+$screen-md-max:          ($screen-lg-min - 1) !default;
+
+// Browser context size, controls the helper function that resizes content (May be resized by media queries)
+$browser-context:                                   16;

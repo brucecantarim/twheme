@@ -1,0 +1,54 @@
+{# hero.twig #}
+
+{% block hero %}
+    <div id="hero">
+        {% if slides %}
+            {% block slideshow %}
+                {% include 'slideshow.twig' %}
+            {% endblock slideshow %}
+        {% endif %}
+	    </div>
+        <div id="slogan">
+        <div class="container-fluid">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+                <span id="sloganline1" class="wow fadeInLeftBig">CONFIANÇA</span></div>
+        </div>
+        <div class="container-fluid">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+                <span id="sloganline2" class="wow fadeInLeftBig" data-wow-delay="0.3s">CONQUISTADA</span></div>
+        </div>
+        <div class="container-fluid">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+                <span id="sloganline3" class="wow fadeInLeftBig" data-wow-delay="0.6s">COM PRODUTOS</span></div>
+        </div>
+        <div class="container-fluid">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+                <span id="sloganline4" class="wow fadeInLeftBig"  data-wow-delay="0.9s">DURÁVEIS</span></div>
+        </div>
+        </div><!-- /#slogan -->
+        <div class="container-fluid" id="bottomfoldbar">
+            <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center wow fadeIn">
+            <img src="assets/img/pilana_logo_branca-80.png" alt="Pilana" class="img-sm"/>
+            <img src="assets/img/pilana_logo_branca-400.png" alt="Pilana" class="img-md"/>
+            <img src="assets/img/pilana_logo_branca-400.png" alt="Pilana" class="img-lg"/>
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3 text-center wow fadeIn">
+            <img src="assets/img/wagner_logo_branca-53.png" alt="Wagner" class="img-sm"/>
+            <img src="assets/img/wagner_logo_branca-256.png" alt="Pilana" class="img-md"/>
+            <img src="assets/img/wagner_logo_branca-256.png" alt="Pilana" class="img-lg"/>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-center wow fadeIn">
+            <img src="assets/img/oregon_logo_branca-68.png" alt="Oregon" class="img-sm"/>
+            <img src="assets/img/oregon_logo_branca.svg" alt="Pilana" class="img-md"/>
+            <img src="assets/img/oregon_logo_branca.svg" alt="Pilana" class="img-lg"/>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 text-center wow fadeIn">
+                <button type="button" class="btn btn-primary wow bounceIn" id="catalogbutton" data-wow-delay="2s">
+                    <span class="text-center">CONFIRA O CATÁLOGO</span>
+                </button>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </div><!-- /#hero -->
+{% endblock hero %}

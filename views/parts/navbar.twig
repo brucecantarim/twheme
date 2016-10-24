@@ -1,0 +1,283 @@
+{# navbar.twig #}
+      
+{% block navbar %}
+
+        <!-- NAVIGATION BAR --> 
+       
+        <nav id="bootstrap-overrides" class="navbar blur">
+           
+            <div id="brand">
+                <a href="{{ site.url }}/index.php"><img class="img-responsive" src="assets/img/logo.png" alt="{% if wp_title %}{{ wp_title }} - {{ site.name }}{% else %}{{ site.name }}{% endif %}"></a>
+            </div><!-- /#brand -->
+            
+            <div id="brand-sig">
+                <p><small>Equipped to</small><br/>
+                <strong>Do More.<small>™</small></strong></p>
+            </div>   
+            
+            <div class="mainmenu">
+                <ul class='menulist text-center'>
+                    <li class='menuitem' data-target=""><a href="#">Home</a></li>
+                    <li class='menuitem' data-target="#meioambiente"><a href="#">Manejo de Árvores</a></li>
+                    <li class='menuitem' data-target="#infraestrutura"><a href="#">Infraestrutura</a></li>
+                    <li class='menuitem' data-target="#energiasolar"><a href="#">Solar</a></li>
+                    <li class='menuitem' data-target="#valeteamento"><a href="#">Valeteamento</a></li>
+                    <li class='menuitem' data-target="#agricultura"><a href="#">Agricultura</a></li>
+                    <li class='menuitem' data-target="#biomassa"><a href="biomassa.html">Biomassa</a></li>
+                    <li class='menuitem' data-target="#mineracao"><a href="#">Mineração</a></li>
+                    <li class='menuitem' data-target="#compostagem"><a href="#">Compostagem</a></li>
+                    <li class='menuitem' data-target="#suporte"><a href="#">Suporte ao Produto</a></li>
+                </ul><!-- /.menulist -->
+            </div><!-- /.menu -->
+            
+            <div class="contact">
+                
+                <i class="fa fa-phone"></i>
+                <a href="phone:(19) 3517-9400">(19) 3517-9400</a>
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:brasil@vermeer.com">brasil@vermeer.com</a>
+                
+            </div>
+            
+            <div class="search">
+            
+                <input type="text" placeholder="Procurar..."></input>
+                <span type="submit"><i class="fa fa-search"></i></span>
+            
+            </div>
+            
+        </nav>
+        
+        <div id="meioambiente" class="submenu blur">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>DESTOCADORES</b></h4></li>
+                            <li class='submenuitem'>SC292</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-4">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>PICADORES DE GALHOS</b></h4></li>
+                            <li class='submenuitem'>BC700XL</li>
+                            <li class='submenuitem'>BC900XL</li>
+                            <li class='submenuitem'>BC1000XL49</li>
+                            <li class='submenuitem'>BC1000XL74</li>
+                            <li class='submenuitem'>BC1200XL</li>
+                            <li class='submenuitem'>BC1500XL</li>
+                            <li class='submenuitem'>BC1800XL</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-4">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>UTILITY</b></h4></li>
+                            <li class='submenuitem'>S450TX</li>
+                            <li class='submenuitem'>S725TX</li>
+                            <li class='submenuitem'>S800TX</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /#meioambiente -->
+        
+        <div id="infraestrutura" class="submenu blur">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>SISTEMA</b></h4></li>
+                            <li class='submenuitem'>AXIS</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-3">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>NAVIGATOR</b></h4></li>
+                            <li class='submenuitem'>D10X15S3</li>
+                            <li class='submenuitem'>D20X22S3</li>
+                            <li class='submenuitem'>D23X30S3</li>
+                            <li class='submenuitem'>D24X40S3</li>
+                            <li class='submenuitem'>D24X40II</li>
+                            <li class='submenuitem'>D24X40VTM</li>
+                            <li class='submenuitem'>D36X50DRII</li>
+                            <li class='submenuitem'>D60X90VTM</li>
+                            <li class='submenuitem'>D130X150</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-3">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>TANQUE DE MISTURA</b></h4></li>
+                            <li class='submenuitem'>MX125</li>
+                            <li class='submenuitem'>MX240</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-3">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>UTILITY</b></h4></li>
+                            <li class='submenuitem'>S450TX</li>
+                            <li class='submenuitem'>S725TX</li>
+                            <li class='submenuitem'>S800TX</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /#infraestrutura -->
+            
+        <div id="energiasolar" class="submenu blur">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>INSTALADOR DE ESTACAS</b></h4></li>
+                            <li class='submenuitem'>PD10</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /#energiasolar -->
+        
+        <div id="valeteamento" class="submenu blur">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>VALETADEIRA</b></h4></li>
+                            <li class='submenuitem'>RTX250</li>
+                            <li class='submenuitem'>RTX450</li>
+                            <li class='submenuitem'>RTX550</li>
+                            <li class='submenuitem'>RTX1250</li>
+                            <li class='submenuitem'>XTS1250</li>
+                            <li class='submenuitem'>T755II</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /#valeteamento -->
+        
+        <div id="agricultura" class="submenu blur">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>ENFARDADORA</b></h4></li>
+                            <li class='submenuitem'>404PR</li>
+                            <li class='submenuitem'>504PR</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-1">
+                        <ul class='submenulist row text-center'>
+                            <li class='submenuitem'><h4><b>SEGADORA</b></h4></li>
+                            <li class='submenuitem'>M6040</li>
+                            <li class='submenuitem'>M7040</li>
+                            <li class='submenuitem'>M8040</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-2">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>SEGADORA CONDICIONADORA</b></h4></li>
+                            <li class='submenuitem'>MC3300</li>
+                            <li class='submenuitem'>MC3700</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-2">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>PLASTIFICADOR</b></h4></li>
+                            <li class='submenuitem'>SW5000</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-1">
+                        <ul class='submenulist row text-center'>
+                            <li class='submenuitem'><h4><b>ESPALHADOR</b></h4></li>
+                            <li class='submenuitem'>TE170</li>
+                            <li class='submenuitem'>TE250</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-2">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>ESPALHADOR E ENLOIRADOS</b></h4></li>
+                            <li class='submenuitem'>TR90</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-2">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>ENLEIRADOR</b></h4></li>
+                            <li class='submenuitem'>VR1428</li>
+                            <li class='submenuitem'>VR820</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /#agricultura -->
+           
+        <div id="biomassa" class="submenu blur">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>TRITURADOR HORIZONTAL</b></h4></li>
+                            <li class='submenuitem'>HG4000E</li>
+                            <li class='submenuitem'>HG4000TX</li>
+                            <li class='submenuitem'>HG6000E G2</li>
+                            <li class='submenuitem'>HG6000TX</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-3">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>TRITURADOR VERTICAL</b></h4></li>
+                            <li class='submenuitem'><a href="produto.html">TG5000</a></li>
+                            <li class='submenuitem'>TG7000E</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-3">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>PICADOR HORIZONTAL</b></h4></li>
+                            <li class='submenuitem'>WC2300XL</li>
+                            <li class='submenuitem'>WC2500TX</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-3">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>MULCHER</b></h4></li>
+                            <li class='submenuitem'>FT300</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /#biomassa -->
+           
+        <div id="compostagem" class="submenu blur">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>COMPOSTADOR</b></h4></li>
+                            <li class='submenuitem'>CT612</li>
+                            <li class='submenuitem'>CT718</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                    <div class="col-md-6">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>PENEIRA ROTATIVA</b></h4></li>
+                            <li class='submenuitem'>TR521</li>
+                            <li class='submenuitem'>TR626</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /#biomassa -->
+            
+        <div id="mineracao" class="submenu blur">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class='submenulist text-center'>
+                            <li class='submenuitem'><h4><b>MINERADOR DE SUPERFÍCIE</b></h4></li>
+                            <li class='submenuitem'>TL1255IIITL CD</li>
+                            <li class='submenuitem'>TL1255IIITL DD</li>
+                            <li class='submenuitem'>TL1655IIITL</li>
+                        </ul><!-- /.submenulist -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /#mineracao -->
+{% endblock navbar %}

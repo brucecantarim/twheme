@@ -1,0 +1,21 @@
+/*---------------------------------------------------/
+/                                                    /
+/        MIDDLE BAR - Usefull for text display       /
+/            with invisible scrolling.               /
+/                                                    /
+/---------------------------------------------------*/
+
+// --------------------------------------------------
+// Those properties are inherited by .slider-gradient
+// --------------------------------------------------
+.middlebar {
+    width: 31%;
+    height: 84.30%;
+    position: absolute;
+    top: 15.70%;
+    right: 19%;
+    background-color: $color-grey;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 20px;
+}

@@ -1,0 +1,46 @@
+/*---------------------------------------------------------------
+
+    This is the btn-custom class file. Just a quick fix to
+    bootstrap behaviour.
+
+--------------------------------------------------------------*/
+
+.btn-custom {
+    background-color: $color-main;
+    color: $color-copy;
+    padding: 0 20px;
+        h5 {
+            text-align: center;
+        }
+}
+
+.btn-yellow, .btn-square {
+    background-color: $color-main;
+    color: $color-copy;
+    padding: 0 20px;
+}
+
+.btn-yellow h5 {
+    text-align: center;
+    color: $color-black;
+}
+
+.btn-square {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+}
+
+.btn-square p {
+    position: relative;
+    bottom: 9px;
+    right: 3px;
+    text-indent: 0;
+    color: $color-copy !important;
+}
+
+.plus-fix p {
+    text-indent: 0;
+}

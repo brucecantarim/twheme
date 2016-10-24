@@ -1,0 +1,57 @@
+{% extends 'base.twig' %}
+
+{% block hero %}
+    <div class="container" style="background-color:rgba(0,0,0,0);padding:0;margin:20px auto 0 auto;">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-md-12 col-lg-12">
+                {% for product in products %}
+                    {% if product.title == 'Produtos' %}
+                        <img src="{{ product.thumbnail.src }}" srcset="{{ product.thumbnail.src | retina(1) }} 1x, {{ product.thumbnail.src | retina(2) }}  2x, {{ product.thumbnail.src | retina(3) }}  3x, {{ product.thumbnail.src | retina(4) }}  4x" class="img-responsive">
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock hero %}
+
+{% block content %}
+
+{% for product in products %}
+
+	<div class="container">
+	    <div class="row">
+	{% if product.title == 'Produtos' %}
+            <div class="container-flex col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="greydotline wow fadeInUp"> </div><br/>
+               <div class="greydotline wow fadeInUp"> </div><br/>
+               <div class="greydotline wow fadeInUp"> </div>
+            </div>
+		    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h1 class="page-title wow fadeInUp">{{ product.title }}</h1>
+				<div class="page-content wow fadeInUp">
+				    {{ product.content }}
+                    <br/><hr/><br/>
+                </div>
+            </div><!-- /col -->
+    {% else %}
+
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
+				<h1 class="product-title">{{ product.title }}</h1>
+				<a href="{{ product.link }}">
+				{% if product.thumbnail %}
+				<img class="img-thumbnail" src="{{ product.thumbnail.src }}" srcset="{{ product.thumbnail.src | retina(1) }} 1x, {{ product.thumbnail.src | retina(2) }}  2x, {{ product.thumbnail.src | retina(3) }}  3x, {{ product.thumbnail.src | retina(4) }}  4x">
+                {% else %}
+                <img class="img-thumbnail" src="http://placehold.it/300?text=PRODUTO">
+                {% endif %}
+                </a>
+            </div><!--/. col -->
+{% endif %}
+    
+{% endfor %}
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <br/><br/><br/><br/>
+        </div>
+    </div><!-- /.row -->
+</div><!-- /.container -->
+
+{% endblock content %}

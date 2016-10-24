@@ -1,0 +1,64 @@
+{# more-content.twig #}
+
+{% block morecontent %}
+
+<div class="container-flex col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="greydotline wow fadeInUp"> </div><br/>
+    <div class="greydotline wow fadeInUp"> </div><br/>
+    <div class="greydotline wow fadeInUp"> </div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInUp">
+    <h2 class="more-title">{{__("Outros produtos:", "twheme")}}</h2>
+</div>
+                    
+    {% for product in products %}
+        {% if product.title == "Produtos" %}
+        
+        {% elseif product.title != post.title %}
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
+                <h3>{{ product.title }}</h3>
+                <a href="{{ product.link }}">
+                {% if product.thumbnail %}
+                    <img class="img-responsive" src="{{ product.thumbnail.src }}" srcset="{{ product.thumbnail.src | retina(1) }} 1x, {{ product.thumbnail.src | retina(2) }}  2x, {{ product.thumbnail.src | retina(3) }}  3x, {{ product.thumbnail.src | retina(4) }}  4x">
+                {% else %}
+                    <img class="img-responsive" src="http://placehold.it/300?text={{__('PRODUTO', 'twheme')}}">
+                {% endif %}
+                </a>
+            </div>
+        {% else %}
+                        
+        {% endif %}
+    {% endfor %}
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br/><br/></div>
+
+<div class="container-flex col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="greydotline wow fadeInUp"> </div><br/>
+    <div class="greydotline wow fadeInUp"> </div><br/>
+    <div class="greydotline wow fadeInUp"> </div>
+</div>
+                   
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <h2 class="more-title wow fadeInUp">{{__("Outros serviços:", "twheme")}}</h2>
+</div>    
+    
+    {% for service in services %}
+        {% if service.title == "Serviços" %}
+        
+        {% elseif service.title != post.title %}
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
+                <h3>{{ service.title }}</h3>
+                <a href="{{ service.link }}">
+                {% if service.thumbnail %}
+                    <img class="img-responsive" src="{{ service.thumbnail.src }}" srcset="{{ service.thumbnail.src | retina(1) }} 1x, {{ service.thumbnail.src | retina(2) }}  2x, {{ service.thumbnail.src | retina(3) }}  3x, {{ service.thumbnail.src | retina(4) }}  4x">
+                {% else %}
+                    <img class="img-responsive" src="http://placehold.it/300?text={{__('SERVIÇO', 'twheme')}}">
+                {% endif %}
+                </a>
+            </div>
+        {% else %}
+                        
+        {% endif %}
+    {% endfor %}
+{% endblock morecontent %}

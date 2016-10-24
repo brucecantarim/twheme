@@ -1,0 +1,21 @@
+/*---------------------------------------------------/
+/                                                    /
+/  BODY CONTENT - Here's the wrapper for the bellow  /
+/          the fold content and it's classes.        /
+/                                                    /
+/---------------------------------------------------*/
+
+// --------------------------------------------------
+//    BODY WRAPPER (Yeah, awesome gangsta nickname)
+// --------------------------------------------------
+.body-content {
+    background-color: $color-grey;
+    width: 100%;
+    min-height: 500px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+        p {
+            font-size: 9pt;
+            text-align: justify;    
+        }
+}

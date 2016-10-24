@@ -1,0 +1,5 @@
+{# gmaps.twig - shortcode: [ gmaps ] args: address, width, height. #}
+
+{% if address %}
+<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDMj6wzqhvXZTuvzRLbzLWZgTMLVhe0GNQ&q={{ address }}" width="{{ width }}" height="{{ height }}" frameborder="0" style="border:0" class="noscrolling"></iframe>
+{% endif %}

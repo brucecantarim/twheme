@@ -1,0 +1,40 @@
+/*---------------------------------------------------/
+/                                                    /
+/ FOOTER CONTENT - Here's the wrapper for the bellow /
+/          the fold footer and it's classes.         /
+/                                                    /
+/---------------------------------------------------*/
+
+// --------------------------------------------------
+//                  Footer Wrapper
+// --------------------------------------------------
+.footer-content {
+    background-color: $color-footer;
+    border-top: 10px solid $color-main;
+    min-height: 300px;
+    padding: 100px 10em;
+    color: white;
+    
+        h5 {
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            color: $color-white;
+        }
+    
+        a {
+            &, &:hover, &:active, &:visited {
+                color: $color-main;
+                text-decoration: none;
+                display: block;
+                margin: 20px 0;
+                font-weight: bold;
+            }
+        }
+        p {
+            color: $color-white;
+        }
+        span { 
+            font: { family: "open sans condensed", sans-serif; size: 0.9em; }
+            hr { border: 1px dashed $color-main !important; }
+        }
+}

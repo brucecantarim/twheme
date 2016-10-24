@@ -1,0 +1,28 @@
+/*---------------------------------------------------/
+/                                                    /
+/ LAYOUT STYLE SHEET - This file was generated with  /
+/      SASS. Bellow are the compilation imports.     /
+/           Please refer to the source code.         /
+/                                                    /
+/                Coder: Bruce Cantarim               /
+/               brucecantarim.github.com             /
+/                 bruce@cantarim.com                 /
+/                                                    /
+/---------------------------------------------------*/
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700';
+@import '_mixins.scss';
+@import '_variables.scss';
+@import 'base/_base.scss';
+@import 'components/_blur.scss';
+@import 'components/_navbar.scss';
+@import 'components/_middle-bar.scss';
+@import 'components/_post-slider.scss';
+@import 'components/_right-bar.scss';
+@import 'components/_btn-custom.scss';
+@import 'components/_accordion.scss';
+@import 'components/_icon-circle';
+@import 'sections/_body-content.scss';
+@import 'sections/_footer-content.scss';
+@import 'utils/_colors.scss';
+@import 'utils/_helpers.scss';

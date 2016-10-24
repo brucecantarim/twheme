@@ -1,0 +1,58 @@
+{# post-slider-2.twig #}
+
+{% block postslider2 %}
+
+<!-- POST SLIDER --> 
+
+<div class="slider">
+            <div class="slide active-slide post-img-1">
+            </div>
+
+            <div class="slide post-img-2">
+            </div>
+
+            <div class="slide post-img-3">
+            </div>
+                
+        </div>
+        
+        <div class="slider-control">
+           
+            <div class="post-title-bar blur">
+                <div class="slide-title active-slide">
+                    <h1>AGILIDADE E ROBUSTEZ</h1>
+                    <h4>BC1000XL é colocada a teste em um dia de campo especial</h4>
+                </div>
+                
+                <div class="slide-title">
+                    <h1>ALTA PERFOMANCE</h1>
+                    <h4>Confira os resultados da nova Navigator</h4>
+                </div>
+            
+                <div class="slide-title">
+                    <h1>DICAS DO ESPECIALISTA</h1>
+                    <h4>Saiba porque a RTX250 é tão procurada</h4>
+                </div>
+                
+                <div class="arrow-prev text-center">
+                    <i class="glyphicon glyphicon-chevron-left arrow-icon"></i>
+                </div>
+
+                <div class="arrow-next text-center">
+                    <i class="glyphicon glyphicon-chevron-right arrow-icon"></i>
+                </div>
+            </div>
+            
+            <div class="slider-nav">
+                <ul class="slider-dots">
+                    <li class="dot active-dot">&bull;</li>
+                    <li class="dot">&bull;</li>
+                    <li class="dot">&bull;</li>
+                </ul>
+            </div>
+        
+        </div>
+        
+        {% if post.type  %}
+        
+{% endblock postslider2 %}

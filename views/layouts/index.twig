@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{#{% block hero %}
+{% include 'hero.twig' %}
+{% endblock hero %}#}
+
+{#{% block navbar %} 
+{% include 'navbar.twig' %}
+{% endblock navbar %}#}
+
+{% block postslider2 %}
+{% include 'post-slider-2.twig' %}
+{% endblock postslider2 %}
+
+{% block rightbar %}
+{% include 'rightbar.twig' %}
+{% endblock rightbar %}
+
+{% block content %}
+	
+    {% block bodycontent %}
+    {% include 'body-content.twig' %}
+    {% endblock bodycontent %}
+    
+    {% block footercontent %}
+    {% include 'footer-content.twig' %}
+    {% endblock footercontent %}
+    
+{% endblock content %}

@@ -1,0 +1,31 @@
+/*---------------------------------------------------------------
+
+    This is the accordion class file. Don't forget to use it
+    along with jQuery UI!
+
+--------------------------------------------------------------*/
+
+
+.accordion-button {
+    background-color: $color-main;
+    color: $color-copy;
+    width: 100%;
+    border: 0;
+    padding: 10px 10px;
+    
+        h4, i {
+            display: inline-block;
+            margin: 0 5px;
+        }
+}
+
+.accordion-box {
+    background-color: $color-grey;
+    color: $color-copy;
+    padding: 15px;
+    height: 62%;
+}
+
+.chevron {
+    
+}

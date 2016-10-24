@@ -1,0 +1,768 @@
+/*---------------------------------------------------/
+/                                                    /
+/ LAYOUT STYLE SHEET - This file was generated with  /
+/      SASS. Bellow are the compilation imports.     /
+/           Please refer to the source code.         /
+/                                                    /
+/                Coder: Bruce Cantarim               /
+/               brucecantarim.github.com             /
+/                 bruce@cantarim.com                 /
+/                                                    /
+/---------------------------------------------------*/
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700";
+/*---------------------------------------------------/
+/                                                    /
+/    MIXINS - Here are the SASS mixins. I didn't     /
+/ messed to much with them, feel free to apply them. /
+/                                                    /
+/---------------------------------------------------*/
+/* eg: @include user-select(none); */
+/* eg: @include rotate(45deg); */
+/* eg: @include translate3d(0,0,0); */
+/* eg: @include border-radius(3px); */
+/* eg: @include visibility-backface(hidden); */
+/*---------------------------------------------------/
+/                                                    /
+/    VARIABLES - Here you'll find the most useful    /
+/  variables to apply this styling to a new client.  /
+/                                                    /
+/---------------------------------------------------*/
+/*---------------------------------------------------/
+/                                                    /
+/   BASE - Here's the definition for the main html   /
+/   elements. Notice the 100% above the fold trick.  /
+/                                                    /
+/---------------------------------------------------*/
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; }
+
+html, html a, body {
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: "Arial", sans-serif;
+  color: black; }
+
+p {
+  font-weight: 400;
+  font-family: "Arial", sans-serif;
+  color: black; }
+
+em,
+li,
+li a {
+  font-weight: 700;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: white; }
+
+a {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: white;
+  outline: 0; }
+  a:focus, a:hover, a:active {
+    outline: 0;
+    color: #ffc425;
+    text-decoration: none; }
+
+.link {
+  position: relative;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: "Arial", sans-serif;
+  text-transform: uppercase; }
+  .link:after {
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    width: 9px;
+    height: 2px;
+    background: white;
+    content: " "; }
+
+span {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Arial", sans-serif;
+  color: #f2f2f2; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: black;
+  text-transform: uppercase; }
+  h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
+    color: white; }
+    h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover, h5 > a:hover, h6 > a:hover {
+      color: #ffc425;
+      text-decoration: none; }
+    h1 > a:focus, h2 > a:focus, h3 > a:focus, h4 > a:focus, h5 > a:focus, h6 > a:focus {
+      text-decoration: none; }
+
+::selection {
+  color: white;
+  background: #ffc425;
+  text-shadow: none; }
+
+::-webkit-selection {
+  color: white;
+  background: #ffc425;
+  text-shadow: none; }
+
+::-moz-selection {
+  color: white;
+  background: #ffc425;
+  text-shadow: none; }
+
+:active,
+:focus {
+  outline: none; }
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  z-index: 2; }
+  footer a, footer a:hover, footer a:active, footer a:visited {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase; }
+
+.blur {
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  -o-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); }
+
+/*---------------------------------------------------/
+/                                                    /
+/   NAVIGATION BAR - If you need to mess with the    / 
+/      menu, here's the right place for this.        /
+/                                                    /
+/---------------------------------------------------*/
+#bootstrap-overrides .navbar, .mainmenu, .submenu {
+  margin-bottom: 0;
+  border: 0; }
+
+.navbar {
+  width: 100%;
+  font-family: "Open Sans Condensed", sans-serif;
+  top: 0;
+  min-height: 160px;
+  height: 15.70%;
+  margin: 0;
+  z-index: 100;
+  position: fixed; }
+
+#brand {
+  margin: 1em;
+  display: inline-block; }
+  #brand img {
+    max-width: 15em; }
+
+#brand-sig {
+  padding-left: 1em;
+  border-left: 1px solid white;
+  display: inline-block;
+  position: relative;
+  top: -2.5em; }
+  #brand-sig p {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+    line-height: 0.9em; }
+
+.contact {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  z-index: 101;
+  margin: 0;
+  color: white;
+  font-size: 1.3em; }
+  .contact a:hover, .contact a:active {
+    color: #ffc425;
+    text-decoration: none; }
+  .contact a, .contact a:visited {
+    color: white; }
+  .contact i {
+    color: #ffc425;
+    margin-left: 0.5em;
+    margin-right: 0.2em; }
+
+.search {
+  position: absolute;
+  top: 4.9em;
+  right: 2em;
+  z-index: 101;
+  display: inline-block;
+  margin: 0;
+  color: #f2f2f2;
+  font-size: 1.3em; }
+  .search input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #f2f2f2;
+    color: #f2f2f2; }
+  .search i {
+    color: white; }
+
+.mainmenu {
+  position: absolute;
+  top: 5em;
+  left: 1em;
+  width: 85%;
+  font-family: "Open Sans Condensed", sans-serif; }
+
+.menuitem {
+  display: inline-block;
+  margin: 1em;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: bold; }
+  .menuitem a, .menuitem a:visited {
+    color: white; }
+  .menuitem a:hover, .menuitem a:active {
+    color: #ffc425;
+    text-decoration: none; }
+
+.submenu {
+  position: fixed;
+  top: 15.25%;
+  width: 100%;
+  min-height: 30%;
+  display: none;
+  z-index: 99;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.submenuitem {
+  list-style-type: none;
+  color: white; }
+  .submenuitem h4 {
+    color: white; }
+  .submenuitem h4 small {
+    color: white;
+    font-weight: bold; }
+  .submenuitem a:hover, .submenuitem a:visited {
+    color: #ffc425;
+    text-decoration: none; }
+  .submenuitem a, .submenuitem a:visited {
+    color: white;
+    text-decoration: none; }
+
+.navbar, .submenu {
+  border-bottom: 10px solid #ffc425; }
+
+.menustrip {
+  background-color: #ffc425;
+  width: 100%;
+  height: 5px; }
+
+/*---------------------------------------------------/
+/                                                    /
+/        MIDDLE BAR - Usefull for text display       /
+/            with invisible scrolling.               /
+/                                                    /
+/---------------------------------------------------*/
+.middlebar, .slider-gradient {
+  width: 31%;
+  height: 84.30%;
+  position: absolute;
+  top: 15.70%;
+  right: 19%;
+  background-color: #f2f2f2;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 20px; }
+
+/*---------------------------------------------------/
+/                                                    /
+/   POST SLIDER - If you need to mess with the main  /
+/   page slider an it's controls, here's the place!  /
+/                                                    /
+/---------------------------------------------------*/
+.slider, .slide {
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans Condensed", sans-serif; }
+
+.slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1; }
+
+.slider-body {
+  position: relative;
+  top: 0;
+  left: 0; }
+
+.slider-control {
+  width: 81%;
+  height: 100%;
+  position: relative;
+  left: 0; }
+
+.slider-nav, .product-slider-nav {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 30%;
+  z-index: 1; }
+
+.product-slider-nav {
+  width: 50%;
+  position: absolute;
+  bottom: 30%;
+  z-index: 1;
+  left: 0; }
+
+.slider-gradient {
+  background-color: none;
+  background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  right: 0; }
+
+.arrow-next, .arrow-prev {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  background-color: black;
+  color: white; }
+  .arrow-next:hover, .arrow-prev:hover {
+    background-color: #ffc425;
+    color: black; }
+
+.arrow-prev {
+  left: 0; }
+
+.arrow-next {
+  right: 0; }
+
+.arrow-icon {
+  color: color-main;
+  margin: 33% auto; }
+
+.slider-dots {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0; }
+
+.slider-dots li {
+  display: inline;
+  font-size: 30px;
+  margin-right: 5px;
+  color: white; }
+
+.slider-dots li.active-dot {
+  color: #ffc425; }
+
+.product-slider, .product-slider-control {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  left: 0; }
+
+.product-slider-control {
+  position: absolute;
+  top: 12%; }
+
+.post-title-bar {
+  width: 100%;
+  height: 20%;
+  min-height: 230px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  top: 60%;
+  margin-top: -11%; }
+
+.slide-title {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  display: none; }
+  .slide-title h1 {
+    font-size: 100pt;
+    color: white; }
+  .slide-title h4 {
+    color: white;
+    font-family: "Arial", sans-serif;
+    font-size: 20pt;
+    font-weight: normal; }
+  .slide-title a, .slide-title a:hover, .slide-title a:active, .slide-title a:visited {
+    color: #ffc425;
+    font-family: "Arial", sans-serif;
+    text-transform: uppercase; }
+  .slide-title i {
+    color: #ffc425; }
+
+.slide-subtitle {
+  position: absolute;
+  right: 20px;
+  bottom: 10%; }
+
+.post-img-1 {
+  background-image: url(../img/BC1000XL.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none; }
+
+.post-img-2 {
+  background-image: url(../img/D36x50II_Action15.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none; }
+
+.post-img-3 {
+  background-image: url(../img/RTX250_Action3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none; }
+
+.product-img-1, .biomassa-img-1 {
+  background-image: url(../img/TG5000.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none; }
+
+.active-slide {
+  display: block; }
+
+/*---------------------------------------------------/
+/                                                    /
+/    RIGHT BAR - Here you can mess with the post     /
+/     previews, simulator menu, and other stuff.     /
+/                                                    /
+/---------------------------------------------------*/
+.rightbar, .panel-bonardi-bg {
+  width: 20%;
+  min-height: 85.30%;
+  height: 87.30%;
+  position: absolute;
+  top: 12.70%;
+  right: -16px;
+  color: white;
+  padding: 20px;
+  overflow-y: scroll;
+  overflow-x: show; }
+  .rightbar h1, .rightbar h2, .rightbar h3, .rightbar h4, .rightbar h5, .rightbar h6, .rightbar p, .rightbar span, .panel-bonardi-bg h1, .panel-bonardi-bg h2, .panel-bonardi-bg h3, .panel-bonardi-bg h4, .panel-bonardi-bg h5, .panel-bonardi-bg h6, .panel-bonardi-bg p, .panel-bonardi-bg span {
+    color: white; }
+
+.panel-bonardi {
+  width: 100%;
+  background-color: #ffc425;
+  margin-bottom: 120px; }
+
+.panel-bonardi-bg {
+  height: 35%;
+  color: white;
+  background-color: #ffc425;
+  margin: 0;
+  padding: 0;
+  box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2); }
+
+.panel-bonardi-header {
+  background-color: #ffc425;
+  color: white;
+  padding: 10px; }
+
+.panel-bonardi-content {
+  background-color: #f2f2f2;
+  color: black;
+  padding: 10px; }
+
+.item-selected {
+  width: 40%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 10px;
+  box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2); }
+
+.panel-icon-box, .panel-icon-box:visited {
+  background-color: #f2f2f2;
+  height: 80px;
+  width: 80px;
+  overflow-x: hidden;
+  margin: 20px auto;
+  box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease-in-out; }
+
+.panel-icon-box:hover, .painel-icon-box:active {
+  background-color: #ffc425;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+.panel-icon {
+  width: 70%;
+  margin: 15%; }
+
+.panel-icon:hover {
+  position: absolute;
+  transform: translateY(-4em); }
+
+.panel-col-left {
+  margin: 10px 5px 10px 0; }
+
+.panel-col-middle {
+  margin: 10px 0 10px 0; }
+
+.panel-col-right {
+  margin: 10px 0 10px 0px; }
+
+.panel-control {
+  width: 20%;
+  height: 10%;
+  position: fixed;
+  bottom: 0;
+  right: -16px;
+  overflow-y: visible; }
+
+.panel-control i {
+  color: #ffc425;
+  font-size: 70px;
+  position: relative;
+  top: -35px; }
+
+/*---------------------------------------------------------------
+
+    This is the btn-custom class file. Just a quick fix to
+    bootstrap behaviour.
+
+--------------------------------------------------------------*/
+.btn-custom {
+  background-color: #ffc425;
+  color: black;
+  padding: 0 20px; }
+  .btn-custom h5 {
+    text-align: center; }
+
+.btn-yellow, .btn-square {
+  background-color: #ffc425;
+  color: black;
+  padding: 0 20px; }
+
+.btn-yellow h5 {
+  text-align: center;
+  color: black; }
+
+.btn-square {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px; }
+
+.btn-square p {
+  position: relative;
+  bottom: 9px;
+  right: 3px;
+  text-indent: 0;
+  color: black !important; }
+
+.plus-fix p {
+  text-indent: 0; }
+
+/*---------------------------------------------------------------
+
+    This is the accordion class file. Don't forget to use it
+    along with jQuery UI!
+
+--------------------------------------------------------------*/
+.accordion-button {
+  background-color: #ffc425;
+  color: black;
+  width: 100%;
+  border: 0;
+  padding: 10px 10px; }
+  .accordion-button h4, .accordion-button i {
+    display: inline-block;
+    margin: 0 5px; }
+
+.accordion-box {
+  background-color: #f2f2f2;
+  color: black;
+  padding: 15px;
+  height: 62%; }
+
+.body-circle, .footer-circle {
+  border-radius: 50%;
+  background-color: #ffc425;
+  color: black;
+  width: 7em;
+  height: 7em; }
+
+.footer-circle {
+  position: absolute;
+  bottom: -235px;
+  width: 3em;
+  height: 3em; }
+
+.footer-circle i {
+  padding-top: 1em; }
+
+/*---------------------------------------------------/
+/                                                    /
+/  BODY CONTENT - Here's the wrapper for the bellow  /
+/          the fold content and it's classes.        /
+/                                                    /
+/---------------------------------------------------*/
+.body-content {
+  background-color: #f2f2f2;
+  width: 100%;
+  min-height: 500px;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .body-content p {
+    font-size: 9pt;
+    text-align: justify; }
+
+/*---------------------------------------------------/
+/                                                    /
+/ FOOTER CONTENT - Here's the wrapper for the bellow /
+/          the fold footer and it's classes.         /
+/                                                    /
+/---------------------------------------------------*/
+.footer-content {
+  background-color: #5F6062;
+  border-top: 10px solid #ffc425;
+  min-height: 300px;
+  padding: 100px 10em;
+  color: white; }
+  .footer-content h5 {
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: white; }
+  .footer-content a, .footer-content a:hover, .footer-content a:active, .footer-content a:visited {
+    color: #ffc425;
+    text-decoration: none;
+    display: block;
+    margin: 20px 0;
+    font-weight: bold; }
+  .footer-content p {
+    color: white; }
+  .footer-content span {
+    font-family: "open sans condensed", sans-serif;
+    font-size: 0.9em; }
+    .footer-content span hr {
+      border: 1px dashed #ffc425 !important; }
+
+.color-main {
+  color: #ffc425 !important; }
+
+.color-black {
+  color: black !important; }
+
+.color-grey {
+  color: #f2f2f2 !important; }
+
+.color-white {
+  color: white !important; }
+
+.color-title {
+  color: white !important; }
+
+.color-subtitle {
+  color: white !important; }
+
+.color-copy {
+  color: black !important; }
+
+.color-link {
+  color: white !important; }
+
+.color-hover {
+  color: #ffc425 !important; }
+
+.color-active {
+  color: #ffc425 !important; }
+
+.color-visited {
+  color: #ffc425 !important; }
+
+.color-background {
+  color: white !important; }
+
+.color-box {
+  color: #ffc425 !important; }
+
+.bg-color-main {
+  background-color: #ffc425 !important; }
+
+.bg-color-black {
+  background-color: black !important; }
+
+.bg-color-grey {
+  background-color: #f2f2f2 !important; }
+
+.bg-color-white {
+  background-color: white !important; }
+
+.bg-color-title {
+  background-color: white !important; }
+
+.bg-color-subtitle {
+  background-color: white !important; }
+
+.bg-olor-copy {
+  background-color: black !important; }
+
+.bg-color-link {
+  background-color: white !important; }
+
+.bg-color-hover {
+  background-color: #ffc425 !important; }
+
+.bg-color-active {
+  background-color: #ffc425 !important; }
+
+.bg-color-visited {
+  background-color: #ffc425 !important; }
+
+.bg-color-background {
+  background-color: white !important; }
+
+.bg-color-box {
+  background-color: #ffc425 !important; }
+
+/*---------------------------------------------------/
+/                                                    /
+/     HELPERS - Here are the SASS functions and      / 
+/    css classes to convert data and apply fixes.    /
+/                                                    /
+/---------------------------------------------------*/
+.col-left, .col-middle, .col-right, .col-none {
+  padding: 2em !important; }
+
+.col-left {
+  border-right: 1px dashed #5F6062 !important; }
+
+.col-middle {
+  border-left: 1px dashed #5F6062 !important;
+  border-right: 1px dashed #5F6062 !important; }
+
+.col-right {
+  border-left: 1px dashed #5F6062 !important; }

@@ -1,0 +1,18 @@
+.body-circle, .footer-circle {
+    border-radius: 50%;
+    background-color: $color-main;
+    color: $color-copy;
+    width: 7em;
+    height: 7em;
+}
+
+.footer-circle {
+    position: absolute;
+    bottom: -235px;
+    width: 3em;
+    height: 3em;
+}
+
+.footer-circle i {
+    padding-top: 1em;
+}

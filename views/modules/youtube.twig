@@ -1,0 +1,10 @@
+{# youtube.twig - shortcode: [youtube] args: id, format, autoplay, nofullscreen #}
+
+{% block youtube %}
+
+<div class="embed-responsive embed-responsive-{% if format == 'wide' %}16by9{% elseif format == 'standart' %}4by3{% else %}16by9{% endif %}">
+    <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/{{ id }}{% if autoplay %}?cc_load_policy=1&controls=0&disablekb=1&&iv_load_policy=3&loop=1&modestbranding=1&rel=0&showinfo=0{% endif %}" {% if nofullscreen %}{% else %}allowfullscreen="allowfullscreen"{% endif %}></iframe>
+</div>
+
+
+{% endblock %}

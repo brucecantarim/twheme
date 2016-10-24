@@ -1,0 +1,30 @@
+{# post-slider.twig #}
+
+
+{% block postslider %}
+
+<div id="post-slider" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">   
+    <p>{{ dump() }}</p>
+    <p>{{ dump(fonts)}}</p>
+{# Running the loop for the postslider #}
+{% for postslide in postslider %}
+    {# Defining #}
+   {% if postslide.active %}
+        <div class="item active" style="background: url({{ postslide.thumbnail.src }}); background-size: cover;">
+    {% else %}
+        <div class="item" style="background: url({{ postslide.thumbnail.src }}); background-size: cover;">
+    {% endif %}
+            <div id="post-title">
+                
+                <h1>{{ postslide.title }}</h1>
+                <h6>{{ postslide.subtitle }}</h6>
+                <a class="postlink" href="{{ postslide.link }}"><strong>{{ __('SAIBA MAIS', 'twheme') }}</strong></a>
+
+            </div><!-- /#post-title -->
+        </div><!-- /.item -->
+{% endfor %}
+    </div><!-- /.caurousel-inner -->
+</div><!-- /#post-slider -->
+
+{% endblock postslider %}

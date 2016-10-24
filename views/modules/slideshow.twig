@@ -1,0 +1,16 @@
+{# slideshow.twig #}
+
+{% block slideshow %}
+        <div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+		    {% for slide in slides %}
+                {% if slide.active %}
+                <div class="item active">
+                {% else %}
+                <div class="item">
+                {% endif %}
+		            <img class="img-responsive" src="{{ slide.thumbnail.src }}" srcset="{{ slide.thumbnail.src | retina(1) }} 1x, {{ slide.thumbnail.src | retina(2) }}  2x, {{ slide.thumbnail.src | retina(3) }}  3x, {{ slide.thumbnail.src | retina(4) }} 4x">
+		        </div>
+		    {% endfor %}
+           </div>
+{% endblock slideshow %}

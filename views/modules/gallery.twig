@@ -1,0 +1,12 @@
+{# gallery.twig #}
+
+{% block gallery %}
+{% for id in gallery %}
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 wow slideIn">
+            <div class="lightbox" title="{{ post.title }}">
+                <img class="img-responsive thumbnail" src="{{ Image(id).src|resize(300) }}" alt="{{ post.title }}">
+            </div>   
+        </div>
+{% endfor %}
+</div>
+{% endblock %}

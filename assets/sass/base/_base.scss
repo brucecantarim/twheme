@@ -1,0 +1,128 @@
+/*---------------------------------------------------/
+/                                                    /
+/   BASE - Here's the definition for the main html   /
+/   elements. Notice the 100% above the fold trick.  /
+/                                                    /
+/---------------------------------------------------*/
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+html, html a, body {
+    -webkit-font-smoothing: antialiased;
+}
+
+// --------------------------------------------------
+//   Body - Here's the trick. 100% width and height
+// --------------------------------------------------
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: $font-copy;
+    color: $color-copy;
+}
+
+p {
+    @include font($weight: 400, $family: $font-copy);
+    color: $color-copy;
+}
+
+em,
+li,
+li a {
+    @include font($weight: 700, $family: $font-title);
+    color: $color-link;
+}
+
+a {
+    @include font($family: $font-title);
+    color: $color-link;
+    outline: 0;
+
+    &:focus,
+    &:hover,
+    &:active {
+        outline: 0;
+        color: $color-hover;
+        text-decoration: none;
+    }
+}
+
+.link {
+    position: relative;
+    @include font($size: 13px, $weight: 700, $family: $font-copy);
+    text-transform: uppercase;
+
+    &:after {
+        @include position(absolute, $top: 8px, $right: -15px);
+        @include size(9px, 2px);
+        background: $color-background;
+        content: " ";
+    }
+}
+
+span {
+    @include font($size: 14px, $weight: 400, $family: $font-copy);
+    color: $color-grey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @include font($weight: 700, $family: $font-title);
+    color: $color-copy;
+    text-transform: uppercase;
+
+    > a {
+        color: $color-link;
+
+        &:hover {
+            color: $color-hover;
+            text-decoration: none;
+        }
+
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
+::selection {
+    color: $color-white;
+    background: $color-box;
+    text-shadow: none;
+}
+::-webkit-selection {
+    color: $color-white;
+    background: $color-box;
+    text-shadow: none;
+}
+::-moz-selection {
+    color: $color-white;
+    background: $color-box;
+    text-shadow: none;
+}
+
+:active,
+:focus {
+    outline: none;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    z-index: 2;
+        a {
+            &, &:hover, &:active, &:visited { 
+                font: { family: $font-title; weight: bold; }
+                color: $color-white;
+                text-transform: uppercase;
+            }
+        }
+}

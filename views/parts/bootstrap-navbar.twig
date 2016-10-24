@@ -1,0 +1,30 @@
+{# navbar.twig #}
+
+{% block navbar %}
+<!-- NAVIGATION BAR -->
+    <nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed animated fadeIn" data-toggle="collapse" data-target="#topmenu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="brand-custom" href="{{ site.url }}/index.php" class="navbar-left">
+                    <img id="brand-image" src="assets/img/logo.svg" type="/svg+xml" alt="{% if wp_title %}{{ wp_title }} - {{ site.name }}{% else %}{{ site.name }}{% endif %}">
+                    </img>
+                </a>
+            </div>
+            <div id="topmenu" class="collapse navbar-collapse navbar-right text-center animated fadeIn">
+                {% if menu %}
+	                {% include "menu.twig" with {'menu': menu.get_items} %}
+                {% endif %}
+                {% block searchform %}
+                    {% include 'searchbox.twig' %}
+                {% endblock searchform %}
+                </ul>
+            </div><!-- /.nav-collapse -->
+        </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+{% endblock navbar %}

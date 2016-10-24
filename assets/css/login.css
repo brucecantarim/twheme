@@ -1,0 +1,11 @@
+#login h1 a { 
+    background-color: white;
+	background-image: url("../../logo.png") !important;
+    background-size: contain;
+    width: 20rem;
+    height: 5rem;
+    border: 10px solid white;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: 0 1px 1px 1px gainsboro;
+	}
