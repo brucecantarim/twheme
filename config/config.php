@@ -20,6 +20,7 @@ $twheme_is_fullscreen = false;
 $twheme_navbar = 'default';
 $twheme_middlebar = true;
 $twheme_rightbar = true;
+$twheme_default_post = false;
 
 // Custom Google Fonts, currently not working
     

@@ -32,6 +32,7 @@ class Twheme extends TimberSite {
     
     // CUSTOM DEFAULT POST
     function change_default_post_type() {
+        if (!$twheme_default_post) {
         //this is where you can customize the default post type
         global $wp_post_types;
         $labels = &$wp_post_types['post']->labels;
@@ -50,7 +51,7 @@ class Twheme extends TimberSite {
         $labels->name_admin_bar = 'Home';
         $post = &$wp_post_types['post'];
         $post->menu_icon = 'dashicons-admin-home';
-        
+        }
     }
     
     // CUSTOM ADMIN LOGIN HEADER LOGO
@@ -61,7 +62,7 @@ class Twheme extends TimberSite {
 
     // CUSTOM ADMIN LOGIN LOGO LINK
     function change_wp_login_url() {
-        return get_site_uri();  // OR ECHO YOUR OWN URL
+        return get_site_url();  // OR ECHO YOUR OWN URL
     }
 
     // CUSTOM ADMIN LOGIN LOGO & ALT TEXT
