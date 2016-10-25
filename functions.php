@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 /***********************************
  *   Increasing Max Upload Size    *
  ***********************************/
@@ -7,6 +9,18 @@
 @ini_set( 'upload_max_size' , '64M' );
 @ini_set( 'post_max_size', '64M');
 @ini_set( 'max_execution_time', '300' );
+
+/***********************************
+ *    Removing the WP ADMIN BAR    *
+ ***********************************/
+
+add_filter('show_admin_bar', '__return_false'); // I HATE THIS FREAKING BAR
+
+/***********************************
+ *    Removing the WP META TAG     *
+ ***********************************/
+
+remove_action('wp_head', 'wp_generator');
 
 
 /***********************************
@@ -36,4 +50,5 @@ Timber::$dirname = array(
     'views/parts'
 );
 
-require_once('core/init.php');
+// Let's take a look at our configuration variables first
+require_once('config/config.php');

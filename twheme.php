@@ -6,4 +6,7 @@
  * of the php templates in this theme. But then again, if such a simple solution
  * is available, why not use it?
  */
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 Timber::render( 'searchform.twig' );

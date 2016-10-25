@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 $context = Timber::get_context();
 $post = Timber::query_post();
 $context['post'] = $post;

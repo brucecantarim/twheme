@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 // Loading configuration
 require(__DIR__ . "/../config/config.php");
 
@@ -7,11 +9,20 @@ require(__DIR__ . "/../config/config.php");
 $context['fonts'] = $twheme_fonts;
 $context['header'] = Timber::render('header.twig', $context);
 $context['menu'] = new TimberMenu();
-$context['navbar'] = Timber::render('navbar.twig', $context);
+$context['posts'] = Timber::get_posts();
 $context['site'] = $this;
 $context['footer'] = Timber::render('footer.twig', $context);
 
-$context['posts'] = Timber::get_posts();
+
+if ($twheme_navbar == 'default') {
+    $context['navbar'] = Timber::render('navbar.twig', $context);
+} else if($twheme_navbar == 'bootstrap') {
+    $context['navbar'] = Timber::render('bootstrap-navbar.twig', $context);
+} else {
+    $context['navbar'] = Timber::render('bootstrap-navbar.twig', $context);
+}
+
+
 
 // This calls the home post type sections
 $homeargs = array(

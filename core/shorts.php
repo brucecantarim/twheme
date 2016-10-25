@@ -1,5 +1,7 @@
 <?php 
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 // [gmaps] shortcode: [gmaps] address width height
 
 function gmaps_shorttag($atts) {

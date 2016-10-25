@@ -1,5 +1,7 @@
 <?php 
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 $templates = array('archive.twig', 'single.twig');
 
 $data = Timber::get_context();

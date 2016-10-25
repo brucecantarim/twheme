@@ -1,9 +1,10 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 // namespace Twheme; // To be implemented in future versions
 
 // Loading configuration
-require(__DIR__ . "/../config/config.php");
 require_once('shorts.php');
 
 //require_once 'routes.php'; - Currently not working, deprecated in lastest Timber version

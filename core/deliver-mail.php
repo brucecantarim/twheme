@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 // if the submit button is clicked, send the email
 if ( isset( $_POST['message_send'] ) ) {
 

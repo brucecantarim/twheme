@@ -1,5 +1,7 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 // Loading configuration
 require(__DIR__ . "/../config/config.php");
 

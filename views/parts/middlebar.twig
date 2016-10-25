@@ -1,0 +1,23 @@
+{# middlebar.twig #}
+
+{% block middlebar %}
+
+<div class="middlebar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 text-center">
+                       <br/>
+                        <h3 class="text-right">{{ post.path }}</h3>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <h3>{{ post.title }}</strong></h3><br/>
+                        <p>{{ post.content }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock middlebar %}

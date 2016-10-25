@@ -4,7 +4,35 @@
 
 <!-- POST SLIDER --> 
 
-<div class="slider">
+        {% if post.type == 'Produtos' %}
+        
+        <div class="product-slider">
+            <div class="slide active-slide product-img-1" data-toggle="off">
+            </div>
+        </div>
+        
+        <div class="product-slider-control">
+           
+                <div class="arrow-prev text-center">
+                    <i class="glyphicon glyphicon-chevron-left arrow-icon"></i>
+                </div>
+
+                <div class="arrow-next text-center">
+                    <i class="glyphicon glyphicon-chevron-right arrow-icon"></i>
+                </div>
+            </div>
+            
+            <div class="product-slider-nav">
+                <ul class="slider-dots">
+                    <li class="dot active-dot">&bull;</li>
+                    <li class="dot">&bull;</li>
+                    <li class="dot">&bull;</li>
+                </ul>
+            </div>
+        
+        {% else %}
+        
+        <div class="slider">
             <div class="slide active-slide post-img-1">
             </div>
 
@@ -53,6 +81,7 @@
         
         </div>
         
-        {% if post.type  %}
+        
+        {% endif %}
         
 {% endblock postslider2 %}
