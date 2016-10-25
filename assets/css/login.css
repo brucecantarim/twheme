@@ -1,6 +1,6 @@
 #login h1 a { 
     background-color: white;
-	background-image: url("../../logo.png") !important;
+	background-image: url("../img/logo_black.png") !important;
     background-size: contain;
     width: 20rem;
     height: 5rem;

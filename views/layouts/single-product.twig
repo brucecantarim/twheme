@@ -1,0 +1,23 @@
+{# single-product.twig #}
+
+{% extends "base.twig" %}
+
+{# Just in case I need a double check here #}
+{#% if post.post_type == 'produto' %#}
+
+{# This twig will be called when we are visualizing a single post page #}
+{% block middlebar %}
+    {% include 'middlebar.twig' %}
+{% endblock middlebar %}
+
+{% block rightbar %}
+    {% include 'product-rightbar.twig' %}
+{% endblock rightbar %}
+
+{% block content %}
+        
+    
+
+{% endblock content %}
+
+{#% endif %#}
