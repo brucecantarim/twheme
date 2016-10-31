@@ -7,7 +7,7 @@ $templates = array('archive.twig', 'single.twig');
 $data = Timber::get_context();
 $datatype = null;
 
-$data['title'] = printf(__('%s', 'twheme'), $datatype);
+$data['title'] = printf(__('%s', 'twheme'), $datatype); //
 
 if (is_day()){
     $datatype = "Arquivo :";
@@ -43,21 +43,6 @@ if (is_day()){
         array_unshift($templates, 'archive-'.get_post_type().'.twig');
     }
 
-$produtos = array(
-    'post_type' => 'produtos',
-    'post_status' => 'publish',
-    'orderby'=> 'menu_order',
-    'order' => 'asc'
-);
-$servicos = array(
-    'post_type' => 'servicos',
-    'post_status' => 'publish',
-    'orderby'=> 'menu_order',
-    'order' => 'asc'
-);
-
 $data['posts'] = Timber::get_posts();
-$data['products'] = Timber::get_posts($produtos);
-$data['services'] = Timber::get_posts($servicos);
 
 Timber::render($templates, $data);

@@ -28,20 +28,4 @@ $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
 
-$produtos = array(
-    'post_type' => 'produtos',
-    'post_status' => 'publish',
-    'orderby'=> 'menu_order',
-    'order' => 'asc'
-);
-$servicos = array(
-    'post_type' => 'servicos',
-    'post_status' => 'publish',
-    'orderby'=> 'menu_order',
-    'order' => 'asc'
-);
-
-$context['products'] = Timber::get_posts($produtos);
-$context['services'] = Timber::get_posts($servicos);
-
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );

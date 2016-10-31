@@ -1,0 +1,15 @@
+{# mainmenu.twig #}
+
+{% for item in menu %}
+    {{ item|print_r }}
+    {% if item.current %}
+        <li class='{{menuitemclass}} active' {% if notarget %}{% else %}data-target="#menu-item-{{item.ID}}"{% endif %}>
+            <a href="{{item.get_link}}">{{item.title}}</a>
+        </li>
+    {% else %}
+        <li class='{{menuitemclass}}' {% if notarget %}{% else %}data-target="#menu-item-{{item.ID}}"{% endif %}>
+            <a href="{{item.get_link}}">{{item.title}}</a>
+        </li>
+    {% endif %}
+{% endfor %}
+
