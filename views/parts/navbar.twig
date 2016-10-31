@@ -40,9 +40,9 @@
             </div>
             
             <div class="search">
-            
-                <input type="text" placeholder="Procurar..."></input>
-                <span type="submit"><i class="fa fa-search"></i></span>
+                <form method="get" action="{{site.url}}" role="search">
+                    <input type="text" placeholder="{{__('Procurar...', 'twheme')|e }}" value="" name="s"/>
+                    <span type="submit" value="Search"><i class="fa fa-search"></i></span>
             
             </div>
             

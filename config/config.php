@@ -6,8 +6,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 *
 *   This is the configuration file for the theme.
 *   Here, you can define variables to customize the functionality.
-*   It's still being implemented.
+*   It's still being implemented, currently functional and in the scope.
 *   In future versions, this will be hooked to the admin dashboard.
+*
 */
 
 /*  

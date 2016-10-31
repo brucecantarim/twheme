@@ -10,23 +10,23 @@ $datatype = null;
 $data['title'] = printf(__('%s', 'twheme'), $datatype);
 
 if (is_day()){
-    $datatype = "Arquivo :";
+    $datatype = __('Arquivo :', 'twheme');
     $data['title'] = $data['title'].get_the_date( 'D M Y' );
     
 } else if (is_month()){
-    $datatype = "Arquivo :";
+    $datatype = __('Arquivo :', 'twheme');
     $data['title'] = $data['title'].get_the_date( 'M Y' );
 
 } else if (is_year()){
-    $datatype = "Arquivo :";
+    $datatype = __('Arquivo :', 'twheme');
     $data['title'] = $data['title'].get_the_date( 'Y' );
 
 } else if (is_tag()){
-    $datatype = "Tag :";
+    $datatype = __('Tag :', 'twheme');
     $data['title'] = $data['title'].single_tag_title('', false);
 
 } else if (is_category()){
-    $datatype = "Categoria :";
+    $datatype = __('Categoria :', 'twheme');
     $data['title'] = $data['title'].single_cat_title('', false);
     array_unshift($templates, 'archive-'.get_query_var('cat').'.twig');
 
@@ -34,7 +34,7 @@ if (is_day()){
     // TODO: Not great to have these hardcoded
     $term = get_queried_object();
     if(get_taxonomy('source_type')) {
-        $datatype = "Recurso :";
+        $datatype = __('Recurso :', 'twheme');
         $data['title'] = $data['title'].$term->name;
     }
     // array_unshift($templates, 'taxonomy.twig', 'taxonomy-'.get_query_var('cat').'.twig');
@@ -43,21 +43,6 @@ if (is_day()){
         array_unshift($templates, 'archive-'.get_post_type().'.twig');
     }
 
-$produtos = array(
-    'post_type' => 'produtos',
-    'post_status' => 'publish',
-    'orderby'=> 'menu_order',
-    'order' => 'asc'
-);
-$servicos = array(
-    'post_type' => 'servicos',
-    'post_status' => 'publish',
-    'orderby'=> 'menu_order',
-    'order' => 'asc'
-);
-
 $data['posts'] = Timber::get_posts();
-$data['products'] = Timber::get_posts($produtos);
-$data['services'] = Timber::get_posts($servicos);
 
 Timber::render($templates, $data);

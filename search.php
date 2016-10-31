@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 $templates = array( 'search.twig', 'archive.twig', 'index.twig' );
 $context = Timber::get_context();
-$context['text'] = 'Resultados para a procura: ';
+$context['text'] = __('Resultados para a procura: ', 'twheme');
 $context['title'] = $context['text']. get_search_query();
 $context['posts'] = Timber::get_posts();
 
