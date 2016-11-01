@@ -6,38 +6,54 @@
 <!-- BODY CONTENT -->
 
 <div class="body-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 text-center col-left">
-                        <div class="body-circle center-block">
-                            <img src="assets/img/SEMINOVOS-01.svg"/>
-                        </div>
-                        <h3>Seminovos</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus, orci vitae egestas dictum, erat tellus ullamcorper lacus, id suscipit neque metus sit amet nibh. Curabitur et metus non neque porttitor accumsan vel non ante. Cras lobortis elit vitae rhoncus fermentum. Quisque consectetur fermentum sem egestas lacinia. Vivamus enim mi, porta sit amet mauris sed, accumsan mollis purus. In vel tortor neque. Sed porttitor mauris at posuere imperdiet. Cras magna tellus, varius et dapibus at, tempor a odio. Donec hendrerit, risus ut interdum dapibus, ex metus gravida est, non cursus leo leo quis eros. Maecenas ac cursus lorem.</p>
-                    </div>
-                    <div class="col-md-3 text-center col-left">
-                        <div class="body-circle center-block">
-                            <img src="assets/img/ALUGUEL-01.svg"/>
-                        </div>
-                        <h3>Aluguel</h3>
-                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sed maximus nulla. Etiam aliquet sapien eget orci dictum tristique. Ut imperdiet ante ac urna semper, vitae pulvinar tortor tincidunt. Sed eleifend sapien sed placerat ultrices. Vestibulum ut ligula eget turpis vehicula iaculis. Nunc sagittis maximus lacinia. Aenean vulputate mauris pretium, cursus elit sed, molestie ipsum. Vivamus imperdiet ante massa, eget finibus velit ultricies eget. Fusce sit amet sapien maximus, ultrices eros nec, finibus leo. Quisque vel felis vitae odio ullamcorper auctor nec eget tortor.</p>
-                    </div>
-                    <div class="col-md-3 text-center col-left">
-                        <div class="body-circle center-block">
-                            <img src="assets/img/OFERTAS-01.svg"/>
-                        </div>
-                        <h3>Ofertas</h3>
-                        <p>In blandit magna sit amet urna malesuada porta. Praesent ac euismod arcu. Nulla ultricies lacus ut purus commodo, eu mollis sapien fermentum. Aliquam eleifend mauris ultricies est fermentum consequat. Aliquam finibus nisi vel pretium tincidunt. Sed suscipit maximus magna sit amet efficitur. Quisque sit amet tellus in ligula rhoncus malesuada vitae id massa. Sed aliquam orci justo, id eleifend quam porta in. Quisque tristique ex ac lectus pharetra, sit amet efficitur est eleifend. Proin enim massa, hendrerit a mi ultricies, vulputate aliquam elit. Nullam ut metus luctus, auctor odio at, imperdiet augue.</p>
-                    </div>
-                    <div class="col-md-3 text-center col-none">
-                        <div class="body-circle center-block">
-                            <img src="assets/img/FINANCIAMENTOS-01.svg"/>
-                        </div>
-                        <h3>Financiamento</h3>
-                        <p>Sed pellentesque maximus nibh at vehicula. Vestibulum fermentum pretium justo eget euismod. Vivamus sodales elit finibus tempus fermentum. Fusce et ex et metus sollicitudin commodo. Fusce non dolor vitae nunc ultrices suscipit. Praesent id augue elementum, euismod turpis a, sagittis erat. Ut libero nisl, dignissim non turpis eget, posuere consectetur diam. Integer aliquet commodo lacinia. Praesent nec sapien augue. Donec egestas mollis ante. Integer maximus odio nec arcu posuere, ac rutrum massa auctor. Quisque diam odio, luctus id iaculis sed, venenatis id elit. Morbi elementum sem eu ligula efficitur interdum.</p>
-                    </div>
+    <div class="container">
+        <div class="row">
+            
+            {% if post.post_type == 'maquina' %}
+                    
+                <div class="col-md-12 text-center">
+                    {{ post.specs }}
                 </div>
+            
+            {% elseif post.post_type == 'page' %}
+                <div class="col-md-12 text-center">
+                    <h1>{{post.title}}</h1><br/>
+                    {{ post.content }}
+                </div>
+            {% else %}
+            <div class="col-md-3 text-center col-left">
+                <div class="body-circle center-block">
+                    <img src="assets/img/SEMINOVOS-01.svg"/>
+                </div>
+                <h3>Seminovos</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus, orci vitae egestas dictum, erat tellus ullamcorper lacus, id suscipit neque metus sit amet nibh. Curabitur et metus non neque porttitor accumsan vel non ante. Cras lobortis elit vitae rhoncus fermentum. Quisque consectetur fermentum sem egestas lacinia. Vivamus enim mi, porta sit amet mauris sed, accumsan mollis purus. In vel tortor neque. Sed porttitor mauris at posuere imperdiet. Cras magna tellus, varius et dapibus at, tempor a odio. Donec hendrerit, risus ut interdum dapibus, ex metus gravida est, non cursus leo leo quis eros. Maecenas ac cursus lorem.</p>
             </div>
-        </div>
+            <div class="col-md-3 text-center col-left">
+                <div class="body-circle center-block">
+                    <img src="assets/img/ALUGUEL-01.svg"/>
+                </div>
+                <h3>Aluguel</h3>
+                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sed maximus nulla. Etiam aliquet sapien eget orci dictum tristique. Ut imperdiet ante ac urna semper, vitae pulvinar tortor tincidunt. Sed eleifend sapien sed placerat ultrices. Vestibulum ut ligula eget turpis vehicula iaculis. Nunc sagittis maximus lacinia. Aenean vulputate mauris pretium, cursus elit sed, molestie ipsum. Vivamus imperdiet ante massa, eget finibus velit ultricies eget. Fusce sit amet sapien maximus, ultrices eros nec, finibus leo. Quisque vel felis vitae odio ullamcorper auctor nec eget tortor.</p>
+            </div>
+            <div class="col-md-3 text-center col-left">
+                <div class="body-circle center-block">
+                    <img src="assets/img/OFERTAS-01.svg"/>
+                </div>
+                <h3>Ofertas</h3>
+                <p>In blandit magna sit amet urna malesuada porta. Praesent ac euismod arcu. Nulla ultricies lacus ut purus commodo, eu mollis sapien fermentum. Aliquam eleifend mauris ultricies est fermentum consequat. Aliquam finibus nisi vel pretium tincidunt. Sed suscipit maximus magna sit amet efficitur. Quisque sit amet tellus in ligula rhoncus malesuada vitae id massa. Sed aliquam orci justo, id eleifend quam porta in. Quisque tristique ex ac lectus pharetra, sit amet efficitur est eleifend. Proin enim massa, hendrerit a mi ultricies, vulputate aliquam elit. Nullam ut metus luctus, auctor odio at, imperdiet augue.</p>
+            </div>
+            <div class="col-md-3 text-center col-none">
+                <div class="body-circle center-block">
+                    <img src="assets/img/FINANCIAMENTOS-01.svg"/>
+                </div>
+                <h3>Financiamento</h3>
+                <p>Sed pellentesque maximus nibh at vehicula. Vestibulum fermentum pretium justo eget euismod. Vivamus sodales elit finibus tempus fermentum. Fusce et ex et metus sollicitudin commodo. Fusce non dolor vitae nunc ultrices suscipit. Praesent id augue elementum, euismod turpis a, sagittis erat. Ut libero nisl, dignissim non turpis eget, posuere consectetur diam. Integer aliquet commodo lacinia. Praesent nec sapien augue. Donec egestas mollis ante. Integer maximus odio nec arcu posuere, ac rutrum massa auctor. Quisque diam odio, luctus id iaculis sed, venenatis id elit. Morbi elementum sem eu ligula efficitur interdum.</p>
+            </div>
+            
+            {% endif %}
+            
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.body-content -->
         
 {% endblock bodycontent %}

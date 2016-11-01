@@ -4,7 +4,7 @@
 
 <!-- POST SLIDER --> 
 
-        {% if post.type == 'maquinas' %}
+        {% if post.type == 'maquina' %}
         
         <div class="product-slider">
             <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}); background-size: cover;">
@@ -16,30 +16,36 @@
         </div>
         
         {# Should we display the slider control? #}
-        {% if post.gallery %}
-        <div class="product-slider-control">
-           
-                <div class="arrow-prev text-center">
-                    <i class="glyphicon glyphicon-chevron-left arrow-icon"></i>
+            {% if post.gallery %}
+            <div class="product-slider-control">
+
+                    <div class="arrow-prev text-center">
+                        <i class="glyphicon glyphicon-chevron-left arrow-icon"></i>
+                    </div>
+
+                    <div class="arrow-next text-center">
+                        <i class="glyphicon glyphicon-chevron-right arrow-icon"></i>
+                    </div>
                 </div>
 
-                <div class="arrow-next text-center">
-                    <i class="glyphicon glyphicon-chevron-right arrow-icon"></i>
+
+                <div class="product-slider-nav">
+                    <ul class="slider-dots">
+                        <li class="dot active-dot">&bull;</li>
+                        {% for image in post.gallery %}
+                        <li class="dot">&bull;</li>
+                        <li class="dot">&bull;</li>
+                        {% endfor %}
+                    </ul>
                 </div>
-            </div>
-            
-            
-            <div class="product-slider-nav">
-                <ul class="slider-dots">
-                    <li class="dot active-dot">&bull;</li>
-                    {% for image in post.gallery %}
-                    <li class="dot">&bull;</li>
-                    <li class="dot">&bull;</li>
-                    {% endfor %}
-                </ul>
-            </div>
             {% endif %}
-        
+            
+        {% elseif post.type == 'page' %}
+           
+        <div class="slider">
+            <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}); background-size: cover;">
+        </div>
+            
         {% else %}
         
         <div class="slider">
@@ -73,9 +79,9 @@
             {% if slides|length > 1 %}
             <div class="slider-nav">
                 <ul class="slider-dots">
-                        {% for slide in slides %}
+                    {% for slide in slides %}
                         <li class="dot {% if slide.active %}active-dot{% endif %}">&bull;</li>
-                        {% endfor %}
+                    {% endfor %}
                 </ul>
             </div>
             {% endif %}
