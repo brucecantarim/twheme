@@ -12,7 +12,7 @@
 		<li id="menu-item-{{item.ID}}" class="menuitem">
 			<a href="{{item.get_link}}">{{item.title}}</a>
 			{% include "menu.twig" with {'menu': item.get_children} %}
-		</li>
+        </li>
 		{% endif %}
 	{% endfor %}
 {% endif %}

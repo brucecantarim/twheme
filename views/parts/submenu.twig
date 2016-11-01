@@ -1,22 +1,22 @@
 {# submenu.twig #}
        
-{% for item in menu if menu %} 
+{% for item in menu.get_items if menu %} 
     <div id="menu-item-{{item.ID}}" class="submenu blur">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    {% for subitem in item.get_children %}
+                {% for subitem in item.get_children %}
+                {% set colsize = 12 / item.get_children|length %}
+                <div class="col-md-{{colsize}}">
                     <ul class='submenulist text-center'>
-                        {% if subitem.current %}
-                            <li class='submenuitem active'><h4><b>{{subitem.title}}</b></h4></li>
-                            {% include "menuitem.twig" with { 'menu': subitem.get_children, 'menuitemclass': 'submenuitem', 'notarget': true } only %}
-                        {% else %}
-                            <li class='submenuitem active'><h4><b>{{subitem.title}}</b></h4></li>
-                            {% include "menuitem.twig" with { 'menu': subitem.get_children, 'menuitemclass': 'submenuitem', 'notarget': true } only %}
-                        {% endif %}
+                            <li class='submenuitem'><h4><b>{{subitem.title}}</b></h4></li>
+                            {% for sublink in subitem.get_children %}
+                            <li class="submenuitem">
+                                <a href="{{sublink.get_link}}">{{sublink.title}}</a>
+                            </li>
+                            {% endfor %}
                     </ul><!-- /.submenulist -->
-                    {% endfor %}
                 </div><!-- /.col -->
+                {% endfor %}
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div><!-- /#submenu -->

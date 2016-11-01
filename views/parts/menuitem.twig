@@ -1,13 +1,12 @@
 {# mainmenu.twig #}
 
-{% for item in menu %}
-    {{ item|print_r }}
+{% for item in menu.get_items if menu %}
     {% if item.current %}
-        <li class='{{menuitemclass}} active' {% if notarget %}{% else %}data-target="#menu-item-{{item.ID}}"{% endif %}>
+        <li class='menuitem active' data-target="#menu-item-{{item.ID}}">
             <a href="{{item.get_link}}">{{item.title}}</a>
         </li>
     {% else %}
-        <li class='{{menuitemclass}}' {% if notarget %}{% else %}data-target="#menu-item-{{item.ID}}"{% endif %}>
+        <li class='menuitem' data-target="#menu-item-{{item.ID}}">
             <a href="{{item.get_link}}">{{item.title}}</a>
         </li>
     {% endif %}
