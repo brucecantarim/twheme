@@ -1,0 +1,74 @@
+{# product-rightbar.twig #}
+
+{% block rightbar %}
+
+        <div class='rightbar blur'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <br/>
+                        <h3><strong>{{ post.name }}</strong></h3>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                       
+                       <i class="fa fa-video-camera"></i><h4>{{__("Vídeos", twheme)}}</h4>
+                            {% for video in post.videos %}
+                            <div class="col-md-6">
+                                [youtube id="{{ video.id }}" format="wide" ]
+                            </div>
+                            <button class="accordion-button text-left"><i class="fa fa-picture-o"></i><h4>IMAGENS</h4><i class="glyphicon glyphicon-chevron-down chevron pull-right"></i></button>
+                            <div class="accordion-box">
+                                <div class="container-flex">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="#"><img class="img-responsive" src="assets/img/TG5000.jpg"/></a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#"><img class="img-responsive" src="assets/img/TG5000.jpg"/></a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="#"><img class="img-responsive" src="assets/img/TG5000.jpg"/></a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#"><img class="img-responsive" src="assets/img/TG5000.jpg"/></a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="#"><img class="img-responsive" src="assets/img/TG5000.jpg"/></a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#"><img class="img-responsive" src="assets/img/TG5000.jpg"/></a>
+                                        </div>
+                                    </div><br/>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="#"><img class="img-responsive" src="assets/img/TG5000.jpg"/></a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <a href="#"><img class="img-responsive" src="assets/img/TG5000.jpg"/></a>
+                                        </div>
+                                    </div><br/>
+                                </div><!-- /.container-flex -->
+                            </div><!-- /.accordion-box -->
+                            <button class="accordion-button text-left"><i class="fa fa-book"></i><h4>DOCUMENTAÇÃO</h4><i class="glyphicon glyphicon-chevron-down chevron pull-right"></i></button>
+                            <div class="accordion-box">
+                                <ul>
+                                    <li><a href="#"><i class="glyphicon glyphicon-save-file"></i> Manual da TG5000</a></li>
+                                    <li><a href="#"><i class="glyphicon glyphicon-save-file"></i> Dicas de Manutenção</a></li>
+                                    <li><a href="#"><i class="glyphicon glyphicon-save-file"></i> Lista de Assistências Autorizadas</a></li>
+                                </ul>
+                            </div><!-- /.accordion-box -->
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.rightbar -->
+
+{% endblock rightbar %}

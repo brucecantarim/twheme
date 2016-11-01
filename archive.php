@@ -7,7 +7,7 @@ $templates = array('archive.twig', 'single.twig');
 $data = Timber::get_context();
 $datatype = null;
 
-$data['title'] = printf(__('%s', 'twheme'), $datatype);
+$data['title'] = printf(__('%s', 'twheme'), $datatype); //
 
 if (is_day()){
     $datatype = __('Arquivo :', 'twheme');
