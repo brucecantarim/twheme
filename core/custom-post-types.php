@@ -2,10 +2,13 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-// Loading configuration
-require(__DIR__ . "/../config/config.php");
+// Instantiating the config class
+$config = new TwhemeConfig();
 
 // Checking if user wants the Slideshow post type
+
+$twheme_slideshow = $config->slideShow;
+
 if ($twheme_slideshow) {
     register_post_type( 'slides' , array(
         'labels'=> array(
@@ -34,11 +37,40 @@ if ($twheme_slideshow) {
 		'menu_position' => 5,
         'menu_icon' => 'dashicons-slides',		
 		'supports' => array(
-            'title', 'thumbnail'
+            'title', 'subtitle', 'editor', 'thumbnail' // This is where you can add more fields
     )));
 }
 
 // Creating the user defined post types
+// $twheme_post_types = $config->postTypes;
+// PLACEHOLDER! I need to figure how to return the array from the class yet
+$twheme_post_types = array(
+
+        "noticias" => array(
+            'type' => 'noticia',
+            'plural' => 'Notícias',
+            'singular' => 'Notícia',
+            'icon' => 'dashicons-admin-site',
+            'wordsex' => 'female'
+        ),
+
+        "maquinas" => array(
+            'type' => 'maquina',
+            'plural' => 'Máquinas',
+            'singular' => 'Máquina',
+            'icon' => 'dashicons-cart',
+            'wordsex' => 'female'
+        ),
+
+        "eventos" => array(
+            'type' => 'evento',
+            'plural' => 'Eventos',
+            'singular' => 'Evento',
+            'icon' => 'dashicons-megaphone',
+            'wordsex' => 'male'
+        )
+
+    );
 
 foreach ( $twheme_post_types as $twheme_post_type) {
     if ( $twheme_post_type['wordsex'] == 'female' ) {

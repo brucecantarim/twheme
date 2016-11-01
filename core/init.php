@@ -32,7 +32,12 @@ class Twheme extends TimberSite {
     
     // CUSTOM DEFAULT POST
     function change_default_post_type() {
-        if (!$twheme_default_post) {
+        
+        // Instantiating the config class
+        $config = new TwhemeConfig();
+        $twheme_default_post = $config->defaultPost();
+        
+        if ($twheme_default_post) {
         //this is where you can customize the default post type
         global $wp_post_types;
         $labels = &$wp_post_types['post']->labels;

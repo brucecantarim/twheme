@@ -2,17 +2,18 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-// Loading configuration
-require(__DIR__ . "/../config/config.php");
+// Instantiating the config class
+$config = new TwhemeConfig();
 
 // Sending main site elements to all pages
-$context['fonts'] = $twheme_fonts;
+$context['fonts'] = $config->fonts;
 $context['header'] = Timber::render('header.twig', $context);
 $context['menu'] = new TimberMenu();
 $context['posts'] = Timber::get_posts();
 $context['site'] = $this;
 $context['footer'] = Timber::render('footer.twig', $context);
 
+$twheme_navbar = $config->navbar;
 
 if ($twheme_navbar == 'default') {
     $context['navbar'] = Timber::render('navbar.twig', $context);
@@ -36,6 +37,11 @@ $context['sections'] = Timber::get_posts($homeargs);
 $context['clients'] = ["client_logo_1", "client_logo_2", "client_logo_3", "client_logo_4", "client_logo_5", "client_logo_6", "client_logo_7", "client_logo_8", "client_logo_9"];
 
 // Checking if Slideshow is activated in the config.php file
+// Had to disable this check, untill I figure out why this file is not getting the variables
+// Maybe I have to pass the parameters I want in the init.php function call?
+
+$twheme_slideshow = $config->slideShow;
+
 if ($twheme_slideshow) {
     
     $slides = array(
@@ -50,7 +56,10 @@ if ($twheme_slideshow) {
 }
 
 // Checking if Postslide is activated in the config.php file
-if (isset($twheme_postslide)) {
+
+$twheme_postslide = $config->postSlider;
+
+if ($twheme_postslide) {
     
     $postslides = array(
         
@@ -64,19 +73,50 @@ if (isset($twheme_postslide)) {
 }
 
 // Running a loop for each custom post type in config.php
-foreach ($twheme_post_types as $twheme_post_type) {
+// $twheme_post_types = $config->postTypes;
+// PLACEHOLDER! I need to figure how to return the array from the class yet
+$twheme_post_types = array(
 
-    $post_type_name = $twheme_post_type["type"];
+        "noticias" => array(
+            'type' => 'noticia',
+            'plural' => 'Notícias',
+            'singular' => 'Notícia',
+            'icon' => 'dashicons-admin-site',
+            'wordsex' => 'female'
+        ),
+
+        "maquinas" => array(
+            'type' => 'maquina',
+            'plural' => 'Máquinas',
+            'singular' => 'Máquina',
+            'icon' => 'dashicons-cart',
+            'wordsex' => 'female'
+        ),
+
+        "eventos" => array(
+            'type' => 'evento',
+            'plural' => 'Eventos',
+            'singular' => 'Evento',
+            'icon' => 'dashicons-megaphone',
+            'wordsex' => 'male'
+        )
+
+    );
+
+foreach ($twheme_post_types as $twheme_post_type_name) { 
 
     $post_type_args = array(
         
-    'post_type' => $post_type_name,
+    'post_type' => $twheme_post_type_name,
     'post_status' => 'publish',
     'orderby'=> 'menu_order',
     'order' => 'asc'
         
     );
 
-$context[$post_type_name] = Timber::get_posts($post_type_args);
+    $context["'".$twheme_post_type_name."'"] = Timber::get_posts($post_type_args);
+    
+} 
 
-}
+
+

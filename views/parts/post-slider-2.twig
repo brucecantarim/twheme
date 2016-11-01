@@ -4,13 +4,19 @@
 
 <!-- POST SLIDER --> 
 
-        {% if post.type == 'Produtos' %}
+        {% if post.type == 'maquinas' %}
         
         <div class="product-slider">
-            <div class="slide active-slide product-img-1" data-toggle="off">
+            <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}); background-size: cover;">
             </div>
+            {% for image in post.gallery if gallery %}
+                <div class="slide" data-toggle="off" style="background: url({{ image.thumbnail.src }}); background-size: cover;">
+                </div>
+            {% endfor %}
         </div>
         
+        {# Should we display the slider control? #}
+        {% if post.gallery %}
         <div class="product-slider-control">
            
                 <div class="arrow-prev text-center">
@@ -22,46 +28,38 @@
                 </div>
             </div>
             
+            
             <div class="product-slider-nav">
                 <ul class="slider-dots">
                     <li class="dot active-dot">&bull;</li>
+                    {% for image in post.gallery %}
                     <li class="dot">&bull;</li>
                     <li class="dot">&bull;</li>
+                    {% endfor %}
                 </ul>
             </div>
+            {% endif %}
         
         {% else %}
         
         <div class="slider">
-            <div class="slide active-slide post-img-1">
+            {{ slides|print_r }}
+            {% for slide in slides %}
+            <div class="slide {% if slide.active %}active-slide{% endif %}" data-toggle="off" style="background: url({{ slide.thumbnail.src }}); background-size: cover;">
             </div>
-
-            <div class="slide post-img-2">
-            </div>
-
-            <div class="slide post-img-3">
-            </div>
-                
+            {% endfor %}  
         </div>
         
         <div class="slider-control">
-           
             <div class="post-title-bar blur">
-                <div class="slide-title active-slide">
-                    <h1>AGILIDADE E ROBUSTEZ</h1>
-                    <h4>BC1000XL é colocada a teste em um dia de campo especial</h4>
+                {% for slide in slides %}
+                <div class="slide-title {% if slide.active %}active-slide{% endif %}">
+                    <h1>{{slide.title}}</h1>
+                    <h4>{{slide.subtitle}}</h4>
                 </div>
+                {% endfor %}
                 
-                <div class="slide-title">
-                    <h1>ALTA PERFOMANCE</h1>
-                    <h4>Confira os resultados da nova Navigator</h4>
-                </div>
-            
-                <div class="slide-title">
-                    <h1>DICAS DO ESPECIALISTA</h1>
-                    <h4>Saiba porque a RTX250 é tão procurada</h4>
-                </div>
-                
+                {% if slides|length > 1 %}
                 <div class="arrow-prev text-center">
                     <i class="glyphicon glyphicon-chevron-left arrow-icon"></i>
                 </div>
@@ -69,15 +67,18 @@
                 <div class="arrow-next text-center">
                     <i class="glyphicon glyphicon-chevron-right arrow-icon"></i>
                 </div>
+                {% endif %}
             </div>
             
+            {% if slides|length > 1 %}
             <div class="slider-nav">
                 <ul class="slider-dots">
-                    <li class="dot active-dot">&bull;</li>
-                    <li class="dot">&bull;</li>
-                    <li class="dot">&bull;</li>
+                        {% for slide in slides %}
+                        <li class="dot {% if slide.active %}active-dot{% endif %}">&bull;</li>
+                        {% endfor %}
                 </ul>
             </div>
+            {% endif %}
         
         </div>
         
