@@ -530,7 +530,7 @@ footer {
   transform: translateY(-4em); }
 
 #rightbar-image {
-  height: 10em;
+  height: 80px;
   width: 100%; }
 
 .panel-col-left {
@@ -660,9 +660,9 @@ footer {
   .body-content p {
     font-size: 9pt;
     text-align: justify; }
-  .body-content .alignnone {
+  .body-content .size-large {
     position: relative;
-    left: -7.5em; }
+    left: -3.5em; }
   .body-content h1 {
     color: #ffc425; }
 

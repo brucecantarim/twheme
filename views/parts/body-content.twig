@@ -20,7 +20,42 @@
                     <h1>{{post.title}}</h1><br/>
                     <hr/>
                     {{ post.content }}
+                    {% for item in menu.get_items if menu %}
+                    {{post|print_r}}
+                    {{item|print_r}}
+                    {% if post.title == item %}
+                    <div class="container">
+                        <div class="row">
+                            {% set colsize = 12 // item.get_children|length %}
+                            {% if colsize == 1 %}
+                            {% set coldifference = 12 - item.get_children|length %}
+                            {% set coloffset = coldifference // 2 %}
+                                <div class="col-md-{{coloffset}}"></div>
+                            {% endif %}
+                            {% for subitem in item.get_children %}
+                            <div class="col-md-{{colsize}}">
+                                <img src="{{subitem.thumbnail.src}}"/>
+                                <hr class="menustrip"/>
+                                <ul class='submenulist text-center'>
+                                        <li class='submenuitem'>
+                                            <a href="{{subitem.get_link}}">
+                                                <h4><b>{{subitem.title}}</b></h4>
+                                            </a>
+                                        </li>
+                                        {% for sublink in subitem.get_children %}
+                                        <li class="submenuitem">
+                                            <a href="{{sublink.get_link}}">{{sublink.title}}</a>
+                                        </li>
+                                        {% endfor %}
+                                </ul><!-- /.submenulist -->
+                            </div><!-- /.col -->
+                            {% endfor %}
+                        </div><!-- /.row -->
+                    </div><!-- /.container -->
+                    {% endif %}
+                    {% endfor %}
                 </div>
+                
                 {% if post.sections %}
                 {% for section in post.sections %}
                 {% set colsize = 12 / post.sections|length %}

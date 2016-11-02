@@ -621,7 +621,7 @@ footer {
 
 /* line 97, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 #rightbar-image {
-  height: 10em;
+  height: 80px;
   width: 100%; }
 
 /* line 105, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
@@ -773,9 +773,9 @@ footer {
     font-size: 9pt;
     text-align: justify; }
   /* line 21, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_body-content.scss */
-  .body-content .alignnone {
+  .body-content .size-large {
     position: relative;
-    left: -7.5em; }
+    left: -3.5em; }
   /* line 25, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_body-content.scss */
   .body-content h1 {
     color: #ffc425; }
