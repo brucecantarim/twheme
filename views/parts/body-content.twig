@@ -11,14 +11,14 @@
             
             {% if post.post_type == 'maquina' %}
                     
-                <div class="col-md-12 text-center">
+                <div class="col-md-12 text-justify">
                     {{ post.specs }}
                 </div>
             
             {% elseif post.post_type == 'page' %}
-                <div class="row-spacer"></div>
-                <div class="col-md-12 text-center">
+                <div class="col-md-12 text-justify">
                     <h1>{{post.title}}</h1><br/>
+                    <hr/>
                     {{ post.content }}
                 </div>
                 {% if post.sections %}

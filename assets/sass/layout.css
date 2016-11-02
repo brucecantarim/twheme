@@ -619,19 +619,24 @@ footer {
   position: absolute;
   transform: translateY(-4em); }
 
-/* line 96, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 97, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+#rightbar-image {
+  height: 10em;
+  width: 100%; }
+
+/* line 105, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-col-left {
   margin: 10px 5px 10px 0; }
 
-/* line 100, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 109, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-col-middle {
   margin: 10px 0 10px 0; }
 
-/* line 104, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 113, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-col-right {
   margin: 10px 0 10px 0px; }
 
-/* line 111, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 120, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-control {
   width: 20%;
   height: 10%;
@@ -640,7 +645,7 @@ footer {
   right: -16px;
   overflow-y: visible; }
 
-/* line 120, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 129, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-control i {
   color: #ffc425;
   font-size: 70px;
@@ -739,6 +744,19 @@ footer {
 
 /*---------------------------------------------------/
 /                                                    /
+/   PHOTO STRIPE -  This will only be show in pages  /
+/      that have thumbnails attached to them.        /
+/                                                    /
+/---------------------------------------------------*/
+/* line 9, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_photo-stripe.scss */
+.photo-stripe {
+  width: 100%;
+  min-height: 160px;
+  height: 15.70%;
+  margin: 0; }
+
+/*---------------------------------------------------/
+/                                                    /
 /  BODY CONTENT - Here's the wrapper for the bellow  /
 /          the fold content and it's classes.        /
 /                                                    /
@@ -758,6 +776,9 @@ footer {
   .body-content .alignnone {
     position: relative;
     left: -7.5em; }
+  /* line 25, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_body-content.scss */
+  .body-content h1 {
+    color: #ffc425; }
 
 /*---------------------------------------------------/
 /                                                    /

@@ -10,7 +10,6 @@
             <div class="col-md-12">
                 <br/>
                 <h3><strong>{{ post.name }}</strong></h3>
-                
                 <hr/>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -39,10 +38,8 @@
         
         <div class="row">
             {% for id in gallery %}
-            <div class="col-md-6 lightbox" title="{{ post.title }}">
-                <a href='{{Image(id).src}}'>
-                    <img class="img-responsive product-gallery lightbox" src="{{Image(id).src}}"/>
-                </a>
+            <div id="rightbar-image" class="col-md-6 lightbox" title="{{ post.title }}">
+                    <img class="img-responsive product-gallery lightbox" src="{{Image(id).src}}" alt="{{ post.title }}"/>
             </div><!-- /.col -->
             {% endfor %}      
         </div><!-- /.row -->

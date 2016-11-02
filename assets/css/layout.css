@@ -529,6 +529,10 @@ footer {
   position: absolute;
   transform: translateY(-4em); }
 
+#rightbar-image {
+  height: 10em;
+  width: 100%; }
+
 .panel-col-left {
   margin: 10px 5px 10px 0; }
 
@@ -631,6 +635,18 @@ footer {
 
 /*---------------------------------------------------/
 /                                                    /
+/   PHOTO STRIPE -  This will only be show in pages  /
+/      that have thumbnails attached to them.        /
+/                                                    /
+/---------------------------------------------------*/
+.photo-stripe {
+  width: 100%;
+  min-height: 160px;
+  height: 15.70%;
+  margin: 0; }
+
+/*---------------------------------------------------/
+/                                                    /
 /  BODY CONTENT - Here's the wrapper for the bellow  /
 /          the fold content and it's classes.        /
 /                                                    /
@@ -647,6 +663,8 @@ footer {
   .body-content .alignnone {
     position: relative;
     left: -7.5em; }
+  .body-content h1 {
+    color: #ffc425; }
 
 /*---------------------------------------------------/
 /                                                    /
