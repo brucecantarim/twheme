@@ -21,6 +21,16 @@
                     <h1>{{post.title}}</h1><br/>
                     {{ post.content }}
                 </div>
+                {% if post.sections %}
+                {% for section in post.sections %}
+                {% set colsize = 12 / post.sections|length %}
+                <div class="col-md-{{colsize}} text-center col-left">
+                    <img src="{{section.icon}}" class="img-responsive"/>
+                <h3>{{section.title}}</h3>
+                <p>{{section.content}}</p>
+                </div>
+                {% endfor %}
+                {% endif %}
             
             {% elseif sections %}
             {% for section in sections %}

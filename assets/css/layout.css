@@ -262,7 +262,7 @@ footer {
     text-decoration: none; }
 
 .navbar, .submenu {
-  border-bottom: 10px solid #ffc425; }
+  border-bottom: 5px solid #ffc425; }
 
 .menustrip {
   background-color: #ffc425;
@@ -283,7 +283,7 @@ footer {
   right: 19%;
   background-color: #f2f2f2;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   padding: 20px; }
 
 /*---------------------------------------------------/
@@ -648,7 +648,7 @@ footer {
 /---------------------------------------------------*/
 .footer-content {
   background-color: #5F6062;
-  border-top: 10px solid #ffc425;
+  border-top: 5px solid #ffc425;
   min-height: 300px;
   padding: 100px 10em;
   color: white; }

@@ -309,7 +309,7 @@ footer {
 
 /* line 157, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .navbar, .submenu {
-  border-bottom: 10px solid #ffc425; }
+  border-bottom: 5px solid #ffc425; }
 
 /* line 161, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .menustrip {
@@ -332,7 +332,7 @@ footer {
   right: 19%;
   background-color: #f2f2f2;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   padding: 20px; }
 
 /*---------------------------------------------------/
@@ -758,7 +758,7 @@ footer {
 /* line 11, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
 .footer-content {
   background-color: #5F6062;
-  border-top: 10px solid #ffc425;
+  border-top: 5px solid #ffc425;
   min-height: 300px;
   padding: 100px 10em;
   color: white; }
