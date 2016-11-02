@@ -24,7 +24,7 @@
         <div class="row">
             {% for video in post.videos %}
             <div class="col-md-6">
-                [youtube id="{{video.id}}" format="wide" ]
+                [youtube id="{{video}}" format="wide" ]
             </div><!-- /.col -->
             {% endfor %}
         </div><!-- /.row -->
@@ -37,11 +37,9 @@
         </div><!-- /.row -->
         
         <div class="row">
-            {% for id in gallery %}
+            {% for id in post.gallery %}
             <div class="col-md-6 lightbox" title="{{ post.title }}">
-                <a href="{{image.link}}">
-                    <img class="img-responsive product-gallery lightbox" src="{{Image(id).src}}"/>
-                </a>
+                <img class="img-responsive product-gallery lightbox" src="{{Image(id).src}}"/>
             </div><!-- /.col -->
             {% endfor %}      
         </div><!-- /.row -->
@@ -58,7 +56,7 @@
                 <ul>
                 {% for file in post.files %}
                     <li>
-                        <a href="{{file.src}}">
+                        <a href="{{file}}">
                         <i class="glyphicon glyphicon-save-file"></i>{{file.name}}
                         </a>
                     </li>
