@@ -2,60 +2,71 @@
 
 {% block rightbar %}
 
-        <div class='rightbar blur'>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <br/>
-                        <h3><strong>{{ post.name }}</strong></h3>
-                        <hr/>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                       <div class="container-flex">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <i class="fa fa-video-camera"></i><h4>{{__("VÍDEOS", twheme)}}</h4>
-                                </div>
-                            </div>
-                            <div class="row">
-                            {% for video in post.videos %}
-                            <div class="col-md-6">
-                                [youtube id="{{ video.id }}" format="wide" ]
-                            </div>
-                            {% endfor %}
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <i class="fa fa-picture-o"></i><h4>{{__("IMAGENS", twheme)}}</h4>
-                                    </div>
-                                </div>
-                            <div class="row">
-                            {% for id in post.gallery %}
-                                <div class="col-md-6 lightbox" title="{{ post.title }}">
-                                    <a href="{{image.link}}"><img class="img-responsive product-gallery lightbox" src="{{Image(id).src}}"/></a>
-                                </div>
-                            {% endfor %}      
-                            </div><!-- /.row -->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <i class="fa fa-book"></i><h4>{{__("DOCUMENTOS", twheme)}}</h4>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <ul>
-                                    {% for file in post.files %}
-                                        <li><a href="{{file.src}}"><i class="glyphicon glyphicon-save-file"></i>{{file.name}}</a></li>
-                                    {% endfor %}
-                                    </ul>
-                                </div><!-- /.col -->
-                            </div><!-- /.row -->
-                        </div><!-- /.container-flex -->
-                    </div><!-- /.col-md-3 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </div><!-- /.rightbar -->
+<!-- RIGHTBAR -->
+
+<div class='rightbar blur'>
+    <div class="container-flex wow fadeIn">
+        <div class="row">
+            <div class="col-md-12">
+                <br/>
+                <h3><strong>{{ post.name }}</strong></h3>
+                <hr/>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+        
+        <!-- VIDEOS -->
+        <div class="row">
+            <div class="col-md-12">
+                <i class="fa fa-video-camera"></i><h4>{{__("VÍDEOS", twheme)}}</h4>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+        
+        <div class="row">
+            {% for video in post.videos %}
+            <div class="col-md-6">
+                [youtube id="{{video.id}}" format="wide" ]
+            </div><!-- /.col -->
+            {% endfor %}
+        </div><!-- /.row -->
+        
+        <!-- IMAGES -->
+        <div class="row">
+            <div class="col-md-12">
+                <i class="fa fa-picture-o"></i><h4>{{__("IMAGENS", twheme)}}</h4>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+        
+        <div class="row">
+            {% for id in post.gallery %}
+            <div class="col-md-6 lightbox" title="{{ post.title }}">
+                <a href="{{image.link}}">
+                    <img class="img-responsive product-gallery lightbox" src="{{Image(id).src}}"/>
+                </a>
+            </div><!-- /.col -->
+            {% endfor %}      
+        </div><!-- /.row -->
+        
+        <!-- DOCUMENTS -->
+        <div class="row">
+            <div class="col-md-12">
+                <i class="fa fa-book"></i><h4>{{__("DOCUMENTOS", twheme)}}</h4>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+        
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                {% for file in post.files %}
+                    <li>
+                        <a href="{{file.src}}">
+                        <i class="glyphicon glyphicon-save-file"></i>{{file.name}}
+                        </a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-flex -->
+</div><!-- /.rightbar -->
 
 {% endblock rightbar %}

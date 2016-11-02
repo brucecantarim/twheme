@@ -7,9 +7,9 @@ $config = new TwhemeConfig();
 
 // Checking if user wants the Slideshow post type
 
-$twheme_slideshow = $config->slideShow;
+//$twheme_slideshow = $config->slideShow;
 
-if ($twheme_slideshow) {
+//if ($twheme_slideshow) {
     register_post_type( 'slides' , array(
         'labels'=> array(
             'name' => _x('Slideshow', 'post type general name'),
@@ -39,7 +39,7 @@ if ($twheme_slideshow) {
 		'supports' => array(
             'title', 'subtitle', 'editor', 'thumbnail' // This is where you can add more fields
     )));
-}
+//}
 
 // Creating the user defined post types
 // $twheme_post_types = $config->postTypes;

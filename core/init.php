@@ -35,9 +35,9 @@ class Twheme extends TimberSite {
         
         // Instantiating the config class
         $config = new TwhemeConfig();
-        $twheme_default_post = $config->defaultPost();
+        // $twheme_default_post = $config->defaultPost();
         
-        if ($twheme_default_post) {
+        //if ($twheme_default_post) {
         //this is where you can customize the default post type
         global $wp_post_types;
         $labels = &$wp_post_types['post']->labels;
@@ -56,7 +56,7 @@ class Twheme extends TimberSite {
         $labels->name_admin_bar = 'Home';
         $post = &$wp_post_types['post'];
         $post->menu_icon = 'dashicons-admin-home';
-        }
+        //}
     }
     
     // CUSTOM ADMIN LOGIN HEADER LOGO

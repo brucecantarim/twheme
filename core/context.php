@@ -11,7 +11,7 @@ $context['header'] = Timber::render('header.twig', $context);
 $context['menu'] = new TimberMenu();
 $context['posts'] = Timber::get_posts();
 $context['site'] = $this;
-$context['footer'] = Timber::render('footer.twig', $context);
+// $context['footer'] = Timber::render('footer.twig', $context);
 
 $twheme_navbar = $config->navbar;
 
@@ -22,8 +22,6 @@ if ($twheme_navbar == 'default') {
 } else {
     $context['navbar'] = Timber::render('bootstrap-navbar.twig', $context);
 }
-
-
 
 // This calls the home post type sections
 $homeargs = array(
@@ -40,9 +38,9 @@ $context['clients'] = ["client_logo_1", "client_logo_2", "client_logo_3", "clien
 // Had to disable this check, untill I figure out why this file is not getting the variables
 // Maybe I have to pass the parameters I want in the init.php function call?
 
-$twheme_slideshow = $config->slideShow;
+//$twheme_slideshow = $config->slideShow;
 
-if ($twheme_slideshow) {
+//if ($twheme_slideshow) {
     
     $slides = array(
         
@@ -53,9 +51,10 @@ if ($twheme_slideshow) {
     );
 
     $context['slides'] = Timber::get_posts($slides);
-}
+//}
 
 // Checking if Postslide is activated in the config.php file
+// Probably needs fixing, variables still not being called properly? I HATE php...
 
 $twheme_postslide = $config->postSlider;
 

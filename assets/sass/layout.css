@@ -33,17 +33,17 @@
 /   elements. Notice the 100% above the fold trick.  /
 /                                                    /
 /---------------------------------------------------*/
-/* line 8, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 8, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 html {
   width: 100%;
   height: 100%;
   overflow-x: hidden; }
 
-/* line 14, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 14, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 html, html a, body {
   -webkit-font-smoothing: antialiased; }
 
-/* line 21, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 21, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 body {
   width: 100%;
   height: 100%;
@@ -51,13 +51,13 @@ body {
   font-family: "Arial", sans-serif;
   color: black; }
 
-/* line 29, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 29, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 p {
   font-weight: 400;
   font-family: "Arial", sans-serif;
   color: black; }
 
-/* line 36, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 36, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 em,
 li,
 li a {
@@ -65,12 +65,12 @@ li a {
   font-family: "Open Sans Condensed", sans-serif;
   color: white; }
 
-/* line 41, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 41, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 a {
   font-family: "Open Sans Condensed", sans-serif;
   color: white;
   outline: 0; }
-  /* line 48, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+  /* line 48, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
   a:focus,
   a:hover,
   a:active {
@@ -78,14 +78,14 @@ a {
     color: #ffc425;
     text-decoration: none; }
 
-/* line 55, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 55, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 .link {
   position: relative;
   font-size: 13px;
   font-weight: 700;
   font-family: "Arial", sans-serif;
   text-transform: uppercase; }
-  /* line 60, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+  /* line 60, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
   .link:after {
     position: absolute;
     top: 8px;
@@ -95,54 +95,54 @@ a {
     background: white;
     content: " "; }
 
-/* line 68, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 68, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 span {
   font-size: 14px;
   font-weight: 400;
   font-family: "Arial", sans-serif;
   color: #f2f2f2; }
 
-/* line 73, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 73, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-family: "Open Sans Condensed", sans-serif;
   color: black;
   text-transform: uppercase; }
-  /* line 78, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+  /* line 78, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
   h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a {
     color: white; }
-    /* line 81, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+    /* line 81, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
     h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover, h5 > a:hover, h6 > a:hover {
       color: #ffc425;
       text-decoration: none; }
-    /* line 86, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+    /* line 86, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
     h1 > a:focus, h2 > a:focus, h3 > a:focus, h4 > a:focus, h5 > a:focus, h6 > a:focus {
       text-decoration: none; }
 
-/* line 92, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 92, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 ::selection {
   color: white;
   background: #ffc425;
   text-shadow: none; }
 
-/* line 97, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 97, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 ::-webkit-selection {
   color: white;
   background: #ffc425;
   text-shadow: none; }
 
-/* line 102, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 102, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 ::-moz-selection {
   color: white;
   background: #ffc425;
   text-shadow: none; }
 
-/* line 109, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 109, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 :active,
 :focus {
   outline: none; }
 
-/* line 113, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+/* line 113, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
 footer {
   width: 100%;
   position: fixed;
@@ -151,14 +151,14 @@ footer {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
   z-index: 2; }
-  /* line 122, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/base/_base.scss */
+  /* line 122, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/base/_base.scss */
   footer a, footer a:hover, footer a:active, footer a:visited {
     font-family: "Open Sans Condensed", sans-serif;
     font-weight: bold;
     color: white;
     text-transform: uppercase; }
 
-/* line 2, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_blur.scss */
+/* line 2, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_blur.scss */
 .blur {
   background-color: rgba(0, 0, 0, 0.7);
   -webkit-backdrop-filter: blur(10px);
@@ -172,12 +172,12 @@ footer {
 /      menu, here's the right place for this.        /
 /                                                    /
 /---------------------------------------------------*/
-/* line 11, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 11, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 #bootstrap-overrides .navbar, .mainmenu, .submenu {
   margin-bottom: 0;
   border: 0; }
 
-/* line 19, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 19, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .navbar {
   width: 100%;
   font-family: "Open Sans Condensed", sans-serif;
@@ -188,22 +188,22 @@ footer {
   z-index: 100;
   position: fixed; }
 
-/* line 33, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 33, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 #brand {
   margin: 1em;
   display: inline-block; }
-  /* line 36, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 36, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   #brand img {
     max-width: 15em; }
 
-/* line 39, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 39, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 #brand-sig {
   padding-left: 1em;
   border-left: 1px solid white;
   display: inline-block;
   position: relative;
   top: -2.5em; }
-  /* line 45, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 45, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   #brand-sig p {
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 1.5em;
@@ -211,7 +211,7 @@ footer {
     color: white;
     line-height: 0.9em; }
 
-/* line 58, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 58, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .contact {
   position: absolute;
   top: 2em;
@@ -220,20 +220,20 @@ footer {
   margin: 0;
   color: white;
   font-size: 1.3em; }
-  /* line 67, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 67, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .contact a:hover, .contact a:active {
     color: #ffc425;
     text-decoration: none; }
-  /* line 68, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 68, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .contact a, .contact a:visited {
     color: white; }
-  /* line 70, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 70, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .contact i {
     color: #ffc425;
     margin-left: 0.5em;
     margin-right: 0.2em; }
 
-/* line 80, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 80, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .search {
   position: absolute;
   top: 4.9em;
@@ -243,17 +243,17 @@ footer {
   margin: 0;
   color: #f2f2f2;
   font-size: 1.3em; }
-  /* line 93, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 93, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .search input {
     background: none;
     border: none;
     border-bottom: 1px solid #f2f2f2;
     color: #f2f2f2; }
-  /* line 100, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 100, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .search i {
     color: white; }
 
-/* line 108, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 108, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .mainmenu {
   position: absolute;
   top: 5em;
@@ -261,22 +261,22 @@ footer {
   width: 85%;
   font-family: "Open Sans Condensed", sans-serif; }
 
-/* line 116, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 116, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .menuitem {
   display: inline-block;
   margin: 1em;
   text-transform: uppercase;
   font-size: 1.3em;
   font-weight: bold; }
-  /* line 122, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 122, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .menuitem a, .menuitem a:visited {
     color: white; }
-  /* line 123, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 123, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .menuitem a:hover, .menuitem a:active {
     color: #ffc425;
     text-decoration: none; }
 
-/* line 130, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 130, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .submenu {
   position: fixed;
   top: 15.25%;
@@ -287,31 +287,31 @@ footer {
   padding-top: 40px;
   padding-bottom: 40px; }
 
-/* line 140, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 140, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .submenuitem {
   list-style-type: none;
   color: white; }
-  /* line 143, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 143, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem h4 {
     color: white; }
-  /* line 144, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 144, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem h4 small {
     color: white;
     font-weight: bold; }
-  /* line 149, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 149, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem a:hover, .submenuitem a:visited {
     color: #ffc425;
     text-decoration: none; }
-  /* line 150, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 150, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem a, .submenuitem a:visited {
     color: white;
     text-decoration: none; }
 
-/* line 157, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 157, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .navbar, .submenu {
   border-bottom: 10px solid #ffc425; }
 
-/* line 161, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 161, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .menustrip {
   background-color: #ffc425;
   width: 100%;
@@ -323,7 +323,7 @@ footer {
 /            with invisible scrolling.               /
 /                                                    /
 /---------------------------------------------------*/
-/* line 11, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_middle-bar.scss */
+/* line 11, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_middle-bar.scss */
 .middlebar, .slider-gradient {
   width: 31%;
   height: 84.30%;
@@ -341,26 +341,26 @@ footer {
 /   page slider an it's controls, here's the place!  /
 /                                                    /
 /---------------------------------------------------*/
-/* line 11, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 11, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider, .slide {
   width: 100%;
   height: 100%;
   font-family: "Open Sans Condensed", sans-serif; }
 
-/* line 17, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 17, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider {
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1; }
 
-/* line 24, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 24, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider-body {
   position: relative;
   top: 0;
   left: 0; }
 
-/* line 33, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 33, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider-control {
   width: 81%;
   height: 100%;
@@ -368,7 +368,7 @@ footer {
   left: 0;
   top: 2%; }
 
-/* line 41, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 41, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider-nav, .product-slider-nav {
   width: 100%;
   height: 50px;
@@ -377,7 +377,7 @@ footer {
   bottom: 30%;
   z-index: 1; }
 
-/* line 50, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 50, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .product-slider-nav {
   width: 50%;
   position: absolute;
@@ -385,7 +385,7 @@ footer {
   z-index: 1;
   left: 0; }
 
-/* line 58, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 58, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider-gradient {
   background-color: none;
   background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0), white);
@@ -394,7 +394,7 @@ footer {
   background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
   right: 0; }
 
-/* line 71, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 71, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .arrow-next, .arrow-prev {
   width: 50px;
   height: 50px;
@@ -403,55 +403,55 @@ footer {
   z-index: 1;
   background-color: black;
   color: white; }
-  /* line 79, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+  /* line 79, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
   .arrow-next:hover, .arrow-prev:hover {
     background-color: #ffc425;
     color: black; }
 
-/* line 85, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 85, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .arrow-prev {
   left: 0; }
 
-/* line 89, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 89, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .arrow-next {
   right: 0; }
 
-/* line 93, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 93, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .arrow-icon {
   color: color-main;
   margin: 33% auto; }
 
-/* line 98, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 98, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider-dots {
   list-style: none;
   display: inline-block;
   padding-left: 0;
   margin-bottom: 0; }
 
-/* line 105, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 105, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider-dots li {
   display: inline;
   font-size: 30px;
   margin-right: 5px;
   color: white; }
 
-/* line 112, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 112, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider-dots li.active-dot {
   color: #ffc425; }
 
-/* line 120, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 120, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .product-slider, .product-slider-control {
   width: 50%;
   height: 100%;
   position: relative;
   left: 0; }
 
-/* line 127, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 127, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .product-slider-control {
   position: absolute;
   top: 12%; }
 
-/* line 135, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 135, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .post-title-bar {
   width: 100%;
   height: 20%;
@@ -462,39 +462,39 @@ footer {
   top: 60%;
   margin-top: -11%; }
 
-/* line 149, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 149, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slide-title {
   width: 100%;
   height: 100%;
   text-align: center;
   color: white;
   display: none; }
-  /* line 156, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+  /* line 156, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
   .slide-title h1 {
     font-size: 100pt;
     color: white; }
-  /* line 161, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+  /* line 161, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
   .slide-title h4 {
     color: white;
     font-family: "Arial", sans-serif;
     font-size: 20pt;
     font-weight: normal; }
-  /* line 169, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+  /* line 169, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
   .slide-title a, .slide-title a:hover, .slide-title a:active, .slide-title a:visited {
     color: #ffc425;
     font-family: "Arial", sans-serif;
     text-transform: uppercase; }
-  /* line 176, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+  /* line 176, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
   .slide-title i {
     color: #ffc425; }
 
-/* line 181, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 181, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slide-subtitle {
   position: absolute;
   right: 20px;
   bottom: 10%; }
 
-/* line 190, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 190, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .post-img-1 {
   background-image: url(../img/BC1000XL.jpg);
   background-position: center;
@@ -502,7 +502,7 @@ footer {
   background-repeat: no-repeat;
   display: none; }
 
-/* line 194, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 194, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .post-img-2 {
   background-image: url(../img/D36x50II_Action15.jpg);
   background-position: center;
@@ -510,7 +510,7 @@ footer {
   background-repeat: no-repeat;
   display: none; }
 
-/* line 198, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 198, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .post-img-3 {
   background-image: url(../img/RTX250_Action3.jpg);
   background-position: center;
@@ -518,7 +518,7 @@ footer {
   background-repeat: no-repeat;
   display: none; }
 
-/* line 202, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 202, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .product-img-1, .biomassa-img-1 {
   background-image: url(../img/TG5000.jpg);
   background-position: center;
@@ -526,7 +526,7 @@ footer {
   background-repeat: no-repeat;
   display: none; }
 
-/* line 209, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 209, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .active-slide {
   display: block; }
 
@@ -536,7 +536,7 @@ footer {
 /     previews, simulator menu, and other stuff.     /
 /                                                    /
 /---------------------------------------------------*/
-/* line 11, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 11, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .rightbar, .panel-bonardi-bg {
   width: 20%;
   height: 85.30%;
@@ -547,17 +547,17 @@ footer {
   padding: 20px;
   overflow-y: scroll;
   overflow-x: show; }
-  /* line 21, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+  /* line 21, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
   .rightbar h1, .rightbar h2, .rightbar h3, .rightbar h4, .rightbar h5, .rightbar h6, .rightbar p, .rightbar span, .panel-bonardi-bg h1, .panel-bonardi-bg h2, .panel-bonardi-bg h3, .panel-bonardi-bg h4, .panel-bonardi-bg h5, .panel-bonardi-bg h6, .panel-bonardi-bg p, .panel-bonardi-bg span {
     color: white; }
 
-/* line 27, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 27, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-bonardi {
   width: 100%;
   background-color: #ffc425;
   margin-bottom: 120px; }
 
-/* line 33, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 33, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-bonardi-bg {
   height: 35%;
   color: white;
@@ -566,19 +566,19 @@ footer {
   padding: 0;
   box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2); }
 
-/* line 42, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 42, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-bonardi-header {
   background-color: #ffc425;
   color: white;
   padding: 10px; }
 
-/* line 48, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 48, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-bonardi-content {
   background-color: #f2f2f2;
   color: black;
   padding: 10px; }
 
-/* line 57, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 57, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .item-selected {
   width: 40%;
   position: absolute;
@@ -587,7 +587,7 @@ footer {
   margin: 10px;
   box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2); }
 
-/* line 66, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 66, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-icon-box, .panel-icon-box:visited {
   background-color: #f2f2f2;
   height: 80px;
@@ -597,35 +597,35 @@ footer {
   box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease-in-out; }
 
-/* line 76, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 76, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-icon-box:hover, .painel-icon-box:active {
   background-color: #ffc425;
   margin-top: 50px;
   margin-bottom: 50px; }
 
-/* line 82, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 82, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-icon {
   width: 70%;
   margin: 15%; }
 
-/* line 87, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 87, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-icon:hover {
   position: absolute;
   transform: translateY(-4em); }
 
-/* line 95, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 95, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-col-left {
   margin: 10px 5px 10px 0; }
 
-/* line 99, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 99, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-col-middle {
   margin: 10px 0 10px 0; }
 
-/* line 103, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 103, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-col-right {
   margin: 10px 0 10px 0px; }
 
-/* line 110, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 110, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-control {
   width: 20%;
   height: 10%;
@@ -634,7 +634,7 @@ footer {
   right: -16px;
   overflow-y: visible; }
 
-/* line 119, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 119, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-control i {
   color: #ffc425;
   font-size: 70px;
@@ -647,27 +647,27 @@ footer {
     bootstrap behaviour.
 
 --------------------------------------------------------------*/
-/* line 8, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
+/* line 8, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
 .btn-custom {
   background-color: #ffc425;
   color: black;
   padding: 0 20px; }
-  /* line 12, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
+  /* line 12, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
   .btn-custom h5 {
     text-align: center; }
 
-/* line 17, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
+/* line 17, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
 .btn-yellow, .btn-square {
   background-color: #ffc425;
   color: black;
   padding: 0 20px; }
 
-/* line 23, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
+/* line 23, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
 .btn-yellow h5 {
   text-align: center;
   color: black; }
 
-/* line 28, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
+/* line 28, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
 .btn-square {
   width: 15px;
   height: 15px;
@@ -675,7 +675,7 @@ footer {
   padding: 5px;
   margin: 5px; }
 
-/* line 36, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
+/* line 36, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
 .btn-square p {
   position: relative;
   bottom: 9px;
@@ -683,7 +683,7 @@ footer {
   text-indent: 0;
   color: black !important; }
 
-/* line 44, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
+/* line 44, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_btn-custom.scss */
 .plus-fix p {
   text-indent: 0; }
 
@@ -693,26 +693,26 @@ footer {
     along with jQuery UI!
 
 --------------------------------------------------------------*/
-/* line 9, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_accordion.scss */
+/* line 9, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_accordion.scss */
 .accordion-button {
   background-color: #ffc425;
   color: black;
   width: 100%;
   border: 0;
   padding: 10px 10px; }
-  /* line 16, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_accordion.scss */
+  /* line 16, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_accordion.scss */
   .accordion-button h4, .accordion-button i {
     display: inline-block;
     margin: 0 5px; }
 
-/* line 22, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_accordion.scss */
+/* line 22, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_accordion.scss */
 .accordion-box {
   background-color: #f2f2f2;
   color: black;
   padding: 15px;
   height: 62%; }
 
-/* line 1, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_icon-circle.scss */
+/* line 1, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_icon-circle.scss */
 .body-circle, .footer-circle {
   border-radius: 50%;
   background-color: #ffc425;
@@ -720,14 +720,14 @@ footer {
   width: 7em;
   height: 7em; }
 
-/* line 9, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_icon-circle.scss */
+/* line 9, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_icon-circle.scss */
 .footer-circle {
   position: absolute;
   bottom: -235px;
   width: 3em;
   height: 3em; }
 
-/* line 16, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_icon-circle.scss */
+/* line 16, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_icon-circle.scss */
 .footer-circle i {
   padding-top: 1em; }
 
@@ -737,14 +737,14 @@ footer {
 /          the fold content and it's classes.        /
 /                                                    /
 /---------------------------------------------------*/
-/* line 11, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/sections/_body-content.scss */
+/* line 11, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_body-content.scss */
 .body-content {
   background-color: #f2f2f2;
   width: 100%;
   min-height: 500px;
   padding-top: 100px;
   padding-bottom: 100px; }
-  /* line 17, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/sections/_body-content.scss */
+  /* line 17, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_body-content.scss */
   .body-content p {
     font-size: 9pt;
     text-align: justify; }
@@ -755,137 +755,137 @@ footer {
 /          the fold footer and it's classes.         /
 /                                                    /
 /---------------------------------------------------*/
-/* line 11, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
+/* line 11, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
 .footer-content {
   background-color: #5F6062;
   border-top: 10px solid #ffc425;
   min-height: 300px;
   padding: 100px 10em;
   color: white; }
-  /* line 18, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
+  /* line 18, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
   .footer-content h5 {
     letter-spacing: 3px;
     margin-bottom: 20px;
     color: white; }
-  /* line 25, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
+  /* line 25, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
   .footer-content a, .footer-content a:hover, .footer-content a:active, .footer-content a:visited {
     color: #ffc425;
     text-decoration: none;
     display: block;
     margin: 20px 0;
     font-weight: bold; }
-  /* line 33, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
+  /* line 33, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
   .footer-content p {
     color: white; }
-  /* line 36, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
+  /* line 36, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
   .footer-content span {
     font-family: "open sans condensed", sans-serif;
     font-size: 0.9em; }
-    /* line 38, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
+    /* line 38, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_footer-content.scss */
     .footer-content span hr {
       border: 1px dashed #ffc425 !important; }
 
-/* line 5, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 5, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-main {
   color: #ffc425 !important; }
 
-/* line 6, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 6, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-black {
   color: black !important; }
 
-/* line 7, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 7, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-grey {
   color: #f2f2f2 !important; }
 
-/* line 8, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 8, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-white {
   color: white !important; }
 
-/* line 9, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 9, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-title {
   color: white !important; }
 
-/* line 10, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 10, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-subtitle {
   color: white !important; }
 
-/* line 11, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 11, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-copy {
   color: black !important; }
 
-/* line 12, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 12, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-link {
   color: white !important; }
 
-/* line 13, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 13, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-hover {
   color: #ffc425 !important; }
 
-/* line 14, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 14, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-active {
   color: #ffc425 !important; }
 
-/* line 15, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 15, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-visited {
   color: #ffc425 !important; }
 
-/* line 16, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 16, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-background {
   color: white !important; }
 
-/* line 17, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 17, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .color-box {
   color: #ffc425 !important; }
 
-/* line 23, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 23, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-color-main {
   background-color: #ffc425 !important; }
 
-/* line 24, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 24, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-color-black {
   background-color: black !important; }
 
-/* line 25, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 25, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-color-grey {
   background-color: #f2f2f2 !important; }
 
-/* line 26, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 26, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-color-white {
   background-color: white !important; }
 
-/* line 27, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 27, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-color-title {
   background-color: white !important; }
 
-/* line 28, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 28, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-color-subtitle {
   background-color: white !important; }
 
-/* line 29, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 29, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-olor-copy {
   background-color: black !important; }
 
-/* line 30, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 30, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-color-link {
   background-color: white !important; }
 
-/* line 31, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 31, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-color-hover {
   background-color: #ffc425 !important; }
 
-/* line 32, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 32, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-color-active {
   background-color: #ffc425 !important; }
 
-/* line 33, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 33, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-color-visited {
   background-color: #ffc425 !important; }
 
-/* line 34, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 34, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-color-background {
   background-color: white !important; }
 
-/* line 35, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
+/* line 35, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_colors.scss */
 .bg-color-box {
   background-color: #ffc425 !important; }
 
@@ -895,24 +895,24 @@ footer {
 /    css classes to convert data and apply fixes.    /
 /                                                    /
 /---------------------------------------------------*/
-/* line 25, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_helpers.scss */
+/* line 25, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_helpers.scss */
 .col-left, .col-middle, .col-right, .col-none {
   padding: 2em !important; }
 
-/* line 29, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_helpers.scss */
+/* line 29, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_helpers.scss */
 .col-left {
   border-right: 1px dashed #5F6062 !important; }
 
-/* line 33, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_helpers.scss */
+/* line 33, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_helpers.scss */
 .col-middle {
   border-left: 1px dashed #5F6062 !important;
   border-right: 1px dashed #5F6062 !important; }
 
-/* line 38, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_helpers.scss */
+/* line 38, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_helpers.scss */
 .col-right {
   border-left: 1px dashed #5F6062 !important; }
 
-/* line 42, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/utils/_helpers.scss */
+/* line 42, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/utils/_helpers.scss */
 .row-spacer {
   width: 100%;
   top: 0;
