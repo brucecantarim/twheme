@@ -470,6 +470,9 @@ footer {
   overflow-x: show; }
   .rightbar h1, .rightbar h2, .rightbar h3, .rightbar h4, .rightbar h5, .rightbar h6, .rightbar p, .rightbar span, .panel-bonardi-bg h1, .panel-bonardi-bg h2, .panel-bonardi-bg h3, .panel-bonardi-bg h4, .panel-bonardi-bg h5, .panel-bonardi-bg h6, .panel-bonardi-bg p, .panel-bonardi-bg span {
     color: white; }
+  .rightbar i, .rightbar h4, .panel-bonardi-bg i, .panel-bonardi-bg h4 {
+    display: inline;
+    margin: auto 0.3em; }
 
 .panel-bonardi {
   width: 100%;

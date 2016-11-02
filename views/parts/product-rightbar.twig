@@ -37,7 +37,7 @@
         </div><!-- /.row -->
         
         <div class="row">
-            {% for id in post.gallery %}
+            {% for id in gallery %}
             <div class="col-md-6 lightbox" title="{{ post.title }}">
                 <a href="{{image.link}}">
                     <img class="img-responsive product-gallery lightbox" src="{{Image(id).src}}"/>

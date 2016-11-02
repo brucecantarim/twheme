@@ -19,6 +19,7 @@
     overflow-y: scroll;
     overflow-x: show;
         h1, h2, h3, h4, h5, h6, p, span { color: $color-white }
+        i, h4 { display: inline; margin: auto 0.3em; }
 }
 
 // --------------------------------------------------

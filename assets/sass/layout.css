@@ -550,14 +550,18 @@ footer {
   /* line 21, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
   .rightbar h1, .rightbar h2, .rightbar h3, .rightbar h4, .rightbar h5, .rightbar h6, .rightbar p, .rightbar span, .panel-bonardi-bg h1, .panel-bonardi-bg h2, .panel-bonardi-bg h3, .panel-bonardi-bg h4, .panel-bonardi-bg h5, .panel-bonardi-bg h6, .panel-bonardi-bg p, .panel-bonardi-bg span {
     color: white; }
+  /* line 22, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+  .rightbar i, .rightbar h4, .panel-bonardi-bg i, .panel-bonardi-bg h4 {
+    display: inline;
+    margin: auto 0.3em; }
 
-/* line 27, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 28, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-bonardi {
   width: 100%;
   background-color: #ffc425;
   margin-bottom: 120px; }
 
-/* line 33, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 34, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-bonardi-bg {
   height: 35%;
   color: white;
@@ -566,19 +570,19 @@ footer {
   padding: 0;
   box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2); }
 
-/* line 42, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 43, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-bonardi-header {
   background-color: #ffc425;
   color: white;
   padding: 10px; }
 
-/* line 48, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 49, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-bonardi-content {
   background-color: #f2f2f2;
   color: black;
   padding: 10px; }
 
-/* line 57, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 58, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .item-selected {
   width: 40%;
   position: absolute;
@@ -587,7 +591,7 @@ footer {
   margin: 10px;
   box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2); }
 
-/* line 66, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 67, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-icon-box, .panel-icon-box:visited {
   background-color: #f2f2f2;
   height: 80px;
@@ -597,35 +601,35 @@ footer {
   box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease-in-out; }
 
-/* line 76, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 77, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-icon-box:hover, .painel-icon-box:active {
   background-color: #ffc425;
   margin-top: 50px;
   margin-bottom: 50px; }
 
-/* line 82, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 83, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-icon {
   width: 70%;
   margin: 15%; }
 
-/* line 87, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 88, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-icon:hover {
   position: absolute;
   transform: translateY(-4em); }
 
-/* line 95, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 96, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-col-left {
   margin: 10px 5px 10px 0; }
 
-/* line 99, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 100, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-col-middle {
   margin: 10px 0 10px 0; }
 
-/* line 103, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 104, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-col-right {
   margin: 10px 0 10px 0px; }
 
-/* line 110, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 111, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-control {
   width: 20%;
   height: 10%;
@@ -634,7 +638,7 @@ footer {
   right: -16px;
   overflow-y: visible; }
 
-/* line 119, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 120, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-control i {
   color: #ffc425;
   font-size: 70px;
