@@ -266,7 +266,7 @@ footer {
   display: inline-block;
   margin: 1em;
   text-transform: uppercase;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: bold; }
   /* line 122, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .menuitem a, .menuitem a:visited {
@@ -290,28 +290,30 @@ footer {
 /* line 140, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .submenuitem {
   list-style-type: none;
-  color: white; }
-  /* line 143, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold; }
+  /* line 144, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem h4 {
     color: white; }
-  /* line 144, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 145, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem h4 small {
     color: white;
     font-weight: bold; }
-  /* line 149, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 150, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem a:hover, .submenuitem a:visited {
     color: #ffc425;
     text-decoration: none; }
-  /* line 150, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 151, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem a, .submenuitem a:visited {
     color: white;
     text-decoration: none; }
 
-/* line 157, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 158, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .navbar, .submenu {
   border-bottom: 5px solid #ffc425; }
 
-/* line 161, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 162, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .menustrip {
   background-color: #ffc425;
   width: 100%;
