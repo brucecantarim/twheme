@@ -332,7 +332,7 @@ footer {
   right: 19%;
   background-color: #f2f2f2;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: scroll;
   padding: 20px; }
 
 /*---------------------------------------------------/
@@ -743,7 +743,7 @@ footer {
 /---------------------------------------------------*/
 /* line 11, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_body-content.scss */
 .body-content {
-  background-color: #f2f2f2;
+  background-color: white;
   width: 100%;
   min-height: 500px;
   padding-top: 100px;
@@ -752,6 +752,10 @@ footer {
   .body-content p {
     font-size: 9pt;
     text-align: justify; }
+  /* line 21, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/sections/_body-content.scss */
+  .body-content .alignnone {
+    position: relative;
+    left: -7.5em; }
 
 /*---------------------------------------------------/
 /                                                    /

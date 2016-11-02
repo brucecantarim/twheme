@@ -10,6 +10,7 @@
             <div class="col-md-12">
                 <br/>
                 <h3><strong>{{ post.name }}</strong></h3>
+                
                 <hr/>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -22,7 +23,7 @@
         </div><!-- /.row -->
         
         <div class="row">
-            {% for video in post.videos %}
+            {% for video in videos %}
             <div class="col-md-6">
                 [youtube id="{{video}}" format="wide" ]
             </div><!-- /.col -->
@@ -37,9 +38,11 @@
         </div><!-- /.row -->
         
         <div class="row">
-            {% for id in post.gallery %}
+            {% for id in gallery %}
             <div class="col-md-6 lightbox" title="{{ post.title }}">
-                <img class="img-responsive product-gallery lightbox" src="{{Image(id).src}}"/>
+                <a href='{{Image(id).src}}'>
+                    <img class="img-responsive product-gallery lightbox" src="{{Image(id).src}}"/>
+                </a>
             </div><!-- /.col -->
             {% endfor %}      
         </div><!-- /.row -->
