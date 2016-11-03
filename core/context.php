@@ -13,14 +13,6 @@ $context['posts'] = Timber::get_posts();
 $context['site'] = $this;
 // $context['footer'] = Timber::render('footer.twig', $context);
 
-// Post Gallery Filter
-$gallery = $post->gallery;
-$context['gallery'] =  isset($gallery) ? explode(',', $gallery) : null;
-
-// Video Gallery Filter
-$gallery = $post->videos;
-$context['videos'] =  isset($videos) ? explode(',', $videos) : null;
-
 $twheme_navbar = $config->navbar;
 
 if ($twheme_navbar == 'default') {

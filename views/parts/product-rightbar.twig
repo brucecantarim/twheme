@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-12">
                 <br/>
-                <h3><strong>{{ post.name }}</strong></h3>
+                <h3><strong>Mídias</strong></h3>
                 <hr/>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -17,50 +17,88 @@
         <!-- VIDEOS -->
         <div class="row">
             <div class="col-md-12">
-                <i class="fa fa-video-camera"></i><h4>{{__("VÍDEOS", twheme)}}</h4>
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-square fa-stack-2x color-main"></i>
+                    <i class="fa fa-video-camera fa-stack-1x color-black"></i>
+                </span>
+                <h4>{{__("VÍDEOS", twheme)}}</h4>
             </div><!-- /.col -->
         </div><!-- /.row -->
         
         <div class="row">
-            {% for video in videos %}
-            <div class="col-md-6">
-                [youtube id="{{video}}" format="wide" ]
+            {% if videos %}
+            {% for video in videos|slice(0, 2) %}
+            <div class="col-md-12">
+                [youtube id="{{video}}" format="wide" ][/youtube]
             </div><!-- /.col -->
             {% endfor %}
+            {% else %}
+            <div class="col-md-12">
+                <div class="embed-responsive embed-responsive-16by9 youtube">
+                    <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/{{post.videos|slice(0, 1)}}" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+            </div><!-- /.col -->
+            <div class="col-md-12">
+                <div class="embed-responsive embed-responsive-16by9 youtube">
+                    <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/{{post.videos|slice(1, 2)}}" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+            </div><!-- /.col -->
+            {% endif %}
         </div><!-- /.row -->
         
         <!-- IMAGES -->
         <div class="row">
             <div class="col-md-12">
-                <i class="fa fa-picture-o"></i><h4>{{__("IMAGENS", twheme)}}</h4>
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-square fa-stack-2x color-main"></i>
+                    <i class="fa fa-picture-o fa-stack-1x color-black"></i>
+                </span>
+                <h4>{{__("IMAGENS", twheme)}}</h4>
             </div><!-- /.col -->
         </div><!-- /.row -->
         
-        <div class="row">
-            {% for id in gallery %}
-            <div id="rightbar-image" class="col-md-6 lightbox" title="{{ post.title }}">
-                    <img class="img-responsive product-gallery lightbox" src="{{Image(id).src}}" alt="{{ post.title }}"/>
+        <div class="row rightbar-gallery">
+            <br/>
+            {% for id in gallery|slice(0, 6) %}
+            <div class="col-md-4">
+                <div class="rightbar-image" title="{{ post.title }}">
+                    <img class="img-responsive product-gallery" src="{{Image(id).src}}" alt="{{ post.title }}"/>
+                </div>
             </div><!-- /.col -->
-            {% endfor %}      
+            {% endfor %}   
+            <br/><br/>   
         </div><!-- /.row -->
         
         <!-- DOCUMENTS -->
         <div class="row">
             <div class="col-md-12">
-                <i class="fa fa-book"></i><h4>{{__("DOCUMENTOS", twheme)}}</h4>
+                <br/>
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-square fa-stack-2x color-main"></i>
+                    <i class="fa fa-book fa-stack-1x color-black"></i>
+                </span>
+                <h4>{{__("CATÁLOGOS", twheme)}}</h4>
             </div><!-- /.col -->
         </div><!-- /.row -->
         
         <div class="row">
             <div class="col-md-12">
                 <ul>
-                {% for file in post.files %}
+                {% if post.files %}
+                {#{% for file in post.files %}
                     <li>
                         <a href="{{file}}">
                         <i class="glyphicon glyphicon-save-file"></i>{{file.name}}
                         </a>
                     </li>
                 {% endfor %}
+                    {% else %}#}
+                     <li>
+                        <a href="#">
+                        <i class="glyphicon glyphicon-save-file"></i> {{post.title}}.pdf
+                        </a>
+                    </li>
+                {% endif %}
                 </ul>
             </div><!-- /.col -->
         </div><!-- /.row -->

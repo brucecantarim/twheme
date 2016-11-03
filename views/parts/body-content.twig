@@ -13,6 +13,8 @@
                     
                 <div class="col-md-12 text-justify">
                     {{ post.specs }}
+                    <br/><br/>
+                    <button class="btn btn-yellow btn-flex wow slideIn text-center" action="mailto:brasil@vermeer.com"><h4>Entre em contato e faça o seu orçamento</h4></button>
                 </div>
             
             {% elseif post.post_type == 'page' %}
@@ -20,7 +22,6 @@
                     <h1>{{post.title}}</h1><br/>
                     <hr/>
                     {{ post.content }}
-                
                     {% for item in menu %}
                     <!-- NEEDS FIXING... SCOPE IS THE CULPRIT -->
                     {% if post.title == item %}
@@ -85,28 +86,32 @@
                     <img src="assets/img/SEMINOVOS-01.svg"/>
                 </div>
                 <h3>Seminovos</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempus, orci vitae egestas dictum, erat tellus ullamcorper lacus, id suscipit neque metus sit amet nibh. Curabitur et metus non neque porttitor accumsan vel non ante. Cras lobortis elit vitae rhoncus fermentum. Quisque consectetur fermentum sem egestas lacinia. Vivamus enim mi, porta sit amet mauris sed, accumsan mollis purus. In vel tortor neque. Sed porttitor mauris at posuere imperdiet. Cras magna tellus, varius et dapibus at, tempor a odio. Donec hendrerit, risus ut interdum dapibus, ex metus gravida est, non cursus leo leo quis eros. Maecenas ac cursus lorem.</p>
+                <br/>
+                <p>Confira aqui o nosso catálogo de equipamentos Vermeer de segunda mão numa variedade de modelos, com as características e opções mais desejadas, usados de forragem e industriais à venda para uso em fazendas ou em obras de construção. Comprando conosco, você tem a segurança de que o seu equipamento seminovo está pronto para encarar qualquer trabalho.</p>
             </div>
             <div class="col-md-3 text-center col-left">
                 <div class="body-circle center-block">
                     <img src="assets/img/ALUGUEL-01.svg"/>
                 </div>
                 <h3>Aluguel</h3>
-                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sed maximus nulla. Etiam aliquet sapien eget orci dictum tristique. Ut imperdiet ante ac urna semper, vitae pulvinar tortor tincidunt. Sed eleifend sapien sed placerat ultrices. Vestibulum ut ligula eget turpis vehicula iaculis. Nunc sagittis maximus lacinia. Aenean vulputate mauris pretium, cursus elit sed, molestie ipsum. Vivamus imperdiet ante massa, eget finibus velit ultricies eget. Fusce sit amet sapien maximus, ultrices eros nec, finibus leo. Quisque vel felis vitae odio ullamcorper auctor nec eget tortor.</p>
+                <br/>
+                <p>A Vermeer Brasil oferece aos seus clientes a possibilidade de alugar equipamentos. Temos disponíveis modelos da nossa frota de alugueL e da rede internacional da Vermeer, trazendo a solução na medida das suas necessidades e para toda obra. O aluguel de equipamento tem várias vantagens associadas e é uma ótima opção para usufruir das nossas máquinas.</p>
             </div>
             <div class="col-md-3 text-center col-left">
                 <div class="body-circle center-block">
                     <img src="assets/img/OFERTAS-01.svg"/>
                 </div>
                 <h3>Ofertas</h3>
-                <p>In blandit magna sit amet urna malesuada porta. Praesent ac euismod arcu. Nulla ultricies lacus ut purus commodo, eu mollis sapien fermentum. Aliquam eleifend mauris ultricies est fermentum consequat. Aliquam finibus nisi vel pretium tincidunt. Sed suscipit maximus magna sit amet efficitur. Quisque sit amet tellus in ligula rhoncus malesuada vitae id massa. Sed aliquam orci justo, id eleifend quam porta in. Quisque tristique ex ac lectus pharetra, sit amet efficitur est eleifend. Proin enim massa, hendrerit a mi ultricies, vulputate aliquam elit. Nullam ut metus luctus, auctor odio at, imperdiet augue.</p>
+                <br/>
+                <p>Se você estava esperando para adquirir um dos nossos produtos, agora é a melhor hora para comprar um equipamento Vermeer. Preparamos uma série de promoções selecionadas a dedo, exclusivamente para o nosso site. Estas ofertas especiais estarão disponíveis somente por um curto período de tempo, então clique e confira!</p>
             </div>
             <div class="col-md-3 text-center col-none">
                 <div class="body-circle center-block">
                     <img src="assets/img/FINANCIAMENTOS-01.svg"/>
                 </div>
                 <h3>Financiamento</h3>
-                <p>Sed pellentesque maximus nibh at vehicula. Vestibulum fermentum pretium justo eget euismod. Vivamus sodales elit finibus tempus fermentum. Fusce et ex et metus sollicitudin commodo. Fusce non dolor vitae nunc ultrices suscipit. Praesent id augue elementum, euismod turpis a, sagittis erat. Ut libero nisl, dignissim non turpis eget, posuere consectetur diam. Integer aliquet commodo lacinia. Praesent nec sapien augue. Donec egestas mollis ante. Integer maximus odio nec arcu posuere, ac rutrum massa auctor. Quisque diam odio, luctus id iaculis sed, venenatis id elit. Morbi elementum sem eu ligula efficitur interdum.</p>
+                <br/>
+                <p>No mercado para algo novo? Procurando financiamento, ao invés de pagar em dinheiro novas compras de equipamentos? Pensando sobre qual a taxa de juros e as condições de pagamento que estão disponíveis? Conte com a Vermeer e seus parceiros para opções de financiamento. Sabemos que você precisa de opções de financiamento especialmente criadas para você.</p>
             </div>
             
             {% endif %}

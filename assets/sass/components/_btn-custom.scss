@@ -14,10 +14,18 @@
         }
 }
 
-.btn-yellow, .btn-square {
+.btn-yellow, .btn-square, .btn-rightbar {
     background-color: $color-main;
     color: $color-copy;
     padding: 0 20px;
+}
+
+.btn-rightbar {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    padding: 5px;
+    margin: auto 0.3em;
 }
 
 .btn-yellow h5 {
@@ -39,6 +47,10 @@
     right: 3px;
     text-indent: 0;
     color: $color-copy !important;
+}
+
+.btn-flex {
+    width: 100%;
 }
 
 .plus-fix p {

@@ -18,4 +18,13 @@
     overflow-x: hidden;
     overflow-y: scroll;
     padding: 20px;
+    padding-top: 0;
+    @media only screen and (min-width: 321px) and (max-width: 1265px) {
+        top: 21.50%;
+        height: 78.50%;
+    }
+}
+
+.middlebar-row {
+    width: 100%;
 }

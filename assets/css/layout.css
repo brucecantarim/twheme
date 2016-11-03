@@ -299,7 +299,15 @@ footer {
   background-color: #f2f2f2;
   overflow-x: hidden;
   overflow-y: scroll;
-  padding: 20px; }
+  padding: 20px;
+  padding-top: 0; }
+  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+    .middlebar, .slider-gradient {
+      top: 21.50%;
+      height: 78.50%; } }
+
+.middlebar-row {
+  width: 100%; }
 
 /*---------------------------------------------------/
 /                                                    /
@@ -493,13 +501,16 @@ footer {
   right: -16px;
   color: white;
   padding: 20px;
+  padding-top: 0;
   overflow-y: scroll;
   overflow-x: show; }
   .rightbar h1, .rightbar h2, .rightbar h3, .rightbar h4, .rightbar h5, .rightbar h6, .rightbar p, .rightbar span, .panel-bonardi-bg h1, .panel-bonardi-bg h2, .panel-bonardi-bg h3, .panel-bonardi-bg h4, .panel-bonardi-bg h5, .panel-bonardi-bg h6, .panel-bonardi-bg p, .panel-bonardi-bg span {
     color: white; }
-  .rightbar i, .rightbar h4, .panel-bonardi-bg i, .panel-bonardi-bg h4 {
+  .rightbar h4, .panel-bonardi-bg h4 {
     display: inline;
     margin: auto 0.3em; }
+  .rightbar li, .panel-bonardi-bg li {
+    list-style: none; }
   @media only screen and (min-width: 321px) and (max-width: 1265px) {
     .rightbar, .panel-bonardi-bg {
       top: 21.50%;
@@ -558,8 +569,12 @@ footer {
   position: absolute;
   transform: translateY(-4em); }
 
-#rightbar-image {
-  height: 80px;
+.rightbar-image {
+  max-height: 75px;
+  width: 100%;
+  margin: 5px 0; }
+
+.rightbar-gallery {
   width: 100%; }
 
 .panel-col-left {
@@ -598,10 +613,17 @@ footer {
   .btn-custom h5 {
     text-align: center; }
 
-.btn-yellow, .btn-square {
+.btn-yellow, .btn-square, .btn-rightbar {
   background-color: #ffc425;
   color: black;
   padding: 0 20px; }
+
+.btn-rightbar {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  padding: 5px;
+  margin: auto 0.3em; }
 
 .btn-yellow h5 {
   text-align: center;
@@ -620,6 +642,9 @@ footer {
   right: 3px;
   text-indent: 0;
   color: black !important; }
+
+.btn-flex {
+  width: 100%; }
 
 .plus-fix p {
   text-indent: 0; }
@@ -650,8 +675,8 @@ footer {
   border-radius: 50%;
   background-color: #ffc425;
   color: black;
-  width: 7em;
-  height: 7em; }
+  width: 6em;
+  height: 6em; }
 
 .footer-circle {
   position: absolute;
@@ -683,6 +708,17 @@ footer {
 
 /*---------------------------------------------------/
 /                                                    /
+/    YOUTUBE - This is a simple class to restrain    /
+/          the videos embbed via shortcodes.         /
+/                                                    /
+/---------------------------------------------------*/
+.youtube {
+  max-width: 93%;
+  max-height: 250px;
+  margin: 10px 0; }
+
+/*---------------------------------------------------/
+/                                                    /
 /  BODY CONTENT - Here's the wrapper for the bellow  /
 /          the fold content and it's classes.        /
 /                                                    /
@@ -695,7 +731,8 @@ footer {
   padding-bottom: 100px; }
   .body-content p {
     font-size: 9pt;
-    text-align: justify; }
+    text-align: justify;
+    text-indent: 3em; }
   .body-content .size-large {
     position: relative;
     left: -3.5em; }
@@ -711,8 +748,8 @@ footer {
 .footer-content {
   background-color: #5F6062;
   border-top: 5px solid #ffc425;
-  min-height: 300px;
-  padding: 100px 10em;
+  min-height: 100px;
+  padding: 10px 10em;
   color: white; }
   .footer-content h5 {
     letter-spacing: 3px;

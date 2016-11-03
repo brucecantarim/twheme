@@ -3,17 +3,17 @@
 {% block middlebar %}
 
         <div class="middlebar">
-            <div class="container">
+            <div class="container-flex">
                 <div class="row">
-                    <div class="col-md-5 text-center">
+                    <div class="col-md-12 text-center">
                        <br/>
-                        <h3 class="text-right">{{ post.path }}</h3>
+                        <h3 class="text-left">MANEJO DE ÁRVORES/</h3>
+                        <h1 class="text-left">{{post.category}}<strong>{{ post.title }}</strong></h1><br/>
                         <hr/>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-5 text-justify">
-                        <h3>{{ post.title }}</strong></h3><br/>
+                    <div class="col-md-12 text-justify">
                         <p>{{ post.content }}</p>
                     </div>
                 </div>
