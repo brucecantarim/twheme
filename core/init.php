@@ -102,7 +102,7 @@ class Twheme extends TimberSite {
     
     function custom_search_filter($query) {
         if ($query->is_search) {
-            $query->set('post_type', array('produtos', 'servicos') ); // Here I defined which post types to search for the query
+            $query->set('post_type', 'maquina' ); // Here I defined which post types to search for the query, array('for','more','types')
         };
     return $query;
     }

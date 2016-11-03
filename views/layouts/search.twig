@@ -1,18 +1,16 @@
 {% extends 'base.twig' %}
 
 {% block content %}
+    {% include 'photo-stripe.twig' %}
     <div class="container">
         <div class ="row">
-            <div class="container-flex col-xs-12 col-sm-12 col-md-12 col-lg-12">
-               <div class="greydotline wow fadeInUp"> </div><br/>
-               <div class="greydotline wow fadeInUp"> </div><br/>
-               <div class="greydotline wow fadeInUp"> </div>
-            </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <br/><br/>
                 <h1 class="search-title wow fadeInUp">{{ title }}</h1>
-                <br/><br/><br/><hr/>
+                <hr/>
+                <br/><br/>
             </div>
+        {% if posts %}
         {% for post in posts %}
                 <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
                     <h1>{{ post.title }}</h1>
@@ -25,6 +23,12 @@
                 </a>
             </div><!--/. col -->
         {% endfor %}
+        {% else %}
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
+                    <h1>Nenhum resultado</h1>
+                    <h3>Verifique se digitou o termo corretamente, ou tente novamente mais tarde</h3>
+                 </div><!--/. col -->
+        {% endif %}
         </div>
         <br/><br/><br/>
     </div>

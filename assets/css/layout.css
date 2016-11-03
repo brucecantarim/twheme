@@ -209,7 +209,7 @@ footer {
   margin: 0;
   color: #f2f2f2;
   font-size: 1.3em; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+  @media only screen and (min-width: 321px) and (max-width: 1600px) {
     .search {
       font-size: 1em;
       top: 6em; } }
@@ -239,7 +239,7 @@ footer {
   .menuitem a:hover, .menuitem a:active {
     color: #ffc425;
     text-decoration: none; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+  @media only screen and (min-width: 321px) and (max-width: 1600px) {
     .menuitem {
       font-size: 0.9em; } }
 
@@ -252,9 +252,10 @@ footer {
   z-index: 99;
   padding-top: 40px;
   padding-bottom: 40px; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+  @media only screen and (min-width: 321px) and (max-width: 1600px) {
     .submenu {
-      top: 20%; } }
+      top: 20%;
+      font-size: 0.9em; } }
 
 .submenuitem {
   list-style-type: none;
@@ -265,16 +266,18 @@ footer {
     color: white; }
   .submenuitem h4 small {
     color: white;
-    font-weight: bold; }
+    font-weight: normal; }
   .submenuitem a:hover, .submenuitem a:visited {
     color: #ffc425;
     text-decoration: none; }
   .submenuitem a, .submenuitem a:visited {
     color: white;
     text-decoration: none; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+  @media only screen and (min-width: 321px) and (max-width: 1600px) {
     .submenuitem {
-      font-size: 0.9em; } }
+      font-size: 0.9em; }
+      .submenuitem h4 {
+        font-size: 1em; } }
 
 .navbar, .submenu {
   border-bottom: 5px solid #ffc425; }

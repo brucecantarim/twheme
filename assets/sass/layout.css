@@ -243,7 +243,7 @@ footer {
   margin: 0;
   color: #f2f2f2;
   font-size: 1.3em; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+  @media only screen and (min-width: 321px) and (max-width: 1600px) {
     /* line 80, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
     .search {
       font-size: 1em;
@@ -280,7 +280,7 @@ footer {
   .menuitem a:hover, .menuitem a:active {
     color: #ffc425;
     text-decoration: none; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+  @media only screen and (min-width: 321px) and (max-width: 1600px) {
     /* line 121, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
     .menuitem {
       font-size: 0.9em; } }
@@ -295,42 +295,46 @@ footer {
   z-index: 99;
   padding-top: 40px;
   padding-bottom: 40px; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+  @media only screen and (min-width: 321px) and (max-width: 1600px) {
     /* line 138, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
     .submenu {
-      top: 20%; } }
+      top: 20%;
+      font-size: 0.9em; } }
 
-/* line 151, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 152, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .submenuitem {
   list-style-type: none;
   color: white;
   font-size: 1.1em;
   font-weight: bold; }
-  /* line 155, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 156, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem h4 {
     color: white; }
-  /* line 156, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 157, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem h4 small {
     color: white;
-    font-weight: bold; }
-  /* line 161, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+    font-weight: normal; }
+  /* line 162, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem a:hover, .submenuitem a:visited {
     color: #ffc425;
     text-decoration: none; }
-  /* line 162, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 163, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem a, .submenuitem a:visited {
     color: white;
     text-decoration: none; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
-    /* line 151, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  @media only screen and (min-width: 321px) and (max-width: 1600px) {
+    /* line 152, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
     .submenuitem {
-      font-size: 0.9em; } }
+      font-size: 0.9em; }
+      /* line 167, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+      .submenuitem h4 {
+        font-size: 1em; } }
 
-/* line 172, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 174, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .navbar, .submenu {
   border-bottom: 5px solid #ffc425; }
 
-/* line 176, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 178, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .menustrip {
   background-color: #ffc425;
   width: 100%;

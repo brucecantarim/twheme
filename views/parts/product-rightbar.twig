@@ -61,8 +61,10 @@
             <br/>
             {% for id in gallery|slice(0, 6) %}
             <div class="col-md-4">
-                <div class="rightbar-image" title="{{ post.title }}">
-                    <img class="img-responsive product-gallery" src="{{Image(id).src}}" alt="{{ post.title }}"/>
+                <div class="rightbar-image">
+                    <a href="{{Image(id).src}}" title="{{ post.title }}" target="_blank"> 
+                        <img class="img-responsive product-gallery" src="{{Image(id).src}}" alt="{{ post.title }}"/>
+                    </a>
                 </div>
             </div><!-- /.col -->
             {% endfor %}   
