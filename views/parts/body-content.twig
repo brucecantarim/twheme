@@ -20,9 +20,9 @@
                     <h1>{{post.title}}</h1><br/>
                     <hr/>
                     {{ post.content }}
-                    {% for item in menu.get_items if menu %}
-                    {{post|print_r}}
-                    {{item|print_r}}
+                
+                    {% for item in menu %}
+                    <!-- NEEDS FIXING... SCOPE IS THE CULPRIT -->
                     {% if post.title == item %}
                     <div class="container">
                         <div class="row">

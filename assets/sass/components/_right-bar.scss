@@ -20,6 +20,10 @@
     overflow-x: show;
         h1, h2, h3, h4, h5, h6, p, span { color: $color-white }
         i, h4 { display: inline; margin: auto 0.3em; }
+    @media only screen and (min-width: 321px) and (max-width: 1265px) {
+        top: 21.50%;
+        height: 78.50%;
+    }
 }
 
 // --------------------------------------------------

@@ -27,5 +27,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
+$context['stuff'] = $context;
 
 Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );

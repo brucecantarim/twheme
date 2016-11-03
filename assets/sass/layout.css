@@ -243,17 +243,22 @@ footer {
   margin: 0;
   color: #f2f2f2;
   font-size: 1.3em; }
-  /* line 93, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+    /* line 80, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+    .search {
+      font-size: 1em;
+      top: 6em; } }
+  /* line 98, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .search input {
     background: none;
     border: none;
     border-bottom: 1px solid #f2f2f2;
     color: #f2f2f2; }
-  /* line 100, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 105, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .search i {
     color: white; }
 
-/* line 108, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 113, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .mainmenu {
   position: absolute;
   top: 5em;
@@ -261,22 +266,26 @@ footer {
   width: 85%;
   font-family: "Open Sans Condensed", sans-serif; }
 
-/* line 116, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 121, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .menuitem {
   display: inline-block;
   margin: 1em;
   text-transform: uppercase;
   font-size: 1.1em;
   font-weight: bold; }
-  /* line 122, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 127, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .menuitem a, .menuitem a:visited {
     color: white; }
-  /* line 123, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 128, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .menuitem a:hover, .menuitem a:active {
     color: #ffc425;
     text-decoration: none; }
+  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+    /* line 121, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+    .menuitem {
+      font-size: 0.9em; } }
 
-/* line 130, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 138, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .submenu {
   position: fixed;
   top: 15.25%;
@@ -286,34 +295,42 @@ footer {
   z-index: 99;
   padding-top: 40px;
   padding-bottom: 40px; }
+  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+    /* line 138, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+    .submenu {
+      top: 20%; } }
 
-/* line 140, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 151, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .submenuitem {
   list-style-type: none;
   color: white;
   font-size: 1.1em;
   font-weight: bold; }
-  /* line 144, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 155, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem h4 {
     color: white; }
-  /* line 145, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 156, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem h4 small {
     color: white;
     font-weight: bold; }
-  /* line 150, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 161, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem a:hover, .submenuitem a:visited {
     color: #ffc425;
     text-decoration: none; }
-  /* line 151, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+  /* line 162, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
   .submenuitem a, .submenuitem a:visited {
     color: white;
     text-decoration: none; }
+  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+    /* line 151, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+    .submenuitem {
+      font-size: 0.9em; } }
 
-/* line 158, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 172, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .navbar, .submenu {
   border-bottom: 5px solid #ffc425; }
 
-/* line 162, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
+/* line 176, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_navbar.scss */
 .menustrip {
   background-color: #ffc425;
   width: 100%;
@@ -369,8 +386,12 @@ footer {
   position: relative;
   left: 0;
   top: 2%; }
+  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+    /* line 33, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+    .slider-control {
+      width: 81.5%; } }
 
-/* line 41, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 44, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider-nav, .product-slider-nav {
   width: 100%;
   height: 50px;
@@ -379,7 +400,7 @@ footer {
   bottom: 30%;
   z-index: 1; }
 
-/* line 50, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 53, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .product-slider-nav {
   width: 50%;
   position: absolute;
@@ -387,7 +408,7 @@ footer {
   z-index: 1;
   left: 0; }
 
-/* line 58, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 61, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider-gradient {
   background-color: none;
   background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0), white);
@@ -396,7 +417,7 @@ footer {
   background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
   right: 0; }
 
-/* line 71, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 74, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .arrow-next, .arrow-prev {
   width: 50px;
   height: 50px;
@@ -405,55 +426,55 @@ footer {
   z-index: 1;
   background-color: black;
   color: white; }
-  /* line 79, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+  /* line 82, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
   .arrow-next:hover, .arrow-prev:hover {
     background-color: #ffc425;
     color: black; }
 
-/* line 85, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 88, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .arrow-prev {
   left: 0; }
 
-/* line 89, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 92, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .arrow-next {
   right: 0; }
 
-/* line 93, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 96, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .arrow-icon {
   color: color-main;
   margin: 33% auto; }
 
-/* line 98, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 101, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider-dots {
   list-style: none;
   display: inline-block;
   padding-left: 0;
   margin-bottom: 0; }
 
-/* line 105, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 108, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider-dots li {
   display: inline;
   font-size: 30px;
   margin-right: 5px;
   color: white; }
 
-/* line 112, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 115, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slider-dots li.active-dot {
   color: #ffc425; }
 
-/* line 120, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 123, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .product-slider, .product-slider-control {
   width: 50%;
   height: 100%;
   position: relative;
   left: 0; }
 
-/* line 127, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 130, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .product-slider-control {
   position: absolute;
   top: 12%; }
 
-/* line 135, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 138, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .post-title-bar {
   width: 100%;
   height: 20%;
@@ -463,40 +484,52 @@ footer {
   position: absolute;
   top: 60%;
   margin-top: -11%; }
+  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+    /* line 138, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+    .post-title-bar {
+      min-height: 190px; } }
 
-/* line 149, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 155, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slide-title {
   width: 100%;
   height: 100%;
   text-align: center;
   color: white;
   display: none; }
-  /* line 156, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+  /* line 162, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
   .slide-title h1 {
-    font-size: 100pt;
+    font-size: 7em;
     color: white; }
-  /* line 161, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+    @media only screen and (min-width: 321px) and (max-width: 1265px) {
+      /* line 162, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+      .slide-title h1 {
+        font-size: 5em; } }
+  /* line 170, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
   .slide-title h4 {
     color: white;
     font-family: "Arial", sans-serif;
-    font-size: 20pt;
+    font-size: 2em;
     font-weight: normal; }
-  /* line 169, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+    @media only screen and (min-width: 321px) and (max-width: 1265px) {
+      /* line 170, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+      .slide-title h4 {
+        font-size: 1.5em; } }
+  /* line 181, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
   .slide-title a, .slide-title a:hover, .slide-title a:active, .slide-title a:visited {
     color: #ffc425;
     font-family: "Arial", sans-serif;
     text-transform: uppercase; }
-  /* line 176, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+  /* line 188, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
   .slide-title i {
     color: #ffc425; }
 
-/* line 181, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 193, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .slide-subtitle {
   position: absolute;
   right: 20px;
   bottom: 10%; }
 
-/* line 190, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 202, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .post-img-1 {
   background-image: url(../img/BC1000XL.jpg);
   background-position: center;
@@ -504,7 +537,7 @@ footer {
   background-repeat: no-repeat;
   display: none; }
 
-/* line 194, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 206, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .post-img-2 {
   background-image: url(../img/D36x50II_Action15.jpg);
   background-position: center;
@@ -512,7 +545,7 @@ footer {
   background-repeat: no-repeat;
   display: none; }
 
-/* line 198, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 210, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .post-img-3 {
   background-image: url(../img/RTX250_Action3.jpg);
   background-position: center;
@@ -520,7 +553,7 @@ footer {
   background-repeat: no-repeat;
   display: none; }
 
-/* line 202, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 214, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .product-img-1, .biomassa-img-1 {
   background-image: url(../img/TG5000.jpg);
   background-position: center;
@@ -528,7 +561,7 @@ footer {
   background-repeat: no-repeat;
   display: none; }
 
-/* line 209, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
+/* line 221, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_post-slider.scss */
 .active-slide {
   display: block; }
 
@@ -556,14 +589,19 @@ footer {
   .rightbar i, .rightbar h4, .panel-bonardi-bg i, .panel-bonardi-bg h4 {
     display: inline;
     margin: auto 0.3em; }
+  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+    /* line 11, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+    .rightbar, .panel-bonardi-bg {
+      top: 21.50%;
+      height: 78.50%; } }
 
-/* line 28, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 32, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-bonardi {
   width: 100%;
   background-color: #ffc425;
   margin-bottom: 120px; }
 
-/* line 34, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 38, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-bonardi-bg {
   height: 35%;
   color: white;
@@ -572,19 +610,19 @@ footer {
   padding: 0;
   box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2); }
 
-/* line 43, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 47, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-bonardi-header {
   background-color: #ffc425;
   color: white;
   padding: 10px; }
 
-/* line 49, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 53, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-bonardi-content {
   background-color: #f2f2f2;
   color: black;
   padding: 10px; }
 
-/* line 58, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 62, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .item-selected {
   width: 40%;
   position: absolute;
@@ -593,7 +631,7 @@ footer {
   margin: 10px;
   box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2); }
 
-/* line 67, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 71, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-icon-box, .panel-icon-box:visited {
   background-color: #f2f2f2;
   height: 80px;
@@ -603,40 +641,40 @@ footer {
   box-shadow: 2px 5px 10px 1px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease-in-out; }
 
-/* line 77, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 81, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-icon-box:hover, .painel-icon-box:active {
   background-color: #ffc425;
   margin-top: 50px;
   margin-bottom: 50px; }
 
-/* line 83, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 87, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-icon {
   width: 70%;
   margin: 15%; }
 
-/* line 88, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 92, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-icon:hover {
   position: absolute;
   transform: translateY(-4em); }
 
-/* line 97, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 101, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 #rightbar-image {
   height: 80px;
   width: 100%; }
 
-/* line 105, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 109, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-col-left {
   margin: 10px 5px 10px 0; }
 
-/* line 109, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 113, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-col-middle {
   margin: 10px 0 10px 0; }
 
-/* line 113, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 117, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-col-right {
   margin: 10px 0 10px 0px; }
 
-/* line 120, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 124, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-control {
   width: 20%;
   height: 10%;
@@ -645,7 +683,7 @@ footer {
   right: -16px;
   overflow-y: visible; }
 
-/* line 129, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
+/* line 133, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_right-bar.scss */
 .panel-control i {
   color: #ffc425;
   font-size: 70px;
@@ -737,10 +775,19 @@ footer {
   bottom: -235px;
   width: 3em;
   height: 3em; }
+  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+    /* line 9, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_icon-circle.scss */
+    .footer-circle {
+      width: 2em;
+      height: 2em; } }
 
-/* line 16, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_icon-circle.scss */
+/* line 20, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_icon-circle.scss */
 .footer-circle i {
   padding-top: 1em; }
+  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+    /* line 20, /Users/Bruce/Sites/wordpress.dev/wp-content/themes/twheme/assets/sass/components/_icon-circle.scss */
+    .footer-circle i {
+      padding-top: 0.5em; } }
 
 /*---------------------------------------------------/
 /                                                    /

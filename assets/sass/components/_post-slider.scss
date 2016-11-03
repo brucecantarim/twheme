@@ -36,6 +36,9 @@
     position: relative;
     left: 0;
     top: 2%;
+    @media only screen and (min-width: 321px) and (max-width: 1265px) {
+        width: 81.5%;
+    }
 }
 
 .slider-nav, .product-slider-nav {
@@ -141,6 +144,9 @@
     position: absolute;
     top: 60%;
     margin-top: -11%;
+    @media only screen and (min-width: 321px) and (max-width: 1265px) {
+        min-height: 190px;
+    }
 }
 
 // --------------------------------------------------
@@ -154,14 +160,20 @@
     display: none;
         
         h1 {
-            font-size: 100pt;
+            font-size: 7em;
             color: $color-title;
+            @media only screen and (min-width: 321px) and (max-width: 1265px) {
+                font-size: 5em;
+            }
         }
     
         h4 {
         color: $color-subtitle;
         font-family: $font-copy;
-        font-size: 20pt;
+        font-size: 2em;
+            @media only screen and (min-width: 321px) and (max-width: 1265px) {
+            font-size: 1.5em;
+        }
         font-weight: normal;
         }
         
