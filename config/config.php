@@ -21,22 +21,34 @@ namespace Twheme;
 trait Config {
 
 
-    var $default_post = false, // Here you can set if you want to use the default post type, or Home one  
-        $is_fullscreen = false, // This will define if all content is above the fold
-        $navbar = 'default',  // Here you can define which navbar to use, default or bootstrap for now
-        $middlebar = true, // This activates a middlebar in the twheme context
-        $rightbar = true, // This activates a rightbar in the twheme context
-        $twheme_fonts = "Open Sans Condensed", // This value accept Google Fonts name
-        $twheme_postslide = 'noticia', // Change this value to the post category you want to use
-        $twheme_slideshow = true, //  This enables or disables the Slideshow post type
+    var $isFullscreen = false, // This will define if all content is above the fold
+        $navBar = 'default',  // Here you can define which navbar to use, default or bootstrap for now
+        $middleBar = true, // This activates a middlebar in the twheme context
+        $rightBar = true, // This activates a rightbar in the twheme context
+        $fonts = "Open Sans Condensed", // This value accept Google Fonts name
+        $slideshow = true, //  This enables or disables the Slideshow post type
     
     /*  
+    *
     *   POST TYPES
+    *
     *   Use this sections to add you custom post types
-    *   Singular name only for now, the s will be add automaticaly
+    *   These will appear in the admin dashboard, and will be called in the context
     *
     */
-        $twheme_post_types = array(
+        $defaultPost = false, // True for the default WP main post type, false for a custom type instead
+    
+        $mainPostType = array( // Here, you can customize the main custom post type
+            'type' => 'home',
+            'plural' => 'Seções',
+            'singular' => 'Seção',
+            'icon' => 'dashicons-admin-home',
+            'wordsex' => 'female'
+        ),
+    
+        $postSlide = 'noticia', // Change this value to the post category you want to use
+    
+        $postTypes = array( // Here, you can add all the custom post types that you may need
 
         "noticias" => array(
             'type' => 'noticia',
@@ -65,10 +77,18 @@ trait Config {
     );
     
     /*  
+    *
     *   GETTERS, SETTERS AND CHECKERS
+    *
     *   These are some of the regular tool to access these variables
     *   I encapsulated them, so we make sure these values can only
     *   be altered through these gatekeepers. SAFETY FIRST. ;)
+    *   This way, we can change the variables names for better
+    *   organization, without breaking the rest of the code.
+    *   
+    *   Don't forget to add an alias check bellow if you do change
+    *   one of the internal variables name, ok? Otherwise, you'll
+    *   have to change if through all the rest of the code.
     *
     */
     
