@@ -2,6 +2,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+namespace Twheme; 
+
 // Instantiating the config class
 $config = new TwhemeConfig();
 

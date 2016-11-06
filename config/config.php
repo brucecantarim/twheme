@@ -2,41 +2,33 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+namespace Twheme; 
+
 /*
 *
 *   This is the configuration file for the theme.
 *   Here, you can define variables to customize the functionality.
-*   It's still being implemented. PHP is hell. I need to figure out what to do.
+*
+*   I defined it as a trait, so, the correct usage is "use Config;"
+*   inside your class. A trait can't be instantied on it's own.
+*   That's by design, so we save some lines and headaches.
+*
 *   In future versions, this will be hooked to the admin dashboard.
 *
 */
 
 
-class Config {
+trait Config {
 
-    //
-    var $default_post = false;
 
-    //     
-    var $is_fullscreen = false;
-
-    //    
-    var $navbar = 'default';
-
-    //
-    var $middlebar = true;
-    
-    //
-    var $rightbar = true;
-
-    // Custom Google Fonts, currently not fully implemented
-    var $twheme_fonts = "Open Sans Condensed";
-    
-    // Comment this out to disable the Postslide
-    var $twheme_postslide = 'noticia'; // Change this value to the post category you want to use
-
-    //  This enables or disables the Slideshow post type
-    var $twheme_slideshow = true;
+    var $default_post = false, // Here you can set if you want to use the default post type, or Home one  
+        $is_fullscreen = false, // This will define if all content is above the fold
+        $navbar = 'default',  // Here you can define which navbar to use, default or bootstrap for now
+        $middlebar = true, // This activates a middlebar in the twheme context
+        $rightbar = true, // This activates a rightbar in the twheme context
+        $twheme_fonts = "Open Sans Condensed", // This value accept Google Fonts name
+        $twheme_postslide = 'noticia', // Change this value to the post category you want to use
+        $twheme_slideshow = true, //  This enables or disables the Slideshow post type
     
     /*  
     *   POST TYPES
@@ -44,7 +36,7 @@ class Config {
     *   Singular name only for now, the s will be add automaticaly
     *
     */
-    var $twheme_post_types = array(
+        $twheme_post_types = array(
 
         "noticias" => array(
             'type' => 'noticia',
@@ -71,6 +63,14 @@ class Config {
         )
 
     );
+    
+    /*  
+    *   GETTERS, SETTERS AND CHECKERS
+    *   These are some of the regular tool to access these variables
+    *   I encapsulated them, so we make sure these values can only
+    *   be altered through these gatekeepers. SAFETY FIRST. ;)
+    *
+    */
     
     function __set($name, $value)
     {

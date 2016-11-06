@@ -54,4 +54,4 @@ Timber::$dirname = array(
 // require_once 'includes/vafpress/bootstrap.php';
 
 // Let's take a look at our configuration variables first
-require_once 'config/config.php';
+require_once 'core/autoload.php';

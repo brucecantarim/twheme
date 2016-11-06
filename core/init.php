@@ -2,7 +2,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-// namespace Twheme; // To be implemented in future versions
+namespace Twheme; 
 
 require_once 'shorts.php';
 
