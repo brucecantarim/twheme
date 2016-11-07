@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 abstract class Config {
 
 
-    var
+   public static
         $isFullscreen = false, // This will define if all content is above the fold
         $navBar = 'default',  // Here you can define which navbar to use, default or bootstrap for now
         $middleBar = true, // This activates a middlebar in the twheme context
@@ -38,7 +38,7 @@ abstract class Config {
     *   These will appear in the admin dashboard, and will be called in the context
     *
     */
-        $defaultPost = false, // True for the default WP main post type, false for a custom type instead
+        // $defaultPost = false, // True for the default WP main post type, false for a custom type instead (NEEDS REWORK)
     
         $mainPostType = array( // Here, you can customize the main custom post type
             'type' => 'home',
@@ -105,7 +105,7 @@ abstract class Config {
     
     public static function get($name)
     {
-        return isset(self::$name) ? self::$name : false;
+        return isset(self::$name) ? self::$name : null;
     }
     
     public function __set($name, $value)

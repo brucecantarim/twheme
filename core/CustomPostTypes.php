@@ -4,16 +4,17 @@ namespace Twheme;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-// Checking if user wants the Slideshow post type
 class CustomPostTypes {
     
-    // CUSTOM DEFAULT POST
     public function register() {
         
-        // Checking if the boolean is set in config
-        $defaultPostCheck = Config::get($defaultPost);
+        // CUSTOM DEFAULT POST
+        // Needs rework, currently duplicating the post type in the dashboard
         
-        if ( $defaultPostCheck ) {
+        // Checking if the boolean is set in config
+        //$defaultPostCheck = Config::$defaultPost;
+        
+        /*if ( !$defaultPostCheck ) {
             
             // This is where you can customize the default post type
             // I need to improve this later on
@@ -49,15 +50,15 @@ class CustomPostTypes {
             'rewrite' => array( 'slug' => 'post' ),
             'query_var' => false,
             'menu_position' => 5,
-            'menu_icon' => 'dashicons-slides',		
+            'menu_icon' => 'dashicons-home',		
             'supports' => array(
                 'title', 'editor', 'thumbnail' // This is where you can add more fields    
             )));
             
-        }
+        }*/
         
         // Checking if the boolean is set in config
-        $slideshowCheck = Config::get($slideshow);
+        $slideshowCheck = Config::$slideshow;
         
         if ( $slideshowCheck ) {
             
@@ -94,7 +95,7 @@ class CustomPostTypes {
         }
 
         // Creating the user defined post types
-        $twheme_post_types[] = Config::get($postTypes);
+        $twheme_post_types = Config::$postTypes;
         
         foreach (  $twheme_post_types as $twheme_post_type) {
 
