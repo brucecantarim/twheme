@@ -18,10 +18,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 */
 
 
-trait Config {
+abstract class Config {
 
 
-    var $isFullscreen = false, // This will define if all content is above the fold
+    var
+        $isFullscreen = false, // This will define if all content is above the fold
         $navBar = 'default',  // Here you can define which navbar to use, default or bootstrap for now
         $middleBar = true, // This activates a middlebar in the twheme context
         $rightBar = true, // This activates a rightbar in the twheme context
@@ -101,25 +102,30 @@ trait Config {
     *
     */
     
-    function __set($name, $value)
+    public static function get($name)
     {
-        $this->$name = $value;
+        return isset(self::$name) ? self::$name : false;
     }
     
-    function __get($name)
+    public function __set($name, $value)
     {
-        return isset($this->$name) ? $this->$name : null;
+        self::$name = $value;
     }
     
-    function __isset($name)
+    public function __get($name)
     {
-        return isset($this->$name);
+        return isset(self::$name) ? self::$name : null;
     }
     
-    function __unset($name)
+    public function __isset($name)
     {
-        if (isset($this->$name)) {
-            unset($this->$name);
+        return isset(self::$name);
+    }
+    
+    public function __unset($name)
+    {
+        if (isset(self::$name)) {
+            unset(self::$name);
         }
     }
 }

@@ -7,8 +7,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 //require_once 'routes.php'; - Currently not working, deprecated in lastest Timber version
 
 class Site extends \TimberSite {
-    
-    use Config; // Loading the configuration trait, that's where our variables are
 
      /**
      *__construct
@@ -61,7 +59,9 @@ class Site extends \TimberSite {
     // CUSTOM POST TYPES
 	function register_post_types() {
 		$customPostTypes = new CustomPostTypes;
-        return $customPostTypes;
+        $customPostTypes->defaultPost();
+        $customPostTypes->register();
+        $customPostTypes->slideShow();
 	}
 
 	function register_taxonomies() {
@@ -94,7 +94,7 @@ class Site extends \TimberSite {
     function deliver_mail() { 
 
         $deliver_mail = new Mailer();
-        return $deliver_mail->Send();
+        return $deliver_mail->send();
     }
 
     /**
@@ -107,7 +107,7 @@ class Site extends \TimberSite {
         
         // Getting the context from the Context class, and them returning it
         $context = new Context();
-        return $context->context;
+        return $context->build();
         
     }
     
@@ -118,7 +118,7 @@ class Site extends \TimberSite {
      */
 	function add_to_twig( $twig ) {
 		/* this is where you can add your own fuctions to twig */
-		$twig->addExtension( new Twig_Extension_StringLoader() );
+		$twig->addExtension( new \Twig_Extension_StringLoader() );
 		return $twig;
 	}
 
