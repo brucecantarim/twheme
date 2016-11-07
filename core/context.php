@@ -100,7 +100,10 @@ class Context {
             $context['navbar'] = \Timber::render('navbar.twig', $context);
         }
         
-        $context['footer'] = \Timber::render('footer.twig', $context);
+        // Optional devFooter, for cool clients to sport our brand
+        if (Config::get($devFooter)) {
+            $context['footer'] = \Timber::render('footer.twig', $context);
+        }
             
         return $context;
     }

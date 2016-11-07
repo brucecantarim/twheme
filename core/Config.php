@@ -28,6 +28,7 @@ abstract class Config {
         $rightBar = true, // This activates a rightbar in the twheme context
         $fonts = "Open Sans Condensed", // This value accept Google Fonts name
         $slideshow = true, //  This enables or disables the Slideshow post type
+        $devFooter = false, // This is the optional devFooter, for cool clients
     
     /*  
     *
