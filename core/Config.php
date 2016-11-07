@@ -38,7 +38,7 @@ abstract class Config {
     *   These will appear in the admin dashboard, and will be called in the context
     *
     */
-        // $defaultPost = false, // True for the default WP main post type, false for a custom type instead (NEEDS REWORK)
+        $defaultPost = false, // True for the default WP main post type, false for a custom type instead
     
         $mainPostType = array( // Here, you can customize the main custom post type
             'type' => 'home',

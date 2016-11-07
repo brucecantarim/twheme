@@ -6,56 +6,40 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 class CustomPostTypes {
     
-    public function register() {
+    public function mainPostType() {
         
         // CUSTOM DEFAULT POST
-        // Needs rework, currently duplicating the post type in the dashboard
-        
+    
         // Checking if the boolean is set in config
-        //$defaultPostCheck = Config::$defaultPost;
+        $defaultPostCheck = Config::$defaultPost;
         
-        /*if ( !$defaultPostCheck ) {
+        if ( !$defaultPostCheck ) {
             
             // This is where you can customize the default post type
             // I need to improve this later on
 
-            register_post_type( 'post', array(
-            'labels' => array(
-                'name_admin_bar' => _x( 'Home', 'add new on admin bar' ),
-                'name' => _x('Home', 'post type general name'),
-                        'singular_name' => _x('Home', 'post type singular name'),
-                        'add_new' => _x('Nova Seção', 'Nova Seção'),
-                        'all_items' => __('Todas as Seções'),
-                        'add_new_item' => __('Nova Seção'),
-                        'edit_item' => __('Editar Seção'),
-                        'new_item' => __('Nova Seção'),
-                        'view_item' => __('Ver Seção'),
-                        'search_items' => __('Procurar Seção'),
-                        'not_found' =>  __('Nenhum registro encontrado'),
-                        'not_found_in_trash' => __('Nenhum registro encontrado na lixeira'),
-                        'parent_item_colon' => '',
-                        'menu_name' => 'Home'
-            ),
-            'public' => true,
-            '_builtin' => false,
-            '_edit_link' => 'post.php?post=%d', 
-            'public_queryable' => true,
-            'show_ui' => true,			
-            'query_var' => true,
-            'rewrite' => true,
-            'capability_type' => 'post',
-            'map_meta_cap' => true,
-            'has_archive' => true,
-            'hierarchical' => false,
-            'rewrite' => array( 'slug' => 'post' ),
-            'query_var' => false,
-            'menu_position' => 5,
-            'menu_icon' => 'dashicons-home',		
-            'supports' => array(
-                'title', 'editor', 'thumbnail' // This is where you can add more fields    
-            )));
+             global $wp_post_types;
+            $labels = &$wp_post_types['post']->labels;
+            $labels->name = _('Home');
+            $labels->singular_name = __('Home');
+            $labels->add_new = __('Nova Seção');
+            $labels->add_new_item = __('Nova Seção');
+            $labels->edit_item = __('Editar a Seção');
+            $labels->new_item = __('Seções');
+            $labels->view_item = __('Ver Seção');
+            $labels->search_items = __('Procurar Seção');
+            $labels->not_found = __('Nenhuma Seção encontrada');
+            $labels->not_found_in_trash = __('Nenhuma Seção encontrada no lixo');
+            $labels->all_items = __('Todas as Seções');
+            $labels->menu_name = 'Home';
+            $labels->name_admin_bar = __('Home');
+            $post = &$wp_post_types['post'];
+            $post->menu_icon = 'dashicons-admin-home';
             
-        }*/
+        }
+    }
+    
+    public function register() {
         
         // Checking if the boolean is set in config
         $slideshowCheck = Config::$slideshow;

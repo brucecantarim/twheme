@@ -24,6 +24,7 @@ class Site extends \TimberSite {
         add_filter( 'login_headerurl', array( $this, 'change_wp_login_url') );
         add_filter( 'login_headertitle', array( $this, 'change_wp_login_title' ) );
         add_filter( 'pre_get_posts', array( $this, 'custom_search_filter' ) );
+        add_filter( 'init', array( $this, 'change_default_post_type' ) );
         
         // Hooking up Actions
         add_action( 'login_head',  array( $this, 'login_css' ) );
@@ -54,6 +55,12 @@ class Site extends \TimberSite {
         return get_option('blogname'); // OR ECHO YOUR OWN ALT TEXT
     }
 
+    function change_default_post_type () {
+        $customPostType = new CustomPostTypes;
+        return $customPostType->mainPostType();
+    }
+        
+        
     // CUSTOM POST TYPES
 	function register_post_types() {
         

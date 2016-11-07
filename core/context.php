@@ -68,7 +68,7 @@ class Context {
         // This way, they'll be add to the context by the name of
         // the array. Almost an autoloader of sorts for context
         // post types and it's fields.
-        $twheme_post_types = Config::$postTypes!;
+        $twheme_post_types = Config::$postTypes;
         
         foreach ( $twheme_post_types as $postTypeName ) { 
 
