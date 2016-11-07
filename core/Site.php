@@ -56,10 +56,10 @@ class Site extends \TimberSite {
 
     // CUSTOM POST TYPES
 	function register_post_types() {
+        
 		$customPostTypes = new CustomPostTypes;
-        $customPostTypes->defaultPost();
-        $customPostTypes->register();
-        $customPostTypes->slideShow();
+        return $customPostTypes->register();
+        
 	}
 
 	function register_taxonomies() {

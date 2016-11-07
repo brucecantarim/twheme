@@ -8,10 +8,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 class CustomPostTypes {
     
     // CUSTOM DEFAULT POST
-    public function defaultPost() {
+    public function register() {
         
         // Checking if the boolean is set in config
-        if (Config::get($defaultPost)) {
+        $defaultPostCheck = Config::get($defaultPost);
+        
+        if ( $defaultPostCheck ) {
             
             // This is where you can customize the default post type
             // I need to improve this later on
@@ -51,15 +53,13 @@ class CustomPostTypes {
             'supports' => array(
                 'title', 'editor', 'thumbnail' // This is where you can add more fields    
             )));
-
-            flush_rewrite_rules();
             
         }
-    }
-    
-    public function slideShow() {
-    
-        if (Config::get($slideshow)) {
+        
+        // Checking if the boolean is set in config
+        $slideshowCheck = Config::get($slideshow);
+        
+        if ( $slideshowCheck ) {
             
             register_post_type( 'slides' , array(
                 'labels'=> array(
@@ -91,13 +91,9 @@ class CustomPostTypes {
                     'title', 'editor', 'thumbnail' // This is where you can add more fields
             )));
             
-            flush_rewrite_rules();
         }
-    }
 
-    // Creating the user defined post types
-    public function register() {
-        
+        // Creating the user defined post types
         $twheme_post_types[] = Config::get($postTypes);
         
         foreach (  $twheme_post_types as $twheme_post_type) {
@@ -134,8 +130,6 @@ class CustomPostTypes {
                         'title', 'editor', 'thumbnail' // This is where you can add more fields
                 )));
 
-                flush_rewrite_rules();
-
             } elseif ( $twheme_post_type['wordsex'] == 'male' ) {
 
                 register_post_type( $twheme_post_type['type'] , array(
@@ -168,8 +162,10 @@ class CustomPostTypes {
                         'title', 'editor', 'thumbnail' // This is where you can add more fields
                 )));
 
-                flush_rewrite_rules();
             }
         }
+        
+    flush_rewrite_rules();
+        
     }
 }
