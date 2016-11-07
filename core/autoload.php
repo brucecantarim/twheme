@@ -24,7 +24,7 @@ spl_autoload_register(function ($class) {
     $prefix = 'Twheme\\';
 
     // base directory for the namespace prefix
-    $base_dir = __DIR__ . '/core/';
+    $base_dir = __DIR__ . '/';
 
     // does the class use the namespace prefix?
     $len = strlen($prefix);
@@ -46,3 +46,5 @@ spl_autoload_register(function ($class) {
         require $file;
     }
 });
+
+new Twheme\Site;

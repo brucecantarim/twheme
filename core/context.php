@@ -1,8 +1,8 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
 namespace Twheme; 
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Here in this class, we define which will be the global contexts that will be passed
 // and be acessible through our twig files. If you need one for just a specific page, then

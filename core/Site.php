@@ -1,15 +1,12 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
 namespace Twheme;
-use \;
 
-require_once 'shorts.php';
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 //require_once 'routes.php'; - Currently not working, deprecated in lastest Timber version
 
-class Twheme extends \TimberSite {
+class Site extends \TimberSite {
     
     use Config; // Loading the configuration trait, that's where our variables are
 
@@ -64,6 +61,7 @@ class Twheme extends \TimberSite {
     // CUSTOM POST TYPES
 	function register_post_types() {
 		$customPostTypes = new CustomPostTypes;
+        return $customPostTypes;
 	}
 
 	function register_taxonomies() {
@@ -95,7 +93,8 @@ class Twheme extends \TimberSite {
     
     function deliver_mail() { 
 
-        require_once(__DIR__ . "/deliver-mail.php");
+        $deliver_mail = new Mailer();
+        return $deliver_mail->Send();
     }
 
     /**
@@ -107,8 +106,8 @@ class Twheme extends \TimberSite {
 	function add_to_context() {
         
         // Getting the context from the Context class, and them returning it
-        $context = new Context->context;
-        return $context;
+        $context = new Context();
+        return $context->context;
         
     }
     
@@ -124,5 +123,3 @@ class Twheme extends \TimberSite {
 	}
 
 }
-
-new Twheme();

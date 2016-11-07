@@ -1,9 +1,8 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
 namespace Twheme;
-use \;
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Checking if user wants the Slideshow post type
 class CustomPostTypes {
@@ -35,10 +34,12 @@ class CustomPostTypes {
         $labels->name_admin_bar = __('Home');
         $post = &$wp_post_types['post'];
         $post->menu_icon = 'dashicons-admin-home';
-        //}
+        
+        return $wp_post_types;
+        }
     }
     
-    public function SlideShow($slideshow) {
+    public function slideShow($slideshow) {
     
         if ($slideshow) {
             register_post_type( 'slides' , array(
@@ -70,42 +71,17 @@ class CustomPostTypes {
                 'supports' => array(
                     'title', 'editor', 'thumbnail' // This is where you can add more fields
             )));
+            
+            flush_rewrite_rules();
         }
     }
 
     // Creating the user defined post types
-    // $twheme_post_types = $config->postTypes;
-    // PLACEHOLDER! I need to figure how to return the array from the class yet
-    $twheme_post_types = array(
-
-            "noticias" => array(
-                'type' => 'noticia',
-                'plural' => 'Notícias',
-                'singular' => 'Notícia',
-                'icon' => 'dashicons-admin-site',
-                'wordsex' => 'female'
-            ),
-
-            "maquinas" => array(
-                'type' => 'maquina',
-                'plural' => 'Máquinas',
-                'singular' => 'Máquina',
-                'icon' => 'dashicons-cart',
-                'wordsex' => 'female'
-            ),
-
-            "eventos" => array(
-                'type' => 'evento',
-                'plural' => 'Eventos',
-                'singular' => 'Evento',
-                'icon' => 'dashicons-megaphone',
-                'wordsex' => 'male'
-            )
-
-        );
-
-    foreach ( $twheme_post_types as $twheme_post_type) {
+        
+    foreach ( $postTypes as $twheme_post_type) {
+        
         if ( $twheme_post_type['wordsex'] == 'female' ) {
+            
             register_post_type( $twheme_post_type['type'] , array(
                 'labels'=> array(
                     'name' => _x($twheme_post_type['plural'], 'post type general name'),
@@ -135,6 +111,9 @@ class CustomPostTypes {
                 'supports' => array(
                     'title', 'editor', 'thumbnail' // This is where you can add more fields
             )));
+            
+            flush_rewrite_rules();
+            
         } elseif ( $twheme_post_type['wordsex'] == 'male' ) {
 
             register_post_type( $twheme_post_type['type'] , array(
@@ -166,8 +145,8 @@ class CustomPostTypes {
                 'supports' => array(
                     'title', 'editor', 'thumbnail' // This is where you can add more fields
             )));
+            
+            flush_rewrite_rules();
 
         }
 }
-        
-flush_rewrite_rules();
