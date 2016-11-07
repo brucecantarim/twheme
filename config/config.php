@@ -80,6 +80,15 @@ trait Config {
     *
     *   GETTERS, SETTERS AND CHECKERS
     *
+    *   In theory, not realllly necessary here, since I added
+    *   "use Config;" where I needed it, but they are here for the
+    *   simple case if you do need to access them without declaring
+    *   the use of the trait further down the road.
+    *   I guess they would work, if it doesn't count as an instance.
+    *   You can't instantiate a trait, so you might need to change this,
+    *   if you get some errors with what you're trying to achieve.
+    *
+    *   If you do use them, here's some guidelines for it:
     *   These are some of the regular tool to access these variables
     *   I encapsulated them, so we make sure these values can only
     *   be altered through these gatekeepers. SAFETY FIRST. ;)

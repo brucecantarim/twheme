@@ -30,7 +30,6 @@ class Twheme extends \TimberSite {
         add_filter( 'login_headerurl', array( $this, 'change_wp_login_url') );
         add_filter( 'login_headertitle', array( $this, 'change_wp_login_title' ) );
         add_filter( 'pre_get_posts', array( $this, 'custom_search_filter' ) );
-        add_filter( 'init', array( $this, 'change_default_post_type' ) );
         
         // Hooking up Actions
         add_action( 'login_head',  array( $this, 'login_css' ) );
@@ -43,12 +42,6 @@ class Twheme extends \TimberSite {
 		parent::__construct();
         
 	}
-    
-    // CUSTOM DEFAULT POST
-    function change_default_post_type() {
-        
-        
-    }
     
     // CUSTOM ADMIN LOGIN HEADER LOGO
  
@@ -69,7 +62,7 @@ class Twheme extends \TimberSite {
 
     // CUSTOM POST TYPES
 	function register_post_types() {
-		include 'custom-post-types.php';
+		$customPostTypes = new CustomPostTypes;
 	}
 
 	function register_taxonomies() {
@@ -110,9 +103,11 @@ class Twheme extends \TimberSite {
      * @param $context
      * @return mixed
      */
-	function add_to_context( $context ) {
+	function add_to_context() {
         
-        require_once(__DIR__ . "/context.php");
+        // Getting the context from the Context class, and them returning it
+        $context = new Context->context;
+        return $context;
         
     }
     

@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 namespace Twheme;
 
 // Checking if user wants the Slideshow post type
-class CustomPostType {
+class CustomPostTypes {
     
     use Config;
     
