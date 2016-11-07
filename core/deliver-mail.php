@@ -2,7 +2,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-namespace Twheme; 
+namespace Twheme;
+use \;
 
 // if the submit button is clicked, send the email
 if ( isset( $_POST['message_send'] ) ) {

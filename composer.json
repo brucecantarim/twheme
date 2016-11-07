@@ -1,0 +1,20 @@
+{
+    "name": "brucecantarim/twheme",
+    "license": "MIT",
+    "type": "wordpress-theme",
+    "description": "Twheme",
+    "authors": [
+        {
+            "name": "Bruce Cantarim",
+            "email": "bruce@cantarim.com",
+            "homepage": "http://brucecantarim.github.io"
+        }
+    ],
+    "keywords": [
+        "twheme", "composer", "wordpress", "wp", "theme", "timber", "twig", "sass", "modular", "mvc", "dry"
+    ],
+    "require": {
+        "composer/installers": "^1.0",
+        "php": ">=5.2.8"
+    }
+}

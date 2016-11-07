@@ -3,6 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 namespace Twheme;
+use \;
 
 // Checking if user wants the Slideshow post type
 class CustomPostTypes {
@@ -20,18 +21,18 @@ class CustomPostTypes {
         global $wp_post_types;
         $labels = &$wp_post_types['post']->labels;
         $labels->name = $this->mainPostType[];
-        $labels->singular_name = 'Home';
-        $labels->add_new = 'Nova Seção';
-        $labels->add_new_item = 'Nova Seção';
-        $labels->edit_item = 'Editar a Seção';
-        $labels->new_item = 'Seções';
-        $labels->view_item = 'Ver Seção';
-        $labels->search_items = 'Procurar Seção';
-        $labels->not_found = 'Nenhuma Seção encontrada';
-        $labels->not_found_in_trash = 'Nenhuma Seção encontrada no lixo';
-        $labels->all_items = 'Todas as Seções';
-        $labels->menu_name = 'Home';
-        $labels->name_admin_bar = 'Home';
+        $labels->singular_name = __('Home');
+        $labels->add_new = __('Nova Seção');
+        $labels->add_new_item = __('Nova Seção');
+        $labels->edit_item = __('Editar a Seção');
+        $labels->new_item = __('Seções');
+        $labels->view_item = __('Ver Seção');
+        $labels->search_items = __('Procurar Seção');
+        $labels->not_found = __('Nenhuma Seção encontrada');
+        $labels->not_found_in_trash = __('Nenhuma Seção encontrada no lixo');
+        $labels->all_items = __('Todas as Seções');
+        $labels->menu_name = __('Home');
+        $labels->name_admin_bar = __('Home');
         $post = &$wp_post_types['post'];
         $post->menu_icon = 'dashicons-admin-home';
         //}
@@ -67,7 +68,7 @@ class CustomPostTypes {
                 'menu_position' => 5,
                 'menu_icon' => 'dashicons-slides',		
                 'supports' => array(
-                    'title', 'subtitle', 'editor', 'thumbnail' // This is where you can add more fields
+                    'title', 'editor', 'thumbnail' // This is where you can add more fields
             )));
         }
     }
@@ -132,7 +133,7 @@ class CustomPostTypes {
                 'menu_position' => 5,
                 'menu_icon' => $twheme_post_type['icon'],		
                 'supports' => array(
-                    'title','editor','thumbnail','comments', 'excerpt', 'custom-fields', 'revisions', 'trackbacks'
+                    'title', 'editor', 'thumbnail' // This is where you can add more fields
             )));
         } elseif ( $twheme_post_type['wordsex'] == 'male' ) {
 
@@ -163,7 +164,7 @@ class CustomPostTypes {
                 'menu_position' => 5,
                 'menu_icon' => $twheme_post_type['icon'],		
                 'supports' => array(
-                    'title','editor','thumbnail','comments', 'excerpt', 'custom-fields', 'revisions', 'trackbacks'
+                    'title', 'editor', 'thumbnail' // This is where you can add more fields
             )));
 
         }

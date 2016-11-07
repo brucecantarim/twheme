@@ -2,7 +2,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-namespace Twheme; 
+namespace Twheme;
+use \;
 
 require_once 'shorts.php';
 

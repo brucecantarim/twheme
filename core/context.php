@@ -14,16 +14,16 @@ class Context {
     // Checking which navbar should we send to the context
     // That's all we got for now, bootstrap or the default
     if ($navBar == 'bootstrap') {
-        $context['navbar'] = Timber::render('bootstrap-navbar.twig', $context);
+        $context['navbar'] = \Timber::render('bootstrap-navbar.twig', $context);
     } else {
-        $context['navbar'] = Timber::render('navbar.twig', $context);
+        $context['navbar'] = \Timber::render('navbar.twig', $context);
     }
     
     // Sending the other main site elements to all pages
-    $context['header'] = Timber::render('header.twig', $context);
-    $context['menu'] = new TimberMenu();
-    $context['posts'] = Timber::get_posts();
-    $context['footer'] = Timber::render('footer.twig', $context);
+    $context['header'] = \Timber::render('header.twig', $context);
+    $context['menu'] = new \TimberMenu();
+    $context['posts'] = \Timber::get_posts();
+    $context['footer'] = \Timber::render('footer.twig', $context);
     
     // Retrieving the values stored in the config
     $context['fonts'] = $fonts;
@@ -39,7 +39,7 @@ class Context {
             'category_name' => 'home'
         );
         
-        $context['sections'] = Timber::get_posts($homeargs);
+        $context['sections'] = \Timber::get_posts($homeargs);
     }
 
     // Checking if Slideshow is activated in the config.php file
@@ -55,7 +55,7 @@ class Context {
             'order' => 'asc'
         );
 
-        $context['slides'] = Timber::get_posts($slides);
+        $context['slides'] = \Timber::get_posts($slides);
     }
 
     // Checking if Postslide is activated in the config.php file
@@ -73,7 +73,7 @@ class Context {
             'order' => 'asc'
         );
 
-        $context['postslider'] = Timber::get_posts($postSlides);
+        $context['postslider'] = \Timber::get_posts($postSlides);
     }
 
     // Running a loop for each custom post type in config.php
@@ -91,7 +91,7 @@ class Context {
 
         );
 
-        $context["'".$postTypeName."'"] = Timber::get_posts($postTypeName);
+        $context["'".$postTypeName."'"] = \Timber::get_posts($postTypeName);
     }
     
     /*  
