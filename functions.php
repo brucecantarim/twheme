@@ -2,6 +2,10 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+if (!defined('THEMENAME')) {
+    define('THEMENAME', 'twheme');
+}
+
 /***********************************
  *   Increasing Max Upload Size    *
  ***********************************/
@@ -27,12 +31,12 @@ remove_action('wp_head', 'wp_generator');
  * Checking if Timber is installed *
  ***********************************/
 
-if ( ! class_exists( 'Timber' ) ) {
+if ( ! class_exists( '\TimberTheme' ) ) {
 	add_action( 'admin_notices', function() {
 			echo '<div class="error"><p>';
             $admin_plugin_page = '<a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php' ) ) . '</a></p></div>';
             printf (
-                __("Timber not activated. Make sure you activate the plugin in %s.", "twheme"), 
+                __("Timber not activated. Twheme requires it to be installed and activated. Make sure you do this in %s.", "twheme"), 
                     $admin_plugin_page
                 );
 		} );

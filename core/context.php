@@ -9,25 +9,14 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // You should refer to the individual pages files in the root directory of the theme.
 class Context {
 
-    function build () {
-        // Checking which navbar should we send to the context
-        // That's all we got for now, bootstrap or the default
-        if (Config::get($navBar) == 'bootstrap') {
-            $context['navbar'] = \Timber::render('bootstrap-navbar.twig', $context);
-        } else {
-            $context['navbar'] = \Timber::render('navbar.twig', $context);
-        }
-
-        // Sending the other main site elements to all pages
-        $context['header'] = \Timber::render('header.twig', $context);
+    function build ($site) {
+        // Retrieving the values stored in the config
+        $context['site'] = $site;
+        $context['fonts'] = Config::get($fonts);
         $context['menu'] = new \TimberMenu();
         $context['posts'] = \Timber::get_posts();
-        $context['footer'] = \Timber::render('footer.twig', $context);
-
-        // Retrieving the values stored in the config
-        $context['fonts'] = Config::get($fonts);
-        $context['site'] = $this;
-
+        $context['dir'] = get_template_directory_uri();
+        
         // This calls the home post type sections, as sections, if needed
         // Use this to manage the main page content, it's pretty handy
         if (Config::get($defaultPost)) {
@@ -94,6 +83,24 @@ class Context {
 
             $context["'".$postTypeName."'"] = \Timber::get_posts($postTypeName);
         }
+        
+        // Rendering the default bits of the website
+        // I should change this later on...
+        // For now, keep them below here, as the order of the calls
+        // directly influences the content that gets passed here
+        // with the render function. I'm probably gonna throw these
+        // in a render function inside this context class.
+        $context['header'] = \Timber::render('header.twig', $context);
+        
+        // Checking which navbar should we send to the context
+        // That's all we got for now, bootstrap or the default
+        if (Config::get($navBar) === 'bootstrap') {
+            $context['navbar'] = \Timber::render('bootstrap-navbar.twig', $context);
+        } else {
+            $context['navbar'] = \Timber::render('navbar.twig', $context);
+        }
+        
+        $context['footer'] = \Timber::render('footer.twig', $context);
             
         return $context;
     }

@@ -4,8 +4,6 @@ namespace Twheme;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-//require_once 'routes.php'; - Currently not working, deprecated in lastest Timber version
-
 class Site extends \TimberSite {
 
      /**
@@ -93,8 +91,8 @@ class Site extends \TimberSite {
     
     function deliver_mail() { 
 
-        $deliver_mail = new Mailer();
-        return $deliver_mail->send();
+        $mailer = new Mailer();
+        return $mailer->send();
     }
 
     /**
@@ -107,7 +105,7 @@ class Site extends \TimberSite {
         
         // Getting the context from the Context class, and them returning it
         $context = new Context();
-        return $context->build();
+        return $context->build($this);
         
     }
     
