@@ -60,15 +60,29 @@ class Site extends \TimberSite {
         return $customPostType->mainPostType();
     }
         
-        
-    // CUSTOM POST TYPES
+    /**
+     * register_post_types
+     *
+     * This functions calls the register method from the
+     * CustomPostTypes, which you can configure in the
+     * Config Class file (always check there FIRST, before
+     * you start messing with the functions of the rest of
+     * the twheme core).
+     */
 	function register_post_types() {
         
 		$customPostTypes = new CustomPostTypes;
         return $customPostTypes->register();
         
 	}
-
+    
+    /**
+     * register_taxonomies
+     *
+     * This is where we can set custom categories and such.
+     * I still haven't messed with it, but I'll make a better integration of
+     * it in a near future, when the need arrives.
+     */
 	function register_taxonomies() {
 		//this is where you can register custom taxonomies
         register_taxonomy('category', array(), array('show_in_nav_menus' => false) );
@@ -120,8 +134,8 @@ class Site extends \TimberSite {
     /**
      * add_shortcodes
      *
-     * This can be used in the editor or in twig
-     * Check the Shorts Class for reference
+     * This can be used in the editor or in twig.
+     * Check the Shorts Class for reference.
      */
     function add_shortcodes() {
         
@@ -133,8 +147,11 @@ class Site extends \TimberSite {
     /**
      * add_to_context
      *
-     * @param $context
-     * @return mixed
+     * This is where I register variables to be available
+     * 'globally' for the twig files, and call default twigs
+     * such as the header, navbar and footer.
+     *
+     * Refer to the context class for more information.
      */
 	function add_to_context() {
         
@@ -147,7 +164,7 @@ class Site extends \TimberSite {
     /**
      * add_to_twig
      *
-     * Add Custom Functions to Twig
+     * Add Custom Functions to Twig.
      */
 	function add_to_twig( $twig ) {
 		/* this is where you can add your own fuctions to twig */
