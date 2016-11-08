@@ -58,7 +58,8 @@ abstract class Config {
             'plural' => 'Notícias',
             'singular' => 'Notícia',
             'icon' => 'dashicons-admin-site',
-            'wordsex' => 'female'
+            'wordsex' => 'female',
+            'orderby' => 'date'
         ),
 
         "maquinas" => array(
@@ -67,7 +68,8 @@ abstract class Config {
             'plural' => 'Máquinas',
             'singular' => 'Máquina',
             'icon' => 'dashicons-cart',
-            'wordsex' => 'female'
+            'wordsex' => 'female',
+            'orderby' => 'rand'
         ),
 
         "eventos" => array(
@@ -76,7 +78,8 @@ abstract class Config {
             'plural' => 'Eventos',
             'singular' => 'Evento',
             'icon' => 'dashicons-megaphone',
-            'wordsex' => 'male'
+            'wordsex' => 'male',
+            'orderby' => 'date'
         )
 
     );

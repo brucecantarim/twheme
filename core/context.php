@@ -80,12 +80,13 @@ class Context {
             
             $post_type_name = $post_type['type'];
             $post_type_slug = $post_type['slug'];
+            $post_type_order = $post_type['orderby'];
             
             $post_type_args = array(
 
             'post_type' => $post_type_name,
             'post_status' => 'publish',
-            'orderby'=> 'menu_order',
+            'orderby'=> $post_type_order,
             'order' => 'asc'
 
             );
