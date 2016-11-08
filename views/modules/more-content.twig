@@ -15,14 +15,17 @@
         {% if product.title != post.title %}
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
                 <h3>{{ product.title }}</h3>
-                <a href="{{ product.link }}">
-                {% if product.mainimg %}
-                    <img class="img-responsive" src="{{ product.mainimg.src }}"/>
-                {% else %}
-                    <img class="img-responsive" src="http://placehold.it/300?text={{__('MÁQUINA', 'twheme')}}"/>
-                {% endif %}
-                </a>
-            </div>
+                <div class="product-thumbnail">
+                    <a href="{{ product.link }}">
+                    {% if product.mainimg %}
+                        {% set id = product.mainimg %}
+                        <img class="img-responsive" src="{{ Image(id).src }}"/>
+                    {% else %}
+                        <img class="img-responsive" src="http://placehold.it/300?text={{__('MÁQUINA', 'twheme')}}"/>
+                    {% endif %}
+                    </a>
+                </div><!-- /.product-thumbnail -->
+            </div><!-- /.col -->
         {% else %}
                         
         {% endif %}

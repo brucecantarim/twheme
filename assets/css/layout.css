@@ -9,7 +9,7 @@
 /                 bruce@cantarim.com                 /
 /                                                    /
 /---------------------------------------------------*/
-@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700";
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700';
 /*---------------------------------------------------/
 /                                                    /
 /    MIXINS - Here are the SASS mixins. I didn't     /
@@ -719,6 +719,15 @@ footer {
   max-width: 93%;
   max-height: 250px;
   margin: 10px 0; }
+
+/*---------------------------------------------------/
+/                                                    /
+/   PRODUCTS - Here you'll find some of the classes  /
+/        that deal with the product content.         /
+/                                                    /
+/---------------------------------------------------*/
+.product-thumbnail {
+  height: 300px; }
 
 /*---------------------------------------------------/
 /                                                    /

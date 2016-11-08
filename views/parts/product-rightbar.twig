@@ -55,11 +55,11 @@
             {% set images = post.gallery|split(',') %}
             {% for id in images|slice(0, 6) %} {# This is where I impose the image limit #}
             <div class="col-md-4">
-                <div class="rightbar-image">
+                <div class="rightbar-image lightbox" title="{{ post.title }}">
                     <a href="{{ Image(id).src }}" title="{{ post.title }}" target="_blank"> 
-                        <img class="img-responsive product-gallery" src="{{ Image(id).src }}" alt="{{ post.title }}"/>
+                        <img class="img-responsive product-gallery" src="{{ Image(id).src|resize(300, 200) }}" alt="{{ post.title }}"/>
                     </a>
-                </div>
+                </div><!-- /.lightbox -->
             </div><!-- /.col -->
             {% endfor %}   
             <br/><br/>   
