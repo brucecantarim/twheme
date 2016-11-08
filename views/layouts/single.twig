@@ -1,9 +1,9 @@
-{# single-maquina.twig #}
+{# single.twig #}
 
 {% extends "base.twig" %}
 
 {# First, let's check if there's a gallery #}
-   {% if gallery %}
+   {% if post.gallery %}
         {# Ok, then let's add our lightbox twig. This will only be visible when called through javascript #}
         {% block gallerylightbox %}
         {% include 'gallery-lightbox.twig' %}

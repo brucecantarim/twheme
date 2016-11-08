@@ -54,6 +54,7 @@ abstract class Config {
 
         "noticias" => array(
             'type' => 'noticia',
+            'slug' => 'noticias',
             'plural' => 'Notícias',
             'singular' => 'Notícia',
             'icon' => 'dashicons-admin-site',
@@ -62,6 +63,7 @@ abstract class Config {
 
         "maquinas" => array(
             'type' => 'maquina',
+            'slug' => 'maquinas',
             'plural' => 'Máquinas',
             'singular' => 'Máquina',
             'icon' => 'dashicons-cart',
@@ -70,6 +72,7 @@ abstract class Config {
 
         "eventos" => array(
             'type' => 'evento',
+            'slug' => 'eventos',
             'plural' => 'Eventos',
             'singular' => 'Evento',
             'icon' => 'dashicons-megaphone',
