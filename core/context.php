@@ -12,14 +12,14 @@ class Context {
     function build ( $site ) {
         // Retrieving the values stored in the config
         $context['site'] = $site;
-        $context['fonts'] = Config::get( $fonts );
+        $context['fonts'] = Config::$fonts;
         $context['menu'] = new \TimberMenu();
         $context['posts'] = \Timber::get_posts();
         $context['dir'] = get_template_directory_uri();
         
         // This calls the home post type sections, as sections, if needed
         // Use this to manage the main page content, it's pretty handy
-        if ( !Config::get( $defaultPost ) ) {
+        if ( !Config::$defaultPost ) {
 
             $homeargs = array(
                 'orderby'=> 'menu_order',
@@ -33,7 +33,7 @@ class Context {
         // Checking if Slideshow is activated in the config.php file
         // The use is up to you, made this for a project where I had
         // to show multiple products above the hero in a main page
-        if ( Config::get( $slideshow ) ) {
+        if ( Config::$slideshow ) {
 
             $slides = array(
 
@@ -51,11 +51,11 @@ class Context {
         // Can be attached to another custom post type, where you can
         // define a custom field to check which posts should apear in
         // the slider. The check must be done in the twig files.
-        if (Config::get( $postSlide )) {
+        if ( Config::$postSlide ) {
 
             $postSlides = array(
 
-                'post_type' => Config::get( $postSlide ),
+                'post_type' => Config::$postSlide,
                 'post_status' => 'publish',
                 'orderby'=> 'menu_order',
                 'order' => 'asc'
@@ -68,11 +68,17 @@ class Context {
         // This way, they'll be add to the context by the name of
         // the array. Almost an autoloader of sorts for context
         // post types and it's fields.
+        
+        // OK! Almost there! I need to change this so it iterates through
+        // the name keys in this array. I'll make this work in the morning.
+        // Funny thing is that this didn't gave me an error at work.
+        // Noticed it only at my home computer. That's why you should
+        // check your code in different enviroments, I guess.
         $twheme_post_types = Config::$postTypes;
         
         foreach ( $twheme_post_types as $postTypeName ) { 
 
-            $postTypeName = array(
+            $postTypeNameArray = array(
 
             'post_type' => $postTypeName,
             'post_status' => 'publish',
@@ -81,7 +87,7 @@ class Context {
 
             );
 
-            $context["'".$postTypeName."'"] = \Timber::get_posts( $postTypeName );
+            $context["'".$postTypeName."'"] = \Timber::get_posts( $postTypeNameArray );
         }
         
         // Rendering the default bits of the website
@@ -94,14 +100,14 @@ class Context {
         
         // Checking which navbar should we send to the context
         // That's all we got for now, bootstrap or the default
-        if (Config::get( $navBar ) === 'bootstrap') {
+        if (Config::$navBar === 'bootstrap') {
             $context['navbar'] = \Timber::render( 'bootstrap-navbar.twig', $context );
         } else {
             $context['navbar'] = \Timber::render( 'navbar.twig', $context );
         }
         
         // Optional devFooter, for cool clients to sport our brand
-        if (Config::get( $devFooter )) {
+        if (Config::$devFooter ) {
             $context['footer'] = \Timber::render( 'footer.twig', $context );
         }
             
