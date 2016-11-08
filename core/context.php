@@ -76,18 +76,21 @@ class Context {
         // check your code in different enviroments, I guess.
         $twheme_post_types = Config::$postTypes;
         
-        foreach ( $twheme_post_types as $postTypeName ) { 
+        foreach ( $twheme_post_types as $key => $valor ) { 
+            
+            if ($key === 'name') {
+                
+                $key = array(
 
-            $postTypeNameArray = array(
+                'post_type' => $name,
+                'post_status' => 'publish',
+                'orderby'=> 'menu_order',
+                'order' => 'asc'
 
-            'post_type' => $postTypeName,
-            'post_status' => 'publish',
-            'orderby'=> 'menu_order',
-            'order' => 'asc'
+                );
 
-            );
-
-            $context["'".$postTypeName."'"] = \Timber::get_posts( $postTypeNameArray );
+                $context["'".$name."'"] = \Timber::get_posts( $key );
+            }
         }
         
         // Rendering the default bits of the website

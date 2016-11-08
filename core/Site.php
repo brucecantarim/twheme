@@ -89,17 +89,45 @@ class Site extends \TimberSite {
         //register_taxonomy_for_object_type( 'category', 'produtos' );
 	}
     
+    /**
+     * custom_search_filter
+     *
+     * This controls where we will be searching for the terms the user inputs
+     * I still need to improve this, for more flexibility, and integrate with
+     * the Config Class.
+     */
     function custom_search_filter($query) {
+        
         if ($query->is_search) {
-            $query->set('post_type', 'maquina' ); // Here I defined which post types to search for the query, array('for','more','types')
+            $query->set('post_type', 'maquina', 'noticia', 'evento' ); // Here I defined which post types to search for the query, array('for','more','types')
         };
     return $query;
+        
     }
     
+    /**
+     * deliver_mail
+     *
+     * used for form send
+     */
     function deliver_mail() { 
 
         $mailer = new Mailer();
         return $mailer->send();
+        
+    }
+    
+    /**
+     * add_shortcodes
+     *
+     * This can be used in the editor or in twig
+     * Check the Shorts Class for reference
+     */
+    function add_shortcodes() {
+        
+        $shorts = new Shorts();
+        return $shorts->register();
+        
     }
 
     /**

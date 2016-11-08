@@ -63,7 +63,7 @@ class Shorts {
 
     }
     
-    function Register () {
+    function register () {
         add_shortcode('gmaps', 'gmaps');
         add_shortcode('card', 'card');
         add_shortcode('youtube', 'youtube');
