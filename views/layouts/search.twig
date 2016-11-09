@@ -15,8 +15,11 @@
                 <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
                     <h1>{{ post.title }}</h1>
 				    <a href="{{ post.link }}">
-				    {% if post.thumbnail %}
-				    <img class="img-thumbnail" src="{{ post.thumbnail.src }}" srcset="{{ post.thumbnail.src | retina(1) }} 1x, {{ post.thumbnail.src | retina(2) }}  2x, {{ post.thumbnail.src | retina(3) }}  3x, {{ post.thumbnail.src | retina(4) }}  4x">
+				    {% if post.mainimg %}
+                    {% set id = post.mainimg %}
+                    <img class="img-thumbnail" src="{{ Image(id).src }}" srcset="{{ Image(id).src }}"/>
+				    {% elseif post.thumbnail %}
+				    <img class="img-thumbnail" src="{{ post.thumbnail.src }}" srcset="{{ post.thumbnail.src }}">
                     {% else %}
                     <img class="img-thumbnail" src="http://placehold.it/300?text={{__('IMAGEM', 'twheme')|e }}">
                     {% endif %}
@@ -25,8 +28,8 @@
         {% endfor %}
         {% else %}
                 <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
-                    <h1>Nenhum resultado</h1>
-                    <h3>Verifique se digitou o termo corretamente, ou tente novamente mais tarde</h3>
+                    <h1>{{__('Nenhum resultado', 'twheme')|e}}</h1>
+                    <h3>{{__('Verifique se digitou o termo corretamente, ou tente novamente mais tarde', 'twheme')}}</h3>
                  </div><!--/. col -->
         {% endif %}
         </div>

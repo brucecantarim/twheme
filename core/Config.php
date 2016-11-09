@@ -67,9 +67,19 @@ abstract class Config {
             'slug' => 'maquinas',
             'plural' => 'Máquinas',
             'singular' => 'Máquina',
-            'icon' => 'dashicons-cart',
+            'icon' => 'dashicons-star-filled',
             'wordsex' => 'female',
             'orderby' => 'rand'
+        ),
+            
+        "seminovos" => array(
+            'type' => 'seminovo',
+            'slug' => 'seminovos',
+            'plural' => 'Seminovos',
+            'singular' => 'Seminovo',
+            'icon' => 'dashicons-star-half',
+            'wordsex' => 'male',
+            'orderby' => 'date'
         ),
 
         "eventos" => array(

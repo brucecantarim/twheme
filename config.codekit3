@@ -2356,6 +2356,12 @@
 		"oAP": "\/page.php",
 		"oF": 0
 		},
+	"\/README.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/README.html",
+		"oF": 0
+		},
 	"\/README.md": {
 		"cS": 0,
 		"eF": 1,
@@ -2475,6 +2481,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/views\/layouts\/single-product.twig",
+		"oF": 0
+		},
+	"\/views\/layouts\/single-seminovo.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/single-seminovo.twig",
 		"oF": 0
 		},
 	"\/views\/layouts\/single.twig": {
