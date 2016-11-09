@@ -669,10 +669,9 @@ footer {
     margin: 0 5px; }
 
 .accordion-box {
-  background-color: #f2f2f2;
+  background-color: white;
   color: black;
-  padding: 15px;
-  height: 62%; }
+  display: none; }
 
 .body-circle, .footer-circle {
   border-radius: 50%;
@@ -728,6 +727,19 @@ footer {
 /---------------------------------------------------*/
 .product-thumbnail {
   height: 300px; }
+
+/*---------------------------------------------------/
+/                                                    /
+/  FORMS - Here you'll find the form field classes.  /
+/  You might wanna check the accordion file as well. /
+/                                                    /
+/---------------------------------------------------*/
+.contact-field {
+  width: 100%;
+  border-width: 0;
+  background-color: #f2f2f2;
+  padding: 0.5em;
+  margin: 1em 0 1em 0; }
 
 /*---------------------------------------------------/
 /                                                    /

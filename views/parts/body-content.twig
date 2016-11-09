@@ -10,21 +10,31 @@
         <div class="row">
             
             {% if post.post_type == 'maquina' %}
-                    
+                <!-- MACHINE BODY -->    
                 <div class="col-md-12 text-justify">
                     {{ post.specs }}
                     <br/><br/>
-                    <button class="btn btn-yellow btn-flex wow slideIn text-center" action="mailto:brasil@vermeer.com"><h4>Entre em contato e faça o seu orçamento</h4></button>
-                </div>
+                    <div>
+                            <button data-toggle="collapse" data-target="#contact-form" class="accordion-button btn-flex text-center"></i>
+                            <h4>{{__('Entre em contato e solicite o seu orçamento', 'twheme')|e }}</h4>
+                            </button>
+                            <div id="contact-form" class="collapse wow fadeIn">
+                                {% block contactform %}
+                                    {% include 'contact-form.twig' %}
+                                {% endblock contactform %}
+                            </div><!-- /.accordion-box -->
+                    <!--<button class="btn btn-yellow btn-flex wow slideIn text-center" action="mailto:brasil@vermeer.com"><h4>Entre em contato e faça o seu orçamento</h4></button>-->
+                    </div><!-- /#accordion -->
+                </div><!-- /.col -->
             
             {% elseif post.post_type == 'page' %}
+                <!-- CATEGORY PAGE BODY - NOT WORKING -->
                 <div class="col-md-12 text-justify">
                     <h1>{{post.title}}</h1><br/>
                     <hr/>
                     {{ post.content }}
                     {% for item in menu %}
-                    <!-- NEEDS FIXING... SCOPE IS THE CULPRIT -->
-                    {% if post.title == item %}
+                    {% if post.title == item.title %}
                     <div class="container">
                         <div class="row">
                             {% set colsize = 12 // item.get_children|length %}
@@ -69,6 +79,7 @@
                 {% endif %}
             
             {% elseif sections %}
+            <!-- HOME BODY CONTENT -->
             {% for section in sections %}
             {% set colsize = 12 / sections|length %}
             <div class="col-md-{{colsize}} text-center col-left">
@@ -81,6 +92,7 @@
             {% endfor %}
             
             {% else %}
+            <!-- DEFAULT BODY CONTENT -->
             <div class="col-md-3 text-center col-left">
                 <div class="body-circle center-block">
                     <img src="assets/img/SEMINOVOS-01.svg"/>

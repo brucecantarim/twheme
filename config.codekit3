@@ -651,6 +651,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/sass\/components\/_form.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/sass\/css\/_form.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/assets\/sass\/components\/_icon-circle.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -754,6 +767,16 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/assets\/sass\/layout-min.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/assets\/sass\/layout-min-min.css",
+		"oF": 0,
+		"oS": 0
 		},
 	"\/assets\/sass\/layout.css": {
 		"aP": 0,
@@ -2472,10 +2495,10 @@
 		"oAP": "\/views\/modules\/cards.twig",
 		"oF": 0
 		},
-	"\/views\/modules\/contactform.twig": {
+	"\/views\/modules\/contact-form.twig": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/views\/modules\/contactform.twig",
+		"oAP": "\/views\/modules\/contact-form.twig",
 		"oF": 0
 		},
 	"\/views\/modules\/gallery-lightbox.twig": {

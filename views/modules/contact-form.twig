@@ -1,0 +1,38 @@
+{# contact-form.twig #}
+
+{% block contactform %}
+<form action="{{ site.url }}" method="post">
+    <div class="container-flex">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-left color-black">{{__('SOLICITE O SEU ORÇAMENTO', 'twheme')|e }}</h1>
+                <input class="contact-field center-block wow fadeIn" placeholder="{{__('Nome', 'twheme')|e }}" type="text" name="message_name" pattern="[a-zA-Z]+" required data-wow-delay="0.6s">
+                <input class="contact-field center-block wow fadeIn" placeholder="{{__('Empresa', 'twheme')|e }}" type="text" name="message_company" pattern="[a-zA-Z]+" required data-wow-delay="0.6s">
+                <input class="contact-field center-block wow fadeIn" placeholder="{{__('Email', 'twheme')|e }}" type="email" name="message_email" required data-wow-delay="0.6s">
+            </div>
+            <div class="col-md-6">
+                <input class="contact-field center-block wow fadeIn" placeholder="{{__('Telefone', 'twheme')|e }}" type="tel" name="message_phone" required data-wow-delay="0.6s">
+            </div>
+            <div class="col-md-4">
+                <input class="contact-field center-block wow fadeIn" placeholder="{{__('Cidade', 'twheme')|e }}" type="text" name="message_city" pattern="[a-zA-Z]+" required data-wow-delay="0.6s">
+            </div>
+            <div class="col-md-2">
+                <input class="contact-field center-block wow fadeIn" placeholder="{{__('Estado', 'twheme')|e }}" type="text" name="message_state" pattern="[a-zA-Z]+" required data-wow-delay="0.6s">
+            </div>
+            <div class="col-md-6">
+                <input class="contact-field center-block wow fadeIn" placeholder="{{__('Equipamento', 'twheme')|e }}" type="text" name="message_equipment" pattern="[a-zA-Z]+" required data-wow-delay="0.6s">
+            </div>
+            <div class="col-md-6">
+                <input class="contact-field center-block wow fadeIn" placeholder="{{__('Modelo', 'twheme')|e }}" type="text" name="message_model" pattern="[a-zA-Z]+" required data-wow-delay="0.6s">
+            </div>
+            <div class="col-md-12">
+                <textarea placeholder="{{__('Comentários', 'twheme')|e }}" name="message_comments" required class="contact-field center-block wow fadeIn" data-wow-delay="0.6s"></textarea>
+            </div>
+            <div class="col-md-12 text-right">
+                <input type="submit" name="message_send" class="btn btn-yellow wow bounceIn" id="sendbutton" data-wow-delay="0.2s" value="{{__('ENVIAR', 'twheme')|e }}">
+                <input type="reset" name="message_clear" class="btn btn-yellow wow bounceIn" id="sendbutton" data-wow-delay="0.2s" value="{{__('LIMPAR', 'twheme')|e }}">
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container-flex -->
+</form>
+{% endblock contactform %}

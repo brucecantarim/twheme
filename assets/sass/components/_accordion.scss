@@ -20,10 +20,9 @@
 }
 
 .accordion-box {
-    background-color: $color-grey;
+    background-color: $color-white;
     color: $color-copy;
-    padding: 15px;
-    height: 62%;
+    display: none;
 }
 
 .chevron {

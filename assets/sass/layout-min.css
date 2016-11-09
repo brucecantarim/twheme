@@ -830,10 +830,9 @@ footer a, footer a:hover, footer a:active, footer a:visited {
 
 /* line 22, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_accordion.scss */
 .accordion-box {
-  background-color: #f2f2f2;
+  background-color: white;
   color: black;
-  padding: 15px;
-  height: 62%; }
+  display: none; }
 
 /* line 1, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_icon-circle.scss */
 .body-circle, .footer-circle {
@@ -890,9 +889,23 @@ footer a, footer a:hover, footer a:active, footer a:visited {
   max-height: 250px;
   margin: 10px 0; }
 
-/* line 1, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_products.scss */
+/*---------------------------------------------------/
+/                                                    /
+/   PRODUCTS - Here you'll find some of the classes  /
+/        that deal with the product content.         /
+/                                                    /
+/---------------------------------------------------*/
+/* line 8, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_products.scss */
 .product-thumbnail {
-  min-height: 300px; }
+  height: 300px; }
+
+/* line 1, /Users/bruce/Sites/vermeer.dev/wordpress/wp-content/themes/twheme/assets/sass/components/_form.scss */
+.contact-field {
+  width: 100%;
+  border-width: 0;
+  background-color: #f2f2f2;
+  padding: 0.5em;
+  margin: 1em; }
 
 /*---------------------------------------------------/
 /                                                    /
