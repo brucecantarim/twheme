@@ -9,22 +9,20 @@
     <div class="container">
         <div class="row">
             
-            {% if post.post_type == 'maquina' %}
+            {% if post.post_type == 'maquina' or 'seminovo' %}
                 <!-- MACHINE BODY -->    
                 <div class="col-md-12 text-justify">
                     {{ post.specs }}
                     <br/><br/>
                     <div>
-                            <button data-toggle="collapse" data-target="#contact-form" class="accordion-button btn-flex text-center"></i>
-                            <h4>{{__('Entre em contato e solicite o seu orçamento', 'twheme')|e }}</h4>
-                            </button>
-                            <div id="contact-form" class="collapse wow fadeIn">
-                                {% block contactform %}
-                                    {% include 'contact-form.twig' %}
-                                {% endblock contactform %}
-                            </div><!-- /.accordion-box -->
-                    <!--<button class="btn btn-yellow btn-flex wow slideIn text-center" action="mailto:brasil@vermeer.com"><h4>Entre em contato e faça o seu orçamento</h4></button>-->
-                    </div><!-- /#accordion -->
+                        <button data-toggle="collapse" data-target="#contact-form" class="accordion-button btn-flex text-center"></i>
+                        <h4>{{__('Entre em contato e solicite o seu orçamento', 'twheme')|e }}</h4>
+                        </button>
+                        <div id="contact-form" class="collapse wow fadeIn">
+                            {% block contactform %}
+                                {% include 'contact-form.twig' %}
+                            {% endblock contactform %}
+                        </div>
                 </div><!-- /.col -->
             
             {% elseif post.post_type == 'page' %}
@@ -99,7 +97,7 @@
                 </div>
                 <h3>Seminovos</h3>
                 <br/>
-                <p>Confira aqui o nosso catálogo de equipamentos Vermeer de segunda mão numa variedade de modelos, com as características e opções mais desejadas, usados de forragem e industriais à venda para uso em fazendas ou em obras de construção. Comprando conosco, você tem a segurança de que o seu equipamento seminovo está pronto para encarar qualquer trabalho.</p>
+                <p>Confira aqui o nosso catálogo de equipamentos Vermeer de segunda mão numa variedade de modelos. Comprando conosco, você tem a segurança de que o seu equipamento seminovo está pronto para encarar qualquer trabalho.</p>
             </div>
             <div class="col-md-3 text-center col-left">
                 <div class="body-circle center-block">
@@ -107,7 +105,7 @@
                 </div>
                 <h3>Aluguel</h3>
                 <br/>
-                <p>A Vermeer Brasil oferece aos seus clientes a possibilidade de alugar equipamentos. Temos disponíveis modelos da nossa frota de alugueL e da rede internacional da Vermeer, trazendo a solução na medida das suas necessidades e para toda obra. O aluguel de equipamento tem várias vantagens associadas e é uma ótima opção para usufruir das nossas máquinas.</p>
+                <p>A Vermeer Brasil oferece aos seus clientes a possibilidade de alugar equipamentos. O aluguel de equipamento tem várias vantagens associadas e é uma ótima opção para usufruir das nossas máquinas.</p>
             </div>
             <div class="col-md-3 text-center col-left">
                 <div class="body-circle center-block">
@@ -115,7 +113,7 @@
                 </div>
                 <h3>Ofertas</h3>
                 <br/>
-                <p>Se você estava esperando para adquirir um dos nossos produtos, agora é a melhor hora para comprar um equipamento Vermeer. Preparamos uma série de promoções selecionadas a dedo, exclusivamente para o nosso site. Estas ofertas especiais estarão disponíveis somente por um curto período de tempo, então clique e confira!</p>
+                <p>Se você estava esperando para adquirir um dos nossos produtos, agora é a melhor hora para comprar um equipamento Vermeer. Estas ofertas especiais estarão disponíveis somente por um curto período de tempo, então clique e confira!</p>
             </div>
             <div class="col-md-3 text-center col-none">
                 <div class="body-circle center-block">
@@ -123,7 +121,7 @@
                 </div>
                 <h3>Financiamento</h3>
                 <br/>
-                <p>No mercado para algo novo? Procurando financiamento, ao invés de pagar em dinheiro novas compras de equipamentos? Pensando sobre qual a taxa de juros e as condições de pagamento que estão disponíveis? Conte com a Vermeer e seus parceiros para opções de financiamento. Sabemos que você precisa de opções de financiamento especialmente criadas para você.</p>
+                <p>No mercado para algo novo? Conte com a Vermeer e seus parceiros para opções de financiamento. Sabemos que você precisa de opções especialmente criadas para você.</p>
             </div>
             
             {% endif %}

@@ -46,7 +46,38 @@
         <div class="slider">
             <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}); background-size: cover;"></div>
         </div>
-            
+           
+        {% elseif post.type == 'seminovo' %}
+        
+        <div class="row-spacer"></div>
+           
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img class="img-responsive" src="{{post.thumbnail.src}}"/>
+                    <div class="row">
+                        {% for id in post.gallery if post.gallery %}
+                        <div class="col-md-3">
+                            <a href="{{Image(id).src}}">
+                                <img class="img-thumbnail" src="{{Image(id).src}}"/>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div><!-- /.row -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-md-6 bg-color-grey">
+                    <h2>{{post.title}}</h2>
+                    <p>{{post.content}}</p>
+                    <h3><small>{{__('Número de Série:', 'twheme')}} </small>{{post.serialnumber}}</h3>
+                    <h3><small>{{__('Ano:', 'twheme')}} </small>{{post.year}}</h3>
+                    <h3><small>{{__('Horímetro:', 'twheme')}} </small>{{post.hours}}</h3>
+                    <h3><small>{{__('Local:', 'twheme')}} </small>{{post.location}}</h3>
+                    <h3><small>{{__('Composição:', 'twheme')}} </small></h3>
+                    <p>{{post.composition}}</p>
+                    <h1 class="text-right">{{post.price}}</h1>
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
         {% else %}
         
         {#<div class="slider">

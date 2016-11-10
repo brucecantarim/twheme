@@ -1,0 +1,29 @@
+{
+  "name": "twheme",
+  "homepage": "https://github.com/brucecantarim/twheme",
+  "authors": [
+    "Bruce Cantarim <bruce@cantarim.com>"
+  ],
+  "description": "A modular framework for wordpress theme development, using timber, twig and sass.",
+  "main": [
+      "functions.php",
+      "core/Config.php"
+  ],
+  "keywords": [
+    "framework",
+    "theme",
+    "wordpress"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}

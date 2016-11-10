@@ -802,6 +802,9 @@ footer {
 .color-grey {
   color: #f2f2f2 !important; }
 
+.color-dark-grey {
+  color: #D7D7D7 !important; }
+
 .color-white {
   color: white !important; }
 
@@ -840,6 +843,9 @@ footer {
 
 .bg-color-grey {
   background-color: #f2f2f2 !important; }
+
+.bg-color-dark-grey {
+  background-color: #D7D7D7 !important; }
 
 .bg-color-white {
   background-color: white !important; }
