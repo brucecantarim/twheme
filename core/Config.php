@@ -81,6 +81,26 @@ abstract class Config {
                 'wordsex' => 'male',
                 'orderby' => 'date'
                 ),
+            
+            "locacoes" => array(
+                'type' => 'locacao',
+                'slug' => 'locacoes',
+                'plural' => 'Locações',
+                'singular' => 'Locação',
+                'icon' => 'dashicons-star-half',
+                'wordsex' => 'male',
+                'orderby' => 'date'
+                ),
+            
+            "ofertas" => array(
+                'type' => 'oferta',
+                'slug' => 'ofertas',
+                'plural' => 'Ofertas',
+                'singular' => 'Oferta',
+                'icon' => 'dashicons-star-half',
+                'wordsex' => 'female',
+                'orderby' => 'date'
+                ),
 
             "eventos" => array(
                 'type' => 'evento',
@@ -114,7 +134,7 @@ abstract class Config {
                 'plural' => 'Categorias',
                 'singular' => 'Categoria',
                 'wordsex' => 'female',
-                'post'=> 'maquina' // To which post it'll be associated
+                'post'=> array('maquina', 'seminovo', 'locacao', 'oferta')  // To which post it'll be associated
             )
         );
     

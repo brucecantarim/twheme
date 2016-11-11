@@ -28,6 +28,7 @@ class Site extends \TimberSite {
         
         // Hooking up Actions
         add_action( 'login_head',  array( $this, 'login_css' ) );
+        add_action( 'admin_init', array( $this, 'remove_dashboard_meta') ); 
         add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
         add_action( 'init', array( $this, 'deliver_mail' ) );
@@ -54,10 +55,21 @@ class Site extends \TimberSite {
     function change_wp_login_title() {
         return get_option('blogname'); // OR ECHO YOUR OWN ALT TEXT
     }
-
+    
+    // Hiding dashboard widgets from Clients
+    function remove_dashboard_meta() {
+        
+        $dashboard = new Dashboard();
+        return $dashboard->removeWidgets();
+        
+    }
+    
+    // Change the default post type
     function change_default_post_type () {
+        
         $customPostType = new CustomPostTypes;
         return $customPostType->mainPostType();
+        
     }
         
     /**

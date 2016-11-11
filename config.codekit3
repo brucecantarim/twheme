@@ -3660,6 +3660,12 @@
 		"oAP": "\/core\/CustomTaxonomies.php",
 		"oF": 0
 		},
+	"\/core\/Dashboard.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/core\/Dashboard.php",
+		"oF": 0
+		},
 	"\/core\/Mailer.php": {
 		"ft": 8192,
 		"oA": 0,
