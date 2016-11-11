@@ -25,4 +25,34 @@ class Dashboard {
         
     }
     
+    public function removeMenus() {
+        
+        $isAdmin = current_user_can( 'manage_options');
+        
+        if ( !$isAdmin ) {
+            remove_menu_page( 'themes.php' );          // Appearance
+            remove_menu_page( 'plugins.php' );         // Plugins
+            remove_menu_page( 'users.php' );           // Users
+            remove_menu_page( 'tools.php' );           // Tools
+            remove_menu_page( 'options-general.php' ); // Settings
+        }
+        
+    }
+    
+    public function removeSubMenus() {
+        
+        // WIP - To be implemented
+	    $page = remove_submenu_page( $parent, $children );
+    }
+    
+    // Custom Admin footer
+    function customFooter () {
+        
+        $footerMessage = Config::$footerMessage;
+        $footerLink = Config::$footerLink;
+        $footerName = Config::$footerName;
+        
+        echo '<span id="footer-thankyou">' . $footerMessage . '<a href="' . $footerLink . '" target="_blank">' . $footerName . '</a></span>';
+    }
+    
 }

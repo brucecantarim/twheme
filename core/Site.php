@@ -24,11 +24,13 @@ class Site extends \TimberSite {
         add_filter( 'login_headerurl', array( $this, 'change_wp_login_url') );
         add_filter( 'login_headertitle', array( $this, 'change_wp_login_title' ) );
         add_filter( 'pre_get_posts', array( $this, 'custom_search_filter' ) );
+        add_filter( 'admin_footer_text', array( $this, 'custom_footer_admin') );
         add_filter( 'init', array( $this, 'change_default_post_type' ) );
         
         // Hooking up Actions
         add_action( 'login_head',  array( $this, 'login_css' ) );
-        add_action( 'admin_init', array( $this, 'remove_dashboard_meta') ); 
+        add_action( 'admin_init', array( $this, 'remove_dashboard_meta') );
+        add_action( 'admin_init', array( $this, 'remove_dashboard_menus') );
         add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
         add_action( 'init', array( $this, 'deliver_mail' ) );
@@ -61,6 +63,22 @@ class Site extends \TimberSite {
         
         $dashboard = new Dashboard();
         return $dashboard->removeWidgets();
+        
+    }
+    
+    // Hiding admin menus from Clients
+    function remove_dashboard_menus() {
+        
+        $dashboard = new Dashboard();
+        return $dashboard->removeMenus();
+        
+    }
+    
+    // Changing the default WP footer in the admin page
+    function custom_footer_admin() {
+        
+        $dashboard = new Dashboard();
+        return $dashboard->customFooter();
         
     }
     

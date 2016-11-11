@@ -114,14 +114,14 @@ abstract class Config {
 
         ),
     
-    /*  
-    *
-    *   TAXONOMIES TYPES
-    *
-    *   Use this sections to add you custom taxonomies
-    *   These will appear in the admin dashboard, and will be called in the context
-    *
-    */
+        /*  
+        *
+        *   TAXONOMIES TYPES
+        *
+        *   Use this sections to add you custom taxonomies
+        *   These will appear in the admin dashboard, and will be called in the context
+        *
+        */
     
         $disableDefaultTaxonomy = true, // This hide the default post taxonomies
     
@@ -136,7 +136,20 @@ abstract class Config {
                 'wordsex' => 'female',
                 'post'=> array('maquina', 'seminovo', 'locacao', 'oferta')  // To which post it'll be associated
             )
-        );
+        ),
+    
+         /*  
+        *
+        *   DASHBOARD
+        *
+        *   Here you can toogle and configure customizations in the admin dashboard.
+        *   Slowly implementing options here.
+        *
+        */
+    
+        $footerMessage = 'Desenvolvimento: ',
+        $footerLink = 'http://jotacom.com.br',
+        $footerName = 'Grupo Jota';
     
     /*  
     *
