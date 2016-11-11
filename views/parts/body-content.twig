@@ -26,7 +26,7 @@
                 </div><!-- /.col -->
             
             {% elseif post.post_type == 'page' %}
-                <!-- CATEGORY PAGE BODY - NOT WORKING -->
+                {#<!-- CATEGORY PAGE BODY - NOT WORKING -->
                 <div class="col-md-12 text-justify">
                     <h1>{{post.title}}</h1><br/>
                     <hr/>
@@ -63,7 +63,7 @@
                     </div><!-- /.container -->
                     {% endif %}
                     {% endfor %}
-                </div>
+                </div>#}
                 
                 {% if post.sections %}
                 {% for section in post.sections %}

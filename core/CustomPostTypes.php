@@ -18,7 +18,7 @@ class CustomPostTypes {
             // This is where you can customize the default post type
             // I need to improve this later on
 
-             global $wp_post_types;
+            global $wp_post_types;
             $labels = &$wp_post_types['post']->labels;
             $labels->name = _('Home');
             $labels->singular_name = __('Home');

@@ -85,22 +85,9 @@ class Site extends \TimberSite {
      */
 	function register_taxonomies() {
 		//this is where you can register custom taxonomies
-        register_taxonomy('category', array(), array('show_in_nav_menus' => false) );
-        register_taxonomy('post_tag', array(), array('show_in_nav_menus' => false) );
-        register_taxonomy(
-		'types',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces).
-		'produtos',   		 //post type name
-		array(
-			'hierarchical' 		=> true,
-			'label' 			=> __('Tipos', 'twheme'),  //Display name
-			'query_var' 		=> true,
-			'rewrite'			=> array(
-					'slug' 			=> 'type', // This controls the base slug that will display before each term
-					'with_front' 	=> false // Don't display the category base before
-					)
-			)
-		);
-        //register_taxonomy_for_object_type( 'category', 'produtos' );
+        $taxonomies = new CustomTaxonomies();
+        return $taxonomies->hideDefaultTaxonomy();
+        return $taxonomies->register();
 	}
     
     /**

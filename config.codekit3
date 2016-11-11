@@ -171,12 +171,6 @@
 		"oAP": "\/assets\/other\/ideias_layout.pptx",
 		"oF": 0
 		},
-	"\/assets\/other\/~$ideias_layout.pptx": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/assets\/other\/~$ideias_layout.pptx",
-		"oF": 0
-		},
 	"\/assets\/sass\/.sass-cache\/071b3de28f35b50850937750de81448a4409474f\/_colors.scssc": {
 		"ft": 8192,
 		"oA": 1,
@@ -3658,6 +3652,12 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/core\/CustomPostTypes.php",
+		"oF": 0
+		},
+	"\/core\/CustomTaxonomies.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/core\/CustomTaxonomies.php",
 		"oF": 0
 		},
 	"\/core\/Mailer.php": {

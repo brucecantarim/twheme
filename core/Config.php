@@ -30,14 +30,14 @@ abstract class Config {
         $slideshow = true, //  This enables or disables the Slideshow post type
         $devFooter = false, // This is the optional devFooter, for cool clients
     
-    /*  
-    *
-    *   POST TYPES
-    *
-    *   Use this sections to add you custom post types
-    *   These will appear in the admin dashboard, and will be called in the context
-    *
-    */
+        /*  
+        *
+        *   POST TYPES
+        *
+        *   Use this sections to add you custom post types
+        *   These will appear in the admin dashboard, and will be called in the context
+        *
+        */
         $defaultPost = false, // True for the default WP main post type, false for a custom type instead
     
         $mainPostType = array( // Here, you can customize the main custom post type
@@ -52,47 +52,71 @@ abstract class Config {
     
         $postTypes = array( // Here, you can add all the custom post types that you may need
 
-        "noticias" => array(
-            'type' => 'noticia',
-            'slug' => 'noticias',
-            'plural' => 'Notícias',
-            'singular' => 'Notícia',
-            'icon' => 'dashicons-admin-site',
-            'wordsex' => 'female',
-            'orderby' => 'date'
-        ),
+            "noticias" => array(
+                'type' => 'noticia',
+                'slug' => 'noticias',
+                'plural' => 'Notícias',
+                'singular' => 'Notícia',
+                'icon' => 'dashicons-admin-site',
+                'wordsex' => 'female',
+                'orderby' => 'date'
+                ),
 
-        "maquinas" => array(
-            'type' => 'maquina',
-            'slug' => 'maquinas',
-            'plural' => 'Máquinas',
-            'singular' => 'Máquina',
-            'icon' => 'dashicons-star-filled',
-            'wordsex' => 'female',
-            'orderby' => 'rand'
-        ),
-            
-        "seminovos" => array(
-            'type' => 'seminovo',
-            'slug' => 'seminovos',
-            'plural' => 'Seminovos',
-            'singular' => 'Seminovo',
-            'icon' => 'dashicons-star-half',
-            'wordsex' => 'male',
-            'orderby' => 'date'
-        ),
+            "maquinas" => array(
+                'type' => 'maquina',
+                'slug' => 'maquinas',
+                'plural' => 'Máquinas',
+                'singular' => 'Máquina',
+                'icon' => 'dashicons-star-filled',
+                'wordsex' => 'female',
+                'orderby' => 'rand'
+                ),
 
-        "eventos" => array(
-            'type' => 'evento',
-            'slug' => 'eventos',
-            'plural' => 'Eventos',
-            'singular' => 'Evento',
-            'icon' => 'dashicons-megaphone',
-            'wordsex' => 'male',
-            'orderby' => 'date'
-        )
+            "seminovos" => array(
+                'type' => 'seminovo',
+                'slug' => 'seminovos',
+                'plural' => 'Seminovos',
+                'singular' => 'Seminovo',
+                'icon' => 'dashicons-star-half',
+                'wordsex' => 'male',
+                'orderby' => 'date'
+                ),
 
-    );
+            "eventos" => array(
+                'type' => 'evento',
+                'slug' => 'eventos',
+                'plural' => 'Eventos',
+                'singular' => 'Evento',
+                'icon' => 'dashicons-megaphone',
+                'wordsex' => 'male',
+                'orderby' => 'date'
+            )
+
+        ),
+    
+    /*  
+    *
+    *   TAXONOMIES TYPES
+    *
+    *   Use this sections to add you custom taxonomies
+    *   These will appear in the admin dashboard, and will be called in the context
+    *
+    */
+    
+        $disableDefaultTaxonomy = true, // This hide the default post taxonomies
+    
+        $customTaxonomy = true,
+        $customTaxonomies = array( // Here, you can add all the custom txonomies that you may need
+
+            "categoria" => array(
+                'type' => 'categoria',
+                'slug' => 'categoria',
+                'plural' => 'Categorias',
+                'singular' => 'Categoria',
+                'wordsex' => 'female',
+                'post'=> 'maquina' // To which post it'll be associated
+            )
+        );
     
     /*  
     *
