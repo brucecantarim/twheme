@@ -44,13 +44,14 @@ class CustomTaxonomies {
                         'update_item'       => __('Atualizar ' . $taxonomy['singular']),
                         'add_new_item'      => __('Adicionar nova ' . $taxonomy['singular']),
                         'new_item_name'     => __('Novo nome de ' . $taxonomy['singular']),
-                        'menu_name'         => __($taxonomy['singular']),
+                        'menu_name'         => __('Gerenciar ' . $taxonomy['plural'])
                     ];
                     $args = [
                         'hierarchical'      => true, // make it hierarchical (like categories)
                         'labels'            => $labels,
                         'show_ui'           => true,
                         'show_admin_column' => true,
+                        'show_in_nav_menus' => true,
                         'query_var'         => true,
                         'rewrite'           => ['slug' => $taxonomy['slug']],
                     ];
@@ -68,19 +69,21 @@ class CustomTaxonomies {
                         'update_item'       => __('Atualizar ' . $taxonomy['singular']),
                         'add_new_item'      => __('Adicionar novo ' . $taxonomy['singular']),
                         'new_item_name'     => __('Novo nome de ' . $taxonomy['singular']),
-                        'menu_name'         => __($taxonomy['singular']),
+                        'menu_name'         => __('Gerenciar ' . $taxonomy['plural'])
                     ];
                     $args = [
                         'hierarchical'      => true, // make it hierarchical (like categories)
                         'labels'            => $labels,
                         'show_ui'           => true,
                         'show_admin_column' => true,
+                        'show_in_nav_menus' => true,
                         'query_var'         => true,
                         'rewrite'           => ['slug' => $taxonomy['slug']],
                     ];
                 }
                 
                 register_taxonomy($taxonomy['slug'], $taxonomy['post'], $args);
+                $this->hideDefaultTaxonomy();
             }
 
         }

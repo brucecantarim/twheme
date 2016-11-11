@@ -86,7 +86,6 @@ class Site extends \TimberSite {
 	function register_taxonomies() {
 		//this is where you can register custom taxonomies
         $taxonomies = new CustomTaxonomies();
-        return $taxonomies->hideDefaultTaxonomy();
         return $taxonomies->register();
 	}
     
