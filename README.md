@@ -10,6 +10,8 @@ A live version can be found here: http://jotacom.com.br/wp_vermeer
 
 
 To do list:
+- Add Dashboard Customization.
+- Simplify the Site.php code, instantianting the classes inside the constructor.
 - Implement Typescript.
 - Implement Vafpress for Admin Configuration.
 - Add support for child themes.
