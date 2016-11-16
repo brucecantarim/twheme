@@ -3678,10 +3678,10 @@
 		"oAP": "\/core\/Mailer.php",
 		"oF": 0
 		},
-	"\/core\/Shorts.php": {
+	"\/core\/shorts.php": {
 		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/core\/Shorts.php",
+		"oA": 2,
+		"oAP": "\/core\/shorts.php",
 		"oF": 0
 		},
 	"\/core\/Site.php": {

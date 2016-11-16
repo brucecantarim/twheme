@@ -17,6 +17,9 @@ class Context {
         $context['posts'] = \Timber::get_posts();
         $context['dir'] = get_template_directory_uri();
         
+        // I'll have to implement a loop here
+        $context['categories'] = \Timber::get_terms(Config::$customTaxonomies['slug']);
+        
         // This calls the home post type sections, as sections, if needed
         // Use this to manage the main page content, it's pretty handy
         if ( !Config::$defaultPost ) {

@@ -126,7 +126,7 @@ abstract class Config {
         $disableDefaultTaxonomy = true, // This hide the default post taxonomies
     
         $customTaxonomy = true,
-        $customTaxonomies = array( // Here, you can add all the custom txonomies that you may need
+        $customTaxonomies = array( // Here, you can add all the custom taxonomies that you may need
 
             "categoria" => array(
                 'type' => 'categoria',

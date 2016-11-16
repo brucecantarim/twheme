@@ -37,7 +37,7 @@ class CustomTaxonomies {
                         'name'              => _x($taxonomy['plural'], 'taxonomy general name'),
                         'singular_name'     => _x($taxonomy['singular'], 'taxonomy singular name'),
                         'search_items'      => __('Procurar ' . $taxonomy['plural']),
-                        'all_items'         => __('Todas as' . $taxonomy['plural']),
+                        'all_items'         => __('Todas as ' . $taxonomy['plural']),
                         'parent_item'       => __($taxonomy['singular'] . ' principal'),
                         'parent_item_colon' => __($taxonomy['singular'] . ' principal:'),
                         'edit_item'         => __('Editar ' . $taxonomy['singular']),

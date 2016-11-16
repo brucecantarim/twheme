@@ -758,8 +758,7 @@ footer {
     text-align: left;
     text-indent: 3em; }
   .body-content .size-large {
-    position: relative;
-    left: -3.5em; }
+    margin: 0 auto; }
   .body-content h1 {
     color: #ffc425; }
 
