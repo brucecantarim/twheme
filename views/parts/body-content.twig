@@ -9,9 +9,11 @@
     <div class="container">
         <div class="row">
             
-            {% if post.post_type == 'maquina' or 'seminovo' %}
+            {% if post.post_type == 'maquina' or post.post_type == 'seminovo' %}
                 <!-- MACHINE BODY -->    
                 <div class="col-md-12 text-justify">
+                    <h3>{{__('ESPECIFICAÇÕES TÉCNICAS', 'twheme')}}</h3>
+                    <hr/>
                     {{ post.specs }}
                     <br/><br/>
                     <div>

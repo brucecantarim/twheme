@@ -49,7 +49,7 @@
            
         {% elseif post.type == 'seminovo' %}
         
-        <div class="row-spacer"></div>
+        <div class="row-spacer"></div><!-- /.row spacer -->
            
         <div class="container">
             <div class="row">
@@ -65,16 +65,34 @@
                         {% endfor %}
                     </div><!-- /.row -->
                 </div><!-- /.col-md-6 -->
-                <div class="col-md-6 bg-color-grey">
-                    <h2>{{post.title}}</h2>
-                    <p>{{post.content}}</p>
-                    <h3><small>{{__('Número de Série:', 'twheme')}} </small>{{post.serialnumber}}</h3>
-                    <h3><small>{{__('Ano:', 'twheme')}} </small>{{post.year}}</h3>
-                    <h3><small>{{__('Horímetro:', 'twheme')}} </small>{{post.hours}}</h3>
-                    <h3><small>{{__('Local:', 'twheme')}} </small>{{post.location}}</h3>
-                    <h3><small>{{__('Composição:', 'twheme')}} </small></h3>
-                    <p>{{post.composition}}</p>
-                    <h1 class="text-right">{{post.price}}</h1>
+                <div class="col-md-6 bg-color-grey no-padding">
+                    <div class="col-md-12 bg-color-grey">
+                        <h2>{{post.title}}</h2>
+                    </div><!-- /.col-md-12 -->
+                    <div class="col-md-12 bg-color-grey">
+                    <p>{{post.content|slice(0, 350)}}</p>
+                    </div><!-- /.col-md-12 -->
+                    <div class="col-md-12 bg-color-dark-grey">
+                    <h3><small class="color-black">{{__('Número de Série:', 'twheme')}} </small>{{post.serialnumber}}</h3>
+                    </div><!-- /.col-md-12 -->
+                    <div class="col-md-12 bg-color-grey">
+                    <h3><small class="color-black">{{__('Ano:', 'twheme')}} </small>{{post.year}}</h3>
+                    </div><!-- /.col-md-12 -->
+                    <div class="col-md-12 bg-color-dark-grey">
+                    <h3><small class="color-black">{{__('Horímetro:', 'twheme')}} </small>{{post.hours}} {{__('horas', 'twheme')|lower}}</h3>
+                    </div><!-- /.col-md-12 -->
+                    <div class="col-md-12 bg-color-grey">
+                    <h3><small class="color-black">{{__('Local:', 'twheme')}} </small>{{post.location}}</h3>
+                    </div><!-- /.col-md-12 -->
+                    <div class="col-md-12 bg-color-dark-grey">
+                    <h3><small class="color-black">{{__('Composição:', 'twheme')}} </small></h3>
+                    </div><!-- /.col-md-12 -->
+                    <div class="col-md-12 bg-color-dark-grey">
+                    <p>{{post.composition|slice(0, 350)}}</p>
+                    </div><!-- /.col-md-12 -->
+                    <div class="col-md-12 bg-color-grey">
+                    <h1 class="text-right">R$ {{post.price}}</h1>
+                    </div><!-- /.col-md-12 -->
                 </div><!-- /.col-md-6 -->
             </div><!-- /.row -->
         </div><!-- /.container -->

@@ -34,6 +34,7 @@ class Site extends \TimberSite {
         add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
         add_action( 'init', array( $this, 'deliver_mail' ) );
+        add_action( 'init', array( $this, 'add_shortcodes' ) );
         
         
         // Calling Timber Construct Function

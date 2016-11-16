@@ -2,14 +2,13 @@
 
 {% block morecontent %}
 
-<div class="body-content">
     <div class="container">
         <div class="row">
         
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInUp">
                 <h2 class="more-title">{{__("Confira também:", "twheme")}}</h2>
             </div>
-                    
+    {% if post.type == 'maquina' %}
     {% for product in maquinas|slice(0, 8) %}
         
         {% if product.title != post.title %}
@@ -31,9 +30,34 @@
         {% endif %}
         
     {% endfor %}
+    
+    {% elseif post.type == 'seminovo' %}
+    {% for product in seminovos|slice(0, 8) %}
+        
+        {% if product.title != post.title %}
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
+                <h3>{{ product.title }}</h3>
+                <div class="product-thumbnail">
+                    <a href="{{ product.link }}">
+                    {% if product.mainimg %}
+                        {% set id = product.mainimg %}
+                        <img class="img-responsive" src="{{ Image(id).src }}"/>
+                    {% else %}
+                        <img class="img-responsive" src="http://placehold.it/300?text={{__('SEMINOVO', 'twheme')}}"/>
+                    {% endif %}
+                    </a>
+                </div><!-- /.product-thumbnail -->
+            </div><!-- /.col -->
+        {% else %}
+                        
+        {% endif %}
+        
+    {% endfor %}
+    {% endif %}
        
         </div><!-- /.row -->
     </div><!-- /.container -->
 </div><!-- /.body-content -->
+
                    
 {% endblock morecontent %}

@@ -754,8 +754,8 @@ footer {
   padding-top: 100px;
   padding-bottom: 100px; }
   .body-content p {
-    font-size: 9pt;
-    text-align: justify;
+    font-size: 12pt;
+    text-align: left;
     text-indent: 3em; }
   .body-content .size-large {
     position: relative;
@@ -902,3 +902,7 @@ footer {
   min-height: 160px;
   height: 15.70%;
   margin: 0; }
+
+.no-padding {
+  padding: 0 !important;
+  margin: 0 !important; }
