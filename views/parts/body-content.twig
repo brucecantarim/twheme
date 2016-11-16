@@ -28,12 +28,12 @@
                 </div><!-- /.col -->
             
             {% elseif post.post_type == 'page' %}
-                {#<!-- CATEGORY PAGE BODY - NOT WORKING -->
+                <!-- CATEGORY PAGE BODY -->
                 <div class="col-md-12 text-justify">
                     <h1>{{post.title}}</h1><br/>
                     <hr/>
                     {{ post.content }}
-                    {% for item in menu %}
+                    {#{% for item in menu %}
                     {% if post.title == item.title %}
                     <div class="container">
                         <div class="row">
@@ -60,12 +60,12 @@
                                         {% endfor %}
                                 </ul><!-- /.submenulist -->
                             </div><!-- /.col -->
-                            {% endfor %}
+                        {% endfor %}
                         </div><!-- /.row -->
                     </div><!-- /.container -->
                     {% endif %}
-                    {% endfor %}
-                </div>#}
+                    {% endfor %}#}
+                </div>
                 
                 {% if post.sections %}
                 {% for section in post.sections %}

@@ -17,9 +17,6 @@ class Context {
         $context['posts'] = \Timber::get_posts();
         $context['dir'] = get_template_directory_uri();
         
-        // I'll have to implement a loop here
-        $context['categories'] = \Timber::get_terms(Config::$customTaxonomies['slug']);
-        
         // This calls the home post type sections, as sections, if needed
         // Use this to manage the main page content, it's pretty handy
         if ( !Config::$defaultPost ) {
@@ -72,11 +69,6 @@ class Context {
         // the array. Almost an autoloader of sorts for context
         // post types and it's fields.
         
-        // OK! Almost there! I need to change this so it iterates through
-        // the name keys in this array. I'll make this work in the morning.
-        // Funny thing is that this didn't gave me an error at work.
-        // Noticed it only at my home computer. That's why you should
-        // check your code in different enviroments, I guess.
         $twheme_post_types = Config::$postTypes;
         
         foreach ( $twheme_post_types as $post_type) { 
@@ -97,6 +89,17 @@ class Context {
             $context[$post_type_slug] = \Timber::get_posts( $post_type_args );
         
         }
+        
+        // And here, we are running a loop for all custom
+        // taxonomies, to register each one of them in the context
+        $twheme_taxonomy_types = Config::$customTaxonomies;
+        
+        foreach ( $twheme_taxonomy_types as $taxonomy_type ) {
+        
+            $context[$taxonomy_type['plural']] = \Timber::get_terms($taxonomy_type['slug']);
+            
+        }
+        
         
         // Rendering the default bits of the website
         // I should change this later on...
