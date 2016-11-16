@@ -27,7 +27,8 @@
         </div><!-- /.row -->
         
         <div class="row">
-            {% set videos = post.videos|split(', ') %}
+            {% set videos_sanitized = post.videos|replace({' ':''}) %}
+            {% set videos = videos_sanitized|split(',') %}
             {% for video in videos|slice(0, 2) %} {# This is where I impose the video limit #}
             <div class="col-md-12">
                 <div class="embed-responsive embed-responsive-16by9 youtube">
