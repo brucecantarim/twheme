@@ -42,16 +42,20 @@
             {% endif %}
             
         {% elseif post.type == 'page' %}
-           
-        <div class="slider">
-            <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}); background-size: cover;"></div>
-        </div>
-           
+            {% if post.thumbnail %}
+            <div class="slider">
+                <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}); background-size: cover;"></div>
+            </div>
+            {% elseif post.title|lower == 'seminovos' %}
+            <div class="row-spacer"></div><!-- /.row spacer -->
+            {% else %}
+            <div class="row-spacer"></div><!-- /.row spacer -->
+            {% endif %}
         {% elseif post.type == 'seminovo' %}
            
         <div class="container">
-            <div class="row-spacer">
-            </div>
+            <div class="row-spacer"></div><!-- /.row spacer -->
+            <br/>
             <div class="row">
                 <div class="col-md-6">
                     <img class="img-responsive" src="{{post.thumbnail.src}}"/>

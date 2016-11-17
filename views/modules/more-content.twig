@@ -3,7 +3,8 @@
 {% block morecontent %}
 
     <div class="container">
-        {% if post.title != 'Seminovos' %}
+       
+        {% if post.title|lower != 'seminovos' %}
         <div class="row-spacer"></div><!-- /.row spacer -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInUp">
@@ -26,6 +27,8 @@
                     {% if product.mainimg %}
                         {% set id = product.mainimg %}
                         <img class="img-responsive" src="{{ Image(id).src }}"/>
+                    {% elseif product.thumbnail %}
+                        <img class="img-responsive" src="{{ product.thumbnail.src }}"/>
                     {% else %}
                         <img class="img-responsive" src="http://placehold.it/300?text={{__('MÁQUINA', 'twheme')}}"/>
                     {% endif %}
@@ -38,38 +41,40 @@
         
     {% endfor %}
     
-    {% elseif post.type == 'seminovo' or post.title == 'Seminovos' %}
+    {% elseif post.type == 'seminovo' or post.title|lower == 'seminovos' %}
     {% for product in seminovos|slice(0, 8) %}
         
         {% if product.title != post.title %}
+            <a href="{{ product.link }}">
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight background-color-grey">
                 <h3 >{{ product.title }}</h3>
                 <div class="product-thumbnail">
-                    <a href="{{ product.link }}">
                     {% if product.mainimg %}
                         {% set id = product.mainimg %}
                         <img class="img-responsive" src="{{ Image(id).src }}"/>
+                    {% elseif product.thumbnail %}
+                        <img class="img-responsive" src="{{ product.thumbnail.src }}"/>
                     {% else %}
                         <img class="img-responsive" src="http://placehold.it/300?text={{__('SEMINOVO', 'twheme')}}"/>
                     {% endif %}
-                    </a>
                     <div class="col-md-12 bg-color-grey">
                     <p>{{product.content|slice(0, 150)}}</p>
                     </div>
                     <div class="col-md-12 bg-color-dark-grey">
-                        <h4><small class="color-black">{{__('Número de Série:', 'twheme')}} </small>{{post.serialnumber}}</h3>
+                        <h4><small class="color-black">{{__('Número de Série:', 'twheme')}} </small>{{product.serialnumber}}</h3>
                     </div><!-- /.col-md-12 -->
                     <div class="col-md-12 bg-color-grey">
-                        <h4><small class="color-black">{{__('Ano:', 'twheme')}} </small>{{post.year}}</h3>
+                        <h4><small class="color-black">{{__('Ano:', 'twheme')}} </small>{{product.year}}</h3>
                     </div><!-- /.col-md-12 -->
                     <div class="col-md-12 bg-color-dark-grey">
-                        <h4><small class="color-black">{{__('Horímetro:', 'twheme')}} </small>{{post.hours}} {{__('horas', 'twheme')|lower}}</h3>
+                        <h4><small class="color-black">{{__('Horímetro:', 'twheme')}} </small>{{product.hours}} {{__('horas', 'twheme')|lower}}</h3>
                     </div><!-- /.col-md-12 -->
                     <div class="col-md-12 bg-color-grey">
-                        <h4><small class="color-black">{{__('Local:', 'twheme')}} </small>{{post.location}}</h3>
+                        <h3 class="text-right">R$ {{product.price}}</h3>
                     </div><!-- /.col-md-12 -->
                 </div><!-- /.product-thumbnail -->
             </div><!-- /.col -->
+            </a>
         {% else %}
                         
         {% endif %}
@@ -79,7 +84,7 @@
        
         </div><!-- /.row -->
     </div><!-- /.container -->
-    {% if post.title == 'Seminovos' %}
+    {% if post.title|lower == 'seminovos' %}
         <div class="row-spacer"></div><!-- /.row spacer -->
     {% endif %}
 </div><!-- /.body-content -->
