@@ -92,9 +92,9 @@
                 {% endif %}
             {% for section in sections %}
             <div class="col-md-{{colsize}} text-center">
-                <a href="{{section.pagelink}}">
+                <a href="{{ section.pagelink.src }}">
                 <div class="body-circle center-block">
-                    <img src="{{section.icon}}"/>
+                    <img src="{{Image(section.icon).src}}"/>
                 </div>
                 <h3>{{section.title}}</h3></a>
                 <p>{{section.content}}</p>
