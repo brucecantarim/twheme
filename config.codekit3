@@ -5228,10 +5228,28 @@
 		"oAP": "\/views\/layouts\/index.twig",
 		"oF": 0
 		},
+	"\/views\/layouts\/page-gerencie-sua-frota.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/page-gerencie-sua-frota.twig",
+		"oF": 0
+		},
+	"\/views\/layouts\/page-pecas.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/page-pecas.twig",
+		"oF": 0
+		},
 	"\/views\/layouts\/page-produtos.twig": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/views\/layouts\/page-produtos.twig",
+		"oF": 0
+		},
+	"\/views\/layouts\/page-seguranca.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/page-seguranca.twig",
 		"oF": 0
 		},
 	"\/views\/layouts\/page-seminovos.twig": {
@@ -5244,6 +5262,18 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/views\/layouts\/page-servicos.twig",
+		"oF": 0
+		},
+	"\/views\/layouts\/page-suporte-ao-produto.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/page-suporte-ao-produto.twig",
+		"oF": 0
+		},
+	"\/views\/layouts\/page-treinamentos.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/page-treinamentos.twig",
 		"oF": 0
 		},
 	"\/views\/layouts\/page.twig": {
@@ -5328,6 +5358,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/views\/modules\/slideshow.twig",
+		"oF": 0
+		},
+	"\/views\/modules\/support-media.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/modules\/support-media.twig",
 		"oF": 0
 		},
 	"\/views\/modules\/youtube.twig": {

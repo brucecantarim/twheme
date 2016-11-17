@@ -80,17 +80,30 @@
             
             {% elseif sections %}
             <!-- HOME BODY CONTENT -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+            <div class="container-flex">
+                <div class="row">
+            {% set colsize = 12 // sections|length %}
+                {% if colsize == 2 %}
+                    {% set coldifference = 8 - sections|length %}
+                    {% set coloffset = coldifference // 2 %}
+                    <div class="col-md-{{coloffset}}"></div>
+                {% endif %}
             {% for section in sections %}
-            {% set colsize = 12 / sections|length %}
-            <div class="col-md-{{colsize}} text-center col-left">
+            <div class="col-md-{{colsize}} text-center">
+                <a href="{{section.pagelink}}">
                 <div class="body-circle center-block">
                     <img src="{{section.icon}}"/>
                 </div>
-                <h3>{{section.title}}</h3>
+                <h3>{{section.title}}</h3></a>
                 <p>{{section.content}}</p>
             </div>
             {% endfor %}
-            
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+            <div class="container-flex">
+                <div class="row">
             {% else %}
             <!-- DEFAULT BODY CONTENT -->
             <div class="col-md-3 text-center col-left">
