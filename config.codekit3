@@ -5234,6 +5234,12 @@
 		"oAP": "\/views\/layouts\/page-produtos.twig",
 		"oF": 0
 		},
+	"\/views\/layouts\/page-seminovos.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/page-seminovos.twig",
+		"oF": 0
+		},
 	"\/views\/layouts\/page-servicos.twig": {
 		"ft": 8192,
 		"oA": 2,
