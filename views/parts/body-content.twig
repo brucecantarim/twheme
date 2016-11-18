@@ -92,7 +92,8 @@
                 {% endif %}
             {% for section in sections %}
             <div class="col-md-{{colsize}} text-center">
-                <a href="{{ section.pagelink.src }}">
+                
+                <a href="{{ TimberPost(section.pagelink).link }}">
                 <div class="body-circle center-block">
                     <img src="{{Image(section.icon).src}}"/>
                 </div>

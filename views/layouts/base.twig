@@ -1,5 +1,8 @@
 {# base.twig #}
 
+{% set category = post.get_terms[0] %}
+{% set parent = TimberTerm(category.parent) %}
+
 {% block header %}
 {% endblock header %}
 

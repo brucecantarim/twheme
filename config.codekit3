@@ -3690,6 +3690,18 @@
 		"oAP": "\/core\/Site.php",
 		"oF": 0
 		},
+	"\/core\/TwhemePost.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/core\/TwhemePost.php",
+		"oF": 0
+		},
+	"\/core\/TwigFunctions.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/core\/TwigFunctions.php",
+		"oF": 0
+		},
 	"\/functions.php": {
 		"ft": 8192,
 		"oA": 0,
