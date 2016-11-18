@@ -131,6 +131,7 @@ abstract class Config {
             "categoria" => array(
                 'type' => 'categoria',
                 'slug' => 'categoria',
+                'slug_plural' => 'categorias',
                 'plural' => 'Categorias',
                 'singular' => 'Categoria',
                 'wordsex' => 'female',

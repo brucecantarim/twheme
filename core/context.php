@@ -96,7 +96,16 @@ class Context {
         
         foreach ( $twheme_taxonomy_types as $taxonomy_type ) {
         
-            $context[$taxonomy_type['plural']] = \Timber::get_terms($taxonomy_type['slug']);
+            $taxonomy_args = array(
+                'taxonomy'               => $taxonomy_type['slug'],
+                'orderby'                => 'name',
+                'order'                  => 'ASC',
+                'hide_empty'             => false,
+            );
+            
+            $taxonomy_type_name = $taxonomy_type['slug_plural'];
+        
+            $context[$taxonomy_type_name] = \Timber::get_terms($taxonomy_args);
             
         }
         
