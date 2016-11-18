@@ -25,7 +25,7 @@
                                 {% include 'contact-form.twig' %}
                             {% endblock contactform %}
                         </div>
-                </div><!-- /.col -->
+                    </div><!-- /.col -->
             
             {% elseif post.post_type == 'page' %}
                 <!-- CATEGORY PAGE BODY -->
@@ -33,9 +33,10 @@
                     <h1>{{post.title}}</h1><br/>
                     <hr/>
                     {{ post.content }}
-                    {#{% for item in menu %}
-                    {% if post.title == item.title %}
-                    <div class="container">
+                    {% for item in categorias %}
+                    {% if post.title|lower == item.name|lower %}
+                    <div class="row-spacer"></div>
+                    <div class="container-flex">
                         <div class="row">
                             {% set colsize = 12 // item.get_children|length %}
                             {% if colsize == 1 %}
@@ -44,27 +45,29 @@
                                 <div class="col-md-{{coloffset}}"></div>
                             {% endif %}
                             {% for subitem in item.get_children %}
-                            <div class="col-md-{{colsize}}">
-                                <img src="{{subitem.thumbnail.src}}"/>
+                            <div class="col-md-{{colsize}} text-left">
+                                {#{% for subitem_post in subitem.posts %}
+                                {% set subitem_images = subitem_images|merge([subitem_post.mainimg]) %}
+                                {% endfor %}#}
+                                {% set subitem_image = subitem.posts[0].mainimg %}
+                                <div class="square-thumb">
+                                    <img class="img-responsive" src="{{Image(subitem_image).src}}"/>
+                                </div>
+                                <h4><b><a class="color-black" href="{{subitem.get_link}}">{{subitem.title}}</a></b></h4>
                                 <hr class="menustrip"/>
-                                <ul class='submenulist text-center'>
-                                        <li class='submenuitem'>
-                                            <a href="{{subitem.get_link}}">
-                                                <h4><b>{{subitem.title}}</b></h4>
-                                            </a>
-                                        </li>
-                                        {% for sublink in subitem.get_children %}
-                                        <li class="submenuitem">
-                                            <a href="{{sublink.get_link}}">{{sublink.title}}</a>
-                                        </li>
-                                        {% endfor %}
+                                <ul class='submenulist text-left no-padding'>
+                                    {% for sublink in subitem.posts %}
+                                    <li class="submenuitem">
+                                        <a class="color-black" href="{{sublink.get_link}}">{{sublink.title}}</a>
+                                    </li>
+                                    {% endfor %}
                                 </ul><!-- /.submenulist -->
                             </div><!-- /.col -->
                         {% endfor %}
                         </div><!-- /.row -->
                     </div><!-- /.container -->
                     {% endif %}
-                    {% endfor %}#}
+                    {% endfor %}
                 </div>
                 
                 {% if post.sections %}

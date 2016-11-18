@@ -17,11 +17,17 @@
 				    <a href="{{ post.link }}">
 				    {% if post.mainimg %}
                     {% set id = post.mainimg %}
-                    <img class="img-thumbnail" src="{{ Image(id).src }}" srcset="{{ Image(id).src }}"/>
+                    <div class="square-thumb">
+                        <img class="img-responsive" src="{{ Image(id).src }}" srcset="{{ Image(id).src }}"/>
+                    </div>
 				    {% elseif post.thumbnail %}
-				    <img class="img-thumbnail" src="{{ post.thumbnail.src }}" srcset="{{ post.thumbnail.src }}">
+				    <div class="square-thumb">
+                        <img class="img-responsive" src="{{ post.thumbnail.src }}" srcset="{{ post.thumbnail.src }}">
+                    </div>
                     {% else %}
-                    <img class="img-thumbnail" src="http://placehold.it/300?text={{__('IMAGEM', 'twheme')|e }}">
+                    <div class="square-thumb">
+                        <img class="img-responsive" src="http://placehold.it/300?text={{__('IMAGEM', 'twheme')|e }}">
+                    </div>
                     {% endif %}
                 </a>
             </div><!--/. col -->

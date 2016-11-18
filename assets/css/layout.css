@@ -741,6 +741,14 @@ footer {
   padding: 0.5em;
   margin: 1em 0 1em 0; }
 
+.square-thumb {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; }
+
 /*---------------------------------------------------/
 /                                                    /
 /  BODY CONTENT - Here's the wrapper for the bellow  /
