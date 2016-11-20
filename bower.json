@@ -5,10 +5,6 @@
     "Bruce Cantarim <bruce@cantarim.com>"
   ],
   "description": "A modular framework for wordpress theme development, using timber, twig and sass.",
-  "main": [
-      "functions.php",
-      "core/Config.php"
-  ],
   "keywords": [
     "framework",
     "theme",

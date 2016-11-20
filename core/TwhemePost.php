@@ -12,5 +12,6 @@ class TwhemePost extends \TimberPost {
         $category = $this->get_terms();
         if (is_array($category) && count($category)) {
             return $category[0];
+        }
     }
 }

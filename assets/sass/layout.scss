@@ -10,6 +10,15 @@
 /                                                    /
 /---------------------------------------------------*/
 
+// Resets
+@import "../../bower_components/normalize-scss/_normalize.scss";
+
+// Dependencies
+@import "susy"; // Susy
+@import "../../bower_components/breakpoint-sass/stylesheets/_breakpoint.scss"; // Breakpoint
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"; // Boostrap
+
+// Core Components
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700';
 @import '_mixins.scss';
 @import '_variables.scss';
