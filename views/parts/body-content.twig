@@ -33,47 +33,50 @@
                     <h1>{{post.title}}</h1><br/>
                     <hr/>
                     {{ post.content }}
+                </div><!-- /.col-md-12 -->
                     {% for item in categorias %}
                     {% if post.title|lower == item.name|lower %}
-                    <div class="row-spacer"></div>
-                    <div class="container-flex">
-                        <div class="row">
-                            {% set coloffset = (100 - item.get_children|length * 14) // 2 %}
-                            {% if coloffset > 1 %}
-                                <div class="col-md-12" style="width:{{ coloffset }}%;display:inline;margin:0;"></div>
-                            {% endif %}
-                            {% for subitem in item.get_children %}
-                            <div class="col-md-12" style="width:14%;display:inline;margin:0;">
-                                {#{% for subitem_post in subitem.posts %}
-                                {% set subitem_images = subitem_images|merge([subitem_post.mainimg]) %}
-                                {% endfor %}#}
-                                {% set subitem_image = subitem.posts[0].mainimg %}
-                                <div class="square-thumb">
-                                    <img class="img-responsive" src="{{Image(subitem_image).src}}"/>
-                                </div>
-                                <h4><b><a class="color-black" href="{{subitem.get_link}}">{{subitem.title}}</a></b></h4>
-                                <hr class="menustrip"/>
-                                <ul class='submenulist text-left no-padding'>
-                                    {% for sublink in subitem.posts %}
-                                    <li class="submenuitem">
-                                        <a class="color-black" href="{{sublink.get_link}}">{{sublink.title}}</a>
-                                    </li>
-                                    {% endfor %}
-                                </ul><!-- /.submenulist -->
-                            </div><!-- /.col -->
-                        {% endfor %}
-                        </div><!-- /.row -->
-                    </div><!-- /.container -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+        <div class="container-flex">
+            <div class="row">
+                {% set coloffset = (100 - item.get_children|length * 12) / 2 %}
+                <div class="col-md-12" style="width:{{ coloffset }}%;display:inline;margin:0;"></div>
+                {% for subitem in item.get_children %}
+                <div class="col-md-12" style="width:12%;display:inline;margin:0;">
+                {#{% for subitemlist in subitem.get_items %}
+                {% set subitem_images = subitem_images|merge([subitemlist.mainimg]) %}
+                {% endfor %}#}
+                {% set subitem_image = subitem.posts[0].mainimg %}
+                <div class="square-thumb">
+                    {% if subitem_image %}
+                    <img class="img-responsive" src="{{Image(subitem_image).src}}"/>
+                    {% else %}
+                    <img class="img-responsive" src="http://placehold.it/300?text={{__('SEM IMAGEM', 'twheme')}}"/>
                     {% endif %}
-                    {% endfor %}
                 </div>
+                <h4><b><a class="color-black" href="{{subitem.get_link}}">{{subitem.title}}</a></b></h4>
+                <hr class="menustrip"/>
+                    <ul class='submenulist text-left no-padding'>
+                        {% for sublink in subitem.posts %}
+                        <li class="submenuitem">
+                            <a class="color-black" href="{{sublink.get_link}}">{{sublink.title}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul><!-- /.submenulist -->
+                </div><!-- /.col -->
+                {% endfor %}
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+        {% endif %}
+        {% endfor %}
             
             {% elseif sections %}
             <!-- HOME BODY CONTENT -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-            <div class="container-flex">
-                <div class="row">
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+        <div class="container-flex">
+            <div class="row">
             {% set colsize = 12 // sections|length %}
                 {% if colsize == 2 %}
                     {% set coldifference = 8 - sections|length %}

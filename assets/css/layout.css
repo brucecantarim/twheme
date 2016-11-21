@@ -1228,8 +1228,7 @@ footer {
 .row-spacer {
   width: 100%;
   top: 0;
-  min-height: 160px;
-  height: 15.70%;
+  height: 10em;
   margin: 0; }
 
 .full-flex {
