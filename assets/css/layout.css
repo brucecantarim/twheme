@@ -655,7 +655,8 @@ footer {
   background-color: #f2f2f2;
   padding: 20px;
   padding-top: 10em;
-  margin: 0; }
+  margin: 0;
+  overflow-y: scroll; }
   .middlebar ::-webkit-scrollbar, .slider-gradient ::-webkit-scrollbar {
     display: none; }
 
@@ -817,7 +818,8 @@ footer {
   top: 0;
   color: white;
   padding: 20px;
-  padding-top: 10em; }
+  padding-top: 10em;
+  overflow-y: scroll; }
   .rightbar h1, .rightbar h2, .rightbar h3, .rightbar h4, .rightbar h5, .rightbar h6, .rightbar p, .rightbar span, .panel-bonardi-bg h1, .panel-bonardi-bg h2, .panel-bonardi-bg h3, .panel-bonardi-bg h4, .panel-bonardi-bg h5, .panel-bonardi-bg h6, .panel-bonardi-bg p, .panel-bonardi-bg span {
     color: white; }
   .rightbar h4, .panel-bonardi-bg h4 {
