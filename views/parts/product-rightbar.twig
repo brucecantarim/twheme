@@ -4,7 +4,7 @@
 
 <!-- RIGHTBAR -->
 
-<div class='rightbar blur'>
+<div class='rightbar'>
     <div class="container-flex wow fadeIn">
         <div class="row">
             <div class="col-md-12">
@@ -26,19 +26,19 @@
             </div><!-- /.col -->
         </div><!-- /.row -->
         
+        {% set videos_sanitized = post.videos|replace({' ':''}) %}
+        {% set videos = videos_sanitized|split(',') %}
+        {% for video in videos|slice(0, 2) %} {# This is where I impose the video limit #}
         <div class="row">
-            {% set videos_sanitized = post.videos|replace({' ':''}) %}
-            {% set videos = videos_sanitized|split(',') %}
-            {% for video in videos|slice(0, 2) %} {# This is where I impose the video limit #}
-            <div class="col-md-12">
+            <div class="col-md-10 col-md-offset-1">
                 <div class="embed-responsive embed-responsive-16by9 youtube">
                     <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/{{video}}" allowfullscreen="allowfullscreen"></iframe>
                 </div>
             </div><!-- /.col -->
-            {% endfor %}
         </div><!-- /.row -->
+        {% endfor %}
         {% endif %}
-        
+        <br/>
         <!-- IMAGES -->
         {% if post.gallery %}
         <div class="row">
@@ -80,10 +80,10 @@
         </div><!-- /.row -->
         
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-10 col-md-offset-1">
                 <ul>
                 {% set file = post.get_field('files') %}
-                     <li>
+                     <li class="file">
                         <a href="{{ file.url }}" target="_blank">
                         <i class="glyphicon glyphicon-save-file"></i> {{ file.title }}
                         </a>

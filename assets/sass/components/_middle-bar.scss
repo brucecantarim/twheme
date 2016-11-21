@@ -9,22 +9,13 @@
 // Those properties are inherited by .slider-gradient
 // --------------------------------------------------
 .middlebar {
-    width: 31%;
-    height: 84.30%;
-    position: absolute;
-    top: 15.70%;
-    right: 19%;
-    background-color: $color-grey;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    padding: 20px;
-    padding-top: 0;
-    @media only screen and (min-width: 321px) and (max-width: 1265px) {
-        top: 21.50%;
-        height: 78.50%;
-    }
-}
-
-.middlebar-row {
     width: 100%;
+    height: 100%;
+    background-color: $color-grey;
+    padding: 20px;
+    padding-top: 10em;
+    margin: 0;
+    ::-webkit-scrollbar { 
+    display: none; 
+    }
 }

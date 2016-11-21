@@ -4,9 +4,17 @@
 
 {# This twig will be called when we are visualizing a single post page #}
 {% block fold %}
-    {% include 'slider-machine.twig' %}
-    {% include 'middlebar.twig' %}
-    {% include 'product-rightbar.twig' %}
+<div class="container-flex fold no-padding">
+    <div class="col-md-6 no-padding full-height">
+        {% include 'slider-machine.twig' %}
+    </div><!-- /.col-md-6 -->
+    <div class="col-md-3 no-padding full-height">
+        {% include 'middlebar.twig' %}
+    </div><!-- /.col-md-3 -->
+    <div class="col-md-3 no-padding full-height blur">
+        {% include 'product-rightbar.twig' %}
+    </div><!-- /.col-md-3 -->
+</div><!-- /.container-flex -->
 {% endblock fold %}
 
 {% block content %}   

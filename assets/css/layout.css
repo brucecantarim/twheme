@@ -650,23 +650,14 @@ footer {
 /                                                    /
 /---------------------------------------------------*/
 .middlebar, .slider-gradient {
-  width: 31%;
-  height: 84.30%;
-  position: absolute;
-  top: 15.70%;
-  right: 19%;
+  width: 100%;
+  height: 100%;
   background-color: #f2f2f2;
-  overflow-x: hidden;
-  overflow-y: scroll;
   padding: 20px;
-  padding-top: 0; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
-    .middlebar, .slider-gradient {
-      top: 21.50%;
-      height: 78.50%; } }
-
-.middlebar-row {
-  width: 100%; }
+  padding-top: 10em;
+  margin: 0; }
+  .middlebar ::-webkit-scrollbar, .slider-gradient ::-webkit-scrollbar {
+    display: none; }
 
 /*---------------------------------------------------/
 /                                                    /
@@ -701,7 +692,7 @@ footer {
   z-index: 1; }
 
 .product-slider-nav {
-  width: 50%;
+  width: 100%;
   position: relative;
   bottom: 30%;
   z-index: 1;
@@ -755,10 +746,8 @@ footer {
   color: #ffc425; }
 
 .product-slider, .product-slider-control {
-  width: 50%;
-  height: 100%;
-  position: relative;
-  left: 0; }
+  width: 100%;
+  height: 100%; }
 
 .product-slider-control {
   position: relative;
@@ -828,8 +817,7 @@ footer {
   top: 0;
   color: white;
   padding: 20px;
-  padding-top: 12em;
-  overflow: hidden; }
+  padding-top: 10em; }
   .rightbar h1, .rightbar h2, .rightbar h3, .rightbar h4, .rightbar h5, .rightbar h6, .rightbar p, .rightbar span, .panel-bonardi-bg h1, .panel-bonardi-bg h2, .panel-bonardi-bg h3, .panel-bonardi-bg h4, .panel-bonardi-bg h5, .panel-bonardi-bg h6, .panel-bonardi-bg p, .panel-bonardi-bg span {
     color: white; }
   .rightbar h4, .panel-bonardi-bg h4 {
@@ -837,6 +825,8 @@ footer {
     margin: auto 0.3em; }
   .rightbar li, .panel-bonardi-bg li {
     list-style: none; }
+  .rightbar ::-webkit-scrollbar, .panel-bonardi-bg ::-webkit-scrollbar {
+    display: none; }
 
 .panel-bonardi {
   width: 100%;

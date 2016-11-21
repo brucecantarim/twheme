@@ -15,11 +15,13 @@
     top: 0;
     color: $color-white;
     padding: 20px;
-    padding-top: 12em;
-    overflow: hidden;
+    padding-top: 10em;
         h1, h2, h3, h4, h5, h6, p, span { color: $color-white }
         h4 { display: inline; margin: auto 0.3em; }
         li {list-style: none;}
+        ::-webkit-scrollbar { 
+        display: none;
+        } 
 }
 
 // --------------------------------------------------

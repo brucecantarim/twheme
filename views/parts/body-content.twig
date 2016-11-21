@@ -38,14 +38,12 @@
                     <div class="row-spacer"></div>
                     <div class="container-flex">
                         <div class="row">
-                            {% set colsize = 12 // item.get_children|length %}
-                            {% if colsize == 1 %}
-                            {% set coldifference = 12 - item.get_children|length %}
-                            {% set coloffset = coldifference // 2 %}
-                                <div class="col-md-{{coloffset}}"></div>
+                            {% set coloffset = (100 - item.get_children|length * 14) // 2 %}
+                            {% if coloffset > 1 %}
+                                <div class="col-md-12" style="width:{{ coloffset }}%;display:inline;margin:0;"></div>
                             {% endif %}
                             {% for subitem in item.get_children %}
-                            <div class="col-md-{{colsize}} text-left">
+                            <div class="col-md-12" style="width:14%;display:inline;margin:0;">
                                 {#{% for subitem_post in subitem.posts %}
                                 {% set subitem_images = subitem_images|merge([subitem_post.mainimg]) %}
                                 {% endfor %}#}
@@ -69,17 +67,6 @@
                     {% endif %}
                     {% endfor %}
                 </div>
-                
-                {% if post.sections %}
-                {% for section in post.sections %}
-                {% set colsize = 12 / post.sections|length %}
-                <div class="col-md-{{colsize}} text-center col-left">
-                    <img src="{{section.icon}}" class="img-responsive"/>
-                <h3>{{section.title}}</h3>
-                <p>{{section.content}}</p>
-                </div>
-                {% endfor %}
-                {% endif %}
             
             {% elseif sections %}
             <!-- HOME BODY CONTENT -->
