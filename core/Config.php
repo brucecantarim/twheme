@@ -59,7 +59,8 @@ abstract class Config {
                 'singular' => 'Notícia',
                 'icon' => 'dashicons-admin-site',
                 'wordsex' => 'female',
-                'orderby' => 'date'
+                'orderby' => 'date',
+                'order' => 'desc'
                 ),
 
             "maquinas" => array(
@@ -69,7 +70,8 @@ abstract class Config {
                 'singular' => 'Máquina',
                 'icon' => 'dashicons-star-filled',
                 'wordsex' => 'female',
-                'orderby' => 'rand'
+                'orderby' => 'rand',
+                'order' => 'asc'
                 ),
 
             "seminovos" => array(
@@ -79,7 +81,8 @@ abstract class Config {
                 'singular' => 'Seminovo',
                 'icon' => 'dashicons-star-half',
                 'wordsex' => 'male',
-                'orderby' => 'date'
+                'orderby' => 'date',
+                'order' => 'asc'
                 ),
             
             "locacoes" => array(
@@ -89,7 +92,8 @@ abstract class Config {
                 'singular' => 'Locação',
                 'icon' => 'dashicons-star-half',
                 'wordsex' => 'male',
-                'orderby' => 'date'
+                'orderby' => 'date',
+                'order' => 'asc'
                 ),
             
             "ofertas" => array(
@@ -99,7 +103,8 @@ abstract class Config {
                 'singular' => 'Oferta',
                 'icon' => 'dashicons-star-half',
                 'wordsex' => 'female',
-                'orderby' => 'date'
+                'orderby' => 'date',
+                'order' => 'asc'
                 ),
 
             "eventos" => array(
@@ -109,7 +114,8 @@ abstract class Config {
                 'singular' => 'Evento',
                 'icon' => 'dashicons-megaphone',
                 'wordsex' => 'male',
-                'orderby' => 'date'
+                'orderby' => 'date',
+                'order' => 'asc'
             )
 
         ),

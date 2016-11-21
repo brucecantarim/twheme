@@ -26,7 +26,7 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
-@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700";
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700';
 html {
   font-family: sans-serif;
   /* 1 */
@@ -471,6 +471,9 @@ h1, h2, h3, h4, h5, h6 {
       text-decoration: none; }
     h1 > a:focus, h2 > a:focus, h3 > a:focus, h4 > a:focus, h5 > a:focus, h6 > a:focus {
       text-decoration: none; }
+
+li {
+  list-style: none; }
 
 ::selection {
   color: white;
@@ -1151,6 +1154,16 @@ footer {
 
 .color-box {
   color: #ffc425 !important; }
+
+.link-black {
+  color: black !important; }
+  .link-black:hover, .link-black:active {
+    color: #ffc425 !important; }
+
+.link-white {
+  color: white !important; }
+  .link-white:hover, .link-white:active {
+    color: #ffc425 !important; }
 
 .bg-color-main {
   background-color: #ffc425 !important; }

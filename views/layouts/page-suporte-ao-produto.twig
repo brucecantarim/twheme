@@ -1,6 +1,9 @@
 {# page-suporte-ao-produto.twig #}
 
+{% extends "single.twig" %}
 
+{% block fold %}
+<div class="row-spacer"></div>
 <div class="body-content">
     <div class="container">
        <div class="row">
@@ -9,10 +12,14 @@
            </div>
            <div class="col-md-4 text-right">
                 <br/><br/>
-                <i class="fa fa-phone"></i>
-                <a href="phone:19997066772" class="color-black">(19) 9 9706-6772</a>
-                <i class="fa fa-envelope"></i>
-                <a href="mailto:brasil@vermeer.com" class="color-black">suporte@vermeer.com</a>
+                <div class="col-md-6 text-right">
+                    <i class="fa fa-phone"></i>
+                    <a href="phone:19997066772" class="color-black">(19) 9 9706-6772</a>
+                </div>
+                <div class="col-md-6 text-left">
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:brasil@vermeer.com" class="color-black">suporte@vermeer.com</a>
+                </div>
            </div>
            <div class="col-md-12">
                <hr/>
@@ -23,23 +30,35 @@
             <div class="col-md-4 bg-color-grey">
                 <br/>
                 <ul>
-                    <li><a href='{{site.url}}treinamento/' class="color-black">{{__('Treinamento', 'twheme')|upper}}</a></li>
-                    <li><a href='{{site.url}}pecas/' class="color-black">{{__('Peças', 'twheme')|upper}}</a></li>
-                    <li><a href='{{site.url}}gerencie-sua-frota/' class="color-black">{{__('Gerencie sua frota', 'twheme')|upper}}</a></li>
-                    <li><a href='{{site.url}}seguranca/' class="color-black">{{__('Segurança', 'twheme')|upper}}</a></li>
-                </ul>
+                    {% if post.children %}
+                    {% for child in post.children %}
+                    <li><a href='{{child.link}}' class="link-black">{{child.title|upper}}</a></li>
+                    {% endfor %}
+                    {% else %}
+                    {% for child in post.parent.children %}
+                    <li><a href='{{child.link}}' class="link-black">{{child.title|upper}}</a></li>
+                    {% endfor %}
+                    {% endif %}
                 <br/>
             </div>
             
             <div class="col-md-8">
-                <img class="img-responsive" src="{{post.thumbnail.src}}"/>
+                <div class="full-width">
+                    <img class="img-responsive" src="{{post.thumbnail.src}}"/>
+                </div>
                 <br/>
                 {{ post.content }}
             </div>
         </div><!-- /.row -->
-            
-            {% block media %}
-            {% endblock media %}
-            
+{% endblock fold %}
+
+{% block content %}
+    {% block media %}
+        {% if post.children %}
+        {% else %}
+            {% include 'support-media.twig' %}
+        {% endif %}
+    {% endblock media %}
     </div><!-- /.container -->
 </div><!-- /.body-content -->
+{% endblock content %}

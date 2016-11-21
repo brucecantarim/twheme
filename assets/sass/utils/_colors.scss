@@ -18,6 +18,13 @@
 .color-box { color: $color-box !important; }
 
 // --------------------------------------------------
+//                  Link Colors
+// --------------------------------------------------
+
+.link-black { color: $color-black !important; &:hover, &:active, { color: $color-main !important; } }
+.link-white { color: $color-white !important; &:hover, &:active, { color: $color-main !important; } }
+
+// --------------------------------------------------
 //                 Background Colors
 // --------------------------------------------------
 
