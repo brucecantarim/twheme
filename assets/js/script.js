@@ -79,15 +79,15 @@ $(document).ready(function () {
     });
 
     // Slideshow
-    $('.slider .slide:gt(0)').hide();
+    $('.slider > .slide:gt(0)').hide();
 
     setInterval(function () {
 
-        var currentSlide = $('.slide.active-slide');
+        var currentSlide = $('.slide .active-slide');
         var nextSlide = currentSlide.next();
         var currentDot = $('.active-dot');
         var nextDot = currentDot.next();
-        var currentSlideTitle = $('.slide-title.active-slide');
+        var currentSlideTitle = $('.slide-title .active-slide');
         var nextSlideTitle = currentSlideTitle.next();
 
         if (nextSlide.length === 0 || nextDot.length === 0 || nextSlideTitle.length === 0) {
