@@ -1,24 +1,25 @@
 {# base.twig #}
 
+{# For now, that's where I've set the variables to implement custom taxonomy in the context. #}
+{# Not proud of it, I'll move this logic back to php soon. This is the file for it, if you need #}
+{# to set any twig variables that need to be accessed globally. Yes, twig has a scope too. ;) #}
 {% set category = post.get_terms[0] %}
 {% set parent = TimberTerm(category.parent) %}
 
+{# Below, you'll find the basic building blocks. You can override them when extending base.twig. #}
+{# You can include twig files that you need universally inside each block, check context first. #}
 {% block header %}
 {% endblock header %}
 
-<body class="{{body_class}}" data-template="base.twig">
-    {% block navbar %} 
-    {% endblock navbar %}
-    {% block postslider2 %}
-    {% endblock postslider2 %}
-    {% block middlebar %}
-    {% endblock middlebar %}
-    {% block rightbar %}
-    {% endblock rightbar %}
-    {#{% block hero %}
-    {% endblock hero %}#}
-    {% block content %}
-    {% endblock content %}
-    {% block footer %}
-        {% include 'footer-content.twig' %}
-    {% endblock footer %}
+    <body class="{{body_class}}" data-template="base.twig">
+        {% block navbar %} 
+        {% endblock navbar %}
+        {% block fold %}
+        {% endblock fold %}
+        {% block content %}
+        {% endblock content %}
+        {% block footer %}
+            {% include 'footer-content.twig' %}
+        {% endblock footer %}
+    </body>
+</html>

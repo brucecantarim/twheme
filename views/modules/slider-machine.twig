@@ -1,0 +1,38 @@
+{# slider-machine.twig #}
+
+{# There's more functionality to it, but the client actually asked for just one static image #}
+
+{% block slidermachine %}
+
+<!-- SLIDER -->
+<div class="product-slider">
+    <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}); background-size: cover;">
+    </div>
+    {#{% for image in post.gallery if gallery %}
+    <div class="slide" data-toggle="off" style="background: url({{ image.thumbnail.src }}); background-size: cover;">
+    </div>
+    {% endfor %}#}
+</div>
+
+{# Should we display the slider control? #} 
+{#{% if post.gallery %}
+<div class="product-slider-control">
+    <div class="arrow-prev text-center">
+        <i class="glyphicon glyphicon-chevron-left arrow-icon"></i>
+    </div>
+
+    <div class="arrow-next text-center">
+        <i class="glyphicon glyphicon-chevron-right arrow-icon"></i>
+    </div>
+</div>
+
+<div class="product-slider-nav">
+    <ul class="slider-dots">
+        <li class="dot active-dot">&bull;</li>
+        {% for image in post.gallery %}
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        {% endfor %}
+    </ul>
+</div>#}
+{% endblock slidermachine %}

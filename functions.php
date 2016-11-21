@@ -54,6 +54,9 @@ Timber::$dirname = array(
     'views/parts'
 );
 
+// Loading ACF custom fields backup
+include_once 'includes/customfields.php';
+
 // Loading Vafpress, for the dashboard controls
 // require_once 'includes/vafpress/bootstrap.php';
 

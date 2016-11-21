@@ -6496,7 +6496,7 @@ footer {
 /   page slider an it's controls, here's the place!  /
 /                                                    /
 /---------------------------------------------------*/
-.slider, .slide {
+.fold, .slider, .slide {
   width: 100%;
   height: 100%;
   font-family: "Open Sans Condensed", sans-serif; }
@@ -6507,20 +6507,9 @@ footer {
   top: 0;
   z-index: -1; }
 
-.slider-body {
-  position: relative;
-  top: 0;
-  left: 0; }
-
 .slider-control {
-  width: 81%;
-  height: 100%;
-  position: relative;
-  left: 0;
-  top: 2%; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
-    .slider-control {
-      width: 81.5%; } }
+  width: 100%;
+  height: 100%; }
 
 .slider-nav, .product-slider-nav {
   width: 100%;
@@ -6637,34 +6626,6 @@ footer {
   right: 20px;
   bottom: 10%; }
 
-.post-img-1 {
-  background-image: url(../img/BC1000XL.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: none; }
-
-.post-img-2 {
-  background-image: url(../img/D36x50II_Action15.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: none; }
-
-.post-img-3 {
-  background-image: url(../img/RTX250_Action3.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: none; }
-
-.product-img-1, .biomassa-img-1 {
-  background-image: url(../img/TG5000.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: none; }
-
 .active-slide {
   display: block; }
 
@@ -6675,11 +6636,11 @@ footer {
 /                                                    /
 /---------------------------------------------------*/
 .rightbar, .panel-bonardi-bg {
-  width: 20%;
-  height: 85.30%;
-  position: absolute;
-  top: 14.70%;
-  right: -16px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  right: -4%;
   color: white;
   padding: 20px;
   padding-top: 0;
@@ -6692,10 +6653,6 @@ footer {
     margin: auto 0.3em; }
   .rightbar li, .panel-bonardi-bg li {
     list-style: none; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
-    .rightbar, .panel-bonardi-bg {
-      top: 21.50%;
-      height: 78.50%; } }
 
 .panel-bonardi {
   width: 100%;

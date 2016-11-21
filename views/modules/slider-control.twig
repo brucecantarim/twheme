@@ -1,0 +1,43 @@
+{# slider-control.twig #}
+
+{# This block is actually separated so that I can merge it in a hero container #}
+{# What enables me to layout this using bootstrap's column sizes and media queries breaks #}
+
+{% block slidercontrol %}
+
+<!-- SLIDER CONTROL -->
+<div class="slider-control">
+    <div class="post-title-bar blur">
+
+    {% for slide in slides %}
+        <div class="slide-title {% if slide.active %}active-slide{% endif %}">
+            <h1>{{slide.title}}</h1>
+            <h4>{{slide.subtitle}}</h4>
+        </div>
+    {% endfor %} 
+    
+    {% if slides|length > 1 %}
+        <div class="arrow-prev text-center">
+            <i class="glyphicon glyphicon-chevron-left arrow-icon"></i>
+        </div>
+
+        <div class="arrow-next text-center">
+            <i class="glyphicon glyphicon-chevron-right arrow-icon"></i>
+        </div>
+    {% endif %}
+
+    </div><!-- /.post-title-bar -->
+
+{% if slides|length > 1 %}
+    <div class="slider-nav">
+        <ul class="slider-dots">
+            {% for slide in slides %}
+            <li class="dot {% if slide.active %}active-dot{% endif %}">&bull;</li>
+            {% endfor %}
+        </ul>
+    </div><!-- /.slider-nav -->
+{% endif %}
+        
+</div>
+
+{% endblock slidercontrol %}

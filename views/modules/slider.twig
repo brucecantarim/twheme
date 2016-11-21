@@ -1,0 +1,25 @@
+{# slider.twig #}
+
+{% block slider %}
+
+{# If we are in home, you'll get this block #}
+<!-- SLIDER -->
+<div class="slider">
+    {% for slide in slides %}
+        <div class="slide {% if slide.active %}active-slide{% endif %}" data-toggle="{% if slides|length <= 1 %}off{% else %}on{% endif %}" style="background: url({{ slide.thumbnail.src }}); background-size: cover;">
+        </div>
+    {% endfor %}  
+</div>
+
+{# Now, if it's a page, we have to check if there's a post thumbnail or not #}
+{% if post.type == 'page' %} 
+    {% if post.thumbnail %}
+    <div class="slider">
+        <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}); background-size: cover;"></div>
+    </div>
+    {% else %}
+    <div class="row-spacer"></div><!-- /.row spacer -->
+    {% endif %}
+{% endif %} 
+
+{% endblock %}

@@ -8,7 +8,7 @@
 // --------------------------------------------------
 //                   Slide Wrappers
 // --------------------------------------------------
-.slider, .slide {
+.fold, .slider, .slide {
     width: 100%;
     height: 100%;
     font-family: $font-title;
@@ -21,24 +21,12 @@
     z-index: -1;
 }
 
-.slider-body {
-    position: relative;
-    top: 0;
-    left: 0;
-}
-
 // --------------------------------------------------
 //          Control and slider-gradient Wrapper
 // --------------------------------------------------
 .slider-control {
-    width: 81%;
+    width: 100%;
     height: 100%;
-    position: relative;
-    left: 0;
-    top: 2%;
-    @media only screen and (min-width: 321px) and (max-width: 1265px) {
-        width: 81.5%;
-    }
 }
 
 .slider-nav, .product-slider-nav {
@@ -194,25 +182,6 @@
     position: absolute;
     right: 20px;
     bottom: 10%;
-}
-
-// --------------------------------------------------
-//     Post-img classes, for prototyping purposes
-// --------------------------------------------------
-.post-img-1 {
-    @include slider-post-img(url(../img/BC1000XL.jpg));
-}
-
-.post-img-2 {
-    @include slider-post-img(url(../img/D36x50II_Action15.jpg));
-}
-
-.post-img-3 {
-    @include slider-post-img(url(../img/RTX250_Action3.jpg));
-}
-
-.product-img-1, .biomassa-img-1 {
-    @include slider-post-img(url(../img/TG5000.jpg));
 }
 
 // --------------------------------------------------

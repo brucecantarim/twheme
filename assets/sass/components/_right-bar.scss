@@ -9,11 +9,11 @@
 //                 Right Bar Wrappers
 // --------------------------------------------------
 .rightbar, .panel-bonardi-bg {
-    width: 20%;
-    height: 85.30%;
-    position: absolute;
-    top: 14.70%;
-    right: -16px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    right: -4%;
     color: $color-white;
     padding: 20px;
     padding-top: 0;
@@ -22,10 +22,6 @@
         h1, h2, h3, h4, h5, h6, p, span { color: $color-white }
         h4 { display: inline; margin: auto 0.3em; }
         li {list-style: none;}
-    @media only screen and (min-width: 321px) and (max-width: 1265px) {
-        top: 21.50%;
-        height: 78.50%;
-    }
 }
 
 // --------------------------------------------------

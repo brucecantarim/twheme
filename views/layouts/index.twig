@@ -1,25 +1,28 @@
 {% extends "base.twig" %}
 
-{#{% block hero %}
-{% include 'hero.twig' %}
-{% endblock hero %}#}
 
-{#{% block navbar %} 
-{% include 'navbar.twig' %}
-{% endblock navbar %}#}
+{% block fold %}
+<!-- FOLD -->
+    {% block slider %}
+        {% include 'slider.twig' %}
 
-{% block postslider2 %}
-{% include 'post-slider-2.twig' %}
-{% endblock postslider2 %}
+<div class="container-flex fold no-padding">
+    <div class="row no-padding">
+        <div class="col-md-9 no-padding">
+            {% include 'slider-control.twig' %}
+        </div>
+    {% endblock slider %}
 
-{% block rightbar %}
-{% include 'rightbar.twig' %}
-{% endblock rightbar %}
+    {% block rightbar %}
+        <div class="col-md-3 no-padding">
+            {% include 'rightbar.twig' %}
+        </div>
+    {% endblock rightbar %}
+
+    </div><!-- /.row -->
+</div><!-- /.container-flex -->
+{% endblock fold %}
 
 {% block content %}
-	
-    {% block bodycontent %}
     {% include 'body-content.twig' %}
-    {% endblock bodycontent %}
-    
 {% endblock content %}
