@@ -11,13 +11,13 @@
 .footer-content {
     background-color: $color-footer;
     border-top: 5px solid $color-main;
-    min-height: 100px;
+    min-height: 10em;
     padding: 10px 10em;
     color: white;
     
         h5 {
             letter-spacing: 3px;
-            margin-bottom: 20px;
+            margin-bottom: 0.5em;
             color: $color-white;
         }
     
@@ -26,7 +26,7 @@
                 color: $color-main;
                 text-decoration: none;
                 display: block;
-                margin: 20px 0;
+                margin: 0.1em 0 0 0;
                 font-weight: bold;
             }
         }
@@ -37,4 +37,21 @@
             font: { family: "open sans condensed", sans-serif; size: 0.9em; }
             hr { border: 1px dashed $color-main !important; }
         }
+}
+
+.footer-circle {
+    margin-top: 2em;
+    width: 3em;
+    height: 3em;
+    @media only screen and (min-width: 321px) and (max-width: 1265px) {
+        width: 2em;
+        height: 2em;
+    }
+}
+
+.footer-circle i {
+    padding-top: 1em;
+    @media only screen and (min-width: 321px) and (max-width: 1265px) {
+        padding-top: 0.5em;
+    }
 }

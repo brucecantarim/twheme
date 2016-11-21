@@ -24,6 +24,8 @@ abstract class Config {
    public static
         $isFullscreen = false, // This will define if all content is above the fold
         $navBar = 'default',  // Here you can define which navbar to use, default or bootstrap for now
+        $mainmenu = 'navegacao', // Here you can define the main menu, that will be called in the navbar
+        $footermenu = 'rodape', // Here you can define the menu that will be called in the footer
         $middleBar = true, // This activates a middlebar in the twheme context
         $rightBar = true, // This activates a rightbar in the twheme context
         $fonts = "Open Sans Condensed", // This value accept Google Fonts name

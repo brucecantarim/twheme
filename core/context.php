@@ -13,7 +13,8 @@ class Context {
         // Retrieving the values stored in the config
         $context['site'] = $site;
         $context['fonts'] = Config::$fonts;
-        $context['menu'] = new \TimberMenu();
+        $context['menu'] = new \TimberMenu(Config::$mainmenu);
+        $context['footermenu'] = new \TimberMenu(Config::$footermenu);
         $context['posts'] = \Timber::get_posts();
         $context['dir'] = get_template_directory_uri();
         

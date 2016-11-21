@@ -994,22 +994,6 @@ footer {
   width: 6em;
   height: 6em; }
 
-.footer-circle {
-  position: absolute;
-  bottom: -235px;
-  width: 3em;
-  height: 3em; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
-    .footer-circle {
-      width: 2em;
-      height: 2em; } }
-
-.footer-circle i {
-  padding-top: 1em; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
-    .footer-circle i {
-      padding-top: 0.5em; } }
-
 /*---------------------------------------------------/
 /                                                    /
 /   PHOTO STRIPE -  This will only be show in pages  /
@@ -1092,18 +1076,18 @@ footer {
 .footer-content {
   background-color: #5F6062;
   border-top: 5px solid #ffc425;
-  min-height: 100px;
+  min-height: 10em;
   padding: 10px 10em;
   color: white; }
   .footer-content h5 {
     letter-spacing: 3px;
-    margin-bottom: 20px;
+    margin-bottom: 0.5em;
     color: white; }
   .footer-content a, .footer-content a:hover, .footer-content a:active, .footer-content a:visited {
     color: #ffc425;
     text-decoration: none;
     display: block;
-    margin: 20px 0;
+    margin: 0.1em 0 0 0;
     font-weight: bold; }
   .footer-content p {
     color: white; }
@@ -1112,6 +1096,21 @@ footer {
     font-size: 0.9em; }
     .footer-content span hr {
       border: 1px dashed #ffc425 !important; }
+
+.footer-circle {
+  margin-top: 2em;
+  width: 3em;
+  height: 3em; }
+  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+    .footer-circle {
+      width: 2em;
+      height: 2em; } }
+
+.footer-circle i {
+  padding-top: 1em; }
+  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+    .footer-circle i {
+      padding-top: 0.5em; } }
 
 .color-main {
   color: #ffc425 !important; }

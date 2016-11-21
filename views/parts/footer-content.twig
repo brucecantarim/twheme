@@ -7,43 +7,34 @@
 <div class="footer-content">
     <div class="container-flex">
         <div class="row">
+            {% for footersection in footermenu.get_items %}
             <div class="col-md-2">
-                <h5>Institucional</h5>
-                <a href="#">Trabalhe Conosco</a>
-                <a href="#">Política</a>
+                <h5>{{footersection.title}}</h5>
+                {% for footerlink in footersection.get_children %}
+                <a href="{{footerlink.link}}">{{footerlink.title}}</a>
+                {% endfor %}
             </div>
-            <div class="col-md-2">
-                <h5>Parceiros</h5>
-                <a href="#">Kennametal</a>
-                <a href="#">Mclaughlin</a>
-                <a href="#">Digitrak</a>
-                <a href="#">System Mud</a>
-                <a href="#">Dismotor</a>
-            </div>
-            <div class="col-md-2">
-                <h5>Newsletter</h5>
-                <a href="#">Cadastro</a>
-            </div>
+            {% endfor %}
             <div class="col-md-2">
                 <h5>Eventos</h5>
                 <a href="#">Próximos Eventos:</a>
                 <span>
-                        <strong>Evento 1</strong><br/>
-                        Dia - 01/01/2016<br/>
-                        Local: Rua Campinas - Campinas/SP
-                            <div class="btn btn-square text-center">
-                                <p>+</p>
-                            </div>
-                        <hr/>
-                        <strong>Evento 2</strong><br/>
-                        Dia - 01/01/2016<br/>
-                        Local: Rua Campinas - Campinas/SP
-                            <div class="btn btn-square text-center">
-                                <p>+</p>
-                            </div>
-                        </span>
+                    <strong>Nenhum evento agendado neste momento.</strong><br/>
+                    <!--Dia - 01/01/2016<br/>
+                    Local: Rua Campinas - Campinas/SP
+                        <div class="btn btn-square text-center">
+                            <p>+</p>
+                        </div>
+                    <hr/>
+                    <strong>Evento 2</strong><br/>
+                    Dia - 01/01/2016<br/>
+                    Local: Rua Campinas - Campinas/SP
+                        <div class="btn btn-square text-center">
+                            <p>+</p>
+                        </div>-->
+                </span>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 pull-right">
                 <div class="col-md-6">
                 </div>
                 <div class="col-md-6">
