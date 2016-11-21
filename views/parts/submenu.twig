@@ -5,14 +5,12 @@
     <div id="menu-item-{{item.ID}}" class="submenu blur">
         <div class="container-flex">
             <div class="row">
-                {% set colsize = 12 // item.get_children|length %}
-                {% if colsize == 1 %}
-                {% set coldifference = 12 - item.get_children|length %}
-                {% set coloffset = coldifference // 2 %}
-                    <div class="col-md-{{coloffset}}"></div>
-                {% endif %}
+                {% set coloffset = (100 - item.get_children|length * 14) // 2 %}
+                    {% if coloffset > 1 %}
+                        <div class="col-md-12" style="width:{{ coloffset }}%;display:inline;margin:0;"></div>
+                    {% endif %}
                 {% for subitem in item.get_children %}
-                <div class="col-md-{{colsize}}">
+                 <div class="col-md-12" style="width:14%;display:inline;margin:0;">
                     <ul class='submenulist text-center'>
                             <li class='submenuitem'>
                                 <a href="{{subitem.get_link}}">

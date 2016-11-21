@@ -1,49 +1,53 @@
-{# navbar.twig #}
-      
-{% block navbar %}
+{# navbar.twig #} {% block navbar %}
 
-        <!-- NAVIGATION BAR --> 
-       
-        <nav id="bootstrap-overrides" class="navbar blur">
-           
-            <div id="brand">
-                <a href="{{ site.url }}/index.php"><img class="img-responsive" src="assets/img/logo.png" alt="{% if wp_title %}{{ wp_title }} - {{ site.name }}{% else %}{{ site.name }}{% endif %}"></a>
-            </div><!-- /#brand -->
+<!-- NAVIGATION BAR -->
+<nav id="bootstrap-overrides" class="navbar blur">
+    <div class="container-flex">
+        <div class="row">
+            <div class="col-md-4">
+                <div id="brand">
+                    <a href="{{ site.url }}/index.php"><img class="img-responsive" src="assets/img/logo.png" alt="{% if wp_title %}{{ wp_title }} - {{ site.name }}{% else %}{{ site.name }}{% endif %}"></a>
+                </div><!-- /#brand -->
+
+                <div id="brand-sig">
+                    <p><small>Equipped to</small><br/>
+                        <strong>Do More.<small>™</small></strong></p>
+                </div><!-- /#brand-sig -->
+            </div><!-- /.col-md-4 -->
             
-            <div id="brand-sig">
-                <p><small>Equipped to</small><br/>
-                <strong>Do More.<small>™</small></strong></p>
-            </div>   
-            <div class="mainmenu">
-                <ul class='menulist text-center'>
+            <div class="col-md-4 col-md-offset-2 text-right">
+                <div class="contact">
+                    <i class="fa fa-phone"></i>
+                    <a href="phone:(19) 3517-9400">(19) 3517-9400</a>
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:brasil@vermeer.com">brasil@vermeer.com</a>
+                </div><!-- /.contact -->
+            </div><!-- /.col-md-4 .col-md-offset-2 text-right -->
+            <div class="col-md-2 text-right">
+                <div class="search">
+                    <form method="get" action="{{site.url}}" role="search">
+                        <input type="text" placeholder="{{__('Procurar...', 'twheme')|e }}" value="" name="s" />
+                        <span type="submit" value="Search">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </form>
+                </div><!-- /.search -->
+            </div><!-- /.col-md-2 text-right -->
+        </div><!-- /.row -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="mainmenu text-center">
                     {% block mainmenu %}
                         {% include 'menuitem.twig' %}
                     {% endblock mainmenu %}
-                </ul><!-- /.menulist -->
-            </div><!-- /.mainmenu -->
-            
-            <div class="contact">
-                
-                <i class="fa fa-phone"></i>
-                <a href="phone:(19) 3517-9400">(19) 3517-9400</a>
-                <i class="fa fa-envelope"></i>
-                <a href="mailto:brasil@vermeer.com">brasil@vermeer.com</a>
-                
-            </div>
-            
-            <div class="search">
-                <form method="get" action="{{site.url}}" role="search">
-                    <input type="text" placeholder="{{__('Procurar...', 'twheme')|e }}" value="" name="s"/>
-                    <span type="submit" value="Search">
-                        <i class="fa fa-search"></i>
-                    </span>
-                </form>
-            </div>
-            
-        </nav>
-        
-{% block submenu %}
-    {% include "submenu.twig" %}
-{% endblock submenu %}
+                </ul>
+            </div><!-- /.col-md-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.containe-flex-->
+</nav>
 
+    {% block submenu %} 
+        {% include "submenu.twig" %} 
+    {% endblock submenu %} 
 {% endblock navbar %}

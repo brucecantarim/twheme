@@ -526,7 +526,7 @@ footer {
   width: 100%;
   font-family: "Open Sans Condensed", sans-serif;
   top: 0;
-  height: 12em;
+  height: 10em;
   margin: 0;
   z-index: 100;
   position: fixed; }
@@ -551,11 +551,7 @@ footer {
     line-height: 0.9em; }
 
 .contact {
-  position: absolute;
-  top: 2em;
-  right: 2em;
-  z-index: 101;
-  margin: 0;
+  padding-top: 1.5em;
   color: white;
   font-size: 1.3em; }
   .contact a:hover, .contact a:active {
@@ -569,18 +565,13 @@ footer {
     margin-right: 0.2em; }
 
 .search {
-  position: absolute;
-  top: 4.9em;
-  right: 2em;
-  z-index: 101;
   display: inline-block;
-  margin: 0;
+  padding: 1.5em 1em 0 0;
   color: #f2f2f2;
   font-size: 1.3em; }
   @media only screen and (min-width: 321px) and (max-width: 1600px) {
     .search {
-      font-size: 1em;
-      top: 6em; } }
+      font-size: 1em; } }
   .search input {
     background: none;
     border: none;
@@ -590,11 +581,10 @@ footer {
     color: white; }
 
 .mainmenu {
-  position: absolute;
-  top: 5em;
-  left: 1em;
-  width: 85%;
-  font-family: "Open Sans Condensed", sans-serif; }
+  width: 100%;
+  font-family: "Open Sans Condensed", sans-serif;
+  position: relative;
+  top: -3em; }
 
 .menuitem {
   display: inline-block;
@@ -613,16 +603,14 @@ footer {
 
 .submenu {
   position: fixed;
-  top: 15.25%;
+  top: 10em;
   width: 100%;
-  min-height: 30%;
   display: none;
   z-index: 99;
   padding-top: 40px;
   padding-bottom: 40px; }
   @media only screen and (min-width: 321px) and (max-width: 1600px) {
     .submenu {
-      top: 20%;
       font-size: 0.9em; } }
 
 .submenuitem {

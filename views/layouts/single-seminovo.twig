@@ -2,6 +2,10 @@
 
 {% extends 'single.twig' %}
 
+{% block fold %}
+    {% include 'product-info.twig' %}
+{% endblock fold %}
+
 {% block content %}   
     {% include 'body-content.twig' %}
     {% include 'more-content.twig' %}

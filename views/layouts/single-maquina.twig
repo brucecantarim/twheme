@@ -1,27 +1,13 @@
 {# single-maquina.twig #}
 
-{% extends "base.twig" %}
-
-{# First, let's check if there's a gallery #}
-   {% if post.gallery %}
-        {# Ok, then let's add our lightbox twig. This will only be visible when called through javascript #}
-        {% block gallerylightbox %}
-        {% include 'gallery-lightbox.twig' %}
-        {% endblock gallerylightbox %}
-    {% endif %}
+{% extends "single.twig" %}
 
 {# This twig will be called when we are visualizing a single post page #}
-{% block postslider2 %}
-    {% include 'post-slider-2.twig' %}
-{% endblock postslider2 %}
-
-{% block middlebar %}
+{% block fold %}
+    {% include 'slider-machine.twig' %}
     {% include 'middlebar.twig' %}
-{% endblock middlebar %}
-
-{% block rightbar %}
     {% include 'product-rightbar.twig' %}
-{% endblock rightbar %}
+{% endblock fold %}
 
 {% block content %}   
     {% include 'body-content.twig' %}
