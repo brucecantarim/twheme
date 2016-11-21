@@ -13,12 +13,10 @@
     height: 100%;
     position: relative;
     top: 0;
-    right: -4%;
     color: $color-white;
     padding: 20px;
-    padding-top: 0;
-    overflow-y: scroll;
-    overflow-x: show;
+    padding-top: 12em;
+    overflow: hidden;
         h1, h2, h3, h4, h5, h6, p, span { color: $color-white }
         h4 { display: inline; margin: auto 0.3em; }
         li {list-style: none;}

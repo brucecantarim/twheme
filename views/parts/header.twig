@@ -12,10 +12,7 @@
 
 <head>
     <meta charset="{{site.charset}}" />
-    <title>
-        {% if wp_title %} {{ wp_title }} - {{ site.name }} {% else %} {{ site.name }} {% endif %}
-    </title>
-    <!-- BASE: NEEDS FIXING -->
+    <title>{% if wp_title %}{{ wp_title }} - {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
     <base href="{{ site.theme.link }}/index.php">
     <meta name="description" content="{{site.description}}">
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />

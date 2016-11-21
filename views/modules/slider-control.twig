@@ -14,7 +14,17 @@
             <h1>{{slide.title}}</h1>
             <h4>{{slide.subtitle}}</h4>
         </div>
-    {% endfor %} 
+    {% endfor %}
+
+    {% if slides|length > 1 %}
+    <div class="slider-nav">
+        <ul class="slider-dots">
+            {% for slide in slides %}
+            <li class="dot {% if slide.active %}active-dot{% endif %}">&bull;</li>
+            {% endfor %}
+        </ul>
+    </div><!-- /.slider-nav -->
+    {% endif %} 
     
     {% if slides|length > 1 %}
         <div class="arrow-prev text-center">
@@ -27,17 +37,7 @@
     {% endif %}
 
     </div><!-- /.post-title-bar -->
-
-{% if slides|length > 1 %}
-    <div class="slider-nav">
-        <ul class="slider-dots">
-            {% for slide in slides %}
-            <li class="dot {% if slide.active %}active-dot{% endif %}">&bull;</li>
-            {% endfor %}
-        </ul>
-    </div><!-- /.slider-nav -->
-{% endif %}
         
-</div>
+</div><!-- /.slider-control -->
 
 {% endblock slidercontrol %}
