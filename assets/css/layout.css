@@ -26,7 +26,7 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
-@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700';
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700";
 html {
   font-family: sans-serif;
   /* 1 */
@@ -777,8 +777,8 @@ footer {
   width: 100%;
   text-align: center;
   color: white;
-  display: none;
-  padding-top: 1.2em; }
+  padding-top: 1.2em;
+  display: none; }
   .slide-title h1 {
     font-size: 7em;
     color: white; }
@@ -806,6 +806,9 @@ footer {
   bottom: 10%; }
 
 .active-slide {
+  display: block; }
+
+.active-title {
   display: block; }
 
 /*---------------------------------------------------/

@@ -145,7 +145,6 @@
     width: 100%;
     text-align: center;
     color: $color-title;
-    display: none;
     padding-top: 1.2em;
         
         h1 {
@@ -157,13 +156,9 @@
         }
     
         h4 {
-        color: $color-subtitle;
-        font-family: $font-copy;
-        font-size: 2em;
-            @media only screen and (min-width: 321px) and (max-width: 1265px) {
-            font-size: 1.5em;
-        }
-        font-weight: normal;
+            color: $color-subtitle;
+            font: { family: $font-copy; size: 2em; weight: normal; }
+            @media only screen and (min-width: 321px) and (max-width: 1265px) { font-size: 1.5em; }
         }
         
         a {
@@ -174,9 +169,10 @@
             }
         }
         
-        i {
-            color: $color-main;
-        }
+        i { color: $color-main; }
+
+    display: none;
+
 }
 
 .slide-subtitle {
@@ -189,5 +185,9 @@
 //  This class should be attached to the first slide
 // --------------------------------------------------
 .active-slide {
+    display: block;
+}
+
+.active-title {
     display: block;
 }

@@ -42,18 +42,27 @@ $(document).ready(function () {
         // Handle Slides
         var currentSlide = $('.active-slide');
         var nextSlide = currentSlide.next();
+
         var currentDot = $('.active-dot');
         var nextDot = currentDot.next();
 
-        if (nextSlide.length === 0 && nextDot.length === 0) {
+        var currentSlideTitle = $('.active-title');
+        var nextSlideTitle = currentSlideTitle.next();
+
+        if (nextSlide.length === 0 || nextDot.length === 0 || nextSlideTitle.length === 0) {
             nextSlide = $('.slide').first();
             nextDot = $('.dot').first();
+            nextSlideTitle = $('.slide-title').first();
         }
 
-        currentSlide.fadeOut(600).removeClass('active-slide');
-        nextSlide.fadeIn(600).addClass('active-slide');
+        currentSlide.hide( "slide", "left", 600 ).removeClass('active-slide');
+        nextSlide.show( "slide", "left", 600 ).addClass('active-slide');
+
         currentDot.removeClass('active-dot');
         nextDot.addClass('active-dot');
+
+        currentSlideTitle.hide().removeClass('active-title');
+        nextSlideTitle.show().addClass('active-title');
 
     });
 
@@ -63,18 +72,27 @@ $(document).ready(function () {
         // Handle Slides
         var currentSlide = $('.active-slide');
         var prevSlide = currentSlide.prev();
+
         var currentDot = $('.active-dot');
         var prevDot = currentDot.prev();
 
-        if (prevSlide.length === 0 && prevDot.length === 0) {
+        var currentSlideTitle = $('.active-title');
+        var prevSlideTitle = currentSlideTitle.prev();
+
+        if (prevSlide.length === 0 || prevDot.length === 0 || prevSlideTitle.length === 0) {
             prevSlide = $('.slide').last();
             prevDot = $('.dot').last();
+            prevSlideTitle = $('.slide-title').last();
         }
 
-        currentSlide.fadeOut(600).removeClass('active-slide');
-        prevSlide.fadeIn(600).addClass('active-slide');
+        currentSlide.hide( "slide", "right", 600 ).removeClass('active-slide');
+        prevSlide.show( "slide", "right", 600 ).addClass('active-slide');
+
         currentDot.removeClass('active-dot');
         prevDot.addClass('active-dot');
+
+        currentSlideTitle.hide().removeClass('active-title');
+        prevSlideTitle.show().addClass('active-title');
 
     });
 
@@ -83,11 +101,15 @@ $(document).ready(function () {
 
     setInterval(function () {
 
-        var currentSlide = $('.slide .active-slide');
+        var sliderCheck = $('.slider').children();
+
+        var currentSlide = $('.active-slide');
         var nextSlide = currentSlide.next();
+
         var currentDot = $('.active-dot');
         var nextDot = currentDot.next();
-        var currentSlideTitle = $('.slide-title .active-slide');
+
+        var currentSlideTitle = $('.active-title');
         var nextSlideTitle = currentSlideTitle.next();
 
         if (nextSlide.length === 0 || nextDot.length === 0 || nextSlideTitle.length === 0) {
@@ -96,28 +118,28 @@ $(document).ready(function () {
             nextSlideTitle = $('.slide-title').first();
         }
 
-        if (currentSlide.data('toggle') === 'off') {
+        if (currentSlide.data('toggle') === 'off' && sliderCheck.length <= 1) {
             // This stops the slider if there's only one image
         } else {
 
-            currentSlide.fadeOut(600).removeClass('active-slide');
-            nextSlide.fadeIn(600).addClass('active-slide');
-            currentSlideTitle.fadeOut(600).removeClass('active-slide');
-            nextSlideTitle.fadeIn(600).addClass('active-slide');
+            currentSlide.hide( "slide", "left", 600 ).removeClass('active-slide');
+            nextSlide.show( "slide", "left", 600 ).addClass('active-slide');
+
             currentDot.removeClass('active-dot');
             nextDot.addClass('active-dot');
+
+            currentSlideTitle.hide().removeClass('active-title');
+            nextSlideTitle.show().addClass('active-title');
 
         }
     }, 5000);
 
     // Hide slide controls is data-toggle='off'
     $(function () {
-        var currentSlide = $('.slide.active-slide');
-        if (currentSlide.data('toggle') === 'off') {
-            $('.slider-nav').hide();
-            $('.product-slider-nav').hide();
-            $('.slider-control').hide();
-            $('.product-slider-control').hide();
+        var currentSlide = $('.active-slide');
+        var sliderCheck = $('.slider').children();
+        if (currentSlide.data('toggle') === 'off' && sliderCheck.length <= 1) {
+            $('.slider-nav', '.product-slider-nav', '.slider-control', '.product-slider-control').hide();
         }
     });
 
