@@ -32,10 +32,11 @@
                 <div class="col-md-12 text-justify">
                     <h1>{{post.title}}</h1><br/>
                     <hr/>
-                    {{ post.content }}
+                    {{ post.content|raw|wpautop }}
                 </div><!-- /.col-md-12 -->
-                    {% for item in categorias %}
-                    {% if post.title|lower == item.name|lower %}
+                
+        {% for item in categorias %}
+        {% if post.title|lower == item.name|lower %}
             </div><!-- /.row -->
         </div><!-- /.container -->
         <div class="container-flex">
@@ -55,12 +56,20 @@
                     <img class="img-responsive" src="http://placehold.it/300?text={{__('SEM IMAGEM', 'twheme')}}"/>
                     {% endif %}
                 </div>
+                {% if subitem.get_link %}
                 <h4><b><a class="color-black" href="{{subitem.get_link}}">{{subitem.title}}</a></b></h4>
+                {% else %}
+                <h4><b>{{subitem.title}}</b></h4>
+                {% endif %}
                 <hr class="menustrip"/>
                     <ul class='submenulist text-left no-padding'>
                         {% for sublink in subitem.posts %}
                         <li class="submenuitem">
+                            {% if sublink.get_link %}
                             <a class="color-black" href="{{sublink.get_link}}">{{sublink.title}}</a>
+                            {% else %}
+                            {{sublink.title}}
+                            {% endif %}
                         </li>
                         {% endfor %}
                     </ul><!-- /.submenulist -->
@@ -91,13 +100,19 @@
                     <img src="{{Image(section.icon).src}}"/>
                 </div>
                 <h3>{{section.title}}</h3></a>
-                <p>{{section.content}}</p>
+                <p class="text-justify">{{section.content|striptags|raw|capitalize|wpautop}}</p>
             </div>
             {% endfor %}
                 </div><!-- /.row -->
             </div><!-- /.container -->
             <div class="container-flex">
                 <div class="row">
+            {% elseif post.post_type == 'noticia' %}
+                    <div class="col-md-12 text-center">
+                        <h3>{{post.title}}</h3>
+                        <hr/>
+                        {{post.content}}
+                    </div>
             {% else %}
             <!-- DEFAULT BODY CONTENT -->
             <div class="col-md-3 text-center col-left">

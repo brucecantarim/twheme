@@ -1,0 +1,49 @@
+{# single-noticia.twig #}
+ 
+{% extends 'single.twig' %}
+
+{% block fold %}
+{% if post.thumbnail %}
+    <div class="slider">
+        <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}); background-size: cover;"></div>
+    </div>
+    {% else %}
+    <div class="row-spacer"></div><!-- /.row spacer -->
+{% endif %}
+{% endblock fold %}
+
+{% block content %}
+<div class="body-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>{{post.title}}</h3>
+                <hr/>
+                {{post.content}}
+            </div>
+        </div><!-- /.row -->
+        
+        <div class="row-spacer"></div><!-- /.row spacer -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInUp">
+                <h2 class="more-title">{{__("Outras notícias:", "twheme")}}</h2>
+                <hr/>
+            </div>
+        </div><!-- /.row -->
+        <div class="row">
+        {% for preview in noticias %}
+            <div class="col-md-4">
+                <img class="img-responsive" src="{{preview.thumbnail.src}}"/>
+                <h4><strong>{{preview.title}}</strong></h4>
+                <p>{{preview.content|excerpt(30)}}</p>
+                <a class="btn btn-yellow pull-right" href="{{preview.link}}"><h5>Leia Mais</h5></a>
+                <br/>
+                <br/>
+                <hr/>
+            </div><!-- /.col -->
+        {% endfor %}
+               <br/>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.body-content -->
+{% endblock content %}

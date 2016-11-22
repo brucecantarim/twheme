@@ -8006,6 +8006,12 @@
 		"oAP": "\/views\/layouts\/single-maquina.twig",
 		"oF": 0
 		},
+	"\/views\/layouts\/single-noticia.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/single-noticia.twig",
+		"oF": 0
+		},
 	"\/views\/layouts\/single-product.twig": {
 		"ft": 8192,
 		"oA": 2,

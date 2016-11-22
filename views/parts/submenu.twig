@@ -13,13 +13,21 @@
                  <div class="col-md-12" style="width:14%;display:inline;margin:0;">
                     <ul class='submenulist text-center'>
                             <li class='submenuitem'>
-                                <a href="{{subitem.get_link}}">
-                                    <h4><b>{{subitem.title}}</b></h4>
-                                </a>
+                                {% if subitem.get_link %}
+                                <h4><b>
+                                    <a href="{{subitem.get_link}}">{{subitem.title}}</a>
+                                </b></h4>
+                                {% else %}
+                                <h4><b>{{subitem.title}}</b></h4>
+                                {% endif %}
                             </li>
                             {% for sublink in subitem.get_children %}
                             <li class="submenuitem">
+                                {% if sublink.get_link %}
                                 <a href="{{sublink.get_link}}">{{sublink.title}}</a>
+                                {% else %}
+                                {{sublink.title}}
+                                {% endif %}
                             </li>
                             {% endfor %}
                     </ul><!-- /.submenulist -->

@@ -146,8 +146,8 @@
             font-weight: normal;
         }
         a {
-            &:hover, &:visited { color: $color-hover; text-decoration: none; }
-            &, &:visited {color: $color-link; text-decoration: none;}
+            &, &:visited {color: $color-link; text-decoration: none; }
+            &:hover, &:active { color: $color-hover; text-decoration: none; }
         }
     @media only screen and (min-width: 321px) and (max-width: 1600px) {
         font: { size: 0.9em };

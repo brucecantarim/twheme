@@ -9,9 +9,9 @@
         <div class="row">
             {% for footersection in footermenu.get_items %}
             <div class="col-md-2">
-                <h5>{{footersection.title}}</h5>
+                <h5>{{footersection.title|upper}}</h5>
                 {% for footerlink in footersection.get_children %}
-                <a href="{{footerlink.link}}">{{footerlink.title}}</a>
+                <a href="{{footerlink.link}}">{{footerlink.title|capitalize}}</a>
                 {% endfor %}
             </div>
             {% endfor %}

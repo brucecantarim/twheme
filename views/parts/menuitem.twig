@@ -3,11 +3,19 @@
 {% for item in menu.get_items if menu %}
     {% if item.current %}
         <li class='menuitem active' data-target="#menu-item-{{item.ID}}">
-            <a href="{{item.get_link}}">{{item.title}}</a>
+            {% if item.get_link %}
+                <a href="{{item.get_link}}">{{item.title}}</a>
+            {% else %}
+                {{item.title}}
+            {% endif %}
         </li>
     {% else %}
         <li class='menuitem' data-target="#menu-item-{{item.ID}}">
-            <a href="{{item.get_link}}">{{item.title}}</a>
+            {% if item.get_link %}
+                <a href="{{item.get_link}}">{{item.title}}</a>
+            {% else %}
+                {{item.title}}
+            {% endif %}
         </li>
     {% endif %}
 {% endfor %}

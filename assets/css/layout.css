@@ -26,7 +26,7 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
-@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700";
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700';
 html {
   font-family: sans-serif;
   /* 1 */
@@ -626,11 +626,11 @@ footer {
   .submenuitem h4 small {
     color: white;
     font-weight: normal; }
-  .submenuitem a:hover, .submenuitem a:visited {
-    color: #ffc425;
-    text-decoration: none; }
   .submenuitem a, .submenuitem a:visited {
     color: white;
+    text-decoration: none; }
+  .submenuitem a:hover, .submenuitem a:active {
+    color: #ffc425;
     text-decoration: none; }
   @media only screen and (min-width: 321px) and (max-width: 1600px) {
     .submenuitem {
