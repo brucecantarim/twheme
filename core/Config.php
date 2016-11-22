@@ -143,7 +143,17 @@ abstract class Config {
                 'plural' => 'Categorias',
                 'singular' => 'Categoria',
                 'wordsex' => 'female',
-                'post'=> array('maquina', 'seminovo', 'locacao', 'oferta')  // To which post it'll be associated
+                'post'=> array('maquina', 'seminovo', 'locacao')  // To which post it'll be associated
+            ),
+            
+            "promocao" => array(
+                'type' => 'promocao',
+                'slug' => 'promocao',
+                'slug_plural' => 'promocoes',
+                'plural' => 'Promoções',
+                'singular' => 'Promoção',
+                'wordsex' => 'male',
+                'post'=> array('ofertas')  // To which post it'll be associate
             )
         ),
     

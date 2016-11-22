@@ -6,12 +6,16 @@
 
 <!-- SLIDER -->
 <div class="product-slider">
+    <div class="row-spacer"></div>
     <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}); background-size: cover;">
     </div>
     {#{% for image in post.gallery if gallery %}
     <div class="slide" data-toggle="off" style="background: url({{ image.thumbnail.src }}); background-size: cover;">
     </div>
     {% endfor %}#}
+    {#<button onclick="location.href='#contact-jump'" data-toggle="collapse" data-target="#contact-form" id="btn-fold" class="btn btn-yellow text-center"></i>
+        <h4>{{__('Solicite o seu orçamento', 'twheme')|e }}</h4>
+    </button>#}
 </div>
 
 {# Should we display the slider control? #} 

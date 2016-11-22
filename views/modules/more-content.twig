@@ -11,7 +11,7 @@
             <h2 class="more-title">{{__("Confira outros produtos do nosso catálogo:", "twheme")}}</h2>
             <hr/>
         </div>
-{% for product in maquinas|slice(0, 8) %}
+{% for product in maquinas %}
     {% if product.title != post.title and product.terms('categoria', 'false') == post.terms('categoria', 'false') %}
         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
             <h3>{{ product.title }}</h3>
@@ -20,30 +20,26 @@
                 {% if product.mainimg %}
                     {% set id = product.mainimg %}
                     <img class="img-responsive" src="{{ Image(id).src }}"/>
-                {% elseif product.thumbnail %}
-                    <img class="img-responsive" src="{{ product.thumbnail.src }}"/>
                 {% else %}
-                    <img class="img-responsive" src="http://placehold.it/300?text={{__('MÁQUINA', 'twheme')}}"/>
+                    <img class="img-responsive" src="http://placehold.it/300?text={{__('SEM IMAGEM', 'twheme')}}"/>
                 {% endif %}
                 </a>
             </div><!-- /.product-thumbnail -->
         </div><!-- /.col -->
         {% else %}
-        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
+        {#<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
             <h3>{{ product.title }}</h3>
             <div class="product-thumbnail">
                 <a href="{{ product.link }}">
                 {% if product.mainimg %}
                     {% set id = product.mainimg %}
                     <img class="img-responsive" src="{{ Image(id).src }}"/>
-                {% elseif product.thumbnail %}
-                    <img class="img-responsive" src="{{ product.thumbnail.src }}"/>
                 {% else %}
-                    <img class="img-responsive" src="http://placehold.it/300?text={{__('MÁQUINA', 'twheme')}}"/>
+                    <img class="img-responsive" src="http://placehold.it/300?text={{__('SEM IMAGEM', 'twheme')}}"/>
                 {% endif %}
                 </a>
             </div><!-- /.product-thumbnail -->
-        </div><!-- /.col -->                        
+        </div><!-- /.col -->#}                       
         {% endif %}
         
     {% endfor %}
