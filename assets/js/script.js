@@ -56,7 +56,7 @@ $(document).ready(function () {
         }
 
         currentSlide.hide( "slide", "left", 600 ).removeClass('active-slide');
-        nextSlide.show( "slide", "left", 600 ).addClass('active-slide');
+        nextSlide.show( 'fast' ).addClass('active-slide');
 
         currentDot.removeClass('active-dot');
         nextDot.addClass('active-dot');
@@ -86,7 +86,7 @@ $(document).ready(function () {
         }
 
         currentSlide.hide( "slide", "right", 600 ).removeClass('active-slide');
-        prevSlide.show( "slide", "right", 600 ).addClass('active-slide');
+        prevSlide.show( "fast" ).addClass('active-slide');
 
         currentDot.removeClass('active-dot');
         prevDot.addClass('active-dot');
@@ -122,8 +122,8 @@ $(document).ready(function () {
             // This stops the slider if there's only one image
         } else {
 
-            currentSlide.hide( "slide", "left", 600 ).removeClass('active-slide');
-            nextSlide.show( "slide", "left", 600 ).addClass('active-slide');
+            currentSlide.hide( "slide", "left", 1000 ).removeClass('active-slide');
+            nextSlide.fadeIn().addClass('active-slide');
 
             currentDot.removeClass('active-dot');
             nextDot.addClass('active-dot');
