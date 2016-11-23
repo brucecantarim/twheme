@@ -1,7 +1,6 @@
 {# more-content.twig #}
 
 {% block morecontent %}
-
 <div class="container">
 
 {% if post.type == 'maquina' %}
@@ -12,7 +11,15 @@
             <hr/>
         </div>
 {% for product in maquinas %}
-    {% if product.title != post.title and product.terms('categoria', 'false') == post.terms('categoria', 'false') %}
+    {% if product.title|sanitize != post.title|sanitize %}
+        {% set postterms = post.get_terms[0] %}
+        {% set postparent = TimberTerm(postterms.parent) %} 
+        {% set productterms = product.get_terms[0] %}
+        {% set productparent = TimberTerm(productterms.parent) %}
+
+        {#!<br/><br/>{{ postparent.name|print_r }}<br/><br/>?<br/><br/>{{ productparent.name|print_r }}<br/><br/>#}
+
+        {% if postparent.name == productparent.name %}
         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
             <h3>{{ product.title }}</h3>
             <div class="product-thumbnail">
@@ -26,8 +33,9 @@
                 </a>
             </div><!-- /.product-thumbnail -->
         </div><!-- /.col -->
-        {% else %}
-        {#<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
+        {% endif %}
+        {#{% else %}
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
             <h3>{{ product.title }}</h3>
             <div class="product-thumbnail">
                 <a href="{{ product.link }}">

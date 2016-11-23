@@ -7,7 +7,7 @@
 <!-- SLIDER -->
 <div class="product-slider">
     <div class="row-spacer"></div>
-    <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}); background-size: cover;">
+    <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}) no-repeat center center; background-size: cover;">
     </div>
     {#{% for image in post.gallery if gallery %}
     <div class="slide" data-toggle="off" style="background: url({{ image.thumbnail.src }}); background-size: cover;">
