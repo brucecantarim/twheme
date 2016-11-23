@@ -6,7 +6,7 @@
 <!-- SLIDER -->
 <div class="slider">
     {% for slide in slides %}
-        <div class="slide {% if slide.active %}active-slide{% endif %}" data-toggle="{% if slides|length <= 1 %}off{% else %}on{% endif %}" style="background: url({{ slide.thumbnail.src }}); background-size: cover;">
+        <div class="slide {% if slide.active %}active-slide{% endif %}" data-toggle="{% if slides|length <= 1 %}off{% else %}on{% endif %}" style="background: url({{ slide.thumbnail.src }}) no-repeat center center fixed; background-size: cover;">
         </div>
     {% endfor %}  
 </div>

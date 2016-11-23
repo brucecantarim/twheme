@@ -21,10 +21,15 @@
     z-index: -1;
 }
 
-.fold {
+.fold, .half-fold {
     position: relative;
     left: 0;
     top: 0;
+}
+
+.half-fold {
+    width: 100%;
+    height: 50%;
 }
 
 // --------------------------------------------------

@@ -7861,6 +7861,14 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/screenshot.png": {
+		"ft": 32768,
+		"iS": 9977,
+		"oA": 0,
+		"oAP": "\/screenshot.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/script.js": {
 		"ft": 64,
 		"mi": 1,
@@ -8022,6 +8030,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/views\/layouts\/single-seminovo.twig",
+		"oF": 0
+		},
+	"\/views\/layouts\/single-slides.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/single-slides.twig",
 		"oF": 0
 		},
 	"\/views\/layouts\/single.twig": {

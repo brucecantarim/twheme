@@ -11,8 +11,8 @@
 
     {% for slide in slides %}
         <div class="slide-title {% if slide.active %}active-title{% endif %}">
-            <h1>{{slide.title}}</h1>
-            <h4>{{slide.subtitle}}</h4>
+            <a href="{{slide.link}}"><h1>{{slide.title}}</h1>
+            <h4>{{slide.subtitle}}</h4></a>
         </div>
     {% endfor %}
 

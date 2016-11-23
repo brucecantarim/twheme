@@ -1,5 +1,5 @@
-{# single-noticia.twig #}
- 
+{# single-slides.twig #}
+
 {% extends 'single.twig' %}
 
 {% block fold %}
@@ -7,9 +7,9 @@
 <div class="row-spacer"></div><!-- /.row spacer -->
 {% if post.thumbnail %}
 <!-- SLIDER -->
-    <div class="half-fold">
-        <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}) no-repeat center center fixed; background-size: cover;"></div>
-    </div>
+<div class="half-fold">
+    <div class="slide active-slide" data-toggle="off" style="background: url({{ post.thumbnail.src }}) no-repeat center center fixed; background-size: cover;"></div>
+</div>
 {% endif %}
 {% endblock fold %}
 
@@ -27,12 +27,12 @@
         <div class="row-spacer"></div><!-- /.row spacer -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInUp">
-                <h2 class="more-title">{{__("Outras notícias:", "twheme")}}</h2>
+                <h2 class="more-title">{{__("Outros destaques:", "twheme")}}</h2>
                 <hr/>
             </div>
         </div><!-- /.row -->
         <div class="row">
-        {% for preview in noticias %}
+        {% for preview in slides %}
             <div class="col-md-4">
                 <img class="img-responsive" src="{{preview.thumbnail.src}}"/>
                 <h4><strong>{{preview.title}}</strong></h4>
