@@ -45,7 +45,9 @@
     {% endfor %}
     
     {% elseif post.type == 'seminovo' or post.title|lower == 'seminovos' %}
+    {% if post.type == 'seminovo' %}
     <div class="row-spacer"></div><!-- /.row spacer -->
+    {% endif %}
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInUp">
             <h2 class="more-title">{{__("Confira também:", "twheme")}}</h2>

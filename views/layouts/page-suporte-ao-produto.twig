@@ -56,6 +56,7 @@
     {% block media %}
         {% if post.children %}
         {% else %}
+            <div class="row-spacer"></div><!-- /.row spacer -->
             {% include 'support-media.twig' %}
         {% endif %}
     {% endblock media %}

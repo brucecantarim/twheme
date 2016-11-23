@@ -1,9 +1,7 @@
 {# 'photo-stripe.twig' #}
 
+<div class="row-spacer"></div>
 {% if post.thumbnail %}
-    <div class="row-spacer"></div>
     <div class="photo-stripe" style="background: url({{ post.thumbnail.src }}); background-size: cover;">
     </div>
-{% else %}
-    <div class="row-spacer"></div>
 {% endif %}
