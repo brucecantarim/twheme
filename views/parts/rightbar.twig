@@ -16,9 +16,9 @@
 
 <!-- NEWS -->                
 {% if noticias %}
-    {% for preview in noticias|slice(0, 3) %}
         <div class="row">
-            <div class="col-md-12">
+    {% for preview in noticias|slice(0, 3) %}
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12">
                 <h5><strong>{{preview.title}}</strong></h5>
                 <p>{{preview.content|excerpt(30)}}</p>
                 <a class="btn btn-yellow pull-right" href="{{preview.link}}"><h5>Leia Mais</h5></a>
@@ -26,12 +26,12 @@
                 <br/>
                 <hr/>
             </div><!-- /.col -->
-        </div><!-- /.row -->
     {% endfor %}
+    </div><!-- /.row -->
 
 {% else %}
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12">
                 <h5><strong>Vermeer.com.br em desenvolvimento</strong></h5>
                 <p>Mergulhando de cabeça no Brasil, a Vermeer mostra que é realmente verde e amarelo em um novo site dedicado para o mercado nacional.</p>
                 <button class="btn btn-yellow pull-right"><h5>Leia Mais</h5></button>
@@ -39,9 +39,7 @@
                 <br/>
                 <hr/>
             </div><!-- /.col -->
-        </div><!-- /.row -->
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12">
                 <h5><strong>Vermeer.com.br em desenvolvimento</strong></h5>
                 <p>Mergulhando de cabeça no Brasil, a Vermeer mostra que é realmente verde e amarelo em um novo site dedicado para o mercado nacional.</p>
                 <button class="btn btn-yellow pull-right"><h5>Leia Mais</h5></button>
@@ -49,9 +47,7 @@
                 <br/>
                 <hr/>
             </div><!-- /.col -->
-        </div><!-- /.row -->
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-12">
                 <h5><strong>Vermeer.com.br em desenvolvimento</strong></h5>
                 <p>Mergulhando de cabeça no Brasil, a Vermeer mostra que é realmente verde e amarelo em um novo site dedicado para o mercado nacional.</p>
                 <button class="btn btn-yellow pull-right"><h5>Leia Mais</h5></button>

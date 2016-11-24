@@ -84,26 +84,33 @@
 //   Contact info and social media at the right/top
 // --------------------------------------------------
 .contact {
-    display: none;
+    display: inline-block;
+    padding-top: 0.7em;
+    margin-right: 1em;
+    color: $color-hover;
+    font-size: 1.3em;
+        a {
+            &:hover, &:active { color: $color-white; text-decoration: none; }
+            &, &:visited { color: $color-hover; }
+            span { 
+                display: none;
+                font-family: $font-title;
+                font-weight: 700;
+                font-size: 1em;
+            }
+        }
+        i {
+            color: $color-main;
+            margin-left: 0.5em;
+            margin-right: 0.2em;
+        }
 
     @include breakpoint($screen-lg-min) {
-        display: inline-block;
-        padding-top: 1em;
-        color: $color-white;
-        font: { size: 1.3em; weight: regular; }
-            a {
-                &:hover, &:active { color: $color-hover; text-decoration: none; }
-                &, &:visited { color: $color-white; }
-            }
-            i {
-                color: $color-main;
-                margin-left: 0.5em;
-                margin-right: 0.2em;
-            }
-    }
-
-    @include breakpoint($screen-xl-min) {
         padding-top: 1.5em;
+        margin-right: 0;
+            a {
+                span { display: inline; }
+            }     
     }
 }
 
@@ -129,6 +136,7 @@
             border: none;
             border-bottom: 1px solid $color-grey;
             color: $color-grey;
+            width: 80%;
 
             @include breakpoint($screen-lg-min) {
                 display: inline;

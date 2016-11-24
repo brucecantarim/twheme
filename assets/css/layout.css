@@ -572,26 +572,31 @@ footer {
         font-size: 1.5em; } }
 
 .contact {
-  display: none; }
+  display: inline-block;
+  padding-top: 0.7em;
+  margin-right: 1em;
+  color: #ffc425;
+  font-size: 1.3em; }
+  .contact a:hover, .contact a:active {
+    color: white;
+    text-decoration: none; }
+  .contact a, .contact a:visited {
+    color: #ffc425; }
+  .contact a span {
+    display: none;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 1em; }
+  .contact i {
+    color: #ffc425;
+    margin-left: 0.5em;
+    margin-right: 0.2em; }
   @media (min-width: 1200px) {
     .contact {
-      display: inline-block;
-      padding-top: 1em;
-      color: white;
-      font-size: 1.3em;
-      font-weight: regular; }
-      .contact a:hover, .contact a:active {
-        color: #ffc425;
-        text-decoration: none; }
-      .contact a, .contact a:visited {
-        color: white; }
-      .contact i {
-        color: #ffc425;
-        margin-left: 0.5em;
-        margin-right: 0.2em; } }
-  @media (min-width: 1920px) {
-    .contact {
-      padding-top: 1.5em; } }
+      padding-top: 1.5em;
+      margin-right: 0; }
+      .contact a span {
+        display: inline; } }
 
 .search {
   display: none; }
@@ -606,7 +611,8 @@ footer {
     background: none;
     border: none;
     border-bottom: 1px solid #f2f2f2;
-    color: #f2f2f2; }
+    color: #f2f2f2;
+    width: 80%; }
     @media (min-width: 1200px) {
       .search input {
         display: inline; } }
@@ -896,11 +902,16 @@ footer {
   @media (min-width: 1200px) {
     .rightbar, .panel-bonardi-bg {
       width: 100%;
-      height: 100%;
-      position: relative;
-      top: 0;
+      height: 100vh;
       padding-top: 10em;
       overflow-y: scroll; } }
+
+.rightbar-container {
+  position: absolute;
+  bottom: 0; }
+  @media (min-width: 1200px) {
+    .rightbar-container {
+      position: static; } }
 
 .panel-bonardi {
   width: 100%;
@@ -1305,8 +1316,29 @@ footer {
   height: 100%; }
 
 .full-height {
-  height: 100%; }
+  height: 100vh; }
 
 .no-padding {
   padding: 0 !important;
   margin: 0 !important; }
+
+.fold {
+  width: 100%;
+  height: 200vh;
+  font-family: "Open Sans Condensed", sans-serif; }
+  @media (min-width: 1200px) {
+    .fold {
+      height: 100vh; } }
+
+.fold, .half-fold {
+  position: relative;
+  left: 0;
+  top: 0; }
+
+.half-fold {
+  width: 100%;
+  height: 50%; }
+
+.after-fold {
+  position: absolute;
+  bottom: -100%; }
