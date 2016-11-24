@@ -53,7 +53,7 @@ a {
 
 .link {
     position: relative;
-    @include font($size: 13px, $weight: 700, $family: $font-copy);
+    @include font($size: 1em, $weight: 700, $family: $font-copy);
     text-transform: uppercase;
 
     &:after {
