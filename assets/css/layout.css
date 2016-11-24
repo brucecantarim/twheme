@@ -718,7 +718,7 @@ footer {
 /   page slider an it's controls, here's the place!  /
 /                                                    /
 /---------------------------------------------------*/
-.fold, .slider, .slide {
+.slider, .slide {
   width: 100%;
   height: 100%;
   font-family: "Open Sans Condensed", sans-serif; }
@@ -728,15 +728,6 @@ footer {
   left: 0;
   top: 0;
   z-index: -1; }
-
-.fold, .half-fold {
-  position: relative;
-  left: 0;
-  top: 0; }
-
-.half-fold {
-  width: 100%;
-  height: 50%; }
 
 .slider-control {
   width: 100%;

@@ -8,7 +8,7 @@
 // --------------------------------------------------
 //                   Slide Wrappers
 // --------------------------------------------------
-.fold, .slider, .slide {
+.slider, .slide {
     width: 100%;
     height: 100%;
     font-family: $font-title;
@@ -19,17 +19,6 @@
     left: 0;
     top: 0;
     z-index: -1;
-}
-
-.fold, .half-fold {
-    position: relative;
-    left: 0;
-    top: 0;
-}
-
-.half-fold {
-    width: 100%;
-    height: 50%;
 }
 
 // --------------------------------------------------
