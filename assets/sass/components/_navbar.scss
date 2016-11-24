@@ -97,6 +97,8 @@
                 font-family: $font-title;
                 font-weight: 700;
                 font-size: 1em;
+                &:hover, &:active { color: $color-white; text-decoration: none; }
+                &, &:visited { color: $color-hover; }
             }
         }
         i {

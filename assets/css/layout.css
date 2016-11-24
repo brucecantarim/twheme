@@ -587,6 +587,11 @@ footer {
     font-family: "Open Sans Condensed", sans-serif;
     font-weight: 700;
     font-size: 1em; }
+    .contact a span:hover, .contact a span:active {
+      color: white;
+      text-decoration: none; }
+    .contact a span, .contact a span:visited {
+      color: #ffc425; }
   .contact i {
     color: #ffc425;
     margin-left: 0.5em;
