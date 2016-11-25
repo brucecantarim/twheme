@@ -603,6 +603,13 @@ footer {
       .contact a span {
         display: inline; } }
 
+#hamburger {
+  display: inline-block !important;
+  border: 0 !important; }
+  @media (min-width: 1200px) {
+    #hamburger {
+      display: none !important; } }
+
 .search {
   display: none; }
   @media (min-width: 1200px) {
@@ -1282,6 +1289,9 @@ footer {
 .bg-color-box {
   background-color: #ffc425 !important; }
 
+.bg-color-none {
+  background-color: none !important; }
+
 /*---------------------------------------------------/
 /                                                    /
 /     HELPERS - Here are the SASS functions and      / 
@@ -1336,5 +1346,5 @@ footer {
   height: 50%; }
 
 .after-fold {
-  position: absolute;
-  bottom: -100%; }
+  position: relative;
+  bottom: 0; }
