@@ -160,10 +160,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    
-    @include breakpoint($screen-xs-min, $screen-md-max) {
-        transform: translate(-50%, -50%);
-    }
+    transform: translate(-50%, -50%);
     
     @include breakpoint($screen-lg-min) {
         position: relative;

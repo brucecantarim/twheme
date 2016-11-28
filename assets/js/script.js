@@ -24,16 +24,21 @@ $(document).ready(function () {
 
         var target = $(this).data("target");
 
-        $(target).mouseenter(function () {
+        $(target).mouseover(function () {
             $(this).show();
         });
 
         $(target).mouseleave(function () {
-            $(this).children().fadeOut();
-            $(this).children().hide();
+            $(this).children().fadeOut(400);
+            $(this).children().hide(400);
             $(this).toggleClass('wow fadeOut').slideUp('slow').hide(400);
         });
 
+    });
+
+    // Adding the mobile menu functionality
+    $('.hamburger').click(function() {
+            $('.mobilemenu').slideToggle();
     });
 
     // Next Arrow Code
@@ -55,8 +60,8 @@ $(document).ready(function () {
             nextSlideTitle = $('.slide-title').first();
         }
 
-        currentSlide.hide( "slide", "left", 600 ).removeClass('active-slide');
-        nextSlide.show( 'fast' ).addClass('active-slide');
+        currentSlide.hide( "slide", {direction: "left" }, 1000 ).removeClass('active-slide');
+        nextSlide.show( "slide", {direction: "right" }, 1000 ).addClass('active-slide');
 
         currentDot.removeClass('active-dot');
         nextDot.addClass('active-dot');
@@ -85,8 +90,8 @@ $(document).ready(function () {
             prevSlideTitle = $('.slide-title').last();
         }
 
-        currentSlide.hide( "slide", "right", 600 ).removeClass('active-slide');
-        prevSlide.show( "fast" ).addClass('active-slide');
+        currentSlide.hide( "slide", {direction: "right" }, 1000 ).removeClass('active-slide');
+        prevSlide.show( "slide", {direction: "left" }, 1000 ).addClass('active-slide');
 
         currentDot.removeClass('active-dot');
         prevDot.addClass('active-dot');
@@ -122,8 +127,8 @@ $(document).ready(function () {
             // This stops the slider if there's only one image
         } else {
 
-            currentSlide.hide( "slide", "left", 1000 ).removeClass('active-slide');
-            nextSlide.fadeIn().addClass('active-slide');
+            currentSlide.hide( "slide", {direction: "left" }, 1000 ).removeClass('active-slide');
+            nextSlide.show( "slide", {direction: "right" }, 1000 ).addClass('active-slide');
 
             currentDot.removeClass('active-dot');
             nextDot.addClass('active-dot');
@@ -132,7 +137,7 @@ $(document).ready(function () {
             nextSlideTitle.show().addClass('active-title');
 
         }
-    }, 5000);
+    }, 6000);
 
     // Hide slide controls is data-toggle='off'
     $(function () {

@@ -1,0 +1,28 @@
+{# menu-mobile.twig #}
+
+{% block menumobile %}
+<!-- MENU FOR MOBILE DEVICES -->
+<div class="mobilemenu blur">
+    <ul>
+    {% for item in menu.get_items if menu %}
+    {% if item.current %}
+        <li class='menuitem-mobile active' data-target="#menu-item-{{item.ID}}">
+            {% if item.get_link %}
+                <a href="{{item.get_link}}">{{item.title}}</a>
+            {% else %}
+                {{item.title}}
+            {% endif %}
+        </li>
+    {% else %}
+        <li class='menuitem-mobile' data-target="#menu-item-{{item.ID}}">
+            {% if item.get_link %}
+                <a href="{{item.get_link}}">{{item.title}}</a>
+            {% else %}
+                {{item.title}}
+            {% endif %}
+        </li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+</div><!-- /.menu-mobile -->
+{% endblock menumobile %}

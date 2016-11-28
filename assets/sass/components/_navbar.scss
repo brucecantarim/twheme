@@ -36,6 +36,7 @@
 #brand {
     margin: 0.5em;
     display: inline-block;
+    img { margin-left: 1em; }
 
     @include breakpoint($screen-lg-min) {
         margin: 1em;
@@ -51,7 +52,7 @@
 }
 
 #brand-sig {
-    padding-left: 0.5em;
+    padding-left: 1em;
     border-left: 1px solid $color-white;
     display: inline-block;
     position: relative;
@@ -101,10 +102,11 @@
                 &, &:visited { color: $color-hover; }
             }
         }
-        i {
+        i, label {
             color: $color-main;
             margin-left: 0.5em;
             margin-right: 0.2em;
+            cursor: pointer;
         }
 
     @include breakpoint($screen-lg-min) {
@@ -113,15 +115,6 @@
             a {
                 span { display: inline; }
             }
-    }
-}
-
-#hamburger {
-    display: inline-block !important;
-    border: 0 !important;
-
-    @include breakpoint($screen-lg-min) {
-        display: none !important;
     }
 }
 
@@ -178,6 +171,22 @@
     }
 }
 
+.mobilemenu {
+    width: 100%;
+    height: 100%;
+    padding-top: 10em;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    display: none;
+}
+
+.hamburger {
+    @include breakpoint($screen-lg-min) {
+        display: none !important;
+    }
+}
+
 .menuitem {
     display: inline-block;
     margin: 1em;
@@ -190,6 +199,16 @@
     @media only screen and (min-width: 321px) and (max-width: 1600px) {
         font: { size: 0.9em }
     }
+}
+
+.menuitem-mobile {
+    display: block;
+    text-transform: uppercase;
+    font: { size: 2em; weight: bold;}
+        a {
+            &, &:visited { color: $color-link; }
+            &:hover, &:active { color: $color-hover; text-decoration: none; }
+            }
 }
 
 // --------------------------------------------------
