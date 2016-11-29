@@ -226,6 +226,11 @@
     }
 }
 
+.submenu-mobile {
+    @extend .mobilemenu;
+    display: none;
+}
+
 .submenuitem {
     list-style-type: none;
     color: $color-link;

@@ -1,28 +1,63 @@
 {# menu-mobile.twig #}
 
 {% block menumobile %}
+
 <!-- MENU FOR MOBILE DEVICES -->
 <div class="mobilemenu blur">
     <ul>
     {% for item in menu.get_items if menu %}
     {% if item.current %}
-        <li class='menuitem-mobile active' data-target="#menu-item-{{item.ID}}">
+        <li class='menuitem-mobile active'>
             {% if item.get_link %}
                 <a href="{{item.get_link}}">{{item.title}}</a>
+                <button class="btn btn-yellow next-menu pull-right" data-target="#mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right"></i></button>
             {% else %}
                 {{item.title}}
+                <button class="btn btn-yellow next-menu pull-right" data-target="#mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right"></i></button>
             {% endif %}
         </li>
     {% else %}
-        <li class='menuitem-mobile' data-target="#menu-item-{{item.ID}}">
+        <li class='menuitem-mobile'>
             {% if item.get_link %}
                 <a href="{{item.get_link}}">{{item.title}}</a>
+                <button class="btn btn-yellow next-menu pull-right" data-target="#mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right"></i></button>
             {% else %}
                 {{item.title}}
+                <button class="btn btn-yellow next-menu pull-right" data-target="#mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right"></i></button>
             {% endif %}
         </li>
     {% endif %}
     {% endfor %}
     </ul>
 </div><!-- /.menu-mobile -->
+
+{% for item in menu.get_items if menu %}
+{% if item.get_children|length > 0 %}
+<div id="mobilemenu-item-{{item.ID}}" class="submenu-mobile blur">
+    <ul>
+        {% for subitem in item.get_children %}
+        <li class='submenuitem-mobile'>
+            {% if subitem.get_link %}
+            <h4><b>
+                <a href="{{subitem.get_link}}">{{subitem.title}}</a>
+            </b></h4>
+            {% else %}
+            <h4><b>{{subitem.title}}</b></h4>
+            {% endif %}
+        </li>
+        {% for sublink in subitem.get_children %}
+        <li class="submenuitem-mobile">
+            {% if sublink.get_link %}
+            <a href="{{sublink.get_link}}">{{sublink.title}}</a>
+            {% else %}
+            {{sublink.title}}
+            {% endif %}
+        </li>
+        {% endfor %}
+    {% endfor %}
+    </ul><!-- /.submenulist -->
+</div><!-- /#submenu-mobile -->
+{% endif %}
+{% endfor %}
+
 {% endblock menumobile %}
