@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
 
     // Hiding the WP admin bar, I HATE IT
     $('#wpadminbar').hide();
@@ -41,27 +41,26 @@ $(document).ready(function () {
             $('.mobilemenu').slideToggle();
     });
 
+    // Slideshow controls
+    var wait = false,
+        waitDelay = (wait) ? 1000 : 0;
+
     // Next Arrow Code
     $('.arrow-next').click(function () {
 
         // Handle Slides
         var currentSlide = $('.active-slide');
-        var nextSlide = currentSlide.next();
+        var nextCount = currentSlide.next('.slide');
+        var nextSlide = nextCount.length == 0 ? currentSlide.next() : $('.slide').first();
 
         var currentDot = $('.active-dot');
-        var nextDot = currentDot.next();
+        var nextDot = nextCount.length == 0 ? currentDot.next() : $('.dot').first();
 
         var currentSlideTitle = $('.active-title');
-        var nextSlideTitle = currentSlideTitle.next();
+        var nextSlideTitle = nextCount.length == 0 ? currentSlideTitle.next() : $('slide-title').first();
 
-        if (nextSlide.length === 0 || nextDot.length === 0 || nextSlideTitle.length === 0) {
-            nextSlide = $('.slide').first();
-            nextDot = $('.dot').first();
-            nextSlideTitle = $('.slide-title').first();
-        }
-
-        currentSlide.hide( "slide", {direction: "left" }, 1000 ).removeClass('active-slide');
-        nextSlide.show( "slide", {direction: "right" }, 1000 ).addClass('active-slide');
+        currentSlide.fadeIn().removeClass('active-slide');
+        nextSlide.fadeOut().addClass('active-slide');
 
         currentDot.removeClass('active-dot');
         nextDot.addClass('active-dot');
@@ -69,6 +68,7 @@ $(document).ready(function () {
         currentSlideTitle.hide().removeClass('active-title');
         nextSlideTitle.show().addClass('active-title');
 
+        wait = true;
     });
 
     // Previous Arrow Code
@@ -76,22 +76,17 @@ $(document).ready(function () {
 
         // Handle Slides
         var currentSlide = $('.active-slide');
-        var prevSlide = currentSlide.prev();
+        var prevCount = currentSlide.next('.slide');
+        var prevSlide = prevCount.length == 0 ? currentSlide.prev() : $('.slide').last();
 
         var currentDot = $('.active-dot');
-        var prevDot = currentDot.prev();
+        var prevDot = prevCount.length == 0 ? currentDot.prev() : $('.dot').last();
 
         var currentSlideTitle = $('.active-title');
-        var prevSlideTitle = currentSlideTitle.prev();
+        var prevSlideTitle = prevCount.length == 0 ? currentSlideTitle.prev() : $('.slide-title').last();
 
-        if (prevSlide.length === 0 || prevDot.length === 0 || prevSlideTitle.length === 0) {
-            prevSlide = $('.slide').last();
-            prevDot = $('.dot').last();
-            prevSlideTitle = $('.slide-title').last();
-        }
-
-        currentSlide.hide( "slide", {direction: "right" }, 1000 ).removeClass('active-slide');
-        prevSlide.show( "slide", {direction: "left" }, 1000 ).addClass('active-slide');
+        currentSlide.fadeIn().removeClass('active-slide');
+        prevSlide.fadeOut().addClass('active-slide');
 
         currentDot.removeClass('active-dot');
         prevDot.addClass('active-dot');
@@ -99,46 +94,55 @@ $(document).ready(function () {
         currentSlideTitle.hide().removeClass('active-title');
         prevSlideTitle.show().addClass('active-title');
 
+        wait = true;
+
     });
 
     // Slideshow
-    $('.slider > .slide:gt(0)').hide();
+    /*$('.slider > .slide:gt(0)').hide();
+    var slideTotal = $('.slide').length;
+    var intervalDuration = (wait) ? slideTotal * 1000 : slideTotal * 2000;
 
     setInterval(function () {
 
-        var sliderCheck = $('.slider').children();
-
         var currentSlide = $('.active-slide');
-        var nextSlide = currentSlide.next();
+        var nextSlide = currentSlide.next('.slide');
 
         var currentDot = $('.active-dot');
-        var nextDot = currentDot.next();
+        var nextDot = currentDot.next('.dot');
 
         var currentSlideTitle = $('.active-title');
-        var nextSlideTitle = currentSlideTitle.next();
+        var nextSlideTitle = currentSlideTitle.next('.slide-title');
 
-        if (nextSlide.length === 0 || nextDot.length === 0 || nextSlideTitle.length === 0) {
-            nextSlide = $('.slide').first();
-            nextDot = $('.dot').first();
-            nextSlideTitle = $('.slide-title').first();
-        }
-
-        if (currentSlide.data('toggle') === 'off' && sliderCheck.length <= 1) {
+        if (currentSlide.data('toggle') === 'off' && slideCount <= 1) {
             // This stops the slider if there's only one image
         } else {
 
-            currentSlide.hide( "slide", {direction: "left" }, 1000 ).removeClass('active-slide');
-            nextSlide.show( "slide", {direction: "right" }, 1000 ).addClass('active-slide');
+            // If there is no next slide, we need to go back to the start
+            if ((nextSlide.length + nextDot.length + nextSlideTitle.length) === 0) {
+                nextSlide = $('.slide').first();
+                nextDot = $('.dot').first();
+                nextSlideTitle = $('.slide-title').first();
+            }
 
-            currentDot.removeClass('active-dot');
-            nextDot.addClass('active-dot');
+            // Checking if the buttons were pressed
+                currentSlide.delay(waitDelay).fadeOut('slow').removeClass('active-slide');
+                nextSlide.delay(waitDelay).fadeIn('slow').addClass('active-slide');
 
-            currentSlideTitle.hide().removeClass('active-title');
-            nextSlideTitle.show().addClass('active-title');
+                currentDot.delay(waitDelay).removeClass('active-dot');
+                nextDot.delay(waitDelay).addClass('active-dot');
+
+                currentSlideTitle.delay(waitDelay).hide().removeClass('active-title');
+                nextSlideTitle.delay(waitDelay).show().addClass('active-title');
+
+                if (wait) {
+                    wait = false;
+                }
 
         }
-    }, 6000);
+    }, intervalDuration);*/
 
+    // Some pages have only 1 image, so, we need to hide the controllers
     // Hide slide controls is data-toggle='off'
     $(function () {
         var currentSlide = $('.active-slide');
@@ -148,7 +152,7 @@ $(document).ready(function () {
         }
     });
 
-    // Accordion
+    // Accordion (Refer to jQueryUI documentation)
     $(function () {
         $("#accordion").accordion();
     });
