@@ -7900,6 +7900,12 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/summary.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/summary.txt",
+		"oF": 0
+		},
 	"\/twheme.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -8235,6 +8241,15 @@
 		"oA": 2,
 		"oAP": "\/views\/parts\/submenu.twig",
 		"oF": 0
+		},
+	"\/zippy.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/min\/zippy-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		}
 	},
 "hooks": [

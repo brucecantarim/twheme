@@ -41,7 +41,7 @@ $(function () {
             $('.mobilemenu').slideToggle();
     });
 
-    // Slideshow controls
+    /*// Slideshow controls
     var wait = false,
         waitDelay = (wait) ? 1000 : 0;
 
