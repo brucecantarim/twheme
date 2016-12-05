@@ -19,22 +19,21 @@
                     <div class="col-md-12">
                         <h4>{{slide.subtitle}}</h4></a>
                     </div>
-                    {% if slides|length > 1 %}
-                    <div class="slider-nav col-md-12">
-                        <ul class="slider-dots">
-                            {% for slide in slides %}
-                            <li class="dot {% if slide.active %}active-dot{% endif %}">&bull;</li>
-                            {% endfor %}
-                        </ul>
-                    </div><!-- /.slider-nav -->
-                    {% endif %} 
                 </div>
             </div>
         </div>
     {% endfor %}
 
-    
-    
+    {% if slides|length > 1 %}
+        <div class="slider-nav col-md-12">
+            <ul class="slider-dots">
+                {% for slide in slides %}
+                    <li class="dot {% if slide.active %}active-dot{% endif %}">&bull;</li>
+                {% endfor %}
+            </ul>
+        </div><!-- /.slider-nav -->
+    {% endif %} 
+
     {% if slides|length > 1 %}
         <div class="arrow-prev text-center">
             <i class="glyphicon glyphicon-chevron-left arrow-icon"></i>

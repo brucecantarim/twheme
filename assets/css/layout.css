@@ -751,13 +751,23 @@ footer {
 .slider, .slide {
   width: 100%;
   height: 100%;
-  font-family: "Open Sans Condensed", sans-serif; }
-
-.slider {
+  font-family: "Open Sans Condensed", sans-serif;
   position: absolute;
-  left: 0;
   top: 0;
-  z-index: -1; }
+  right: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden; }
+
+.slide {
+  z-index: 1;
+  opacity: 0; }
+
+.slide.active,
+.slide.left,
+.slide.right {
+  z-index: 2;
+  opacity: 1; }
 
 .slider-control {
   width: 100%;
@@ -810,13 +820,19 @@ footer {
   list-style: none;
   display: inline-block;
   padding-left: 0;
+  margin-top: 10em;
   margin-bottom: 0; }
+  @media (min-width: 1200px) {
+    .slider-dots {
+      margin-top: 5em; } }
 
 .slider-dots li {
   display: inline;
   font-size: 30px;
   margin-right: 5px;
   color: white; }
+  .slider-dots li:hover {
+    color: #D7D7D7; }
 
 .slider-dots li.active-dot {
   color: #ffc425; }
@@ -900,10 +916,79 @@ footer {
   left: 3em; }
 
 .active-slide {
-  display: block; }
+  z-index: 2;
+  opacity: 1; }
 
 .active-title {
   display: block; }
+
+/**
+ * ==========================
+ * JS animation styles
+ * 
+ * We use jQuery.animate to control the sliding animations
+ * when CSS3 animations are not available. In order for
+ * the next slide to slide in from the right, we need
+ * to change the left:0 property of the slide to left:auto
+ *
+ */
+.js-reset-left {
+  left: auto; }
+
+/**
+ * ==========================
+ * CSS animation styles
+ * 
+ * .slide.left and .slide.right set-up
+ * the to-be-animated slide so that it can slide
+ * into view. For example, a slide that is about 
+ * to slide in from the right will:
+ * 1. Be positioned to the right of the viewport (right:-100%)
+ * 2. Slide in when the style is superseded with a more specific style (right:0%)
+ *
+ */
+.slide.left {
+  left: -100%;
+  right: 0; }
+
+.slide.right {
+  right: -100%;
+  left: auto; }
+
+.transition .slide.left {
+  left: 0%; }
+
+.transition .slide.right {
+  right: 0%; }
+
+/**
+ * The following classes slide the previously active
+ * slide out of view before positioning behind the 
+ * currently active slide
+ *
+ */
+.transition .slide.shift-right {
+  right: 100%;
+  left: auto; }
+
+.transition .slide.shift-left {
+  left: 100%;
+  right: auto; }
+
+/**
+ * This sets the CSS properties that will animate. We set the
+ * transition-duration property dynamically via JS.
+ * We use the browser's default transition-timing-function
+ * for simplicity's sake
+ * 
+ * It is important to note that we are using CodePen's inbuilt
+ * CSS3 property prefixer. For your own projects, you will need
+ * to prefix the transition and transform properties here to ensure
+ * reliable support across browsers
+ *
+ */
+.transition .slide {
+  transition-property: right, left, margin; }
 
 /*---------------------------------------------------/
 /                                                    /

@@ -33,7 +33,6 @@ $(function () {
             $(this).children().hide(400);
             $(this).toggleClass('wow fadeOut').slideUp('slow').hide(400);
         });
-
     });
 
     // Adding the mobile menu functionality
@@ -41,107 +40,7 @@ $(function () {
             $('.mobilemenu').slideToggle();
     });
 
-    /*// Slideshow controls
-    var wait = false,
-        waitDelay = (wait) ? 1000 : 0;
-
-    // Next Arrow Code
-    $('.arrow-next').click(function () {
-
-        // Handle Slides
-        var currentSlide = $('.active-slide');
-        var nextCount = currentSlide.next('.slide');
-        var nextSlide = nextCount.length == 0 ? currentSlide.next() : $('.slide').first();
-
-        var currentDot = $('.active-dot');
-        var nextDot = nextCount.length == 0 ? currentDot.next() : $('.dot').first();
-
-        var currentSlideTitle = $('.active-title');
-        var nextSlideTitle = nextCount.length == 0 ? currentSlideTitle.next() : $('slide-title').first();
-
-        currentSlide.fadeIn().removeClass('active-slide');
-        nextSlide.fadeOut().addClass('active-slide');
-
-        currentDot.removeClass('active-dot');
-        nextDot.addClass('active-dot');
-
-        currentSlideTitle.hide().removeClass('active-title');
-        nextSlideTitle.show().addClass('active-title');
-
-        wait = true;
-    });
-
-    // Previous Arrow Code
-    $('.arrow-prev').click(function () {
-
-        // Handle Slides
-        var currentSlide = $('.active-slide');
-        var prevCount = currentSlide.next('.slide');
-        var prevSlide = prevCount.length == 0 ? currentSlide.prev() : $('.slide').last();
-
-        var currentDot = $('.active-dot');
-        var prevDot = prevCount.length == 0 ? currentDot.prev() : $('.dot').last();
-
-        var currentSlideTitle = $('.active-title');
-        var prevSlideTitle = prevCount.length == 0 ? currentSlideTitle.prev() : $('.slide-title').last();
-
-        currentSlide.fadeIn().removeClass('active-slide');
-        prevSlide.fadeOut().addClass('active-slide');
-
-        currentDot.removeClass('active-dot');
-        prevDot.addClass('active-dot');
-
-        currentSlideTitle.hide().removeClass('active-title');
-        prevSlideTitle.show().addClass('active-title');
-
-        wait = true;
-
-    });
-
-    // Slideshow
-    /*$('.slider > .slide:gt(0)').hide();
-    var slideTotal = $('.slide').length;
-    var intervalDuration = (wait) ? slideTotal * 1000 : slideTotal * 2000;
-
-    setInterval(function () {
-
-        var currentSlide = $('.active-slide');
-        var nextSlide = currentSlide.next('.slide');
-
-        var currentDot = $('.active-dot');
-        var nextDot = currentDot.next('.dot');
-
-        var currentSlideTitle = $('.active-title');
-        var nextSlideTitle = currentSlideTitle.next('.slide-title');
-
-        if (currentSlide.data('toggle') === 'off' && slideCount <= 1) {
-            // This stops the slider if there's only one image
-        } else {
-
-            // If there is no next slide, we need to go back to the start
-            if ((nextSlide.length + nextDot.length + nextSlideTitle.length) === 0) {
-                nextSlide = $('.slide').first();
-                nextDot = $('.dot').first();
-                nextSlideTitle = $('.slide-title').first();
-            }
-
-            // Checking if the buttons were pressed
-                currentSlide.delay(waitDelay).fadeOut('slow').removeClass('active-slide');
-                nextSlide.delay(waitDelay).fadeIn('slow').addClass('active-slide');
-
-                currentDot.delay(waitDelay).removeClass('active-dot');
-                nextDot.delay(waitDelay).addClass('active-dot');
-
-                currentSlideTitle.delay(waitDelay).hide().removeClass('active-title');
-                nextSlideTitle.delay(waitDelay).show().addClass('active-title');
-
-                if (wait) {
-                    wait = false;
-                }
-
-        }
-    }, intervalDuration);*/
-
+    // SLIDESHOW
     // Some pages have only 1 image, so, we need to hide the controllers
     // Hide slide controls is data-toggle='off'
     $(function () {
@@ -149,6 +48,18 @@ $(function () {
         var sliderCheck = $('.slider').children();
         if (currentSlide.data('toggle') === 'off' && sliderCheck.length <= 1) {
             $('.slider-nav', '.product-slider-nav', '.slider-control', '.product-slider-control').hide();
+        } else {
+            // Custom options for the carousel
+            var slideCount = $('.slide').length;
+
+            var args = {
+                arrowRight : '.arrow-next', //A jQuery reference to the right arrow
+                arrowLeft : '.arrow-prev', //A jQuery reference to the left arrow
+                speed : 1000, //The speed of the animation (milliseconds)
+                slideDuration : slideCount * 2000 //The amount of time between slides, in ms
+            };
+
+            $('.slider').slider(args);
         }
     });
 

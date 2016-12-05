@@ -172,11 +172,29 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/assets\/js\/min\/slider-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/min\/min\/slider-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/assets\/js\/script.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/min\/script-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/slider.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/min\/slider-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -7830,6 +7848,15 @@
 		"oAP": "\/logo.png",
 		"oF": 0,
 		"opt": 0
+		},
+	"\/min\/zippy-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/min\/min\/zippy-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/page.php": {
 		"ft": 8192,

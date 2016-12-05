@@ -34,8 +34,7 @@
      */
     function _slider(element, settings){
       this.defaults = {
-		slideCount: 3,
-        slideDuration: slideCount * 1000,
+        slideDuration: 4000,
         speed: 500,
         arrowRight: '.arrow-next',
         arrowLeft: '.arrow-prev'
@@ -59,6 +58,7 @@
       // Here we'll hold a reference to the DOM element passed in
       // by the $.each function when this plugin was instantiated
       this.$el = $(element);
+      this.$ctrl = $('.slider-control');
       
       // Ensure that the value of 'this' always references the slider
       this.changeSlide = $.proxy(this.changeSlide,this);
@@ -157,9 +157,9 @@
 	 *
 	 */ 
 	slider.prototype.build = function(){
-		var $indicators = this.$el.append('<ul class="slider-dots" >').find('.dot');
+		//var $indicators = this.$el.append('<ul class="slider-dots" >').find('.dot');
 		this.totalSlides = this.$el.find('.slide').length;
-		for(var i = 0; i < this.totalSlides; i++) $indicators.append('<li data-index='+i+'>');
+		//for(var i = 0; i < this.totalSlides; i++) $indicators.append('<li data-index='+i+'>');
 	};
 	
 	/**
@@ -171,7 +171,8 @@
 	 */ 
 	slider.prototype.activate = function(){
 		this.$currSlide = this.$el.find('.slide').eq(0);
-		this.$el.find('.dot').eq(0).addClass('active-dot');
+        this.$ctrl.find('.slide-title').eq(0);
+		this.$ctrl.find('.dot').eq(0);
 	};
 	
 	/**
@@ -185,7 +186,7 @@
 		$('body')
 			.on('click',this.settings.arrowRight,{direction:'right'},this.changeSlide)
 			.on('click',this.settings.arrowLeft,{direction:'left'},this.changeSlide)
-			.on('click','.slider-dots li',this.changeSlide);
+			.on('click','.dot',this.changeSlide);
 	};
 	
 	/**
@@ -248,7 +249,7 @@
 		//Active the next slide to scroll into view
 		var $nextSlide = this.$el.find('.slide').eq(this.currSlide).addClass(direction + ' active');
 		
-    if (!this.csstransitions){
+        if (!this.csstransitions){
 			this._jsAnimation($nextSlide,direction);
 		} else {
 			this._cssAnimation($nextSlide,direction);
@@ -284,10 +285,10 @@
 		
     // If the event was triggered by a slide indicator, we store the data-index value of that indicator
 		var index = (typeof e !== 'undefined' ? $(e.currentTarget).data('index') : undefined);
-		
-		//Logic for determining the next slide
+
+		// Logic for determining the next slide
 		switch(true){
-			//If the event was triggered by an indicator, we set the next slide based on index
+			// If the event was triggered by an indicator, we set the next slide based on index
        case( typeof index !== 'undefined'):
 				if (this.currSlide == index){
 					this.startTimer();
@@ -335,6 +336,7 @@
 			this.removeCSSDuration();
 			this.$currSlide.removeClass('active shift-left shift-right');
 			this.$currSlide = $nextSlide.removeClass(direction);
+            this._updateTitles();
 			this._updateIndicators();
 			this.startTimer();
 		}.bind(this),100 + this.settings.speed);
@@ -369,11 +371,22 @@
 			_.$currSlide.removeClass('active js-reset-left').attr('style','');
 			//Cache the next slide after classes and inline styles have been removed
 			_.$currSlide = $nextSlide.removeClass(direction).attr('style','');
+            _._updateTitles();
 			_._updateIndicators();
 			_.startTimer();
 		});
 	};
 	
+    /**
+	 * Ensures the slide indicators are pointing to the currently active slide
+	 * @params	void
+	 * @returns	void
+	 *
+	 */
+	 slider.prototype._updateTitles = function(){
+		this.$ctrl.find('.slide-title').removeClass('active-title').eq(this.currSlide).addClass('active-title');
+	};
+
   /**
 	 * Ensures the slide indicators are pointing to the currently active slide
 	 * @params	void
@@ -381,7 +394,7 @@
 	 *
 	 */
 	slider.prototype._updateIndicators = function(){
-		this.$el.find('.indicators li').removeClass('active').eq(this.currSlide).addClass('active');
+		this.$ctrl.find('.dot').removeClass('active-dot').eq(this.currSlide).addClass('active-dot');
 	};
 	
 	/**
@@ -403,12 +416,3 @@
 
 });
 
-// Custom options for the carousel
-var args = {
-	arrowRight : '.arrow-right', //A jQuery reference to the right arrow
-	arrowLeft : '.arrow-left', //A jQuery reference to the left arrow
-	speed : 1000, //The speed of the animation (milliseconds)
-	slideDuration : 4000 //The amount of time between animations (milliseconds)
-};
-
-$('.slider').Zippy(args);
