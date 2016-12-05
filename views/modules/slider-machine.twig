@@ -4,6 +4,22 @@
 
 {% block slidermachine %}
 
+<div tabindex="-1" class="modal fade" id="lightbox" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal">×</button>
+        <h3 class="modal-title">{{ post.title }}</h3>
+      </div>
+      <div class="modal-body text-center">
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal">{{__('Fechar', 'twheme')}}</button>
+      </div>
+    </div>
+  </div>
+</div>      
+
 <!-- SLIDER -->
 <div class="product-slider">
     <div class="row-spacer"></div>

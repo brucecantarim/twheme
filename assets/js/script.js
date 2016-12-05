@@ -81,7 +81,7 @@ $(function () {
     // Bootstrap Lightbox
     $('.lightbox').click(function () {
         var title = $(this).attr('title');
-        var src = $(this).children('img').attr("src");
+        var src = $(this).children('img').attr("data-target");
         var alt = $(this).children('img').attr("alt") || "";
         var $img = $('<img class="center-block img-responsive" alt="' + alt + '" src="' + src + '">');
         $('.modal-title').html(title);

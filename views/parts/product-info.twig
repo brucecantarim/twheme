@@ -2,6 +2,22 @@
 
 {% block productinfo %}
 
+<div tabindex="-1" class="modal fade" id="lightbox" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal">×</button>
+        <h3 class="modal-title">{{ post.title }}</h3>
+      </div>
+      <div class="modal-body text-center">
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal">{{__('Fechar', 'twheme')}}</button>
+      </div>
+    </div>
+  </div>
+</div>    
+
 <div class="container">
     <div class="row-spacer"></div><!-- /.row spacer -->
     <br/>
@@ -14,9 +30,7 @@
             <div class="row">
                 {% set images = post.gallery|split(',') %} {% for id in images|slice(0, 4) %} {# This is where I impose the image limit #}
                 <div class="col-md-3 lightbox" title="{{ post.title }}">
-                    <a href="{{Image(id).src}}" title="{{ post.title }}" target="_blank">
-                        <img class="img-responsive no-padding" src="{{Image(id).src|resize(300, 300) }}" alt="{{ post.title }}" />
-                    </a>
+                    <img class="img-responsive no-padding" data-target="{{Image(id).src}}" src="{{Image(id).src|resize(300,300)}}" alt="{{ post.title }}" />
                 </div>
                 {% endfor %}
             </div><!-- /.row -->
