@@ -26,7 +26,7 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
-@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700';
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700";
 html {
   font-family: sans-serif;
   /* 1 */
@@ -598,7 +598,9 @@ footer {
     color: #ffc425;
     margin-left: 0.5em;
     margin-right: 0.2em;
-    cursor: pointer; }
+    cursor: pointer;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
   @media (min-width: 1200px) {
     .contact {
       padding-top: 1.5em;
@@ -639,6 +641,9 @@ footer {
       width: 100%;
       font-family: "Open Sans Condensed", sans-serif;
       position: relative;
+      top: -2em; } }
+  @media (min-width: 1600px) {
+    .mainmenu {
       top: -3em; } }
 
 .mobilemenu, .submenu-mobile {
@@ -658,16 +663,19 @@ footer {
   display: inline-block;
   margin: 1em;
   text-transform: uppercase;
-  font-size: 1.1em;
+  font-size: .9em;
   font-weight: bold; }
   .menuitem a, .menuitem a:visited {
     color: white; }
   .menuitem a:hover, .menuitem a:active {
     color: #ffc425;
     text-decoration: none; }
-  @media only screen and (min-width: 321px) and (max-width: 1600px) {
+  @media (min-width: 1200px) {
     .menuitem {
-      font-size: 0.9em; } }
+      font-size: 1em; } }
+  @media (min-width: 1600px) {
+    .menuitem {
+      font-size: 1.2em; } }
 
 .menuitem-mobile {
   display: block;
@@ -686,11 +694,16 @@ footer {
   width: 100%;
   display: none;
   z-index: 99;
-  padding-top: 40px;
-  padding-bottom: 40px; }
-  @media only screen and (min-width: 321px) and (max-width: 1600px) {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: .9em; }
+  @media (min-width: 1200px) {
     .submenu {
-      font-size: 0.9em; } }
+      font-size: 1em; } }
+  @media (min-width: 1600px) {
+    .submenu {
+      font-size: 1.1em;
+      top: 9em; } }
 
 .submenu-mobile {
   display: none; }
@@ -698,24 +711,30 @@ footer {
 .submenuitem {
   list-style-type: none;
   color: white;
-  font-size: 1.1em;
+  font-size: 0.9em;
   font-weight: bold; }
   .submenuitem h4 {
     color: white; }
   .submenuitem h4 small {
     color: white;
-    font-weight: normal; }
+    font-weight: normal;
+    font-size: 0.9em; }
   .submenuitem a, .submenuitem a:visited {
     color: white;
     text-decoration: none; }
   .submenuitem a:hover, .submenuitem a:active {
     color: #ffc425;
     text-decoration: none; }
-  @media only screen and (min-width: 321px) and (max-width: 1600px) {
+  @media (min-width: 1200px) {
     .submenuitem {
-      font-size: 0.9em; }
+      font-size: 1em; }
       .submenuitem h4 {
         font-size: 1em; } }
+  @media (min-width: 1600px) {
+    .submenuitem {
+      font-size: 1.1em; }
+      .submenuitem h4 {
+        font-size: 1.1em; } }
 
 .navbar, .submenu {
   border-bottom: 5px solid #ffc425; }
@@ -1122,18 +1141,20 @@ footer {
 .btn-yellow, .btn-square, .btn-rightbar {
   background-color: #ffc425;
   color: black;
-  padding: 0 20px; }
+  padding: 0 .3em;
+  height: 1.5em; }
 
 .btn-rightbar {
-  width: 20px;
-  height: 20px;
+  width: 1em;
+  height: .2em;
   display: inline-block;
-  padding: 5px;
-  margin: auto 0.3em; }
+  padding: .2em;
+  margin: auto .3em; }
 
-.btn-yellow h5 {
+.btn-yellow h6 {
   text-align: center;
-  color: black; }
+  color: black;
+  margin: 0; }
 
 .btn-square {
   width: 15px;
@@ -1186,6 +1207,10 @@ footer {
   color: black;
   width: 6em;
   height: 6em; }
+  @media (min-width: 1200px) {
+    .body-circle, .footer-circle {
+      width: 6em;
+      height: 6em; } }
 
 /*---------------------------------------------------/
 /                                                    /
@@ -1249,11 +1274,10 @@ footer {
 .body-content {
   background-color: white;
   width: 100%;
-  padding-top: 5em;
-  padding-bottom: 5em; }
+  padding: 5em 1em; }
   .body-content p {
     font-size: 12pt;
-    text-align: left;
+    text-align: justify;
     text-indent: 3em; }
   .body-content .size-large {
     margin: 0 auto; }
@@ -1270,8 +1294,11 @@ footer {
   background-color: #5F6062;
   border-top: 5px solid #ffc425;
   min-height: 10em;
-  padding: 10px 10em;
+  padding: 10px 1em;
   color: white; }
+  @media (min-width: 1200px) {
+    .footer-content {
+      padding: 10px 10em; } }
   .footer-content h5 {
     letter-spacing: 3px;
     margin-bottom: 0.5em;
@@ -1283,7 +1310,11 @@ footer {
     margin: 0.1em 0 0 0;
     font-weight: bold; }
   .footer-content p {
-    color: white; }
+    color: white;
+    font-size: .7em; }
+    @media (min-width: 1200px) {
+      .footer-content p {
+        font-size: 1em; } }
   .footer-content span {
     font-family: "open sans condensed", sans-serif;
     font-size: 0.9em; }
@@ -1291,19 +1322,19 @@ footer {
       border: 1px dashed #ffc425 !important; }
 
 .footer-circle {
-  margin-top: 2em;
-  width: 3em;
-  height: 3em; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+  margin-top: 3em;
+  width: 2em;
+  height: 2em; }
+  @media (min-width: 1600px) {
     .footer-circle {
-      width: 2em;
-      height: 2em; } }
+      width: 3em;
+      height: 3em; } }
 
 .footer-circle i {
-  padding-top: 1em; }
-  @media only screen and (min-width: 321px) and (max-width: 1265px) {
+  padding-top: 0.5em; }
+  @media (min-width: 1600px) {
     .footer-circle i {
-      padding-top: 0.5em; } }
+      padding-top: 1em; } }
 
 .color-main {
   color: #ffc425 !important; }

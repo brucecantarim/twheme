@@ -12,8 +12,12 @@
     background-color: $color-footer;
     border-top: 5px solid $color-main;
     min-height: 10em;
-    padding: 10px 10em;
+    padding: 10px 1em;
     color: white;
+
+    @include breakpoint($screen-lg-min) {
+        padding: 10px 10em;
+    }
     
         h5 {
             letter-spacing: 3px;
@@ -32,6 +36,11 @@
         }
         p {
             color: $color-white;
+            font-size: .7em;
+
+            @include breakpoint($screen-lg-min) {
+                font-size: 1em;
+            }
         }
         span { 
             font: { family: "open sans condensed", sans-serif; size: 0.9em; }
@@ -40,18 +49,20 @@
 }
 
 .footer-circle {
-    margin-top: 2em;
-    width: 3em;
-    height: 3em;
-    @media only screen and (min-width: 321px) and (max-width: 1265px) {
-        width: 2em;
-        height: 2em;
+    margin-top: 3em;
+    width: 2em;
+    height: 2em;
+    
+    @include breakpoint($screen-xl-min) {
+        width: 3em;
+        height: 3em;
     }
 }
 
 .footer-circle i {
-    padding-top: 1em;
-    @media only screen and (min-width: 321px) and (max-width: 1265px) {
-        padding-top: 0.5em;
+    padding-top: 0.5em;
+    
+    @include breakpoint($screen-xl-min) {
+        padding-top: 1em;
     }
 }

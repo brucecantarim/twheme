@@ -1,7 +1,13 @@
 .body-circle, .footer-circle {
+
     border-radius: 50%;
     background-color: $color-main;
     color: $color-copy;
     width: 6em;
     height: 6em;
+    
+    @include breakpoint($screen-lg-min) {
+        width: 6em;
+        height: 6em;
+    }
 }

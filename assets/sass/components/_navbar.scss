@@ -107,6 +107,9 @@
             margin-left: 0.5em;
             margin-right: 0.2em;
             cursor: pointer;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
         }
 
     @include breakpoint($screen-lg-min) {
@@ -162,11 +165,16 @@
 // --------------------------------------------------
 .mainmenu {
     display: none;
+    
     @include breakpoint($screen-lg-min) {
         display: inline-block;
         width: 100%;
         font-family: $font-title;
         position: relative;
+        top: -2em;
+    }
+    
+    @include breakpoint($screen-xl-min) {
         top: -3em;
     }
 }
@@ -191,13 +199,18 @@
     display: inline-block;
     margin: 1em;
     text-transform: uppercase;
-    font: { size: 1.1em; weight: bold;}
+    font: { size: .9em; weight: bold;}
         a {
             &, &:visited { color: $color-link; }
             &:hover, &:active { color: $color-hover; text-decoration: none; }
             }
-    @media only screen and (min-width: 321px) and (max-width: 1600px) {
-        font: { size: 0.9em }
+    
+    @include breakpoint($screen-lg-min) {
+        font: { size: 1em }
+    }
+
+    @include breakpoint($screen-xl-min) {
+        font: { size: 1.2em }
     }
 }
 
@@ -220,10 +233,18 @@
     width: 100%;
     display: none;
     z-index: 99;
-    padding: {top: 40px; bottom: 40px;}
-    @media only screen and (min-width: 321px) and (max-width: 1600px) {
-        font: { size: 0.9em }
+    padding: {top: 1em; bottom: 1em;}
+    font-size: .9em;
+    
+    @include breakpoint($screen-lg-min) {
+        font: { size: 1em }
     }
+
+    @include breakpoint($screen-xl-min) {
+        font: { size: 1.1em }
+        top: 9em;
+    }
+    
 }
 
 .submenu-mobile {
@@ -234,19 +255,26 @@
 .submenuitem {
     list-style-type: none;
     color: $color-link;
-    font: { size: 1.1em; weight: bold;}
+    font: { size: 0.9em; weight: bold;}
         h4 { color: $color-link };
         h4 small {
             color: $color-link;
             font-weight: normal;
+            font-size: 0.9em;
         }
         a {
             &, &:visited {color: $color-link; text-decoration: none; }
             &:hover, &:active { color: $color-hover; text-decoration: none; }
         }
-    @media only screen and (min-width: 321px) and (max-width: 1600px) {
-        font: { size: 0.9em };
+    
+    @include breakpoint($screen-lg-min) {
+        font: { size: 1em };
         h4 { font-size: 1em };
+    }
+
+    @include breakpoint($screen-xl-min) {
+        font: { size: 1.1em };
+        h4 { font-size: 1.1em };
     }
 }
 

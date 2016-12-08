@@ -8,14 +8,14 @@
     <div class="container-flex">
         <div class="row">
             {% for footersection in footermenu.get_items %}
-            <div class="col-md-2">
+            <div class="col-xs-3 col-md-2">
                 <h5>{{footersection.title|upper}}</h5>
                 {% for footerlink in footersection.get_children %}
                 <a href="{{footerlink.link}}">{{footerlink.title|capitalize}}</a>
                 {% endfor %}
             </div>
             {% endfor %}
-            <div class="col-md-2">
+            <div class="col-xs-3 col-md-2">
                 <h5>Eventos</h5>
                 <a href="#">Próximos Eventos:</a>
                 <span>
@@ -34,32 +34,32 @@
                         </div>-->
                 </span>
             </div>
-            <div class="col-md-4 pull-right">
-                <div class="col-md-6">
+            <div class="col-xs-12 col-md-4 pull-right">
+                <div class="col-xs-6 col-md-6">
                 </div>
-                <div class="col-md-6">
-                    <div class="col-md-3">
+                <div class="col-xs-6 col-md-6">
+                    <div class="col-xs-3 col-md-3">
                         <a href="https://www.facebook.com/VermeerBrasil" target="_blank">
                             <div class="footer-circle center-block text-center">
                                 <i class="fa fa-facebook"></i>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-xs-3 col-md-3">
                         <a href="http://www.instagram.com/VermeerBrasil" target="_blank">
                             <div class="footer-circle center-block text-center">
                                 <i class="fa fa-instagram"></i>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-xs-3 col-md-3">
                         <a href="https://www.linkedin.com/company/vermeer-latin-america" target="_blank">
                             <div class="footer-circle center-block text-center">
                                 <i class="fa fa-linkedin"></i>
                             </div>
                         </a>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-xs-3 col-md-3">
                         <a href="http://www.youtube.com/VermeerLatinAmerica" target="_blank">
                             <div class="footer-circle center-block text-center">
                                 <i class="fa fa-youtube"></i>
@@ -73,10 +73,10 @@
             <div class="col-md-12">
                 <hr/>
             </div>
-            <div class="col-md-6 text-left">
+            <div class="col-xs-6 col-md-6 text-left">
                 <p>R. Francisco Juliato, 79 - Vale Verde, Valinhos - SP, 13279-000</p>
             </div>
-            <div class="col-md-6 text-right">
+            <div class="col-xs-6 col-md-6 text-right">
                 <p>© 2016 Vermeer Brasil. Todos os direitos reservados.</p>
             </div>
         </div>

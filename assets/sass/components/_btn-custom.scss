@@ -17,20 +17,22 @@
 .btn-yellow, .btn-square, .btn-rightbar {
     background-color: $color-main;
     color: $color-copy;
-    padding: 0 20px;
+    padding: 0 .3em;
+    height: 1.5em;
 }
 
 .btn-rightbar {
-    width: 20px;
-    height: 20px;
+    width: 1em;
+    height: .2em;
     display: inline-block;
-    padding: 5px;
-    margin: auto 0.3em;
+    padding: .2em;
+    margin: auto .3em;
 }
 
-.btn-yellow h5 {
+.btn-yellow h6 {
     text-align: center;
     color: $color-black;
+    margin: 0;
 }
 
 .btn-square {
