@@ -256,15 +256,19 @@
     list-style-type: none;
     color: $color-link;
     font: { size: 0.9em; weight: bold;}
+        a {
+            font-weight: normal !important;
+            &, &:visited {color: $color-link; text-decoration: none; }
+            &:hover, &:active { color: $color-hover; text-decoration: none; }
+        }
         h4 { color: $color-link };
         h4 small {
             color: $color-link;
-            font-weight: normal;
+            font-weight: normal !important;
             font-size: 0.9em;
         }
-        a {
-            &, &:visited {color: $color-link; text-decoration: none; }
-            &:hover, &:active { color: $color-hover; text-decoration: none; }
+        h4 a {
+            font-weight: bold !important;
         }
     
     @include breakpoint($screen-lg-min) {

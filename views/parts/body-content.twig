@@ -50,7 +50,7 @@
                 {% set subitem_images = subitem_images|merge([subitemlist.mainimg]) %}
                 {% endfor %}#}
                 {% set subitem_image = subitem.posts[0].mainimg %}
-                <div class="square-thumb">
+                <div class="square-thumb no-padding">
                     {% if subitem_image %}
                     <img class="img-responsive" src="{{Image(subitem_image).src}}"/>
                     {% else %}
@@ -94,7 +94,7 @@
                     <div class="col-md-{{coloffset}}"></div>
                 {% endif %}
             {% for section in sections %}
-            <div class="col-md-{{colsize}} text-center">
+            <div class="col-md-{{colsize}} text-center home-body">
                 
                 <a href="{{ TimberPost(section.pagelink).link }}">
                 <div class="body-circle center-block">

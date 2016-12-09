@@ -26,7 +26,7 @@
  * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
  *  `em` units.
  */
-@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700";
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700';
 html {
   font-family: sans-serif;
   /* 1 */
@@ -713,18 +713,22 @@ footer {
   color: white;
   font-size: 0.9em;
   font-weight: bold; }
+  .submenuitem a {
+    font-weight: normal !important; }
+    .submenuitem a, .submenuitem a:visited {
+      color: white;
+      text-decoration: none; }
+    .submenuitem a:hover, .submenuitem a:active {
+      color: #ffc425;
+      text-decoration: none; }
   .submenuitem h4 {
     color: white; }
   .submenuitem h4 small {
     color: white;
-    font-weight: normal;
+    font-weight: normal !important;
     font-size: 0.9em; }
-  .submenuitem a, .submenuitem a:visited {
-    color: white;
-    text-decoration: none; }
-  .submenuitem a:hover, .submenuitem a:active {
-    color: #ffc425;
-    text-decoration: none; }
+  .submenuitem h4 a {
+    font-weight: bold !important; }
   @media (min-width: 1200px) {
     .submenuitem {
       font-size: 1em; }
@@ -1295,6 +1299,10 @@ footer {
   .body-content .container, .body-content .container-flex {
     padding-top: 0 !important;
     padding-bottom: 0 !important; }
+
+.home-body p {
+  text-align: left;
+  text-indent: 0 !important; }
 
 /*---------------------------------------------------/
 /                                                    /
