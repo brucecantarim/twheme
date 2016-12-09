@@ -13,10 +13,10 @@
             <div class="embed-responsive embed-responsive-16by9 youtube">
                 <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/{{video}}" allowfullscreen="allowfullscreen"></iframe>
             </div>
-        </div>
+        </div><!-- /.col-md-6 -->
         {% endfor %}
         {% endif %}
-    </div>
+    </div><!-- /.col-md-4 -->
     
     <div class="col-md-4">
         {% if post.gallery %}
@@ -33,7 +33,7 @@
         </div><!-- /.col -->
         {% endfor %}
         {% endif %}
-    </div>
+    </div><!-- /.col-md-4 -->
         
     <div class="col-md-4">
         {% if agenda %}
@@ -92,7 +92,7 @@
             <div class="col-md-1 bg-color-grey"></div>
             <div class="col-md-1 bg-color-grey"></div>
             <div class="col-md-1 bg-color-grey"></div>
-        </div>    
-    </div>
-    {% endif %}
+        </div>
+        {% endif %}    
+    </div><!-- /.col -->
 </div><!-- /.row -->

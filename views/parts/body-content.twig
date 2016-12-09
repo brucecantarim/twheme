@@ -18,20 +18,20 @@
                     <br/><br/>
                     <div>
                         <a id="#contact-jump"></a>
-                        <button data-toggle="collapse" data-target="#contact-form" class="accordion-button btn-flex text-center"></i>
+                        {#<button data-toggle="collapse" data-target="#contact-form" class="accordion-button btn-flex text-center"></i>
                         <h4>{{__('Entre em contato e solicite o seu orçamento', 'twheme')|e }}</h4>
                         </button>
-                        <div id="contact-form" class="collapse wow fadeIn">
+                        <div id="contact-form" class="collapse wow fadeIn">#}
                             {% block contactform %}
                                 {% include 'contact-form.twig' %}
                             {% endblock contactform %}
-                        </div>
+                        {#</div>#}
                     </div><!-- /.col -->
             
             {% elseif post.post_type == 'page' %}
                 <!-- CATEGORY PAGE BODY -->
                 <div class="col-md-12 text-justify">
-                    <h1>{{post.title}}</h1><br/>
+                    <h1>{{post.title}}</h1>
                     <hr/>
                     {{ post.content|raw|wpautop }}
                 </div><!-- /.col-md-12 -->

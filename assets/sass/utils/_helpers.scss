@@ -44,6 +44,10 @@
     top: 0;
     height: 10em;
     margin: 0;
+
+    @include breakpoint($screen-xl-min) {
+        height: 9em;
+    }
 }
 
 .full-flex {
@@ -84,4 +88,16 @@
 .after-fold {
     position: relative;
     bottom: 0;
+}
+
+.inline {
+    display: inline !important;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";    
+    display: table;
+}
+.clearfix:after {
+    clear: both;
 }

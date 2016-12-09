@@ -1180,6 +1180,14 @@ footer {
   min-width: 10px;
   min-height: 10px; }
 
+#btn-fold {
+  position: absolute;
+  bottom: 3em;
+  left: 3em;
+  padding: 0 1em;
+  height: 3em;
+  z-index: 99; }
+
 /*---------------------------------------------------------------
 
     This is the accordion class file. Don't forget to use it
@@ -1274,7 +1282,7 @@ footer {
 .body-content {
   background-color: white;
   width: 100%;
-  padding: 5em 1em; }
+  padding: 2em 1em !important; }
   .body-content p {
     font-size: 12pt;
     text-align: justify;
@@ -1282,7 +1290,11 @@ footer {
   .body-content .size-large {
     margin: 0 auto; }
   .body-content h1 {
-    color: #ffc425; }
+    color: #ffc425;
+    margin: 0 !important; }
+  .body-content .container, .body-content .container-flex {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; }
 
 /*---------------------------------------------------/
 /                                                    /
@@ -1457,6 +1469,9 @@ footer {
   top: 0;
   height: 10em;
   margin: 0; }
+  @media (min-width: 1600px) {
+    .row-spacer {
+      height: 9em; } }
 
 .full-flex {
   width: 100%;
@@ -1489,3 +1504,13 @@ footer {
 .after-fold {
   position: relative;
   bottom: 0; }
+
+.inline {
+  display: inline !important; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }

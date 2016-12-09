@@ -5,24 +5,17 @@
 
 {% if post.type == 'maquina' %}
 <div class="row-spacer"></div><!-- /.row spacer -->
-<div class="row">
+<div class="row clearfix">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInUp">
             <h2 class="more-title">{{__("Confira outros produtos do nosso catálogo:", "twheme")}}</h2>
             <hr/>
         </div>
-{% for product in maquinas %}
+{% for product in category.get_posts({'order': 'rand'}) %}
     {% if product.title|sanitize != post.title|sanitize %}
-        {% set postterms = post.get_terms[0] %}
-        {% set postparent = TimberTerm(postterms.parent) %} 
-        {% set productterms = product.get_terms[0] %}
-        {% set productparent = TimberTerm(productterms.parent) %}
 
-        {#!<br/><br/>{{ postparent.name|print_r }}<br/><br/>?<br/><br/>{{ productparent.name|print_r }}<br/><br/>#}
-
-        {% if postparent.name == productparent.name %}
         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
             <h3>{{ product.title }}</h3>
-            <div class="product-thumbnail">
+            <div class="product-thumbnail" width="300px" height="300px">
                 <a href="{{ product.link }}">
                 {% if product.mainimg %}
                     {% set id = product.mainimg %}
@@ -33,7 +26,7 @@
                 </a>
             </div><!-- /.product-thumbnail -->
         </div><!-- /.col -->
-        {% endif %}
+       
         {#{% else %}
         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
             <h3>{{ product.title }}</h3>
@@ -71,7 +64,7 @@
                         {% set id = product.mainimg %}
                         <img class="img-responsive" src="{{ Image(id).src }}"/>
                     {% elseif product.thumbnail %}
-                        <img class="img-responsive" src="{{ product.thumbnail.src }}"/>
+                        <img class="img-responsive" src="{{ product.thumbnail.src|resize(300,300) }}"/>
                     {% else %}
                         <img class="img-responsive" src="http://placehold.it/300?text={{__('SEMINOVO', 'twheme')}}"/>
                     {% endif %}
