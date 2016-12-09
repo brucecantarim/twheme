@@ -91,11 +91,92 @@
         {% endif %}
         
     {% endfor %}
+
+    {% elseif post.type == 'locacao' or post.title|lower == 'locação' %}
+    {% if post.type == 'locacao' %}
+    <div class="row-spacer"></div><!-- /.row spacer -->
+    {% endif %}
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInUp">
+            <h2 class="more-title">{{__("Confira também:", "twheme")}}</h2>
+        </div>
+    {% for product in locacao|slice(0, 8) %}
+        
+        {% if product.title != post.title %}
+            <a href="{{ product.link }}">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight background-color-grey">
+                <h3 >{{ product.title }}</h3>
+                <div class="product-thumbnail">
+                    {% if product.mainimg %}
+                        {% set id = product.mainimg %}
+                        <img class="img-responsive" src="{{ Image(id).src }}"/>
+                    {% elseif product.thumbnail %}
+                        <img class="img-responsive" src="{{ product.thumbnail.src|resize(300,300) }}"/>
+                    {% else %}
+                        <img class="img-responsive" src="http://placehold.it/300?text={{__('SEMINOVO', 'twheme')}}"/>
+                    {% endif %}
+                    <div class="col-md-12 bg-color-grey">
+                    <p>{{product.content|slice(0, 150)}}</p>
+                    </div>
+                    <div class="col-md-12 bg-color-dark-grey">
+                        <h4><small class="color-black">{{__('Número de Série:', 'twheme')}} </small>{{product.serialnumber}}</h3>
+                    </div><!-- /.col-md-12 -->
+                    <div class="col-md-12 bg-color-grey">
+                        <h4><small class="color-black">{{__('Ano:', 'twheme')}} </small>{{product.year}}</h3>
+                    </div><!-- /.col-md-12 -->
+                    <div class="col-md-12 bg-color-dark-grey">
+                        <h4><small class="color-black">{{__('Horímetro:', 'twheme')}} </small>{{product.hours}} {{__('horas', 'twheme')|lower}}</h3>
+                    </div><!-- /.col-md-12 -->
+                    <div class="col-md-12 bg-color-grey">
+                        <h3 class="text-right">R$ {{product.price}} por mês</h3>
+                    </div><!-- /.col-md-12 -->
+                </div><!-- /.product-thumbnail -->
+            </div><!-- /.col -->
+            </a>
+        {% else %}
+                        
+        {% endif %}
+
+        {% endfor %}
+
+
+        {% elseif post.type == 'oferta' or post.title|lower == 'ofertas' %}
+    {% if post.type == 'oferta' %}
+    <div class="row-spacer"></div><!-- /.row spacer -->
+    {% endif %}
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInUp">
+            <h2 class="more-title">{{__("Confira as nossas ofertas:", "twheme")}}</h2>
+        </div>
+    {% for product in ofertas|slice(0, 8) %}
+        
+        {% if product.title != post.title %}
+            <a href="{{ product.link }}">
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight background-color-grey">
+                <h3 >{{ product.title }}</h3>
+                <div class="product-thumbnail">
+                    {% if product.mainimg %}
+                        {% set id = product.mainimg %}
+                        <img class="img-responsive" src="{{ Image(id).src }}"/>
+                    {% elseif product.thumbnail %}
+                        <img class="img-responsive" src="{{ product.thumbnail.src|resize(300,300) }}"/>
+                    {% else %}
+                        <img class="img-responsive" src="http://placehold.it/300?text={{__('OFERTA', 'twheme')}}"/>
+                    {% endif %}
+                </div><!-- /.product-thumbnail -->
+            </div><!-- /.col -->
+            </a>
+        {% else %}
+                        
+        {% endif %}
+        
+    {% endfor %}
+
     {% endif %}
        
         </div><!-- /.row -->
     </div><!-- /.container -->
-    {% if post.title|lower == 'seminovos' %}
+    {% if post.title|lower == 'seminovos' or post.title|lower == 'locacao' or post.title|lower == 'oferta' %}
         <div class="row-spacer"></div><!-- /.row spacer -->
     {% endif %}
 </div><!-- /.body-content -->

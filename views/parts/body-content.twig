@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             
-            {% if post.post_type == 'maquina' or post.post_type == 'seminovo' %}
+            {% if post.post_type == 'maquina' or post.post_type == 'seminovo' or post.post_type == 'locacao' %}
                 <!-- MACHINE BODY -->    
                 <div class="col-md-12 text-justify">
                     <h3>{{__('ESPECIFICAÇÕES TÉCNICAS', 'twheme')}}</h3>
@@ -28,7 +28,7 @@
                         {#</div>#}
                     </div><!-- /.col -->
             
-            {% elseif post.post_type == 'page' %}
+            {% elseif post.post_type == 'page' or post.post_type == 'oferta'%}
                 <!-- CATEGORY PAGE BODY -->
                 <div class="col-md-12 text-justify">
                     <h1>{{post.title}}</h1>
@@ -116,39 +116,11 @@
                     </div>
             {% else %}
             <!-- DEFAULT BODY CONTENT -->
-            <div class="col-md-3 text-center col-left">
-                <a href="{{site.url}}/seminovos/"><div class="body-circle center-block">
-                    <img src="assets/img/SEMINOVOS-01.svg"/>
-                </div>
-                <h3>Seminovos</h3></a>
-                <br/>
-                <p>Confira aqui o nosso catálogo de equipamentos Vermeer de segunda mão numa variedade de modelos. Comprando conosco, você tem a segurança de que o seu equipamento seminovo está pronto para encarar qualquer trabalho.</p>
-            </div>
-            <div class="col-md-3 text-center col-left">
-                <div class="body-circle center-block">
-                    <img src="assets/img/ALUGUEL-01.svg"/>
-                </div>
-                <h3>Aluguel</h3>
-                <br/>
-                <p>A Vermeer Brasil oferece aos seus clientes a possibilidade de alugar equipamentos. O aluguel de equipamento tem várias vantagens associadas e é uma ótima opção para usufruir das nossas máquinas.</p>
-            </div>
-            <div class="col-md-3 text-center col-left">
-                <div class="body-circle center-block">
-                    <img src="assets/img/OFERTAS-01.svg"/>
-                </div>
-                <h3>Ofertas</h3>
-                <br/>
-                <p>Se você estava esperando para adquirir um dos nossos produtos, agora é a melhor hora para comprar um equipamento Vermeer. Estas ofertas especiais estarão disponíveis somente por um curto período de tempo, então clique e confira!</p>
-            </div>
-            <div class="col-md-3 text-center col-none">
-                <div class="body-circle center-block">
-                    <img src="assets/img/FINANCIAMENTOS-01.svg"/>
-                </div>
-                <h3>Financiamento</h3>
-                <br/>
-                <p>No mercado para algo novo? Conte com a Vermeer e seus parceiros para opções de financiamento. Sabemos que você precisa de opções especialmente criadas para você.</p>
-            </div>
-            
+                <div class="col-md-12 text-justify">
+                    <h1>{{post.title}}</h1>
+                    <hr/>
+                    {{ post.content|raw|wpautop }}
+                </div><!-- /.col-md-12 -->
             {% endif %}
             
         </div><!-- /.row -->

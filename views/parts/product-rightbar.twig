@@ -56,7 +56,7 @@
             {% for id in images|slice(0, 6) %} {# This is where I impose the image limit #}
             <div class="col-md-4">
                 <div class="rightbar-image lightbox" title="{{ post.title }}">
-                    <img class="img-responsive product-gallery" data-target="{{Image(id).src}}" src="{{ Image(id).src|resize(300,300) }}" alt="{{ post.title }}"/>
+                    <img class="img-responsive product-gallery" data-target="{{Image(id).src}}" src="{{ Image(id).src }}" alt="{{ post.title }}"/>
                 </div><!-- /.lightbox -->
             </div><!-- /.col -->
             {% endfor %}   

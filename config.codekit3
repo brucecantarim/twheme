@@ -7969,10 +7969,22 @@
 		"oAP": "\/views\/layouts\/page-aluguel.twig",
 		"oF": 0
 		},
-	"\/views\/layouts\/page-gerencie-sua-frota.twig": {
+	"\/views\/layouts\/page-contrato-de-manutencao.twig": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/views\/layouts\/page-gerencie-sua-frota.twig",
+		"oAP": "\/views\/layouts\/page-contrato-de-manutencao.twig",
+		"oF": 0
+		},
+	"\/views\/layouts\/page-controle-de-frota.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/page-controle-de-frota.twig",
+		"oF": 0
+		},
+	"\/views\/layouts\/page-manutencao-preventiva.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/page-manutencao-preventiva.twig",
 		"oF": 0
 		},
 	"\/views\/layouts\/page-ofertas.twig": {
@@ -8035,6 +8047,12 @@
 		"oAP": "\/views\/layouts\/search.twig",
 		"oF": 0
 		},
+	"\/views\/layouts\/single-locacao.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/single-locacao.twig",
+		"oF": 0
+		},
 	"\/views\/layouts\/single-maquina.twig": {
 		"ft": 8192,
 		"oA": 2,
@@ -8045,6 +8063,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/views\/layouts\/single-noticia.twig",
+		"oF": 0
+		},
+	"\/views\/layouts\/single-oferta.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/single-oferta.twig",
 		"oF": 0
 		},
 	"\/views\/layouts\/single-product.twig": {
