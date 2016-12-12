@@ -39,3 +39,25 @@
         text-indent: 0 !important;
     }
 }
+
+.container-cat {
+
+    .square-thumb:after {
+        padding-bottom: 100% !important;
+    }
+
+    h4 {
+        position: relative;
+        top: -.2em;
+    }
+    
+    hr {
+        position: relative;
+        top: -1.2em;
+    }
+
+    ul {
+        position: relative;
+        top: -2.2em;
+    }
+}

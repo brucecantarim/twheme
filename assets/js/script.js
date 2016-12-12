@@ -64,19 +64,19 @@ $(function () {
     });
 
     // Accordion (Refer to jQueryUI documentation)
-    $(function () {
+    /*$(function () {
         $("#accordion").accordion();
-    });
+    });*/
 
     // Accordion Buttons Chevrons
-    $('.accordion-button').click(function () {
+    /*$('.accordion-button').click(function () {
         var chevron = $(this).children('.chevron');
         if (chevron.hasClass('glyphicon-chevron-down')) {
             $('.glyphicon-chevron-up').addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
             chevron.toggleClass('glyphicon-chevron-up');
             chevron.toggleClass('glyphicon-chevron-down');
         }
-    });
+    });*/
 
     // Bootstrap Lightbox
     $('.lightbox').click(function () {

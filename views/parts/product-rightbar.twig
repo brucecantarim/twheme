@@ -30,7 +30,7 @@
         {% set videos = videos_sanitized|split(',') %}
         {% for video in videos|slice(0, 2) %} {# This is where I impose the video limit #}
         <div class="row">
-            <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-8 col-md-offset-2">
                 <div class="embed-responsive embed-responsive-16by9 youtube">
                     <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/{{video}}" allowfullscreen="allowfullscreen"></iframe>
                 </div>
@@ -55,8 +55,8 @@
             {% set images = post.gallery|split(',') %}
             {% for id in images|slice(0, 6) %} {# This is where I impose the image limit #}
             <div class="col-md-4">
-                <div class="rightbar-image lightbox" title="{{ post.title }}">
-                    <img class="img-responsive product-gallery" data-target="{{Image(id).src}}" src="{{ Image(id).src }}" alt="{{ post.title }}"/>
+                <div class="lightbox square-thumb" title="{{ post.title }}">
+                    <img class="img-responsive product-gallery" data-target="{{Image(id).src|resize(1920)}}" src="{{ Image(id).src|resize(600,400) }}" alt="{{ post.title }}"/>
                 </div><!-- /.lightbox -->
             </div><!-- /.col -->
             {% endfor %}   

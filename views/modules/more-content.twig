@@ -10,12 +10,12 @@
             <h2 class="more-title">{{__("Confira outros produtos do nosso catálogo:", "twheme")}}</h2>
             <hr/>
         </div>
-{% for product in category.get_posts({'order': 'rand'}) %}
+{% for product in category.get_posts({'order': 'asc'}) %}
     {% if product.title|sanitize != post.title|sanitize %}
 
         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
             <h3>{{ product.title }}</h3>
-            <div class="product-thumbnail" width="300px" height="300px">
+            <div class="square-thumbl">
                 <a href="{{ product.link }}">
                 {% if product.mainimg %}
                     {% set id = product.mainimg %}
@@ -59,7 +59,7 @@
             <a href="{{ product.link }}">
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight background-color-grey">
                 <h4>{{ product.title }}</h4>
-                <div class="product-thumbnail">
+                <div class="square-thumb">
                     {% if product.mainimg %}
                         {% set id = product.mainimg %}
                         <img class="img-responsive" src="{{ Image(id).src }}"/>
@@ -106,7 +106,7 @@
             <a href="{{ product.link }}">
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight background-color-grey">
                 <h4>{{ product.title }}</h4>
-                <div class="product-thumbnail">
+                <div class="square-thumb">
                     {% if product.mainimg %}
                         {% set id = product.mainimg %}
                         <img class="img-responsive" src="{{ Image(id).src }}"/>
@@ -154,7 +154,7 @@
             <a href="{{ product.link }}">
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight background-color-grey">
                 <h4>{{ product.title }}</h4>
-                <div class="product-thumbnail">
+                <div class="square-thumb">
                     {% if product.mainimg %}
                         {% set id = product.mainimg %}
                         <img class="img-responsive" src="{{ Image(id).src }}"/>
