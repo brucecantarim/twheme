@@ -282,7 +282,6 @@
 	 *
 	 */
 	slider.prototype._next = function(e,direction){
-		
     // If the event was triggered by a slide indicator, we store the data-index value of that indicator
 		var index = (typeof e !== 'undefined' ? $(e.currentTarget).data('index') : undefined);
 
