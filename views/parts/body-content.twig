@@ -14,10 +14,10 @@
                 <div class="col-md-12 text-justify">
                     <h3>{{__('ESPECIFICAÇÕES TÉCNICAS', 'twheme')}}</h3>
                     <hr/>
-                    {{ post.specs }}
+                    {{ post.specs }}<a id="#contact-jump"></a>
+                    <div class="row-spacer"></div>
                     <br/><br/>
                     <div>
-                        <a id="#contact-jump"></a>
                         {#<button data-toggle="collapse" data-target="#contact-form" class="accordion-button btn-flex text-center"></i>
                         <h4>{{__('Entre em contato e solicite o seu orçamento', 'twheme')|e }}</h4>
                         </button>
@@ -81,6 +81,7 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
         <div class="container-flex">
+            <br/>
             <div class="row">
             {% set colsize = 12 // sections|length %}
                 {% if colsize == 2 %}

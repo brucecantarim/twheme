@@ -29,9 +29,9 @@
     <div class="slide" data-toggle="off" style="background: url({{ image.thumbnail.src }}); background-size: cover;">
     </div>
     {% endfor %}#}
-    {#<button onclick="location.href='{{post.link}}#contact-jump'" data-toggle="collapse" data-target="#contact-form" id="btn-fold" class="btn btn-yellow text-center"></i>
+    <button onclick="document.getElementById('#contact-jump').scrollIntoView({block: 'start', behavior: 'smooth'})" id="btn-fold" class="btn btn-yellow text-center"></i>
         <h4>{{__('Solicite o seu orçamento', 'twheme')|e }}</h4>
-    </button>#}
+    </button>
 </div>
 
 {# Should we display the slider control? #} 

@@ -22,7 +22,7 @@ class Mailer {
             $message = esc_textarea( $_POST["message_comments"] );
 
             // get the blog administrator's email address
-            $to = "bruce@cantarim.com";  //'brasil@vermeer.com';
+            $to = "brasil@vermeer.com";  //'brasil@vermeer.com';
 
             $subject = "Vermeer - Solicitação de orçamento: " . $equipment . " " . $model;
             $headers = "From: " . $name . " <" .$email . "> " . "\r\n";
