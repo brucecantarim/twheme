@@ -946,8 +946,11 @@ footer {
 
 #btn-fold {
   position: absolute;
-  bottom: 10%;
-  left: 3em; }
+  bottom: 3em;
+  left: 3em;
+  padding: 0 1em;
+  height: 3em;
+  z-index: 3; }
 
 .active-slide {
   z-index: 2;
@@ -1194,14 +1197,6 @@ footer {
 .next-menu {
   min-width: 10px;
   min-height: 10px; }
-
-#btn-fold {
-  position: absolute;
-  bottom: 3em;
-  left: 3em;
-  padding: 0 1em;
-  height: 3em;
-  z-index: 99; }
 
 /*---------------------------------------------------------------
 
@@ -1508,8 +1503,11 @@ footer {
 .row-spacer {
   width: 100%;
   top: 0;
-  height: 10em;
+  height: 4em;
   margin: 0; }
+  @media (min-width: 1200px) {
+    .row-spacer {
+      height: 10em; } }
   @media (min-width: 1600px) {
     .row-spacer {
       height: 9em; } }

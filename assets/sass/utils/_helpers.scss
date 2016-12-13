@@ -42,8 +42,12 @@
 .row-spacer {
     width: 100%;
     top: 0;
-    height: 10em;
+    height: 4em;
     margin: 0;
+
+    @include breakpoint($screen-lg-min) {
+        height: 10em;
+    }
 
     @include breakpoint($screen-xl-min) {
         height: 9em;

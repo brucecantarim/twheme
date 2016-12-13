@@ -1,13 +1,62 @@
 {% extends "base.twig" %}
 
 {% block content %}
+<div class="row-spacer"></div>
+<div class="body-content">
     <div class="container">
-        <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
-            <section class="article-content">
-                <h1 class="article-h1">{{ post.title }}</h1>
-                <h2 class="article-h2">{{ post.subtitle }}</h2>
-                {{ post.content }}
-            </section>
-        </article>
+        <div class="row">
+            {% if post %}
+            <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+                <section class="article-content">
+                    <h1 class="article-h1">{{ post.title }}</h1>
+                    <h2 class="article-h2">{{ post.subtitle }}</h2>
+                    {{ post.content }}
+                </section>
+            </article>
+            {% else %}
+            <form method="get" action="{{site.url}}" role="search" class="col-md-6 pull-right">
+                <div class="form-group">
+                    <select name="Ordem">
+                        <option value="category.get_posts({'order': 'asc'})">Ascendente</option>
+                        <option value="category.get_posts({'order': 'desc'})">Descendente</option>
+                    </select>
+                    <select name="Classificação'">
+                        <option value="category.get_posts({'orderby': 'date'})">Data</option>
+                        <option value="category.get_posts({'order': 'name'})">Nome</option>
+                        <option value="category.get_posts({'order': 'price'})">Preço</option>
+                    </select>
+                </div>
+            </form>
+            {% endif %}
+            {% if posts %}
+            {% for post in posts %}
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
+                    <h1>{{ post.title }}</h1>
+				    <a href="{{ post.link }}">
+				    {% if post.mainimg %}
+                    {% set id = post.mainimg %}
+                    <div class="square-thumb">
+                        <img class="img-responsive" src="{{ Image(id).src }}" srcset="{{ Image(id).src }}"/>
+                    </div>
+				    {% elseif post.thumbnail %}
+				    <div class="square-thumb">
+                        <img class="img-responsive" src="{{ post.thumbnail.src }}" srcset="{{ post.thumbnail.src }}">
+                    </div>
+                    {% else %}
+                    <div class="square-thumb">
+                        <img class="img-responsive" src="http://placehold.it/300?text={{__('IMAGEM', 'twheme')|e }}">
+                    </div>
+                    {% endif %}
+                </a>
+            </div><!--/. col -->
+        {% endfor %}
+        {% else %}
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
+                    <h1>{{__('Nenhum resultado', 'twheme')|e}}</h1>
+                    <h3>{{__('Verifique se digitou o termo corretamente, ou tente novamente mais tarde', 'twheme')}}</h3>
+                 </div><!--/. col -->
+        {% endif %}
+        </div>
     </div> <!-- /.container -->
+</div>
 {% endblock %}

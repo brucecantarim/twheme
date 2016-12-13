@@ -8,14 +8,14 @@
     <div class="container-flex">
         <div class="row">
             {% for footersection in footermenu.get_items %}
-            <div class="col-xs-3 col-md-2">
+            <div class="col-xs-3 col-sm-3 col-md-2">
                 <h5>{{footersection.title|upper}}</h5>
                 {% for footerlink in footersection.get_children %}
                 <a href="{{footerlink.link}}">{{footerlink.title|capitalize}}</a>
                 {% endfor %}
             </div>
             {% endfor %}
-            <div class="col-xs-3 col-md-2">
+            <div class="col-xs-3 col-sm-3 col-md-2">
                 <h5>Eventos</h5>
                 <a href="#">Próximos Eventos:</a>
                 <span>
@@ -34,10 +34,10 @@
                         </div>-->
                 </span>
             </div>
-            <div class="col-xs-12 col-md-4 pull-right">
-                <div class="col-xs-6 col-md-6">
+            <div class="col-xs-12 col-sm-12 col-md-4 pull-right">
+                <div class="col-xs-12 col-sm-9 col-md-6">
                 </div>
-                <div class="col-xs-6 col-md-6">
+                <div class="col-xs-12 col-sm-3 col-md-6">
                     <div class="col-xs-3 col-md-3">
                         <a href="https://www.facebook.com/VermeerBrasil" target="_blank">
                             <div class="footer-circle center-block text-center">
