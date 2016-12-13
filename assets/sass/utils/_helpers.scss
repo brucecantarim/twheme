@@ -59,6 +59,18 @@
     height: 100vh;
 }
 
+.dynamic-height {
+    height: 50vh;
+
+    @include breakpoint($screen-lg-min) {
+        height: 100vh;
+    }
+}
+
+.half-height {
+    height: 50vh;
+}
+
 .no-padding {
     padding: 0 !important;
     margin: 0 !important;

@@ -596,8 +596,8 @@ footer {
       color: #ffc425; }
   .contact i, .contact label {
     color: #ffc425;
-    margin-left: 0.5em;
-    margin-right: 0.2em;
+    margin-left: .3em;
+    margin-right: .3em;
     cursor: pointer;
     animation-duration: 2s;
     animation-iteration-count: infinite; }
@@ -756,14 +756,25 @@ footer {
 /---------------------------------------------------*/
 .middlebar, .slider-gradient {
   width: 100%;
-  height: 100%;
   background-color: #f2f2f2;
   padding: 20px;
-  padding-top: 10em;
   margin: 0;
   overflow-y: scroll; }
   .middlebar ::-webkit-scrollbar, .slider-gradient ::-webkit-scrollbar {
     display: none; }
+  @media (min-width: 1200px) {
+    .middlebar, .slider-gradient {
+      width: 100%;
+      height: 100vh;
+      padding-top: 10em;
+      overflow-y: scroll; } }
+
+.middlebar-container {
+  position: absolute;
+  bottom: 0; }
+  @media (min-width: 1200px) {
+    .middlebar-container {
+      position: static; } }
 
 /*---------------------------------------------------/
 /                                                    /
@@ -1509,6 +1520,15 @@ footer {
 
 .full-height {
   height: 100vh; }
+
+.dynamic-height {
+  height: 50vh; }
+  @media (min-width: 1200px) {
+    .dynamic-height {
+      height: 100vh; } }
+
+.half-height {
+  height: 50vh; }
 
 .no-padding {
   padding: 0 !important;

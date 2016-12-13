@@ -5,13 +5,13 @@
 {# This twig will be called when we are visualizing a single post page #}
 {% block fold %}
 <div class="container-flex fold no-padding">
-    <div class="col-md-6 no-padding full-height">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 no-padding dynamic-height">
         {% include 'slider-machine.twig' %}
     </div><!-- /.col-md-6 -->
-    <div class="col-md-3 no-padding full-height">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 no-padding middlebar-container after-fold">
         {% include 'middlebar.twig' %}
     </div><!-- /.col-md-3 -->
-    <div class="col-md-3 no-padding full-height blur">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3 no-padding blur rightbar-container after-fold">
         {% include 'product-rightbar.twig' %}
     </div><!-- /.col-md-3 -->
 </div><!-- /.container-flex -->

@@ -25,19 +25,18 @@
                 <h4>{{__("VÍDEOS", twheme)}}</h4>
             </div><!-- /.col -->
         </div><!-- /.row -->
-        
+        <div class="row">
         {% set videos_sanitized = post.videos|replace({' ':''}) %}
         {% set videos = videos_sanitized|split(',') %}
         {% for video in videos|slice(0, 2) %} {# This is where I impose the video limit #}
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-8 col-lg-offset-2">
                 <div class="embed-responsive embed-responsive-16by9 youtube">
                     <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/{{video}}" allowfullscreen="allowfullscreen"></iframe>
                 </div>
             </div><!-- /.col -->
-        </div><!-- /.row -->
         {% endfor %}
         {% endif %}
+        </div><!-- /.row -->
         <br/>
         <!-- IMAGES -->
         {% if post.gallery %}

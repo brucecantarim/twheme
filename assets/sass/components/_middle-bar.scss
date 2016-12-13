@@ -10,13 +10,26 @@
 // --------------------------------------------------
 .middlebar {
     width: 100%;
-    height: 100%;
     background-color: $color-grey;
     padding: 20px;
-    padding-top: 10em;
     margin: 0;
     overflow-y: scroll;
     ::-webkit-scrollbar { 
     display: none; 
+    }
+    @include breakpoint($screen-lg-min) {
+        width: 100%;
+        height: 100vh;
+        padding-top: 10em;
+        overflow-y: scroll;
+    } 
+}
+
+.middlebar-container {
+    position: absolute;
+    bottom: 0;
+
+    @include breakpoint($screen-lg-min) {
+        position: static;
     }
 }
