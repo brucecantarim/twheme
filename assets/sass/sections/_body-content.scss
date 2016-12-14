@@ -49,15 +49,50 @@
     h4 {
         position: relative;
         top: -.2em;
+        text-align: center !important;
+        font-size: 2em !important;
+        @include breakpoint($screen-sm-min) {
+            text-align: center !important;
+            font-size: 1.2em !important;
+        }
+        @include breakpoint($screen-md-min) {
+            text-align: center !important;
+            font-size: 1.3em !important;
+        }
+        @include breakpoint($screen-lg-min) {
+            text-align: left !important;
+            font-size: 1.4em !important;
+        }
     }
     
     hr {
         position: relative;
+        top: -3em;
+        @include breakpoint($screen-sm-min) {
         top: -1.2em;
+        }
     }
 
     ul {
         position: relative;
-        top: -2.2em;
+        top: -3.8em;
+        @include breakpoint($screen-sm-min) {
+            top: -2.2em;
+        }
+    }
+    li {
+        position: relative;
+        left: -0.7em;
+        font-size: 2em !important;
+        text-align: center !important;
+        @include breakpoint($screen-sm-min) {
+            font-size: 1.2em !important;
+            text-align: center !important;
+        }
+        @include breakpoint($screen-lg-min) {
+            left: 0;
+            font-size: 1.4em !important;
+            text-align: left !important;
+        }
     }
 }

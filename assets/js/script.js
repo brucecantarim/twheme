@@ -40,6 +40,11 @@ $(function () {
             $('.mobilemenu').slideToggle();
     });
 
+    $('#next-menu').click(function(){
+            $('#next-menu').find().data('target').show();
+            $('.mobile-menu').hide();
+    });
+
     // SLIDESHOW
     // Some pages have only 1 image, so, we need to hide the controllers
     // Hide slide controls is data-toggle='off'

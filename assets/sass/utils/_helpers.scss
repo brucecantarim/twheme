@@ -80,6 +80,13 @@
     margin: 0 !important;
 }
 
+.no-padding-lg {
+    @include breakpoint($screen-lg-min) {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+}
+
 .fold {
     width: 100%;
     height: 100vh;

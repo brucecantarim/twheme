@@ -50,15 +50,15 @@
                 {% set subitem_images = subitem_images|merge([subitemlist.mainimg]) %}
                 {% endfor %}#}
                 {% set subitem_image = subitem.posts[0].mainimg %}
-                <div class="square-thumb no-padding center-block" style="{% if subitem_image %}background-image:url({{Image(subitem_image).src|resize(300,300)}}){% else %}background-color:rgba(200,200,200,1){% endif %};background-size:cover;">
+                <div class="square-thumb" style="{% if subitem_image %}background-image:url({{Image(subitem_image).src|resize(600,600)}}){% else %}background-color:rgba(200,200,200,1){% endif %};background-size:cover;">
                 </div>
                 {% if subitem.get_link %}
-                <h4><b><a class="color-black" href="{{subitem.get_link}}">{{subitem.title}}</a></b></h4>
+                <a class="color-black" href="{{subitem.get_link}}"><h4><b>{{subitem.title}}</b></h4></a>
                 {% else %}
-                <h4 class="cat-title"><b>{{subitem.title}}</b></h4>
+                <h4><b>{{subitem.title}}</b></h4>
                 {% endif %}
                 <hr class="menustrip"/>
-                    <ul class='submenulist text-left no-padding'>
+                    <ul class='submenulist'>
                         {% for sublink in subitem.posts %}
                         <li class="submenuitem">
                             {% if sublink.get_link %}
@@ -87,16 +87,16 @@
                 {% if colsize == 2 %}
                     {% set coldifference = 8 - sections|length %}
                     {% set coloffset = coldifference // 2 %}
-                    <div class="col-md-{{coloffset}}"></div>
+                    <div class="col-sm-{{coloffset}} col-md-{{coloffset}}"></div>
                 {% endif %}
             {% for section in sections %}
-            <div class="col-md-{{colsize}} text-center home-body">
+            <div class="col-sm-{{colsize}} col-md-{{colsize}} text-center home-body">
                 
                 <a href="{{ TimberPost(section.pagelink).link }}">
                 <div class="body-circle center-block">
                     <img src="{{Image(section.icon).src}}"/>
                 </div>
-                <h3>{{section.title}}</h3></a>
+                <h4>{{section.title}}</h4></a>
                 <p class="text-justify">{{section.content|striptags|raw|capitalize|wpautop}}</p>
             </div>
             {% endfor %}

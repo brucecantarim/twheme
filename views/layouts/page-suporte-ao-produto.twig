@@ -7,27 +7,22 @@
 <div class="body-content">
     <div class="container">
        <div class="row">
-           <div class="col-md-8">
-               <h1>{{post.title}}</h1><br/>
+           <div class="col-xs-12 col-sm-5 col-md-7">
+               <h1>{{post.title}}</h1>
            </div>
-           <div class="col-md-4 text-right">
-                <br/><br/>
-                <div class="col-md-6 text-right">
+           <div class="col-xs-12 col-sm-7 col-md-5 text-right pull-right">
+                    <a href="phone:19997066772" class="color-black">
                     <i class="fa fa-phone"></i>
-                    <a href="phone:19997066772" class="color-black">(19) 9 9706-6772</a>
-                </div>
-                <div class="col-md-6 text-left">
+                    (19) 9 9706-6772</a>
+                    <a href="mailto:brasil@vermeer.com" class="color-black">
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:brasil@vermeer.com" class="color-black">suporte@vermeer.com</a>
-                </div>
-           </div>
-           <div class="col-md-12">
-               <hr/>
-           </div>
+                    suporte@vermeer.com</a>
+            </div>
        </div>
+       <hr/>
         
         <div class="row">
-            <div class="col-md-4 bg-color-grey">
+            <div class="col-sm-4 col-md-4 bg-color-grey">
                 <br/>
                 <ul>
                     {% if post.children %}
@@ -42,7 +37,7 @@
                 <br/>
             </div>
             
-            <div class="col-md-8">
+            <div class="col-sm-8 col-md-8 no-padding">
                 <div class="full-width">
                     {% if post.thumbnail %}
                     <img class="img-responsive" src="{{post.thumbnail.src}}"/>

@@ -20,9 +20,11 @@
     }
     
         h5 {
-            letter-spacing: 3px;
             margin-bottom: 0.5em;
             color: $color-white;
+            @include breakpoint($screen-lg-min) {
+                letter-spacing: 3px;
+            }
         }
     
         a {

@@ -1322,15 +1322,50 @@ footer {
 
 .container-cat h4 {
   position: relative;
-  top: -.2em; }
+  top: -.2em;
+  text-align: center !important;
+  font-size: 2em !important; }
+  @media (min-width: 720px) {
+    .container-cat h4 {
+      text-align: center !important;
+      font-size: 1.2em !important; } }
+  @media (min-width: 992px) {
+    .container-cat h4 {
+      text-align: center !important;
+      font-size: 1.3em !important; } }
+  @media (min-width: 1200px) {
+    .container-cat h4 {
+      text-align: left !important;
+      font-size: 1.4em !important; } }
 
 .container-cat hr {
   position: relative;
-  top: -1.2em; }
+  top: -3em; }
+  @media (min-width: 720px) {
+    .container-cat hr {
+      top: -1.2em; } }
 
 .container-cat ul {
   position: relative;
-  top: -2.2em; }
+  top: -3.8em; }
+  @media (min-width: 720px) {
+    .container-cat ul {
+      top: -2.2em; } }
+
+.container-cat li {
+  position: relative;
+  left: -0.7em;
+  font-size: 2em !important;
+  text-align: center !important; }
+  @media (min-width: 720px) {
+    .container-cat li {
+      font-size: 1.2em !important;
+      text-align: center !important; } }
+  @media (min-width: 1200px) {
+    .container-cat li {
+      left: 0;
+      font-size: 1.4em !important;
+      text-align: left !important; } }
 
 /*---------------------------------------------------/
 /                                                    /
@@ -1348,9 +1383,11 @@ footer {
     .footer-content {
       padding: 10px 10em; } }
   .footer-content h5 {
-    letter-spacing: 3px;
     margin-bottom: 0.5em;
     color: white; }
+    @media (min-width: 1200px) {
+      .footer-content h5 {
+        letter-spacing: 3px; } }
   .footer-content a, .footer-content a:hover, .footer-content a:active, .footer-content a:visited {
     color: #ffc425;
     text-decoration: none;
@@ -1531,6 +1568,11 @@ footer {
 .no-padding {
   padding: 0 !important;
   margin: 0 !important; }
+
+@media (min-width: 1200px) {
+  .no-padding-lg {
+    padding: 0 !important;
+    margin: 0 !important; } }
 
 .fold {
   width: 100%;
