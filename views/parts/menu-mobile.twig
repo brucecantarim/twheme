@@ -8,22 +8,26 @@
     {% for item in menu.get_items if menu %}
     {% if item.current %}
         <li class='menuitem-mobile active'>
-            {% if item.get_link %}
-                <a href="{{item.get_link}}">{{item.title}}</a>
+            {% if item.get_link and item.get_children|length > 0 %}
+                <a href="{{item.get_link}}">{{item.title|upper}}</a>
+                <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{item.ID}}"></i></button>
+            {% elseif item.get_children|length > 0 %}
+                {{item.title|upper}}
                 <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{item.ID}}"></i></button>
             {% else %}
-                {{item.title}}
-                <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{item.ID}}"></i></button>
+                {{item.title|upper}}
             {% endif %}
         </li>
     {% else %}
         <li class='menuitem-mobile'>
-            {% if item.get_link %}
-                <a href="{{item.get_link}}">{{item.title}}</a>
+            {% if item.get_link and item.get_children|length > 0 %}
+                <a href="{{item.get_link}}">{{item.title|upper}}</a>
+                <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{item.ID}}"></i></button>
+            {% elseif item.get_children|length > 0 %}
+                {{item.title|upper}}
                 <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{item.ID}}"></i></button>
             {% else %}
-                {{item.title}}
-                <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{item.ID}}"></i></button>
+                {{item.title|upper}}
             {% endif %}
         </li>
     {% endif %}
@@ -37,26 +41,39 @@
     <ul>
         {% for subitem in item.get_children %}
         <li class='submenuitem-mobile'>
-            {% if subitem.get_link %}
-            <h4><b>
-                <a href="{{subitem.get_link}}">{{subitem.title}}</a>
-            </b></h4>
+            {% if subitem.get_link and subitem.get_children|length > 0 %}
+            <a href="{{subitem.get_link}}">{{subitem.title|upper}}</a>
+            <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{subitem.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{subitem.ID}}"></i></button>
+            {% elseif subitem.get_children|length > 0 %}
+            {{subitem.title|upper}}
+            <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{subitem.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{subitem.ID}}"></i></button>
             {% else %}
-            <h4><b>{{subitem.title}}</b></h4>
-            {% endif %}
-        </li>
-        {% for sublink in subitem.get_children %}
-        <li class="submenuitem-mobile">
-            {% if sublink.get_link %}
-            <a href="{{sublink.get_link}}">{{sublink.title}}</a>
-            {% else %}
-            {{sublink.title}}
+            {{subitem.title|upper}}
             {% endif %}
         </li>
         {% endfor %}
-    {% endfor %}
     </ul><!-- /.submenulist -->
 </div><!-- /#submenu-mobile -->
+{% endif %}
+{% endfor %}
+
+{% for item in menu.get_items if menu %}
+{% if item.get_children|length > 0 %}
+{% for subitem in item.get_children %}
+<div id="mobilemenu-item-{{subitem.ID}}" class="submenu-mobile blur">
+    <ul>
+        {% for sublink in subitem.get_children %}
+        <li class="submenuitem-mobile">
+            {% if sublink.get_link %}
+            <a href="{{sublink.get_link}}">{{sublink.title|upper}}</a>
+            {% else %}
+            {{sublink.title|upper}}
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul><!-- /.submenulist -->
+</div><!-- /#submenu-mobile -->
+{% endfor %}
 {% endif %}
 {% endfor %}
 

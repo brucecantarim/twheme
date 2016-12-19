@@ -38,13 +38,16 @@ $(function () {
     // Adding the mobile menu functionality
     $('.hamburger').click(function() {
         $('.mobilemenu').slideToggle();
-        $('.submenu-mobile').fadeOut();
+        $('.submenu-mobile').slideUp();
+        $('.hamburger').addClass('fa-bars').removeClass('fa-chevron-left');
     });
 
     $('.next-menu').click(function(){
         var target = '#' + $(this).data("target");
-        $('.mobilemenu').fadeOut();
-        $(target).fadeIn();
+        $('.mobilemenu').slideUp();
+        $(target).prev().slideUp();
+        $(target).slideDown();
+        $('.hamburger').removeClass('fa-bars').addClass('fa-chevron-left');
     });
 
     // SLIDESHOW
