@@ -37,12 +37,14 @@ $(function () {
 
     // Adding the mobile menu functionality
     $('.hamburger').click(function() {
-            $('.mobilemenu').slideToggle();
+        $('.mobilemenu').slideToggle();
+        $('.submenu-mobile').fadeOut();
     });
 
-    $('#next-menu').click(function(){
-            $('#next-menu').find().data('target').show();
-            $('.mobile-menu').hide();
+    $('.next-menu').click(function(){
+        var target = '#' + $(this).data("target");
+        $('.mobilemenu').fadeOut();
+        $(target).fadeIn();
     });
 
     // SLIDESHOW
