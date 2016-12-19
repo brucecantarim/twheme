@@ -646,14 +646,15 @@ footer {
     .mainmenu {
       top: -3em; } }
 
-.mobilemenu, .submenu-mobile {
+.mobilemenu {
   width: 100%;
   height: 100%;
-  padding-top: 10em;
+  padding-top: 8em;
   position: fixed;
   top: 0;
   z-index: 99;
-  display: none; }
+  display: none;
+  overflow-y: scroll !important; }
 
 @media (min-width: 1200px) {
   .hamburger {
@@ -681,12 +682,14 @@ footer {
   display: block;
   text-transform: uppercase;
   font-size: 2em;
-  font-weight: bold; }
-  .menuitem-mobile a, .menuitem-mobile a:visited {
-    color: white; }
-  .menuitem-mobile a:hover, .menuitem-mobile a:active {
-    color: #ffc425;
-    text-decoration: none; }
+  font-weight: normal !important; }
+  .menuitem-mobile a {
+    font-weight: normal !important; }
+    .menuitem-mobile a, .menuitem-mobile a:visited {
+      color: white; }
+    .menuitem-mobile a:hover, .menuitem-mobile a:active {
+      color: #ffc425;
+      text-decoration: none; }
 
 .submenu {
   position: fixed;
@@ -706,14 +709,23 @@ footer {
       top: 9em; } }
 
 .submenu-mobile {
+  width: 100%;
+  height: 100%;
+  padding-top: 4em;
+  position: fixed;
+  top: 0;
+  z-index: 99;
   display: none;
   font-size: 2em;
-  font-weight: bold; }
-  .submenu-mobile a, .submenu-mobile a:visited {
-    color: white; }
-  .submenu-mobile a:hover, .submenu-mobile a:active {
-    color: #ffc425;
-    text-decoration: none; }
+  font-weight: normal !important;
+  overflow-y: scroll !important; }
+  .submenu-mobile li a {
+    font-weight: normal !important; }
+    .submenu-mobile li a, .submenu-mobile li a:visited {
+      color: white; }
+    .submenu-mobile li a:hover, .submenu-mobile li a:active {
+      color: #ffc425;
+      text-decoration: none; }
 
 .submenuitem {
   list-style-type: none;
@@ -746,6 +758,14 @@ footer {
       font-size: 1.1em; }
       .submenuitem h4 {
         font-size: 1.1em; } }
+
+.mobile-link {
+  font-family: "Open Sans Condensed", sans-serif !important;
+  font-size: 1em !important;
+  font-weight: normal !important;
+  color: white !important;
+  margin: 0;
+  display: inline; }
 
 .next-menu {
   height: 2em !important;

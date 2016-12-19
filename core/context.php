@@ -17,6 +17,7 @@ class Context {
         $context['footermenu'] = new \TimberMenu(Config::$footermenu);
         $context['posts'] = \Timber::get_posts();
         $context['dir'] = get_template_directory_uri();
+        $context["get"] = $_GET;
         
         // This calls the home post type sections, as sections, if needed
         // Use this to manage the main page content, it's pretty handy

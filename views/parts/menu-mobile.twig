@@ -9,25 +9,25 @@
     {% if item.current %}
         <li class='menuitem-mobile active'>
             {% if item.get_link and item.get_children|length > 0 %}
-                <a href="{{item.get_link}}">{{item.title|upper}}</a>
+                <a class="mobile-link" href="{{item.get_link}}">{% if item.title|length > 25 %}{{item.title|slice(0,25)}}...{% else %}{{item.title|upper}}{% endif %}</a>
                 <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{item.ID}}"></i></button>
             {% elseif item.get_children|length > 0 %}
-                {{item.title|upper}}
+                <p class="mobile-link">{% if item.title|length > 25 %}{{item.title|slice(0,25)}}...{% else %}{{item.title|upper}}{% endif %}</p>
                 <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{item.ID}}"></i></button>
             {% else %}
-                {{item.title|upper}}
+                <p class="mobile-link">{% if item.title|length > 25 %}{{item.title|slice(0,25)}}...{% else %}{{item.title|upper}}{% endif %}</p>
             {% endif %}
         </li>
     {% else %}
         <li class='menuitem-mobile'>
             {% if item.get_link and item.get_children|length > 0 %}
-                <a href="{{item.get_link}}">{{item.title|upper}}</a>
+                <a class="mobile-link" href="{{item.get_link}}">{% if item.title|length > 25 %}{{item.title|slice(0,25)}}...{% else %}{{item.title|upper}}{% endif %}</a>
                 <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{item.ID}}"></i></button>
             {% elseif item.get_children|length > 0 %}
-                {{item.title|upper}}
+                <p class="mobile-link">{% if item.title|length > 25 %}{{item.title|slice(0,25)}}...{% else %}{{item.title|upper}}{% endif %}</p>
                 <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{item.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{item.ID}}"></i></button>
             {% else %}
-                {{item.title|upper}}
+                <p class="mobile-link">{% if item.title|length > 25 %}{{item.title|slice(0,25)}}...{% else %}{{item.title|upper}}{% endif %}</p>
             {% endif %}
         </li>
     {% endif %}
@@ -42,13 +42,13 @@
         {% for subitem in item.get_children %}
         <li class='submenuitem-mobile'>
             {% if subitem.get_link and subitem.get_children|length > 0 %}
-            <a href="{{subitem.get_link}}">{{subitem.title|upper}}</a>
+            <a class="mobile-link" href="{{subitem.get_link}}">{% if subitem.title|length > 25 %}{{subitem.title|slice(0,25)}}...{% else %}{{subitem.title|upper}}{% endif %}</a>
             <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{subitem.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{subitem.ID}}"></i></button>
             {% elseif subitem.get_children|length > 0 %}
-            {{subitem.title|upper}}
+            <p class="mobile-link">{% if subitem.title|length > 25 %}{{subitem.title|slice(0,25)}}...{% else %}{{subitem.title|upper}}{% endif %}</p>
             <button class="btn btn-yellow pull-right next-menu" data-target="mobilemenu-item-{{subitem.ID}}"><i class="fa fa-chevron-right next-menu" data-target="mobilemenu-item-{{subitem.ID}}"></i></button>
             {% else %}
-            {{subitem.title|upper}}
+            <p class="mobile-link">{% if subitem.title|length > 25 %}{{subitem.title|slice(0,25)}}...{% else %}{{subitem.title|upper}}{% endif %}</p>
             {% endif %}
         </li>
         {% endfor %}
@@ -65,9 +65,9 @@
         {% for sublink in subitem.get_children %}
         <li class="submenuitem-mobile">
             {% if sublink.get_link %}
-            <a href="{{sublink.get_link}}">{{sublink.title|upper}}</a>
+            <a class="mobile-link" href="{{sublink.get_link}}">{% if sublink.title|length > 25 %}{{sublink.title|slice(0,25)}}...{% else %}{{sublink.title|upper}}{% endif %}</a>
             {% else %}
-            {{sublink.title|upper}}
+            <p class="mobile-link">{% if sublink.title|length > 25 %}{{sublink.title|slice(0,25)}}...{% else %}{{sublink.title|upper}}{% endif %}</p>
             {% endif %}
         </li>
         {% endfor %}

@@ -182,11 +182,12 @@
 .mobilemenu {
     width: 100%;
     height: 100%;
-    padding-top: 10em;
+    padding-top: 8em;
     position: fixed;
     top: 0;
     z-index: 99;
     display: none;
+    overflow-y: scroll !important;
 }
 
 .hamburger {
@@ -200,11 +201,10 @@
     margin: 1em;
     text-transform: uppercase;
     font: { size: .9em; weight: bold;}
-        a {
+         a {
             &, &:visited { color: $color-link; }
             &:hover, &:active { color: $color-hover; text-decoration: none; }
             }
-    
     @include breakpoint($screen-lg-min) {
         font: { size: 1em }
     }
@@ -217,8 +217,9 @@
 .menuitem-mobile {
     display: block;
     text-transform: uppercase;
-    font: { size: 2em; weight: bold;}
+    font: { size: 2em; weight: normal !important;}
         a {
+            font: { weight: normal !important;}
             &, &:visited { color: $color-link; }
             &:hover, &:active { color: $color-hover; text-decoration: none; }
             }
@@ -248,13 +249,20 @@
 }
 
 .submenu-mobile {
-    @extend .mobilemenu;
+    width: 100%;
+    height: 100%;
+    padding-top: 4em;
+    position: fixed;
+    top: 0;
+    z-index: 99;
     display: none;
-    font: { size: 2em; weight: bold;}
-        a {
+    font: { size: 2em; weight: normal !important;}
+        li a {
+            font: { weight: normal !important;}
             &, &:visited { color: $color-link; }
             &:hover, &:active { color: $color-hover; text-decoration: none; }
             }
+    overflow-y: scroll !important;
 }
 
 .submenuitem {
@@ -286,6 +294,14 @@
         h4 { font-size: 1.1em };
     }
 }
+
+.mobile-link {
+    font: {family: $font-title !important; size: 1em !important; weight: normal !important;}
+        color: $color-white !important;
+        margin: 0;
+        display: inline;
+}
+    
 
 .next-menu {
     height: 2em !important;
