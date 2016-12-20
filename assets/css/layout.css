@@ -1192,7 +1192,7 @@ footer {
   .btn-custom h5 {
     text-align: center; }
 
-.btn-yellow, .btn-square, .btn-rightbar {
+.btn-yellow, .btn-square, .btn-rightbar, .btn-mobile {
   background-color: #ffc425;
   color: black;
   padding: 0 .3em;
@@ -1205,10 +1205,10 @@ footer {
   padding: .2em;
   margin: auto .3em; }
 
-.btn-yellow h6 {
-  text-align: center;
-  color: black;
-  margin: 0; }
+.btn-yellow {
+  font-size: 0.8em !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important; }
 
 .btn-square {
   width: 15px;
@@ -1298,6 +1298,10 @@ footer {
 .product-thumbnail {
   height: 300px; }
 
+.gallery-thumbnail {
+  width: 100%;
+  margin: 1em auto; }
+
 /*---------------------------------------------------/
 /                                                    /
 /  FORMS - Here you'll find the form field classes.  /
@@ -1357,42 +1361,34 @@ footer {
   padding-bottom: 100% !important; }
 
 .container-cat h4 {
-  position: relative;
-  top: -.2em;
+  background: white;
   text-align: center !important;
   font-size: 2em !important; }
   @media (min-width: 720px) {
     .container-cat h4 {
       text-align: center !important;
-      font-size: 1.2em !important; } }
+      font-size: 1.8em !important; } }
   @media (min-width: 992px) {
     .container-cat h4 {
       text-align: center !important;
-      font-size: 1.3em !important; } }
+      font-size: 0.7em !important; } }
   @media (min-width: 1200px) {
+    .container-cat h4 {
+      text-align: left !important;
+      font-size: 0.9em !important; } }
+  @media (min-width: 1600px) {
     .container-cat h4 {
       text-align: left !important;
       font-size: 1.4em !important; } }
 
-.container-cat hr {
-  position: relative;
-  top: -3em; }
-  @media (min-width: 720px) {
-    .container-cat hr {
-      top: -1.2em; } }
-
 .container-cat ul {
-  position: relative;
-  top: -3.8em; }
-  @media (min-width: 720px) {
-    .container-cat ul {
-      top: -2.2em; } }
+  list-style: none;
+  padding-left: 0; }
 
 .container-cat li {
-  position: relative;
-  left: -0.7em;
   font-size: 2em !important;
-  text-align: center !important; }
+  text-align: center !important;
+  text-indent: none; }
   @media (min-width: 720px) {
     .container-cat li {
       font-size: 1.2em !important;
@@ -1402,6 +1398,45 @@ footer {
       left: 0;
       font-size: 1.4em !important;
       text-align: left !important; } }
+
+.cat-box {
+  background: white;
+  height: 8em;
+  position: relative;
+  margin-bottom: 2em; }
+  @media (min-width: 720px) {
+    .cat-box {
+      height: 4.5em; } }
+  @media (min-width: 992px) {
+    .cat-box {
+      height: 4.5em; } }
+  @media (min-width: 1200px) {
+    .cat-box {
+      height: 5em; } }
+  @media (min-width: 1600px) {
+    .cat-box {
+      height: 8em; } }
+  .cat-box hr {
+    position: absolute;
+    bottom: 0; }
+  .cat-box h4 {
+    position: absolute;
+    bottom: 1.2em;
+    left: 0;
+    right: 0;
+    margin: auto; }
+    @media (min-width: 720px) {
+      .cat-box h4 {
+        bottom: 1.2em; } }
+    @media (min-width: 992px) {
+      .cat-box h4 {
+        bottom: 2.7em; } }
+    @media (min-width: 1200px) {
+      .cat-box h4 {
+        bottom: 2.1em; } }
+    @media (min-width: 1600px) {
+      .cat-box h4 {
+        bottom: 1.8em; } }
 
 /*---------------------------------------------------/
 /                                                    /
@@ -1593,7 +1628,7 @@ footer {
   height: 100vh; }
 
 .dynamic-height {
-  height: 50vh; }
+  height: 80vh; }
   @media (min-width: 1200px) {
     .dynamic-height {
       height: 100vh; } }

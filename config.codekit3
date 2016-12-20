@@ -7981,10 +7981,22 @@
 		"oAP": "\/views\/layouts\/page-controle-de-frota.twig",
 		"oF": 0
 		},
+	"\/views\/layouts\/page-eventos.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/page-eventos.twig",
+		"oF": 0
+		},
 	"\/views\/layouts\/page-manutencao-preventiva.twig": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/views\/layouts\/page-manutencao-preventiva.twig",
+		"oF": 0
+		},
+	"\/views\/layouts\/page-newsletter.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/page-newsletter.twig",
 		"oF": 0
 		},
 	"\/views\/layouts\/page-ofertas.twig": {
@@ -8045,6 +8057,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/views\/layouts\/search.twig",
+		"oF": 0
+		},
+	"\/views\/layouts\/single-evento.twig": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/views\/layouts\/single-evento.twig",
 		"oF": 0
 		},
 	"\/views\/layouts\/single-locacao.twig": {

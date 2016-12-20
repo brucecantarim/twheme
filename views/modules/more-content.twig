@@ -186,7 +186,7 @@
     {% if orderfilter and classificationfilter %}
         {% for product in locacao.get_posts({'order': orderfilter, 'orderby': classificationfilter}) %}
         <a href="{{ product.link }}">
-            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 wow slideInRight background-color-grey">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 wow slideInRight bg-color-grey">
                 <h4>{{ product.title }}</h4>
                 <div class="square-thumb">
                     {% if product.mainimg %}

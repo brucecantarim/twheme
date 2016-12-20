@@ -14,7 +14,7 @@
         }
 }
 
-.btn-yellow, .btn-square, .btn-rightbar {
+.btn-yellow, .btn-square, .btn-rightbar, .btn-mobile {
     background-color: $color-main;
     color: $color-copy;
     padding: 0 .3em;
@@ -29,10 +29,10 @@
     margin: auto .3em;
 }
 
-.btn-yellow h6 {
-    text-align: center;
-    color: $color-black;
-    margin: 0;
+.btn-yellow {
+    font-size: 0.8em !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
 }
 
 .btn-square {

@@ -1,0 +1,28 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+{% include 'photo-stripe.twig' %}
+{% include 'body-content.twig' %}
+<div class="body-content">
+
+<form action="{{ site.url }}" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center color-black">{{__('RECEBA A NOSSA NEWSLETTER', 'twheme')|e }}</h1>
+            </div>
+            <div class="col-md-3 col-md-offset-3">
+                <input class="contact-field center-block wow fadeIn" placeholder="{{__('Nome', 'twheme')|e }}" type="text" name="message_name" pattern="[a-zA-Z0-9\s]+" required data-wow-delay="0.6s">
+            </div>
+            <div class="col-md-3">
+                <input class="contact-field center-block wow fadeIn" placeholder="{{__('Email', 'twheme')|e }}" type="email" name="message_email" required data-wow-delay="0.6s">
+            </div>
+            <div class="col-md-6 col-md-offset-3 text-right">
+                <input type="submit" name="message_send" class="btn btn-yellow wow bounceIn" id="sendbutton" data-wow-delay="0.2s" value="{{__('ENVIAR', 'twheme')|e }}">
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</form>
+
+</div>
+{% endblock content %}

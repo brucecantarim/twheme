@@ -64,7 +64,7 @@
 }
 
 .dynamic-height {
-    height: 50vh;
+    height: 80vh;
 
     @include breakpoint($screen-lg-min) {
         height: 100vh;

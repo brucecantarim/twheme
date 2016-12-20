@@ -39,6 +39,7 @@
         {% for item in categorias %}
         {% if post.title|lower == item.name|lower %}
             </div><!-- /.row -->
+            <br/>
         </div><!-- /.container -->
         <div class="container-flex container-cat">
             <div class="row">
@@ -52,12 +53,14 @@
                 {% set subitem_image = subitem.posts[0].mainimg %}
                 <div class="square-thumb" style="{% if subitem_image %}background-image:url({{Image(subitem_image).src|resize(600,600)}}){% else %}background-color:rgba(200,200,200,1){% endif %};background-size:cover;">
                 </div>
-                {% if subitem.get_link %}
-                <a class="color-black" href="{{subitem.get_link}}"><h4><b>{{subitem.title}}</b></h4></a>
-                {% else %}
-                <h4><b>{{subitem.title}}</b></h4>
-                {% endif %}
-                <hr class="menustrip"/>
+                <div class="cat-box">
+                    {% if subitem.get_link %}
+                    <a class="color-black" href="{{subitem.get_link}}"><h4><b>{{subitem.title}}</b></h4></a>
+                    {% else %}
+                    <h4><b>{{subitem.title}}</b></h4>
+                    {% endif %}
+                    <hr class="menustrip"/>
+                </div>
                     <ul class='submenulist'>
                         {% for sublink in subitem.posts %}
                         <li class="submenuitem">

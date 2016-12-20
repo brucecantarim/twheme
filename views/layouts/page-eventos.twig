@@ -1,0 +1,92 @@
+{# page.twig #}
+{% extends 'base.twig' %}
+
+{# just a basic implementation of the post content display, for pages #}
+
+{% block content %}
+    {% include 'photo-stripe.twig' %}
+	{% include 'body-content.twig' %}
+
+<div class="body-content">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+            <h1>{{__('PRÓXIMOS EVENTOS', 'twheme')|e}}</h1>
+            <hr/>
+        </div>
+        {% for evento in eventos %}
+        {% if evento.enddate|date('Y-m-d') >= 'now'|date('Y-m-d') %}
+        <a href="{{ evento.link }}">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 wow slideInRight">
+                <div class="col-md-12 bg-color-grey">
+                    <h3>{{evento.title}}</h3>
+                </div>
+                <div class="col-md-12 text-right bg-color-dark-grey">
+                    <h4>De {{evento.startdate|date("m/d/Y")}} à {{evento.enddate|date("m/d/Y")}}</h4>
+                </div>
+                        {% if evento.thumbnail %}
+                        <img class="img-responsive" src="{{evento.thumbnail.src|resize(600,600)}}"/>
+                        {% else %}
+                        <img class="img-responsive" src="http://placehold.it/300?text={{__('EVENTO', 'twheme')}}"/>
+                        {% endif %}
+                 <div class="col-md-12 bg-color-grey" style="padding: 1em;">
+                    <p>{{evento.content|excerpt(30)}}</p><br/>
+                    <a class="pull-right" href="{{evento.link}}"><button class="btn btn-yellow">LEIA MAIS</button></a>
+                </div>
+                <div class="col-md-12 text-left bg-color-dark-grey">
+                    <h4>{{__('Local:','twheme')|e}} {{evento.address}}</h4>
+                </div>
+                <div class="col-md-12 text-left bg-color-grey" style="padding-bottom: 1em;">
+                    <h4>{{__('Mais Informações','twheme')|e}}:</h4>
+                    <a href="{{evento.externallink}}"><button class="btn btn-yellow" value="{{evento.externallink}}">{{evento.externallink}}</button></a>
+                </div>
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+        </div>
+        <div class="row">
+        {% for evento in eventos %}
+        {% if evento.enddate|date('Y-m-d') < 'now'|date('Y-m-d') %}
+        <div class="row-spacer"></div>
+        <div class="col-md-12">
+            <h1>{{__('EVENTOS PASSADOS', 'twheme')|e}}</h1>
+            <hr/>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% for evento in eventos %}
+        {% if evento.enddate|date('Y-m-d') < 'now'|date('Y-m-d') %}
+        <a href="{{ evento.link }}">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 wow slideInRight">
+                <div class="col-md-12 bg-color-grey">
+                    <h3>{{evento.title}}</h3>
+                </div>
+                <div class="col-md-12 text-right bg-color-dark-grey">
+                    <h4>De {{evento.startdate|date("m/d/Y")}} à {{evento.enddate|date("m/d/Y")}}</h4>
+                </div>
+                        {% if evento.thumbnail %}
+                        <img class="img-responsive" src="{{evento.thumbnail.src|resize(600,600)}}"/>
+                        {% else %}
+                        <img class="img-responsive" src="http://placehold.it/300?text={{__('EVENTO', 'twheme')}}"/>
+                        {% endif %}
+                 <div class="col-md-12 bg-color-grey" style="padding: 1em;">
+                    <p>{{evento.content|excerpt(30)}}</p><br/>
+                    <a class="pull-right" href="{{evento.link}}"><button class="btn btn-yellow">LEIA MAIS</button></a>
+                </div>
+                <div class="col-md-12 text-left bg-color-dark-grey">
+                    <h4>{{__('Local:','twheme')|e}} {{evento.address}}</h4>
+                </div>
+                <div class="col-md-12 text-left bg-color-grey" style="padding-bottom: 1em;">
+                    <h4>{{__('Mais Informações','twheme')|e}}:</h4>
+                    <a href="{{evento.externallink}}"><button class="btn btn-yellow" value="{{evento.externallink}}">{{evento.externallink}}</button></a>
+                </div>
+            </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+
+         </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.body-content -->
+{% endblock content %}

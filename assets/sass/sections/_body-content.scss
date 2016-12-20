@@ -34,10 +34,12 @@
 }
 
 .home-body {
-    p{
+    
+    p {
         text-align: left;
         text-indent: 0 !important;
     }
+
 }
 
 .container-cat {
@@ -47,44 +49,35 @@
     }
 
     h4 {
-        position: relative;
-        top: -.2em;
+        background: $color-background;
         text-align: center !important;
         font-size: 2em !important;
         @include breakpoint($screen-sm-min) {
             text-align: center !important;
-            font-size: 1.2em !important;
+            font-size: 1.8em !important;
         }
         @include breakpoint($screen-md-min) {
             text-align: center !important;
-            font-size: 1.3em !important;
+            font-size: 0.7em !important;
         }
         @include breakpoint($screen-lg-min) {
+            text-align: left !important;
+            font-size: 0.9em !important;
+        }
+        @include breakpoint($screen-xl-min) {
             text-align: left !important;
             font-size: 1.4em !important;
         }
     }
-    
-    hr {
-        position: relative;
-        top: -3em;
-        @include breakpoint($screen-sm-min) {
-        top: -1.2em;
-        }
-    }
 
     ul {
-        position: relative;
-        top: -3.8em;
-        @include breakpoint($screen-sm-min) {
-            top: -2.2em;
-        }
+        list-style:none;
+        padding-left:0;
     }
     li {
-        position: relative;
-        left: -0.7em;
         font-size: 2em !important;
         text-align: center !important;
+        text-indent: none;
         @include breakpoint($screen-sm-min) {
             font-size: 1.2em !important;
             text-align: center !important;
@@ -94,5 +87,49 @@
             font-size: 1.4em !important;
             text-align: left !important;
         }
+    }
+}
+
+.cat-box {
+    background: $color-background;
+    height: 8em;
+    @include breakpoint($screen-sm-min) {
+        height: 4.5em;
+        }
+    @include breakpoint($screen-md-min) {
+        height: 4.5em;
+        }
+    @include breakpoint($screen-lg-min) {
+        height: 5em;  
+        }
+    @include breakpoint($screen-xl-min) {
+        height: 8em;    
+        }
+    position: relative;
+    margin-bottom: 2em;
+
+    hr {
+        position: absolute;
+        bottom: 0;
+    }
+
+    h4 {
+        position: absolute;
+        bottom: 1.2em;
+        @include breakpoint($screen-sm-min) {
+            bottom: 1.2em;
+        }
+        @include breakpoint($screen-md-min) {
+            bottom: 2.7em;
+            }
+        @include breakpoint($screen-lg-min) {
+            bottom: 2.1em;
+            }
+        @include breakpoint($screen-xl-min) {
+            bottom: 1.8em;
+        }
+        left: 0;
+        right: 0;
+        margin: auto
     }
 }

@@ -17,21 +17,22 @@
             {% endfor %}
             <div class="col-xs-3 col-sm-3 col-md-2">
                 <h5>Eventos</h5>
-                <a href="#">Próximos Eventos:</a>
+                <a href="{{site.link}}/eventos">Próximos Eventos:</a>
                 <span>
+                {% for evento in eventos|slice(0,1) %}
+                {% if evento %}
+                    <strong>{{evento.title}}</strong><br/>
+                    De {{evento.startdate|date("m/d/Y")}} à {{evento.enddate|date("m/d/Y")}}<br/>
+                    {{__('Local:','twheme')|e}} {{evento.address}}
+                        <a class="pull-right" href="{{ evento.link }}">
+                            <div class="btn btn-square text-center">
+                                <p>+</p>
+                            </div>
+                        </a>
+                {% else %}
                     <strong>Nenhum evento agendado neste momento.</strong><br/>
-                    <!--Dia - 01/01/2016<br/>
-                    Local: Rua Campinas - Campinas/SP
-                        <div class="btn btn-square text-center">
-                            <p>+</p>
-                        </div>
-                    <hr/>
-                    <strong>Evento 2</strong><br/>
-                    Dia - 01/01/2016<br/>
-                    Local: Rua Campinas - Campinas/SP
-                        <div class="btn btn-square text-center">
-                            <p>+</p>
-                        </div>-->
+                {% endif %}
+                {% endfor %}
                 </span>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 pull-right">

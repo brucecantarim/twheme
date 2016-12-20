@@ -24,17 +24,23 @@ class Mailer {
             // get the blog administrator's email address
             $to = "brasil@vermeer.com";  //'brasil@vermeer.com';
 
-            $subject = "Vermeer - Solicitação de orçamento: " . $equipment . " " . $model;
-            $headers = "From: " . $name . " <" .$email . "> " . "\r\n";
-            $body = "Olá,\r\n\r\n" . $name . " <" .$email . "> da " . $company . ", de " . $city . "/" . $state . " acabou de enviar uma solicitação de orçamento de " . $equipment . " " . $model . ".\r\n\r\nAbaixo segue a mensagem digitada no formulário de contato do site: \r\n\r\n" . $message . "\r\n\r\nO telefone de contato dele é: " . $phone . "\r\nNão se esqueça de entrar em contato.\r\n\r\nAtt.\r\nGRUPO JOTA\r\n41 3333-1023";
+            if ( !isset($phone) && isset($email) ){
+                $subject = "Vermeer - Novo cadastro na newsletter";
+                $headers = "From: " . $name . " <" .$email . "> " . "\r\n";
+                $body = "Olá,\r\n\r\n" . $name . " <" .$email . "> acabou de enviar uma solicitação para ser incluído na newsletter da Vermeer. \r\n\r\nNão se esqueça de adicionar ele na lista.\r\n\r\nAtt.\r\nGRUPO JOTA\r\n41 3333-1023";
 
-            // If email has been process for sending, display a success message
-            if ( wp_mail( $to, $subject, $body, $headers, "-r"."<wordpress@vermeerbrasil.com>" ) ) {
-                echo '<div class="container-fluid" style="position:fixed;top:10em;width:100%;z-index:200;"><div class="row"><div class="alert alert-dismissible alert-success"><button aria-label="Close" class="close" data-dismiss="alert" type="button"><span aria-hidden="true">&times;</span></button><p class="text-center"><small>Obrigado! A sua mensagem foi enviada com sucesso. Em breve entraremos em contato com você.</small></p></div></div></div>';
             } else {
-                echo '<div class="container-fluid" style="position:fixed;top:10em;width:100%;z-index:200;"><div class="row"><div class="alert alert-dismissible alert-danger"><button aria-label="Close" class="close" data-dismiss="alert" type="button"><span aria-hidden="true">&times;</span></button><p class="text-center">Ocorreu um erro ao enviar a sua mensagem. Por favor, tente novamente.</p></div></div></div>';
+                $subject = "Vermeer - Solicitação de orçamento: " . $equipment . " " . $model;
+                $headers = "From: " . $name . " <" .$email . "> " . "\r\n";
+                $body = "Olá,\r\n\r\n" . $name . " <" .$email . "> da " . $company . ", de " . $city . "/" . $state . " acabou de enviar uma solicitação de orçamento de " . $equipment . " " . $model . ".\r\n\r\nAbaixo segue a mensagem digitada no formulário de contato do site: \r\n\r\n" . $message . "\r\n\r\nO telefone de contato dele é: " . $phone . "\r\nNão se esqueça de entrar em contato.\r\n\r\nAtt.\r\nGRUPO JOTA\r\n41 3333-1023";
+            }
+                // If email has been process for sending, display a success message
+            if ( wp_mail( $to, $subject, $body, $headers, "-r"."<wordpress@vermeerbrasil.com>" ) ) {
+                echo '<div class="container-fluid" style="position:fixed;top:10em;width:100%;z-index:200;"><div class="row"><div class="alert alert-dismissible alert-success"><button aria-label="Close" class="close" data-dismiss="alert" type="button"><span aria-hidden="true">&times;</span></button><p class="text-center"><small>Obrigado! Enviado com sucesso. Em breve entraremos em contato com você.</small></p></div></div></div>';
+            } else {
+                echo '<div class="container-fluid" style="position:fixed;top:10em;width:100%;z-index:200;"><div class="row"><div class="alert alert-dismissible alert-danger"><button aria-label="Close" class="close" data-dismiss="alert" type="button"><span aria-hidden="true">&times;</span></button><p class="text-center">Ocorreu um erro com o envio do formulário. Por favor, tente novamente.</p></div></div></div>';
+            
             }
         }
-    }
-    
+    }   
 }
