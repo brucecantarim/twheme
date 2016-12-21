@@ -4,7 +4,7 @@
 <div class="container">
 
 {% if post.type == 'maquina' %}
-<div class="row-spacer"></div><!-- /.row spacer -->
+<br/>
 <div class="row clearfix">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInUp">
             <h2 class="more-title">{{__("Confira outros produtos do nosso catálogo:", "twheme")}}</h2>
@@ -15,16 +15,17 @@
 
         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight">
             <h3>{{ product.title }}</h3>
-            <div class="square-thumbl">
+            <div class="square-thumb">
                 <a href="{{ product.link }}">
                 {% if product.mainimg %}
                     {% set id = product.mainimg %}
-                    <img class="img-responsive" src="{{ Image(id).src }}"/>
+                    <img class="img-responsive" src="{{ Image(id).src|resize(300,300) }}"/>
                 {% else %}
                     <img class="img-responsive" src="http://placehold.it/300?text={{__('SEM IMAGEM', 'twheme')}}"/>
                 {% endif %}
                 </a>
             </div><!-- /.product-thumbnail -->
+            <br/>
         </div><!-- /.col -->
        
         {#{% else %}
@@ -47,29 +48,29 @@
     
     {% elseif post.type == 'seminovo' or post.title|lower == 'seminovos' %}
     {% if post.type == 'seminovo' %}
-    <div class="row-spacer"></div><!-- /.row spacer -->
+    <br/><br/>
     {% endif %}
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 wow fadeInUp">
-            <h2 class="more-title">{{__("Confira também:", "twheme")}}</h2>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 wow fadeInUp">
+            <h2 class="more-title no-padding">{{__("Confira também:", "twheme")}}</h2>
         </div>
-        <form class="col-md-12 text-right form-horizontal" action="{{ post.link }}">
+        <form class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right form-horizontal" action="{{ post.link }}">
         <div class="form-group">
-            <div class="col-md-7"></div>
-            <div class="col-md-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
                 <select name="order" class="form-control">
                     <option class="contact-field" value="asc">{{__("Ascendente", "twheme")}}</option>
                     <option class="contact-field" value="desc">{{__("Descendente", "twheme")}}</option>
                 </select>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
                 <select name="orderby" class="form-control">
                     <option class="contact-field" value="date">{{__("Data", "twheme")}}</option>
                     <option class="contact-field" value="name">{{__("Nome", "twheme")}}</option>
                     <option class="contact-field" value="price">{{__("Preço", "twheme")}}</option>
                 </select>
             </div>
-            <div class="col-md-1">
+            <div class="col-md-2">
                 <input class="btn wow bounceIn" id="sendbutton" data-wow-delay="0.2s" type="Submit" value="{{__('Filtrar', 'twheme')|e }}"/>
             </div>
         </div>
@@ -268,8 +269,10 @@
         {% if product.title != post.title %}
             <a href="{{ product.link }}">
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 wow slideInRight background-color-grey">
-                <h4>{{ product.title }}</h4>
-                <div class="square-thumb">
+                <div class="col-md-12 bg-color-grey">
+                    <h3>{{product.title}}</h3>
+                </div>
+                
                     {% if product.mainimg %}
                         {% set id = product.mainimg %}
                         <img class="img-responsive" src="{{ Image(id).src }}"/>
@@ -278,7 +281,10 @@
                     {% else %}
                         <img class="img-responsive" src="http://placehold.it/300?text={{__('OFERTA', 'twheme')}}"/>
                     {% endif %}
-                </div><!-- /.product-thumbnail -->
+                
+                <div class="col-md-12 bg-color-dark-grey" style="padding: 1em;">
+                    <a class="pull-right" href="{{product.link}}"><button class="btn btn-yellow">LEIA MAIS</button></a>
+                </div>
             </div><!-- /.col -->
             </a>
         {% else %}
@@ -291,8 +297,9 @@
        
         </div><!-- /.row -->
     </div><!-- /.container -->
-    {% if post.title|lower == 'seminovos' or post.title|lower == 'locacao' or post.title|lower == 'oferta' %}
-        <div class="row-spacer"></div><!-- /.row spacer -->
+    {% if post.title|lower == 'seminovos' or post.title|lower == 'locacao' or post.title|lower == 'oferta' or post.title|lower == 'ofertas'%}
+        <!--<div class="row-spacer"></div> /.row spacer -->
+        <br/><br/>
     {% endif %}
 </div><!-- /.body-content -->
 

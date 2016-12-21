@@ -22,7 +22,7 @@
                 {% for evento in eventos|slice(0,1) %}
                 {% if evento %}
                     <strong>{{evento.title}}</strong><br/>
-                    De {{evento.startdate|date("m/d/Y")}} à {{evento.enddate|date("m/d/Y")}}<br/>
+                    De {{evento.startdate|date("d/m/Y")}} à {{evento.enddate|date("d/m/Y")}}<br/>
                     {{__('Local:','twheme')|e}} {{evento.address}}
                         <a class="pull-right" href="{{ evento.link }}">
                             <div class="btn btn-square text-center">

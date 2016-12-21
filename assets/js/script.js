@@ -33,6 +33,11 @@ $(function () {
             $(this).children().hide(400);
             $(this).toggleClass('wow fadeOut').slideUp('slow').hide(400);
         });
+
+        $('body').mouseleave(function() {
+            $('.submenu').toggleClass('wow fadeOut').slideUp('slow').hide(400);
+        });
+
     });
 
     // Adding the mobile menu functionality

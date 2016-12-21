@@ -554,10 +554,13 @@ footer {
 #brand-sig {
   padding-left: 1em;
   border-left: 1px solid white;
-  display: inline-block;
   position: relative;
   top: -1em;
-  height: 2em; }
+  height: 2em;
+  display: none; }
+  @media (min-width: 360px) {
+    #brand-sig {
+      display: inline-block; } }
   @media (min-width: 1200px) {
     #brand-sig {
       padding-left: 1em;
@@ -926,13 +929,19 @@ footer {
   margin-top: 50vh; }
   .post-title-bar h1 {
     margin: 0;
-    font-size: 3em !important; }
+    font-size: 2.5em !important; }
+    @media (min-width: 360px) {
+      .post-title-bar h1 {
+        font-size: 3em !important; } }
     @media (min-width: 720px) {
       .post-title-bar h1 {
         font-size: 5em !important; } }
   .post-title-bar h4 {
     margin: 0;
-    font-size: 1em !important; }
+    font-size: .9em !important; }
+    @media (min-width: 1200px) {
+      .post-title-bar h4 {
+        font-size: 1em !important; } }
     @media (min-width: 1200px) {
       .post-title-bar h4 {
         font-size: 1.5em !important; } }
@@ -1663,6 +1672,24 @@ footer {
   position: relative;
   bottom: 0; }
 
+.hide-desktop {
+  display: block !important; }
+  @media (min-width: 1200px) {
+    .hide-desktop {
+      display: none !important; } }
+
+.hide-mobile {
+  display: none !important; }
+  @media (min-width: 1200px) {
+    .hide-mobile {
+      display: block !important; } }
+
+.hide-xs {
+  display: none !important; }
+  @media (min-width: 360px) {
+    .hide-xs {
+      display: block !important; } }
+
 .inline {
   display: inline !important; }
 
@@ -1672,3 +1699,7 @@ footer {
 
 .clearfix:after {
   clear: both; }
+
+#contact-jump {
+  padding-top: 12em !important;
+  margin-top: -12em !important; }

@@ -54,11 +54,13 @@
 #brand-sig {
     padding-left: 1em;
     border-left: 1px solid $color-white;
-    display: inline-block;
     position: relative;
     top: -1em;
     height: 2em;
-
+    display: none;
+    @include breakpoint($screen-xs-min) {
+        display: inline-block;
+    }
     @include breakpoint($screen-lg-min) {
         padding-left: 1em;
         top: -2.5em;

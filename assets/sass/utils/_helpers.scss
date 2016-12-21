@@ -109,6 +109,27 @@
     bottom: 0;
 }
 
+.hide-desktop {
+    display: block !important;
+    @include breakpoint($screen-lg-min) {
+        display: none !important;
+    }
+}
+
+.hide-mobile {
+    display: none !important;
+    @include breakpoint($screen-lg-min) {
+        display: block !important;
+    }
+}
+
+.hide-xs {
+    display: none !important;
+    @include breakpoint($screen-xs-min) {
+        display: block !important;
+    }
+}
+
 .inline {
     display: inline !important;
 }
@@ -117,6 +138,12 @@
     content: "";    
     display: table;
 }
+
 .clearfix:after {
     clear: both;
+}
+
+#contact-jump {
+  padding-top: 12em !important;
+  margin-top: -12em !important;
 }

@@ -11,13 +11,14 @@
             
             {% if post.post_type == 'maquina' or post.post_type == 'seminovo' or post.post_type == 'locacao' %}
                 <!-- MACHINE BODY -->    
-                <div class="col-md-12 text-justify">
+                <div class="col-md-12 text-justify hide-mobile">
                     <h3>{{__('ESPECIFICAÇÕES TÉCNICAS', 'twheme')}}</h3>
                     <hr/>
-                    {{ post.specs }}<a id="#contact-jump"></a>
-                    <div class="row-spacer"></div>
-                    <br/><br/>
-                    <div>
+                    {{ post.specs }}
+                    <br/><br/><br/>
+                </div>
+                <br/>
+                <div id="contact-jump" class="col-md-12">
                         {#<button data-toggle="collapse" data-target="#contact-form" class="accordion-button btn-flex text-center"></i>
                         <h4>{{__('Entre em contato e solicite o seu orçamento', 'twheme')|e }}</h4>
                         </button>
@@ -26,7 +27,7 @@
                                 {% include 'contact-form.twig' %}
                             {% endblock contactform %}
                         {#</div>#}
-                    </div><!-- /.col -->
+                </div><!-- /.col -->
             
             {% elseif post.post_type == 'page' or post.post_type == 'oferta'%}
                 <!-- CATEGORY PAGE BODY -->

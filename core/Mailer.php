@@ -21,18 +21,17 @@ class Mailer {
             $model    = sanitize_text_field( $_POST["message_model"] );
             $message = esc_textarea( $_POST["message_comments"] );
 
-            // get the blog administrator's email address
-            $to = "brasil@vermeer.com";  //'brasil@vermeer.com';
-
             if ( !isset($phone) && isset($email) ){
                 $subject = "Vermeer - Novo cadastro na newsletter";
                 $headers = "From: " . $name . " <" .$email . "> " . "\r\n";
                 $body = "Olá,\r\n\r\n" . $name . " <" .$email . "> acabou de enviar uma solicitação para ser incluído na newsletter da Vermeer. \r\n\r\nNão se esqueça de adicionar ele na lista.\r\n\r\nAtt.\r\nGRUPO JOTA\r\n41 3333-1023";
+                $to = "marketingvb@vermeer.com";
 
             } else {
                 $subject = "Vermeer - Solicitação de orçamento: " . $equipment . " " . $model;
                 $headers = "From: " . $name . " <" .$email . "> " . "\r\n";
                 $body = "Olá,\r\n\r\n" . $name . " <" .$email . "> da " . $company . ", de " . $city . "/" . $state . " acabou de enviar uma solicitação de orçamento de " . $equipment . " " . $model . ".\r\n\r\nAbaixo segue a mensagem digitada no formulário de contato do site: \r\n\r\n" . $message . "\r\n\r\nO telefone de contato dele é: " . $phone . "\r\nNão se esqueça de entrar em contato.\r\n\r\nAtt.\r\nGRUPO JOTA\r\n41 3333-1023";
+                $to = "brasil@vermeer.com";
             }
                 // If email has been process for sending, display a success message
             if ( wp_mail( $to, $subject, $body, $headers, "-r"."<wordpress@vermeerbrasil.com>" ) ) {
