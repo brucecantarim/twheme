@@ -1,4 +1,5 @@
 # twheme
+## NO LONGER IN DEVELOPMENT
 ### Modular OOP php, twig and sass theme framework for Wordpress
 
 Still a work in progress, being used to speed development between multiple clients.
@@ -25,7 +26,7 @@ A live version can be found here: http://jotacom.com.br/wp_vermeer
 - Add a default themes package.
 - Create the docs.
 
-If you're interested in this project, want to contribute or just want to talk about it, hit me at my linkedin:
+If you're interested in this project, want to fork it or just want to talk about it, hit me at my linkedin:
 http://br.linkedin.com/in/brucecantarim
 
 Cheers!
